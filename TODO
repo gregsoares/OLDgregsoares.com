@@ -1,0 +1,41 @@
+Structure:
+  ✔ Use express-react-views @done(18-11-22 10:29)
+    ✔ render a component + testing module @done(18-11-22 12:25)
+  ☐ Add the respective React page structure for missing routes.
+  ☐ Testing Structure:
+    ☐ routes/ components/ apis/ errors/ ..
+  ☐ Fix ./views/Index - It should grab its components from ../components and render index.html after jsx Compilation
+
+Documentation:
+  ☐ Add purpose and overwall requirements for the project
+  Comments:
+    ✔ ./bin/www @done(18-11-22 12:32)
+    ☐ ./controllers
+    ☐ ./coverage
+    ☐ ./models
+    ☐ ./routes
+    ☐ ./test
+    ☐ ./views
+    ✔ app.js @done(18-11-22 12:32)
+
+Testing:
+  ✔ Install and configure enzyme + jest to test+watch all. @done(18-11-22 12:25)
+  ☐ Make sure Jest+Enzyme work with testing ReactComponents
+
+External List:
+  ☐ Setup:
+    ☐ Trello:
+    ☐ public github
+
+Bugs:
+  ☐ Error route testing:
+    ☐ /404 - should return custom 404 page
+    ☐ /500 - should return custom 500 page
+  ☐ Api route testing:
+    ☐ /api - should return a list of public APIs
+    ☐ /api/getAll - should return all users
+      ☐ temp: should return { title : "/api - Home" }
+    ☐ /api/userId - should return the user's data OR { success: false }
+  ☐ Index
+    ☐ should return status 200
+    ☐ should return { title: 'title message' }

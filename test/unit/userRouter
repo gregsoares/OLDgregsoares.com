@@ -1,0 +1,8 @@
+// describe('GET /users', function () {
+//   it('respond with status 200', function (done) {
+//     request(app)
+//       .get('/users')
+//       .expect('Content-Type', /text\/html/)
+//       .expect(200, done);
+//   });
+// });
