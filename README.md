@@ -1,10 +1,14 @@
-Objective:
+[![Waffle.io - Issues in progress](https://badge.waffle.io/gregsoares/gregsoares.com.png?label=in%20progress&title=In%20Progress)](http://waffle.io/gregsoares/gregsoares.com)
 
-Purpose:
+#Objective:
 
-STACK:
+#Stack: MERN
+MongoDB
+ExpressJs
+ReactJs
+NodeJs
 
-Upcoming Features:
+#Upcoming Features:
 
 ## Available Scripts
 
