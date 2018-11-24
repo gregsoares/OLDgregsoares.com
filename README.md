@@ -14,17 +14,14 @@ NodeJs
 
 In the project directory, you can run:
 
-### `npm client-install` 
-
-"npm install --prefix" --> install all nodeJs modules in client
-
 ### `npm test`
 
-"mocha || true" --> Launches all tests in ./test/ folder.
+"test" --> Launches all .test.js files using: jest --coverage --watchAll --detectOpenHandles
+
 ### `npm start`
 
 Starts the server-side only - Deployment Mode -
 
-### `npm run dev` 
+### `npm run server`
 
-runs: "npm run server" && "npm run client " together, allowing both server and client side to execute with one command.
+Starts the server-side only - Development Mode - nodemon --inspect ./bin/www
