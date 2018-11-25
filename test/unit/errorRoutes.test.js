@@ -3,19 +3,19 @@ const request = require('supertest');
 const app = require('../../app');
 
 describe('Checking all endpoints - Ping style', () => {
-  it('GET /error and returns "Error"', (done) => {
+  test('GET /error and returns "Error"', (done) => {
     request(app)
       .get('/error/')
       .expect(200)
       .then(done);
   });
-  it('GET /error/404 and returns "Error"', (done) => {
+  test('GET /error/404 and returns "Error"', (done) => {
     request(app)
       .get('/error/404')
       .expect(200)
       .then(done);
   });
-  it('GET /error/500 and returns "Error"', (done) => {
+  test('GET /error/500 and returns "Error"', (done) => {
     request(app)
       .get('/error/500')
       .expect(200)

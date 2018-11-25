@@ -1,5 +1,4 @@
 const request = require('supertest');
-
 const app = require('../../app');
 
 describe('Index Component Unit Testing', () => {
