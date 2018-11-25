@@ -8,7 +8,7 @@ router.get('/404', (req, res) => {
 });
 
 // error.capturestacktrace(error);
-router.get('/error/500', (req, res) => {
+router.get('/500', (req, res) => {
   res.sendStatus(200);
 });
 

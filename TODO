@@ -1,6 +1,6 @@
 Structure:
   ✔ Use express-react-views @done(18-11-22 10:29)
-    ✔ render a component + testing module @done(18-11-22 12:25)
+    ☐ render a component + testing module
   ☐ Add the respective React page structure for missing routes.
   ✔ Testing Structure: @done(18-11-25 01:39)
     ✔ test/ unittest/ ... @done(18-11-25 01:38)

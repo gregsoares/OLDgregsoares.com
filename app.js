@@ -33,16 +33,15 @@ app.use('/api', apiRouter);
 app.use('/api/:id', apiRouter);
 
 // MongoDB Keys and Connection info
-// const db = require('../config/keys').prodURI;
-// mongoose.connect(db, { useNewUrlParser: true })
-//   .then(() => console.log('MongoDB connected.'))
-//   .catch(err => console.error(err));
-
+const db = require('./config/keys').prodURI;
+mongoose.connect(db, { useNewUrlParser: true })
+  .then(() => console.log('MongoDB connected.'))
+  .catch(err => console.error(err));
 
 // @Error handlers
 // @404 error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
