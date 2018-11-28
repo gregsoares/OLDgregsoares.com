@@ -1,8 +1,7 @@
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/gregsoares/gregsoares.com.svg?columns=all)](https://waffle.io/gregsoares/gregsoares.com)
-#Objective:
 
-#Stack: MERN
+##Stack: MERN
 MongoDB
 ExpressJs
 ReactJs
