@@ -1,5 +1,5 @@
-[![Waffle.io - Issues in progress](https://badge.waffle.io/gregsoares/gregsoares.com.png?label=in%20progress&title=In%20Progress)](http://waffle.io/gregsoares/gregsoares.com)
 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/gregsoares/gregsoares.com.svg?columns=all)](https://waffle.io/gregsoares/gregsoares.com)
 #Objective:
 
 #Stack: MERN
