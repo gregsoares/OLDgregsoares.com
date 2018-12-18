@@ -1,24 +1,22 @@
 const request = require('supertest');
-
 const app = require('../../app');
 
+const appReq = request.agent(app);
+
 describe('Checking all endpoints - Ping style', () => {
-  test('GET /error and returns "Error"', (done) => {
-    request(app)
-      .get('/error/')
+  it('GET /error and returns "Error"', (done) => {
+      appReq.get('/error/')
       .expect(200)
-      .then(done);
+      .then(done());
   });
-  test('GET /error/404 and returns "Error"', (done) => {
-    request(app)
-      .get('/error/404')
+  it('GET /error/404 and returns "Error"', (done) => {
+      appReq.get('/error/404')
       .expect(200)
-      .then(done);
+      .then(done());
   });
-  test('GET /error/500 and returns "Error"', (done) => {
-    request(app)
-      .get('/error/500')
+  it('GET /error/500 and returns "Error"', (done) => {
+      appReq.get('/error/500')
       .expect(200)
-      .then(done);
+      .then(done());
   });
 });
