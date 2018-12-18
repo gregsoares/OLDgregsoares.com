@@ -3,8 +3,8 @@ import React from 'react';
 class StatusBadge extends React.Component {
   render() {
     return(
-            <Badge color={this.props.id}>{this.props.id}</Badge>
-        );
-      }
+      <span className="badge badge-pill badge-primary">Prim</span>
+      );
+    }
 }
  export default StatusBadge;
