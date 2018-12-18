@@ -1,0 +1,41 @@
+{
+  "name": "gregsoares.com",
+  "version": "1.0.0",
+  "description": "[![Waffle.io - Columns and their card count](https://badge.waffle.io/gregsoares/gregsoares.com.svg?columns=all)](https://waffle.io/gregsoares/gregsoares.com)",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --recursive || true",
+    "server": "npm nodemon --watch ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregsoares/gregsoares.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregsoares/gregsoares.com/issues"
+  },
+  "homepage": "https://github.com/gregsoares/gregsoares.com#readme",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "superagent": "^4.0.0",
+    "supertest": "^3.3.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
