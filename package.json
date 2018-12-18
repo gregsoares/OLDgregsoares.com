@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha --recursive || true",
     "server": "webpack-dev-server --mode development --open --hot",
-    "build": "wenpack --mode production"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,11 @@
   },
   "homepage": "https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "path": "^0.12.7",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
