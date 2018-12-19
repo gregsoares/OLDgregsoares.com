@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import StatusBadge from './components/StatusBadge';
-import TopNav from './components/TopNav';
-import PreviewCard from './components/PreviewCard';
+import StatusBadge from './StatusBadge';
+import TopNav from './TopNav';
+import PreviewCard from './PreviewCard';
 // import './index.css';
 
 class App extends Component {

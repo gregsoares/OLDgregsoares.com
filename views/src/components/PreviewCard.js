@@ -16,7 +16,7 @@ class PreviewCard extends React.Component {
 
   render() {
     return (
-      <span id={ this.props.cardId }>
+      <span className='border' id={ this.props.cardId }>
         <div className="card" >
           <div className="card-body">
             <h5 className="card-title">{ this.props.cardTitleText }</h5>
