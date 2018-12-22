@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, '/views', '/src'));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, '../', 'views')))
-app.set('view engine', 'jsx');
+// app.set('view engine', 'jsx');
 const options = ({
   transform: {},
 });
@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/error/:', errorRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
-app.use('/api/:id', apiRouter);
+// app.use('/api/:id', apiRouter);
 
 // MongoDB Keys and Connection info
 const db = require('./config/keys').prodURI;

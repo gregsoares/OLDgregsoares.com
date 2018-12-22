@@ -1,13 +1,5 @@
 import React from 'react';
 
-//  @Props:
-//    * cardId  - @desc: 
-//    * cardTitleText - @desc: 
-//    * cardSubtitleText - @desc: 
-//    * cardBodyText - @desc: 
-//    * cardLinkOne - @desc: 
-//    * cardLinkTwo - @desc: 
-// 
 
 class PreviewCard extends React.Component {
   constructor(props) {
@@ -15,9 +7,17 @@ class PreviewCard extends React.Component {
   }
 
   render() {
+  //  @Props:
+  //    * cardId  - @desc: 
+  //    * cardTitleText - @desc: 
+  //    * cardSubtitleText - @desc: 
+  //    * cardBodyText - @desc: 
+  //    * cardLinkOne - @desc: 
+  //    * cardLinkTwo - @desc: 
+  // 
     return (
-      <span className='border' id={ this.props.cardId }>
-        <div className="card" >
+      <span className='PrevCard' id={ this.props.cardId }>
+        <div className="card border border-primary bg-secondary col-sm-12 col-md" >
           <div className="card-body">
             <h5 className="card-title">{ this.props.cardTitleText }</h5>
             <h6 className="card-subtitle mb-2 text-muted">{ this.props.cardSubtitleText }</h6>
