@@ -14,7 +14,6 @@ class PreviewCard extends React.Component {
   //    * cardBodyText - @desc: 
   //    * cardLinkOne - @desc: 
   //    * cardLinkTwo - @desc: 
-  // 
     return (
       <span className='PrevCard' id={ this.props.cardId }>
         <div className="card border border-primary bg-secondary col-sm-12 col-md" >
