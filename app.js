@@ -1,6 +1,6 @@
 // Importing dependencies
 const express = require('express');
-const path = require('path');
+// const path = require('path');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -18,8 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.set('views', path.join(__dirname, '/views', '/src'));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, '../', 'views')))
-// app.set('view engine', 'jsx');
 const options = ({
   transform: {},
 });
