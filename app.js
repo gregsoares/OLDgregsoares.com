@@ -21,7 +21,7 @@ app.use(cookieParser());
 const options = ({
   transform: {},
 });
-app.engine('jsx', require('express-react-views').createEngine(options));
+// app.engine('jsx', require('express-react-views').createEngine(options));
 
 // Setting up routes
 app.use('/', indexRouter);
