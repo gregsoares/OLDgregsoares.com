@@ -11,7 +11,7 @@ class PageSection extends React.Component {
       //  bgColor: Bootstrap tyle: "bg-dark"/"bg-secondary"
       <span>
         <div className={`row ${this.props.bgColor}`} id={this.props.id}> 
-
+          
         </div>
       </span>
     )}

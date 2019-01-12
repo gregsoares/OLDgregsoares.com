@@ -1,20 +1,20 @@
 INBOX:
   ☐ Install jest - Test a component
   ☐ Install+Setup axios: Basic giffy API pull
-  ☐ 
+  ☐ Import FontAwesome
 RESEARCH:
   ☐ jest/Enzyme - Integration test: Routing + Component
   
 
 IN PROCESS:
   ☐ PreviewCard - add attributes to normalize its size/margin depending on siblings(mx-auto)
+  ☐ StatusBadge - Add href prop (not required to display component) @started(18-12-22 23:19)
 
 BACKLOG:
   ☐ PageSection - Display all components passed in as props.
   ☐ Route:
-    ☐ App.js - Needs to accept arguments and load pages accordingly
+    ☐ App.js - Needs to accept arguments and load pages 
   ☐ "Giffy for your thought" Component: API:
     ☐ card-style Component, txtBox>SubmitBtn: random 
       ☐ but related giffy shows up on a 'body' div right under.
   ☐ size cards according to the space left ( mx-auto ) 
-  ☐ StatusBadge - Add href prop (not required to display component)

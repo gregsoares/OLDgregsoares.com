@@ -13,3 +13,5 @@ const ThoughtGiffy = (props) => {
     </span>
   );
 }
+
+export default ThoughtGiffy;
