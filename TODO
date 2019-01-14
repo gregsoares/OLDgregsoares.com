@@ -1,12 +1,13 @@
 INDEX:
-  ☐ Install Express and serve static HTML
+  ✔ Install Express and serve static HTML @done(19-01-13 21:15)
+  ✔ Install and implement simple EJS @done(19-01-13 21:16)
   ☐ Install Bootstrap
   ☐ Install MongoDB and make a successful connection
   ☐ Install FontAwesome and use an icon/font.
   ☐ Normalize CSS
 
 Research:
-  ☐ EJS - Is there a better option? (View/Templating Engine)
+  ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-13 21:15)
   ☐ Testing framework: Supertest+SuperAgent enough?
   
 BACKLOG:
