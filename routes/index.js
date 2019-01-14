@@ -1,12 +1,9 @@
 const express = require('express');
-
 const router = express.Router();
 
-
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index/index',  { page: '/index' });
-});
-// const router = (req, res) => res.render('/index/src/index');
+// @route GET /
+// @desc handles any GET request to index
+// @access Public
+router.get('/', (req, res) => res.json({ msg: 'Hello World'}));
 
 module.exports = router;
