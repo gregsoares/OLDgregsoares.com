@@ -1,15 +1,16 @@
 INDEX:
   ✔ Install Express and serve static HTML @done(19-01-13 21:15)
   ✔ Install and implement simple EJS @done(19-01-13 21:16)
-  ☐ Install Bootstrap
-  ☐ Install MongoDB and make a successful connection
-  ☐ Install FontAwesome and use an icon/font.
-  ☐ Normalize CSS
+  ✔ Install Bootstrap @done(19-01-15 21:07)
 
 Research:
   ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-13 21:15)
   ☐ Testing framework: Supertest+SuperAgent enough?
   
 BACKLOG:
+  ☐ Install MongoDB and make a successful connection
+  ☐ Install FontAwesome and use an icon/font.
+  ☐ Normalize CSS
+  ☐ topNav - fix Script to use variable passed in by router/middleware and set topNav link to active
 
 In Progress:

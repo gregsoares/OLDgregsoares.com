@@ -15,7 +15,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Import Routes
 const indexRouter = require('./routes/index');
+const nidsRouter = require('./routes/nids');
 
+//Route Setup
 app.get('/', indexRouter);
+app.get('/nids', nidsRouter);
 
 module.exports = app;

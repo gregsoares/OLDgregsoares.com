@@ -4,6 +4,17 @@
 <body>
   <div id="Body">
     <%include partials/topNav.ejs %>
+    <script>
+      // IIFE - Grab and set the current page's links to active
+      (()=> {
+        let targetElement = document.getElementById(`home`)
+        let currentAttribute = targetElement.getAttribute('class');
+        console.log(`Setting: `);
+        targetElement.setAttribute('class', `${currentAttribute} active`);
+        // setActive.setAttribute('class', 'active' + setActive)
+      })();
+
+    </script>
 
   </div>
 </body>
