@@ -2,6 +2,9 @@ INDEX:
   ✔ Install Express and serve static HTML @done(19-01-13 21:15)
   ✔ Install and implement simple EJS @done(19-01-13 21:16)
   ✔ Install Bootstrap @done(19-01-15 21:07)
+  ☐ topNav - Add depth and border to buttons
+  ☐ jumbotron (top CTA) - Quick and to the point intro and link to resume in pdf and docx
+  ☐ Second Section - Preview(cards style, or pagination Left/Right subsections) of projects
 
 Research:
   ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-13 21:15)

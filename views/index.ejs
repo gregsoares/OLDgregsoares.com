@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <% include partials/headers.ejs %>
-<body>
-  <div id="Body">
+<body class="bg-light">
+  <div class="row m-0" id="Body">
+    <div class="col-11 mx-auto ">
     <%include partials/topNav.ejs %>
-    <script>
+    <div class="jumbotron border text-center">
+      <h1 class="display-4">Page 404, Brain Not Found.</h1>
+      <p class="lead">This is not an error, it is a common occurrence, otherwise known as a condition.</p>
+      <hr class="my-4">
+      <p>More Information to be found somewhere(over the rainbow?!)</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Resume</a>
+    </div>
+
+    </div>
+    <div class="col-11 mx-auto text-center">
+      <div class="jumbotron">
+        <h1 class="lead">Second Section</h1>
+      </div>
+    </div>
+    <!-- <script>
       // IIFE - Grab and set the current page's links to active
       (()=> {
         let targetElement = document.getElementById(`home`)
@@ -13,9 +28,7 @@
         targetElement.setAttribute('class', `${currentAttribute} active`);
         // setActive.setAttribute('class', 'active' + setActive)
       })();
-
-    </script>
-
+      </script> -->
   </div>
 </body>
 </html>
