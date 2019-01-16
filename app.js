@@ -16,8 +16,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Import Routes
 const indexRouter = require('./routes/index');
 
-//Import Controllers
-
-app.use('/', indexRouter);
+app.get('/', indexRouter);
 
 module.exports = app;
