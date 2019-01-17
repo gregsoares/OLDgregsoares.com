@@ -8,7 +8,6 @@ const router = express.Router();
 router.get('/', (req, res) =>{ 
     let itemData = eveMarketData(34);
     console.log(`itemData = ${itemData}`);
-    
     res.render('index', { title: 'Welcome to the Index!', page: 'index', eveMarketData: itemData });
   });
 
