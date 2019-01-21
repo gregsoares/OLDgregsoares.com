@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+let db;
 
 //App Setup
 app.set('views', path.join(__dirname, 'views'));
@@ -12,7 +13,16 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Import DB keys and config
-const db = require('./config/keys').devURI;
+// const db = require('./config/keys').devURI;
+if(process.env.USER == 'yggdrasil') {
+  console.log(`--- inside if ---`);
+  db = require('./config/keys').devURI;
+} else { 
+  console.log(`--- inside else ---`);
+  
+  db = process.env.MONGODB_URI;}
+console.log(db);
+
 
 mongoose
   .connect(db, {useNewUrlParser: true })
