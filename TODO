@@ -1,21 +1,17 @@
 INDEX:
-  ✔ Install Express and serve static HTML @done(19-01-13 21:15)
-  ✔ Install and implement simple EJS @done(19-01-13 21:16)
-  ✔ Install Bootstrap @done(19-01-15 21:07)
   ☐ topNav - Add depth and border to buttons
   ☐ jumbotron (top CTA) - Quick and to the point intro and link to resume in pdf and docx
   ☐ Second Section - Preview(cards style, or pagination Left/Right subsections) of projects
   ☐ design buttons to display/elaborate on skills/work @created(19-01-17 15:30)
   ☐ Implement Light/Dark mode for full page view @created(19-01-17 15:31)
-  ☐ topNav - fix Script to use variable passed in by router/middleware and set topNav link to active
+  ☐ testing - set up basic test (routes, api requests) @created(19-01-21 10:57)
 
 Research:
-  ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-17 15:23)
   ☐ Testing framework: Supertest+SuperAgent enough?
 
 BACKLOG: 
-  ☐ Install MongoDB and make a successful connection
   ☐ Install FontAwesome and use an icon/font.
+  ☐ topNav - fix Script to use variable passed in by router/middleware and set topNav link to active
 
 EveMarketeer:
   ☐ input a controller for requesting data @created(19-01-17 15:29)
@@ -25,3 +21,10 @@ EveMarketeer:
   ☐ display data in proper locations @created(19-01-17 15:28)
   ☐ ItemIDs - readIn and parse itemIDs.txt's content into json @created(19-01-17 17:14)
   ☐ ItemIDs - Save the parsed content into MongoDB for easierData retrieval. @created(19-01-17 17:15)
+
+Done:
+  ✔ Install MongoDB and make a successful connection @done(19-01-21 02:14)
+  ✔ Install Express and serve static HTML @done(19-01-13 21:15)
+  ✔ Install and implement simple EJS @done(19-01-13 21:16)
+  ✔ Install Bootstrap @done(19-01-15 21:07)
+  ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-17 15:23)

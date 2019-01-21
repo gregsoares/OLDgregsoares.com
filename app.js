@@ -20,8 +20,8 @@ mongoose
   .catch(err => console.log(err));
 
 //Import Routes
-const indexRouter = require('./routes/index');
-const nidsRouter = require('./routes/nids');
+const indexRouter = require('./routes/indexRouter');
+const nidsRouter = require('./routes/nidsRouter');
 const eveApiRouter = require('./routes/api/eveMarketData');
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
