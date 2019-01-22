@@ -2,6 +2,13 @@ const https = require('https');
 const express = require('express');
 const router = express.Router();
 
+// Importing required APIs
+const users = require('./users');
+const profile = require('./profile');
+
+// @route GET /evemarketeer/item
+// @desc handles any API GET request to /item
+// @access Public
 router.get('/item', (req, res) => {
   console.log(`eveApiRouter: ${req.body.itemid}`);
   let recData = getItemData(req.body.itemid);

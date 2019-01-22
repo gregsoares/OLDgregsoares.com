@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- importing headers -->
   <% include partials/headers.ejs %>
 <body class="bg-light">
   <div class="row m-0" id="Body">
     <div class="col-11 mx-auto ">
+
+    <!-- Importing Top Navigation Bar -->
     <%include partials/topNav.ejs %>
+
     <!-- Jumbotron - CTA to Resume -->
     <div class="jumbotron border text-center">
       <h1 class="display-4">404: Brain Not Found.</h1>
@@ -21,16 +26,7 @@
         <h1 class="lead">Second Section</h1>
       </div>
     </div>
-    <!-- <script>
-      // IIFE - Grab and set the current page's links to active
-      (()=> {
-        let targetElement = document.getElementById(`home`)
-        let currentAttribute = targetElement.getAttribute('class');
-        console.log(`Setting: `);
-        targetElement.setAttribute('class', `${currentAttribute} active`);
-        // setActive.setAttribute('class', 'active' + setActive)
-      })();
-      </script> -->
   </div>
+
 </body>
 </html>

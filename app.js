@@ -15,26 +15,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Import DB keys and config
 // const db = require('./config/keys').devURI;
 if(process.env.USER == 'yggdrasil') {
-  console.log(`--- inside if ---`);
   db = require('./config/keys').devURI;
 } else { 
-  console.log(`--- inside else ---`);
-  
   db = process.env.MONGODB_URI;}
-console.log(db);
-
 
 mongoose
   .connect(db, {useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected.'))
-  .catch(err => console.log(err));
+  .catch(err => console.log(`DB Connection error: \n${err}`));
 
 //Import Routes
 const indexRouter = require('./routes/indexRouter');
 const nidsRouter = require('./routes/nidsRouter');
 const eveApiRouter = require('./routes/api/eveMarketData');
-const users = require('./routes/api/users');
-const profile = require('./routes/api/profile');
 
 //Route Setup
 app.get('/', indexRouter);
