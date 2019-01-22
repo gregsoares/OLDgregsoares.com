@@ -7,7 +7,6 @@ INDEX:
   ☐ testing - set up basic test (routes, api requests) @created(19-01-21 10:57)
 
 BACKLOG: 
-  ☐ Install FontAwesome and use an icon/font.
 
 EveMarketeer:
   ☐ Front-End: add buttons and fields for requests @created(19-01-17 15:27)
@@ -29,3 +28,4 @@ Done:
   ✔ Install Bootstrap @done(19-01-15 21:07)
   ✔ EJS - Is there a better option? (View/Templating Engine) @done(19-01-17 15:23)
   ✔ topNav - fix Script to use variable passed in by router/middleware and set topNav link to active @done(19-01-21 18:02)
+  ✔ Install FontAwesome and use an icon/font. @done(19-01-22 00:18)
