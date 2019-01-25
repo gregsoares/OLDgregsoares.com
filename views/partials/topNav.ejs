@@ -1,35 +1,31 @@
 <nav class="row navbar navbar-expand-sm navbar-light bg-secondary p-2 mb-3 rounded ">
-  <div class="col-xs-8 col-sm-4 col-md">
+  <div class="col float-left">
     <a class="navbar-brand" href="/">GregSoares.com</a>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggledSection" aria-controls="toggledSection" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>Menu
-  </button>
+  <button class="navbar-toggler col-3" type="button" data-toggle="collapse" data-target="#toggledSection" aria-controls="toggledSection" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="float-right"><i class="fas fa-caret-square-down"></i> Menu</span> </button>
 
   <!-- TODO: Group icons together, and put them out of Toggle Button (align center) -->
   <div class="mx-auto collapse navbar-collapse" id="toggledSection">
-    <ul class="navbar-nav col">
-      <li class="nav-item btn col">
+    <ul class="navbar-nav col-4 float-right">
+      <li class="nav-item btn">
         <i class="fab fa-github-square fa-3x"></i>
         <a class="nav-link" id="github" target="_blank" href="https://github.com/gregsoares/"rel="noopener"></a></i>
       </li>
-      <li class="nav-item btn col">
+      <li class="nav-item btn">
         <i class="fab fa-linkedin fa-3x">  <a class="nav-link" id="linkedin" target="_blank" href="https://www.linkedin.com/in/greg-soares/" rel="noopener"></a></i>
       </li>
-      <li class="nav-item btn col ">
-        <!-- TODO: group Home+Projects together and align right -->
-        <a class="nav-link" id="index" href="/" rel="noopener">Home </a>
+      <li class="nav-item btn">
+        <a class="nav-link" id="index" href="/" rel="noopener"><i class="fas fa-home"></i> Home </a>
       </li>
-      <li class="nav-item btn dropdown col ">
+      <li class="nav-item dropdown pull-left btn">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown projects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Projects
+          <i class="fas fa-project-diagram"></i> Projects
         </a>
-        <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" id="nids" href="/nids">NIDS - RaspberryPi</a>
-          <a class="dropdown-item" id="nas" href="#">NAS Server</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" id="webdev" href="#">Web Develpment</a>
-        </div>
+        <!-- FIXME: add pull-left to dropdown menu -->
+        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+         <li> <a class="dropdown-item" id="nids" href="/nids">NIDS</a>
+         <li> <a class="dropdown-item" id="nas" href="#">NAS Server</a>
       </li>
     </ul>
   </div>
