@@ -35,6 +35,6 @@ app.get('/', indexRouter);
 app.get('/nids', nidsRouter);
 app.use('/evemarketeer', eveApiRouter);
 
-reload(app);
+// reload(app);
 
 module.exports = app;
