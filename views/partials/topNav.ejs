@@ -1,42 +1,41 @@
-<nav class="row navbar navbar-expand-sm navbar-light bg-secondary p-2 mb-3 rounded ">
-  <div class="col float-left">
-    <a class="navbar-brand" href="/">GregSoares.com</a>
-  </div>
-  <button class="navbar-toggler col-3" type="button" data-toggle="collapse" data-target="#toggledSection" aria-controls="toggledSection" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="float-right"><i class="fas fa-caret-square-down"></i> Menu</span> </button>
 
-  <!-- TODO: Group icons together, and put them out of Toggle Button (align center) -->
-  <div class="mx-auto collapse navbar-collapse" id="toggledSection">
-    <ul class="navbar-nav col-4 float-right">
-      <li class="nav-item btn">
-        <i class="fab fa-github-square fa-3x"></i>
-        <a class="nav-link" id="github" target="_blank" href="https://github.com/gregsoares/"rel="noopener"></a></i>
-      </li>
-      <li class="nav-item btn">
-        <i class="fab fa-linkedin fa-3x">  <a class="nav-link" id="linkedin" target="_blank" href="https://www.linkedin.com/in/greg-soares/" rel="noopener"></a></i>
-      </li>
-      <li class="nav-item btn">
-        <a class="nav-link" id="index" href="/" rel="noopener"><i class="fas fa-home"></i> Home </a>
-      </li>
-      <li class="nav-item dropdown pull-left btn">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown projects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-project-diagram"></i> Projects
-        </a>
-        <!-- FIXME: add pull-left to dropdown menu -->
-        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
-         <li> <a class="dropdown-item" id="nids" href="/nids">NIDS</a>
-         <li> <a class="dropdown-item" id="nas" href="#">NAS Server</a>
-      </li>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <section class="navbar-brand"><a href="/">GregSoares.com</a>
+  </section>
+
+  <!-- Nav Icons -->
+  <section class="row mx-auto align-content-center" id="topSocBtns" >
+    <a class="nav-item btn col">
+      <i class="fab fa-github-square fa-3x"></i>
+      <a class="nav-link" id="github" target="_blank" href="https://github.com/gregsoares/"
+          rel="noopener"></a>
+      </a>
+      <a class="nav-item btn col">
+        <i class="fab fa-linkedin fa-3x"> </i><a class="nav-link" id="linkedin"
+            target="_blank" href="https://www.linkedin.com/in/greg-soares/" rel="noopener"></a>
+      </a>
+  </section>
+  <!-- expanding links -->
+  <section class="col topMenuLinks mx-auto">
+    <button class="navbar-toggler navbar-expand-md" type="button" data-toggle="collapse" data-target="#topNavMenu"><span class="expand navbar-expand navbar-toggler-icon navbar-expand-md"></span> Menu</button>
+    <!-- collapsable links -->
+    <ul class="navbar-nav navbar-collapse collapse mx-auto" id="topNavMenu">
+      <li class="nav-item"> <a href="/" class="nav-link"><i class="fas fa-home" ></i> Home</li></a>
+      <li class="nav-item"><a href="/" class="nav-link">Web Development Projects</a></li>
+      <li class="nav-item"><a href="/" class="nav-link">Home Network</a></li>
+      <li class="nav-item"><a href="/" class="nav-link">Security Projects</a></li>
+      <li class="nav-item"><a href="/" class="nav-link">Contact Me</a></li>
+      <li class="nav-item"><a href="/" class="nav-link">Resume(s) Download</a></li>
     </ul>
-  </div>
+  
+  </section>
 </nav>
 
-    <script>
-      // IIFE - Grab and set the current page's links to active
-      (()=> {
-        let targetElement = document.getElementById('<%= page %>');
-        let currentAttribute = targetElement.getAttribute('class');
-        targetElement.setAttribute('class', `${currentAttribute} active`);
-      })();
-
-    </script>
+<script>
+  // IIFE - Grab and set the current page's links to active
+  (() => {
+    let targetElement = document.getElementById('<%= page %>');
+    let currentAttribute = targetElement.getAttribute('class');
+    targetElement.setAttribute('class', `${currentAttribute} active`);
+  })();
+</script>

@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const reload = require('reload');
 const app = express();
 let db;
 
@@ -33,5 +34,7 @@ const eveApiRouter = require('./routes/api/eveMarketData');
 app.get('/', indexRouter);
 app.get('/nids', nidsRouter);
 app.use('/evemarketeer', eveApiRouter);
+
+reload(app);
 
 module.exports = app;

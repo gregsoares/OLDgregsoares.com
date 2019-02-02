@@ -8,7 +8,7 @@
     "npm": "6.5.0"
   },
   "scripts": {
-    "server": "nodemon ./bin/www",
+    "server": "nodemon ./bin/www -e ejs,js,css",
     "start": "node ./bin/www"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "validator": "^10.11.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "reload": "^2.4.0"
   }
 }
