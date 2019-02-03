@@ -32,10 +32,10 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
-    "validator": "^10.11.0"
+    "validator": "^10.11.0",
+    "reload": "^2.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "reload": "^2.4.0"
+    "nodemon": "^1.18.9"
   }
 }
