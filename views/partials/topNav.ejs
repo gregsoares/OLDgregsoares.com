@@ -1,40 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark row">
-  <a class="navbar-brand col-xs-4 col-sm-2 col-md-4" href="/">GregSoares.com</a>
+  <!-- BrandName -->
+  <a class="navbar-brand d-inline" href="/">GregSoares.com</a>
 
-  <!-- Nav Icons -->
-  <div class="col-xs-6 mx-auto align-content-center" id="topSocBtns" >
-    <a class="nav-item btn col">
-      <i class="fab fa-github-square fa-3x"></i>
-      <a class="nav-link" id="github" target="_blank" href="https://github.com/gregsoares/"
-          rel="noopener"></a>
-      </a>
-      <a class="nav-item btn col">
-        <i class="fab fa-linkedin fa-3x"> </i><a class="nav-link" id="linkedin"
-            target="_blank" href="https://www.linkedin.com/in/greg-soares/" rel="noopener"></a>
-      </a>
-    </div>
-  <!-- expanding links -->
-  <section class="col topMenuLinks mx-auto">
-    <button class="navbar-toggler navbar-expand-md" type="button" data-toggle="collapse" data-target="#topNavMenu"><span class="expand navbar-expand navbar-toggler-icon navbar-expand-md"></span> Menu</button>
+  <!-- GitHub/LinkedIn Icons -->
+  <div class="col m-0 p-0 text-center" id="topSocBtns">
+    <a class="nav-link d-inline p-0 m-0" id="github" target="_blank" href="https://github.com/gregsoares/"
+      rel="noopener"><i class="fab fa-github-square fa-2x"></i> </a>
+    <a class="nav-link d-inline p-0 ml-sm-2 m-xs-0 my-0" id="linkedin" target="_blank" href="https://www.linkedin.com/in/greg-soares/"
+      rel="noopener"> <i class="fab fa-linkedin fa-2x"> </i></a>
+  </div>
+
+  <!-- Menu Button and collapsable -->
+  <div class="col text-center">
+    <button class="navbar-toggler navbar-expand-md btn btn-small " type="button"
+      data-toggle="collapse" data-target="#topNavMenu"><span class="expand navbar-expand navbar-toggler-icon navbar-expand-md"></span
+        class="mx-auto"> Menu</button>
+
     <!-- collapsable links -->
-    <ul class="navbar-nav navbar-collapse collapse mx-auto" id="topNavMenu">
-      <li class="nav-item"> <a href="/" class="nav-link"><i class="fas fa-home" ></i> Home</li></a>
-      <li class="nav-item"><a href="/" class="nav-link">Web Development Projects</a></li>
-      <li class="nav-item"><a href="/" class="nav-link">Home Network</a></li>
-      <li class="nav-item"><a href="/" class="nav-link">Security Projects</a></li>
-      <li class="nav-item"><a href="/" class="nav-link">Contact Me</a></li>
-      <li class="nav-item"><a href="/" class="nav-link">Resume(s) Download</a></li>
-    </ul>
-  
-  </section>
+    <div class="navbar-item navbar-collapse collapse " id="topNavMenu">
+      <span class="col m-0 p-0 "><a href="/" class="nav-link" id="index"><i class="fas fa-home"></i>
+        Home</a></span>
+        <span class=" col m-0 p-0 "><a href="#" class="nav-link">Web Development Projects</a></span>
+        <span class=" col m-0 p-0 "><a href="#" class="nav-link">Home Network</a></span>
+        <span class=" col m-0 p-0 "><a href="#" class="nav-link">Security Projects</a></span>
+        <span class=" col m-0 p-0 "><a href="#" class="nav-link"> Contact Me</a></span>
+        <span class=" col m-0 p-0 "><a href="#" class="nav-link" id="resume"> Resume(s)
+          Download</a></span>
+    </div>
+
+  </div>
 </nav>
 
-<script>
-  // IIFE - Grab and set the current page's links to active
-  (() => {
+<script async defer>
+  // Grab and set the current page's links to active
+  window.onload = () => {
     let targetElement = document.getElementById('<%= page %>');
     let currentAttribute = targetElement.getAttribute('class');
     targetElement.setAttribute('class', `${currentAttribute} active`);
-  })();
+  };
 </script>
