@@ -1,15 +1,21 @@
 INDEX:
+  ☐ Add a Footer and some basic content @created(19-01-22 16:49)
+  ☐ Index: Add Project Category Tab section  @created(19-02-06 17:07) @created(19-02-06 17:07)
+  ☐ Project Section - Preview(cards style, or pagination Left/Right subsections) of projects
+  ☐ Add Cards in row formation @today @created(19-02-08 10:42)
+  ☐ Assign projects to cards and link to respective page @today @created(19-02-08 10:42)
+  ☐ Add tooltip on card:hover @today @created(19-02-08 10:42)
   ☐ topNav - Add depth and border to buttons
   ☐ jumbotron (top CTA) - Quick and to the point intro and link to resume in pdf and docx
-  ☐ Second Section - Preview(cards style, or pagination Left/Right subsections) of projects
-  ☐ design buttons to display/elaborate on skills/work @created(19-01-17 15:30)
+  ☐ design buttons/badges to display/elaborate on skills/work @created(19-01-17 15:30)
   ☐ testing - set up basic test (routes, api requests) @created(19-01-21 10:57)
-  ☐ Add a Footer and some basic content @created(19-01-22 16:49)
-  ☐ CSS - Set colors and font to major elements (background, text, CTA buttons and links) @created(19-01-22 16:50)
+  ☐ Icons: Add this website's stack through Icons, on hover show tooltip with a basic description. @created(19-02-06 17:06)
 
 BACKLOG: 
-  ☐ Icons: Add this website's stack through Icons, on hover show tooltip with a basic description. @created(19-02-06 17:06)
-  ☐ Index: Add Project Cards/Tab section  @created(19-02-06 17:07) @created(19-02-06 17:07)
+  ☐ CSS - Set colors and font to major elements (background, text, CTA buttons and links) @created(19-01-22 16:50)
+  ☐ Create a "Knowledge Base" page: (post articles, studies and 'nuggets' of information that I've learned lately. @high  @created(19-02-08 10:47)
+  ☐ CSS - Set colors and font to major elements (background, text, CTA buttons and links) @created(19-01-22 16:50)
+
 EveMarketeer:
   ☐ Front-End: add buttons and fields for requests @created(19-01-17 15:27)
   ☐ Front-End: outline locations for basic output of data @created(19-01-17 15:29)
@@ -19,6 +25,11 @@ EveMarketeer:
 
 Research:
   ☐ Testing framework: Supertest+SuperAgent enough?
+  ☐ D3js: JS library to display data visual representation @created(19-02-08 20:12)
+    ☐ Create a EveMarketeer Preview  HTML Component @created(19-02-08 20:18)
+    ☐ implement an example container with fake item data using D3 @created(19-02-08 20:19)
+    ☐ import real eve market data and display in their respective locations @created(19-02-08 20:19)
+    ☐ style the graph and add it to a page @created(19-02-08 20:20)
 
 Done:
   ✔ Add a main CSS file @created(19-01-22 16:50) @done(19-02-07 09:19)
