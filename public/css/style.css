@@ -10,3 +10,20 @@ body {
 #projSection {
   background-color: #324e58;
 }
+
+/* FIXME: Adding text color resets shadow, padding, etc... */
+.card .btn {
+  background-color: #6e9da3;
+  font-variant: small-caps;
+  font-weight: 600;
+  box-shadow: 2px 3px;
+  padding: 6px;
+}
+.card .btn:hover {
+  background-color: #66b4be;
+  font-variant: small-caps;
+  font-weight: 700;
+  box-shadow: 4px 8px;
+  padding: 10px;
+  transition-timing-function: ease-in;
+}
