@@ -2,11 +2,62 @@ body {
   background-color: #2b3b41;
 }
 
-#indexTopJumbotron {
-  /* background-color: #6e9da3; */
+#indexTopJumbotron, #projSection {
   background-color: #324e58;
 }
 
-#projSection {
-  background-color: #324e58;
+/* TopNav */
+nav.navbar a.nav-link {
+  color: rgb(24, 133, 70);
+}
+nav.navbar a.nav-link:hover {
+  box-shadow: .2em .3em .3em green;
+}
+
+/* Card buttons */
+.card .btn {
+  background-color: #6e9da3;
+  font-variant: small-caps;
+  font-weight: 600;
+  box-shadow: 1px 2px 2px black;
+}
+.card .btn:hover {
+  background-color: #66b4be;
+  font-variant: small-caps;
+  font-weight: 700;
+  box-shadow: .3em .3em .2em black;
+}
+ 
+.footer {
+  background-color: rgb(50, 78, 88);
+}
+ /* Footer buttons */
+
+a.btn, footer a.nav-link{
+  color: #2E0F02;
+}
+
+/* TODO: Add responsive typography rules */
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 1.6rem;
+  }
 }
