@@ -1,5 +1,11 @@
+html {
+  font-family: sans-serif, 'Times New Roman', Times, serif;
+  font-size: 100%;
+}
+
 body {
   background-color: #2b3b41;
+  font-size: 100%;
 }
 
 #indexTopJumbotron, #projSection {
@@ -7,12 +13,10 @@ body {
 }
 
 /* TopNav */
-nav.navbar a.nav-link {
-  color: rgb(24, 133, 70);
+/* nav.navbar a.nav-link {
 }
 nav.navbar a.nav-link:hover {
-  box-shadow: .2em .3em .3em green;
-}
+} */
 
 /* Card buttons */
 .card .btn {
@@ -37,27 +41,34 @@ a.btn, footer a.nav-link{
   color: #2E0F02;
 }
 
-/* TODO: Add responsive typography rules */
-@include media-breakpoint-up(sm) {
+@media (max-width: 575px) { /* xs */
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) { /* sm */
   html {
     font-size: 1.2rem;
   }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) { /* md */
   html {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 
-@include media-breakpoint-up(lg) {
+@media (min-width: 992px) { /* lg */
+
   html {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
 
-@include media-breakpoint-up(xl) {
+@media (min-width: 1200px) { /* xl */
+
   html {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 }
