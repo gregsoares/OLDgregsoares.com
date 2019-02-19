@@ -41,6 +41,25 @@ a.btn, footer a.nav-link{
   color: #2E0F02;
 }
 
+/* Back to top icon */
+.backToTopIcon {
+  /* position: relative; */
+}
+
+.backToTopIcon .backToTop {
+  position: sticky;
+  width: 2em;
+  left: 90%;
+  bottom: 1%;
+  background-color: rgb(52, 105, 129);
+  color: black;
+  z-index: 9;
+  box-shadow: -1px -1px 1px black; 
+}
+ a.backToTopLink {
+   color: black;
+ }
+
 /* Responsive Typography - Better accessibility */
 @media (max-width: 575px) { /* xs */
   html {
