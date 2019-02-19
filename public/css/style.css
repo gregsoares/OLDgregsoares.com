@@ -35,12 +35,13 @@ nav.navbar a.nav-link:hover {
 .footer {
   background-color: rgb(50, 78, 88);
 }
- /* Footer buttons */
 
+ /* Footer buttons */
 a.btn, footer a.nav-link{
   color: #2E0F02;
 }
 
+/* Responsive Typography - Better accessibility */
 @media (max-width: 575px) { /* xs */
   html {
     font-size: 1rem;
@@ -55,20 +56,20 @@ a.btn, footer a.nav-link{
 
 @media (min-width: 768px) { /* md */
   html {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 }
 
 @media (min-width: 992px) { /* lg */
 
   html {
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
 }
 
 @media (min-width: 1200px) { /* xl */
 
   html {
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
 }
