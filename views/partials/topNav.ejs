@@ -1,46 +1,56 @@
-<!-- FIXME: alignment on <lg size screens-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark row " id="topNav">
+<hr class="p-0 mt-0 mb-2">
+<nav class="navbar navbar-nav navbar-expand-lg navbar-dark bg-dark" id="topNav"
+  role="navigation">
 
   <!-- BrandName -->
-  <a class="navbar-brand col-xs col-sm-4 col" href="/">GregSoares.com</a>
+  <a class="navbar-brand col-xs-6 col-sm-8 col-md-4 col-lg-3" href="/">GregSoares.com</a>
 
   <!-- GitHub/LinkedIn Icons -->
-  <div class="col-xs col-sm-2 col mx-auto p-0 my-2 text-center" id="topSocBtns">
-    <a class="nav-link p-0 m-0" id="github" target="_blank" href="https://github.com/gregsoares/"
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 mx-auto p-0 my-2 text-center"
+    id="topSocBtns">
+    <a class="nav-link p-0 m-0 d-inline" id="github" target="_blank" href="https://github.com/gregsoares/"
       rel="noopener"><i class="fab fa-github-square fa-2x" alt="GitHub icon"></i></a>
-    <a class="nav-link p-0 my-0" id="linkedin" target="_blank" href="https://www.linkedin.com/in/greg-soares/"
+    <a class="nav-link p-0 my-0 d-inline" id="linkedin" target="_blank" href="https://www.linkedin.com/in/greg-soares/"
       rel="noopener"> <i class="fab fa-linkedin fa-2x" alt="LinkedIn icon">
       </i></a>
   </div>
 
-  <!-- FIXME: Display buttons beside navbar-brand on small viewports -->
-  <!-- Menu Button and collapsible -->
-  <div class="col-xs col-sm-3 col text-center">
+  <!-- Menu Button -->
+  <div class="col-xs-6 col-sm-12 col-md-4 col-lg-7">
     <button class="navbar-toggler navbar-expand-md btn btn-small mx-auto" type="button"
       data-toggle="collapse" data-target="#topNavMenu"><span class="expand navbar-expand navbar-toggler-icon navbar-expand-md"></span>
       Menu</button>
 
-    <!-- TODO: add: Projects Dropdown(show on hover) -->
     <!-- collapsible links -->
     <div class="navbar-item navbar-collapse collapse " id="topNavMenu">
-      <span class="col my-0 mx-auto p-0 "><a href="/" class="nav-link" id="index"><i
-            class="fas fa-home"></i>
-          Home</a></span>
-      <span class=" col my-0 mx-auto p-0 "><a href="#" class="nav-link">Web
-          Development Projects</a></span>
-      <span class=" col my-0 mx-auto p-0 "><a href="#" class="nav-link">Home
-          Network</a></span>
-      <span class=" col my-0 mx-auto p-0 "><a href="#" class="nav-link">Security
-          Projects</a></span>
-      <span class=" col my-0 mx-auto p-0 "><a href="#" class="nav-link">
-          Contact Me</a></span>
-      <span class=" col my-0 mx-auto p-0 "><a href="#" class="nav-link" id="resume">
-          Resume(s)
-          Download</a></span>
+      <ul class="navbar-nav">
+        <li class="nav-item mx-0 p-0"><a href="/" class="nav-link" id="index"><i
+              class="fas fa-home"></i>
+            Home</a>
+        </li>
+
+        <!-- Projects Dropdown -->
+        <li class="nav-item dropdown" id="projects">
+          <a class="nav-link dropdown-toggle" href="#" id="topMenuDropdown"
+            data-toggle="dropdown" > Projects
+          </a>
+            <div class="dropdown-menu bg-secondary" aria-labelledby="topMenuDropdown">
+              <!-- TODO: add WebDev header here -->
+              <a href="/projects/gregsoares" class="dropdown-item">GregSoares.com</a>
+              <a href="/projects/esucso" class="dropdown-item">ESU CSO</a>
+              <!-- TODO: add divider and Networking header here -->
+              <a href="/projects/proxy" class="dropdown-item">Proxy</a>
+              <a href="/projects/NIDS" class="dropdown-item">NIDS</a>
+              <a href="/projects/logServer" class="dropdown-item">Log Server</a>
+            </div>
+        </li>
+        <li class="nav-item"><a href="/aboutme" class="nav-link" id="aboutMe">About
+            Me</a></li>
+      </ul>
     </div>
   </div>
 </nav>
-
+<hr class="p-0 mt-0 mb-2">
 <script async defer>
   // Grab and set the current page's links to active
   window.onload = () => {
