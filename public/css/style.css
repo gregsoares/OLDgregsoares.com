@@ -1,3 +1,7 @@
+*, ::before, ::after {
+  transition: all ease-in-out 250ms;
+}
+
 html {
   font-family: sans-serif, 'Times New Roman', Times, serif;
   font-size: 100%;
@@ -8,7 +12,8 @@ body {
   font-size: 100%;
 }
 
-#indexTopJumbotron, #projSection {
+#indexTopJumbotron,
+#projSection {
   background-color: #324e58;
 }
 
@@ -25,26 +30,25 @@ nav.navbar a.nav-link:hover {
   font-weight: 600;
   box-shadow: 1px 2px 2px black;
 }
+
 .card .btn:hover {
   background-color: #66b4be;
   font-variant: small-caps;
   font-weight: 700;
   box-shadow: .3em .3em .2em black;
 }
- 
+
 .footer {
   background-color: rgb(50, 78, 88);
 }
 
- /* Footer buttons */
-a.btn, footer a.nav-link{
+/* Footer buttons */
+a.btn,
+footer a.nav-link {
   color: #2E0F02;
 }
 
 /* Back to top icon */
-.backToTopIcon {
-  /* position: relative; */
-}
 
 .backToTopIcon .backToTop {
   position: sticky;
@@ -54,41 +58,36 @@ a.btn, footer a.nav-link{
   background-color: rgb(52, 105, 129);
   color: black;
   z-index: 9;
-  box-shadow: -1px -1px 1px black; 
+  box-shadow: -1px -1px 1px black;
 }
- a.backToTopLink {
-   color: black;
- }
 
 /* Responsive Typography - Better accessibility */
-@media (max-width: 575px) { /* xs */
-  html {
-    font-size: 1rem;
-  }
+@media (max-width: 575px) {
+
+  /* xs */
+  html {}
 }
 
-@media (min-width: 576px) { /* sm */
-  html {
-    font-size: 1.2rem;
-  }
+@media (min-width: 576px) {
+
+  /* sm */
+  html {}
 }
 
-@media (min-width: 768px) { /* md */
-  html {
-    font-size: 1.4rem;
-  }
+@media (min-width: 768px) {
+
+  /* md */
+  html {}
 }
 
-@media (min-width: 992px) { /* lg */
+@media (min-width: 992px) {
+  /* lg */
 
-  html {
-    font-size: 1.6rem;
-  }
+  html {}
 }
 
-@media (min-width: 1200px) { /* xl */
+@media (min-width: 1200px) {
+  /* xl */
 
-  html {
-    font-size: 1.6rem;
-  }
+  html {}
 }
