@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   transition: all ease-in-out 250ms;
 }
 
@@ -9,7 +11,7 @@ html {
 
 body {
   background-color: #2b3b41;
-  font-size: 100%;
+  font-size: 90%;
 }
 
 #indexTopJumbotron,
@@ -23,6 +25,21 @@ body {
 nav.navbar a.nav-link:hover {
 } */
 
+/* Cards */
+.card {
+  box-shadow: .3em .3em 1.2em black;
+}
+
+.card-img-top {
+  max-width: 25vw;
+  box-shadow: -.2em -.2em .1em black;
+  align-self: center;
+}
+.card-img-top:hover {
+  box-shadow: .3em .3em .1em black;
+  padding: 0;
+  max-width: 100%;
+}
 /* Card buttons */
 .card .btn {
   background-color: #6e9da3;
@@ -35,7 +52,7 @@ nav.navbar a.nav-link:hover {
   background-color: #66b4be;
   font-variant: small-caps;
   font-weight: 700;
-  box-shadow: .3em .3em .2em black;
+  box-shadow: 0.3em 0.3em 0.2em black;
 }
 
 .footer {
@@ -45,7 +62,8 @@ nav.navbar a.nav-link:hover {
 /* Footer buttons */
 a.btn,
 footer a.nav-link {
-  color: #2E0F02;
+  color: #2e0f02;
+  background-color: rgb(102, 180, 190);
 }
 
 /* Back to top icon */
@@ -63,31 +81,41 @@ footer a.nav-link {
 
 /* Responsive Typography - Better accessibility */
 @media (max-width: 575px) {
-
   /* xs */
-  html {}
+  html {
+  }
+ .card-img-top {
+  max-width: 75vw;
+  padding: 0em 1em 0em 1em;
+  align-self: center;
+}
 }
 
 @media (min-width: 576px) {
-
   /* sm */
-  html {}
-}
+  html {
+  }
+ .card-img-top {
+  max-width: 75vw;
+  align-self: center;
+}}
 
 @media (min-width: 768px) {
-
   /* md */
-  html {}
+  html {
+  }
 }
 
 @media (min-width: 992px) {
   /* lg */
 
-  html {}
+  html {
+  }
 }
 
 @media (min-width: 1200px) {
   /* xl */
 
-  html {}
+  html {
+  }
 }

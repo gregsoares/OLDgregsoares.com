@@ -1,43 +1,45 @@
 <!-- Projects listed in tabs/pills -->
 
-<div class="container-fluid card-group justify-content-center w-100 p-0 m-0 rounded" id="projSection">
-  <!-- Cards Start Here -->
-  <span class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 mx-auto border border-dark shadow-lg border-4 rounded">
-    <div class="card row">
-      <img src="https://picsum.photos/200/?gravity=east" alt="Img PlaceHolder" class="card-img-top img-fluid  rounded">
-      <div class="card-body col">
-        <h5 class="card-title">Card Title</h5>
-        <p class="card-text "  data-toggle="tooltip" title="Click the Details button to load this project's page " data-placement="top">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nunc et interdum turpis, id porta justo. Pellentesque pharetra
-          aliquam nulla a venenatis. Praesent dictum.</p>
-        <a href="#" class="btn btn-sm border border-dark ">Details</a>
-      </div>
-    </div>
-  </span>
-  <!-- Card #2 -->
-  <span class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 mx-auto border border-dark box-shadow shadow-lg border-4">
-    <div class="card row">
-      <img src="https://picsum.photos/200/?gravity=west" alt="Img PlaceHolder" class="card-img-top img-fluid ">
-      <div class="card-body col">
-        <h5 class="card-title">Card Title</h5>
-          <p class="card-text "  data-toggle="tooltip" title="Click the Details button to load this project's page " data-placement="top">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nunc et interdum turpis, id porta justo. Pellentesque pharetra
-          aliquam nulla a venenatis. Praesent dictum.</p>
-        <a href="#" class="btn btn-sm border border-dark ">Details</a>
-      </div>
-    </div>
-  </span>
+<!-- Cards container -->
+<div class="container-fluid" id="projSection">
+  <div class="row justify-content-around card-group ">
+    <!-- Card #1 -->
+    <span class="col-xs-9 col-sm-5 col-md border-dark box-shadow h-100 my-3 mx-2 card">
+      <img src="https://picsum.photos/200/?gravity=east" alt="Img PlaceHolder"
+          class="card-img-top img-fluid p-0 mt-2">
+        <div class="card-body pt-1 pb-3 px-0 col">
+          <h5 class="card-title">Zeek(Bro) IDS</h5>
+          <p class="card-text " data-toggle="tooltip" title="Click the Details button to load this project's page "
+            data-placement="top">Analyzes all network traffic in depth,
+            recognizing and reporting suspicious activities.</p>
+          <a href="#" class="btn btn-sm border border-dark ">Details</a>
+        </div>
+    </span>
+    <!-- Card #2 -->
+    <span class="col-xs-9 col-sm-5 col-md border-dark box-shadow h-100 my-3 mx-2  card">
+      <img src="https://picsum.photos/200/?gravity=west" alt="Img PlaceHolder"
+          class="card-img-top img-fluid p-0 mt-2">
+        <div class="card-body pt-1 pb-3 px-0 col">
+          <h5 class="card-title">Central Log Server</h5>
+          <p class="card-text " data-toggle="tooltip" title="Click the Details button to load this project's page "
+            data-placement="top">Syslog-ng server daemon receives logs from
+            remote hosts. Splunk analyzes and parses the logs by Hosts and
+            pertinent information. </p>
+          <a href="#" class="btn btn-sm border border-dark ">Details</a>
+        </div>
+    </span>
 
-  <span class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 mx-auto border border-dark box-shadow shadow-lg border-4">
-    <div class="card row">
-      <img src="https://picsum.photos/200/?random" alt="Img PlaceHolder" class="card-img-top img-fluid ">
-      <div class="card-body col">
-        <h5 class="card-title">Card Title</h5>
-        <p class="card-text "  data-toggle="tooltip" title="Click the Details button to load this project's page " data-placement="top">Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nunc et interdum turpis, id porta justo. Pellentesque pharetra
-          aliquam nulla a venenatis. Praesent dictum.</p>
-        <a href="#" class="btn btn-sm border border-dark ">Details</a>
-      </div>
-    </div>
-  </span>
+    <span class="col-xs-9 col-sm-5 col-md border-dark box-shadow h-100 my-3 mx-2 card">
+      <img src="https://picsum.photos/200/?random" alt="Img PlaceHolder"
+          class="card-img-top img-fluid p-0 mt-2">
+        <div class="card-body pt-1 pb-3 px-0 col">
+          <h5 class="card-title">PiHole - Proxy+AdBlocker</h5>
+          <p class="card-text " data-toggle="tooltip" title="Click the Details button to load this project's page "
+            data-placement="top">RaspberryPi 3B running PiHole as a network
+            proxy. PiHole then detects known advertisement DNS and responds
+            with a fake DNS.</p>
+          <a href="#" class="btn btn-sm border border-dark ">Details</a>
+        </div>
+    </span>
+  </div>
 </div>
