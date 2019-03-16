@@ -30,9 +30,6 @@ nav.navbar a.nav-link:hover {
 } */
 
 /* Cards */
-.card {
-  box-shadow: .3em .3em 1.2em black;
-}
 
 .card-img-top {
   max-width: 25vw;
@@ -88,21 +85,26 @@ footer a.nav-link {
   /* xs */
   html {
   }
- .card-img-top {
-  max-width: 75vw;
-  padding: 0em 1em 0em 1em;
-  align-self: center;
-}
+  .card {
+    align-self: center;
+    max-width: 80vw;
+  }
+  .card-img-top {
+    max-width: 75vw;
+    padding: 0em 1em 0em 1em;
+    align-self: center;
+  }
 }
 
 @media (min-width: 576px) {
   /* sm */
   html {
   }
- .card-img-top {
-  max-width: 75vw;
-  align-self: center;
-}}
+  .card {
+    align-self: center;
+    max-width: 80vw;
+  }
+}
 
 @media (min-width: 768px) {
   /* md */
@@ -114,6 +116,10 @@ footer a.nav-link {
   /* lg */
 
   html {
+  }
+  .card {
+    box-shadow: .3em .3em 1.2em black;
+    max-width: 22vw;
   }
 }
 
