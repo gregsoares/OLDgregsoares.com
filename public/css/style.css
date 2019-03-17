@@ -15,7 +15,8 @@ body {
 }
 
 nav div ul li.nav-item {
-  margin: 0em 2em;
+  margin: 0em 1.8em;
+  font-weight: 600;
 }
 
 #indexTopJumbotron,
@@ -30,26 +31,38 @@ nav.navbar a.nav-link:hover {
 } */
 
 /* Cards */
+.card {
+  background-color: #6e9da3;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 1rem;
+  overflow: hidden;
+  max-height: 30%;
+
+}
+
+.card-body {
+  padding: .7em;
+  display: block;
+}
 
 .card-img-top {
-  max-width: 25vw;
+  max-width: 50%;
   box-shadow: -.2em -.2em .1em black;
-  align-self: center;
 }
 .card-img-top:hover {
   box-shadow: .3em .3em .1em black;
-  padding: 0;
-  max-width: 100%;
 }
+
 /* Card buttons */
-.card .btn {
+.card .btn, .act-btn {
   background-color: #6e9da3;
   font-variant: small-caps;
   font-weight: 600;
   box-shadow: 1px 2px 2px black;
 }
 
-.card .btn:hover {
+.act-btn:hover {
   background-color: #66b4be;
   font-variant: small-caps;
   font-weight: 700;
@@ -61,8 +74,7 @@ nav.navbar a.nav-link:hover {
 }
 
 /* Footer buttons */
-a.btn,
-footer a.nav-link {
+a.btn {
   color: #2e0f02;
   background-color: rgb(102, 180, 190);
 }
@@ -85,7 +97,7 @@ footer a.nav-link {
   /* xs */
   html {
   }
-  .card {
+  /* .card {
     align-self: center;
     max-width: 80vw;
   }
@@ -93,17 +105,17 @@ footer a.nav-link {
     max-width: 75vw;
     padding: 0em 1em 0em 1em;
     align-self: center;
-  }
+  } */
 }
 
 @media (min-width: 576px) {
   /* sm */
   html {
   }
-  .card {
+  /* .card {
     align-self: center;
     max-width: 80vw;
-  }
+  } */
 }
 
 @media (min-width: 768px) {
@@ -117,10 +129,10 @@ footer a.nav-link {
 
   html {
   }
-  .card {
+  /* .card {
     box-shadow: .3em .3em 1.2em black;
     max-width: 22vw;
-  }
+  } */
 }
 
 @media (min-width: 1200px) {
