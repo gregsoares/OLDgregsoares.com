@@ -1,0 +1,25 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "description": "stagingRev",
+  "env": {
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "gregsoares.com",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
