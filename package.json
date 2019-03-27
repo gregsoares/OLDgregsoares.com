@@ -9,6 +9,8 @@
   },
   "scripts": {
     "server": "nodemon ./bin/www -e ejs,js,css",
+    "debug":"nodemon --inspect ./bin/www -e ejs,js,css",
+    "testDebug":"nodemon --exec \" mocha ***/*.txt.js \"",
     "start": "node ./bin/www"
   },
   "repository": {

@@ -4,6 +4,10 @@
   transition: all ease-in-out 250ms;
 }
 
+/* clear transition on top Social link buttons */
+#topSocBtns a svg path {
+transition: all ease-in-out 0ms;
+}
 html {
   font-family: sans-serif, 'Times New Roman', Times, serif;
   font-size: 100%;
@@ -12,11 +16,15 @@ html {
 body {
   background-color: #2b3b41;
   font-size: 90%;
+  color: #cea944;
 }
 
 nav div ul li.nav-item {
   margin: 0em 1.8em;
   font-weight: 600;
+}
+.navbar-nav .nav-item .nav-link {
+  color: #cea944;
 }
 
 #indexTopJumbotron,
@@ -44,10 +52,11 @@ nav.navbar a.nav-link:hover {
 .card-body {
   padding: .7em;
   display: block;
+  color: black;
 }
 
 .card-img-top {
-  max-width: 50%;
+  max-width: 60%;
   box-shadow: -.2em -.2em .1em black;
 }
 .card-img-top:hover {
@@ -56,14 +65,17 @@ nav.navbar a.nav-link:hover {
 
 /* Card buttons */
 .card .btn, .act-btn {
-  background-color: #6e9da3;
+  background-color: rgb(52, 105, 129);
   font-variant: small-caps;
   font-weight: 600;
   box-shadow: 1px 2px 2px black;
 }
 
+.act-btn {
+  color: #cea944;
+}
 .act-btn:hover {
-  background-color: #66b4be;
+  background-color: rgb(66, 138, 148);
   font-variant: small-caps;
   font-weight: 700;
   box-shadow: 0.3em 0.3em 0.2em black;
@@ -75,8 +87,8 @@ nav.navbar a.nav-link:hover {
 
 /* Footer buttons */
 a.btn {
-  color: #2e0f02;
-  background-color: rgb(102, 180, 190);
+  color: #cea944;
+  background-color: rgb(52, 105, 129);
 }
 
 /* Back to top icon */
@@ -87,7 +99,7 @@ a.btn {
   left: 90%;
   bottom: 1%;
   background-color: rgb(52, 105, 129);
-  color: black;
+  color: #e2c36f;
   z-index: 9;
   box-shadow: -1px -1px 1px black;
 }
