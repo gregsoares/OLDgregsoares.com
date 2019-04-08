@@ -28,14 +28,14 @@ mongoose
 //Import Routes
 const indexRouter = require('./routes/indexRouter');
 const nidsRouter = require('./routes/nidsRouter');
-const eveApiRouter = require('./routes/api/eveMarketData');
 const projectsRouter = require('./routes/projectsRouter');
+const errorRouter = require('./routes/error');
 
 //Route Setup
 app.get('/', indexRouter);
 app.get('/nids', nidsRouter);
-app.use('/evemarketeer', eveApiRouter);
 app.use('/projects', projectsRouter);
+app.get('/error', errorRouter);
 
 reload(app);
 

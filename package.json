@@ -9,8 +9,8 @@
   },
   "scripts": {
     "server": "nodemon ./bin/www -e ejs,js,css",
-    "debug":"nodemon --inspect ./bin/www -e ejs,js,css",
-    "testDebug":"nodemon --exec \" mocha ***/*.txt.js \"",
+    "debug": "nodemon --inspect ./bin/www -e ejs,js,css",
+    "testDebug": "nodemon --exec \" mocha ***/*.txt.js \"",
     "start": "node ./bin/www"
   },
   "repository": {
@@ -34,8 +34,8 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
-    "validator": "^10.11.0",
-    "reload": "^2.4.0"
+    "reload": "^2.4.0",
+    "validator": "^10.11.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
