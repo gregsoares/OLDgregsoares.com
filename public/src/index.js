@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import App from './App';
 
-ReactDOM.render(<div> <a1> Rendering React JSX ! </a1></div>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
