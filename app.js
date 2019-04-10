@@ -6,7 +6,7 @@ const app = express();
 let db;
 
 //App Setup
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
