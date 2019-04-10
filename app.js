@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-// const reload = require('reload');
 const app = express();
 let db;
 
@@ -30,12 +29,6 @@ const nidsRouter = require('./routes/nidsRouter');
 const projectsRouter = require('./routes/projectsRouter');
 const errorRouter = require('./routes/error');
 
-//Route Setup
-app.get('/', indexRouter);
-app.get('/nids', nidsRouter);
-app.use('/projects', projectsRouter);
-app.get('/error', errorRouter);
-
-// reload(app);
+//Routes Setup
 
 module.exports = app;
