@@ -8,9 +8,12 @@
     "npm": "6.5.0"
   },
   "scripts": {
-    "server": "nodemon ./bin/www -e ejs,js,css",
-    "debug": "nodemon --inspect ./bin/www -e ejs,js,css",
-    "testDebug": "nodemon --exec \" mocha ***/*.txt.js \"",
+    "test": "mocha **/*.test.js --recursive || true",
+    "clientTest": "npm run test --prefix public",
+    "server": "npx nodemon ./bin/www.js",
+    "client": "npm run start --prefix public",
+    "dev": "concurrently \" npm run server\" \" npm run client \" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public",
     "start": "node ./bin/www"
   },
   "repository": {
@@ -27,6 +30,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
