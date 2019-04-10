@@ -8,12 +8,11 @@
     "npm": "6.5.0"
   },
   "scripts": {
-    "test": "mocha **/*.test.js --recursive || true",
-    "clientTest": "npm run test --prefix public",
+    "clientTest": "npm run test --prefix client",
     "server": "npx nodemon ./bin/www.js",
-    "client": "npm run start --prefix public",
+    "client": "npm run start --prefix client",
     "dev": "concurrently \" npm run server\" \" npm run client \" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "start": "node ./bin/www"
   },
   "repository": {
