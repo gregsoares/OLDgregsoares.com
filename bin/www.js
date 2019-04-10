@@ -1,5 +1,7 @@
 //Server file
+const express = require('express');
 const app = require('../app');
+
 const port = process.env.PORT || 3001;
 
 // If in production, serve static file and all subsequent files from prod. env.
