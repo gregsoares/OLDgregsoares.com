@@ -9,27 +9,6 @@ export default class IndexLayout extends React.Component {
     return (
       <div id="page-wrapper">
 
-      <header id="header" className="alt">
-          <h1><a href="/">Solid State</a></h1>
-          <nav>
-            <a href="#menu">Menu</a>
-          </nav>
-        </header>
-
-        <nav id="menu">
-          <div className="inner">
-            <h2>Menu</h2>
-            <ul className="links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="generic.html">Generic</a></li>
-              <li><a href="elements.html">Elements</a></li>
-              <li><a href="/">Log In</a></li>
-              <li><a href="/">Sign Up</a></li>
-            </ul>
-            <a href="/" className="close">Close</a>
-          </div>
-        </nav>
-
         <section id="banner">
           <div className="inner">
             <div className="logo"><span className="icon fa-diamond"></span></div>

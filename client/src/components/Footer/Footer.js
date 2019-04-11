@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default () => {
   return(
@@ -9,15 +9,15 @@ export default () => {
             <form method="post" action="">
               <div className="fields">
                 <div className="field">
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <input type="text" name="name" id="name" />
                 </div>
                 <div className="field">
-                  <label for="email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input type="email" name="email" id="email" />
                 </div>
                 <div className="field">
-                  <label for="message">Message</label>
+                  <label htmlFor="message">Message</label>
                   <textarea name="message" id="message" rows="4"></textarea>
                 </div>
               </div>
