@@ -1,6 +1,9 @@
 #VsCode Debugging files
 .vscode
 
+#Theme files
+/client/theme/
+
 # Logs
 logs
 *.log
