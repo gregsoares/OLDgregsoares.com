@@ -14,3 +14,6 @@
   * server: ```npx nodemon ./bin/www.js``` -  Nodemon executes the server file with auto refresh on change
   * dev: ```concurrently \" npm run server\" \" npm run client \" ``` - Attaches a debugger to the process
   * client: ```npm run start --prefix client``` - Executes client side only
+  
+  
+  **[GregSoares.com](https://gregsoares.com)**
