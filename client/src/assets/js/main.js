@@ -12,7 +12,7 @@
 		$banner = $('#banner');
 
 	// Breakpoints.
-		breakpoints({
+		const breakpoints = ({
 			xlarge:	'(max-width: 1680px)',
 			large:	'(max-width: 1280px)',
 			medium:	'(max-width: 980px)',
@@ -142,4 +142,5 @@
 
 			});
 
+// FIXME: jQuery not defined in assets/js/main.js
 })(jQuery);

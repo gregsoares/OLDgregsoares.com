@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Index from './components/Layout/IndexLayout/IndexLayout'
-require ('./assets/css/main.css');
+import Index from './components/Layout/IndexLayout/IndexLayout';
 
 
 class App extends Component {

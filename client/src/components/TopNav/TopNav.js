@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO: add reactstrap and modify TopNav to Sticky Top
+
 export default () => {
   return(
     <span className="TopNav">
