@@ -2,24 +2,19 @@
   "name": "gregsoares.com",
   "version": "1.0.0",
   "description": "",
-  "main": "./bin/www",
-  "engines": {
-    "node": "10.15.0",
-    "npm": "6.5.0"
-  },
+  "main": "./bin/www.js",
   "scripts": {
     "clientTest": "npm run test --prefix client",
     "server": "npx nodemon ./bin/www.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \" npm run server\" \" npm run client \" ",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gregsoares/gregsoares.com.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -27,18 +22,13 @@
   },
   "homepage": "https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
-    "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.5",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "path": "^0.12.7",
-    "validator": "^10.11.0"
+    "mongoose": "^5.5.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.11"
   }
 }

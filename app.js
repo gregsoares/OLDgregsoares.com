@@ -6,9 +6,11 @@ const app = express();
 let db;
 
 //App Setup
-app.use(express.static(path.join(__dirname, 'client')));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Import DB keys and config
 // const db = require('./config/keys').devURI;
@@ -23,11 +25,15 @@ mongoose
   .catch(err => console.log(`DB Connection error: \n${err}`));
 
 //Import Routes
-const indexRouter = require('./routes/indexRouter');
-const nidsRouter = require('./routes/nidsRouter');
-const projectsRouter = require('./routes/projectsRouter');
-const errorRouter = require('./routes/error');
+// const indexRouter = require('./routes/indexRouter');
+// const nidsRouter = require('./routes/nidsRouter');
+// const projectsRouter = require('./routes/projectsRouter');
+// const errorRouter = require('./routes/error');
 
-//Routes Setup
+//Route Setup
+// app.get('/', indexRouter);
+// app.get('/nids', nidsRouter);
+// app.use('/projects', projectsRouter);
+// app.get('/error', errorRouter);
 
 module.exports = app;
