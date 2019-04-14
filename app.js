@@ -1,39 +1,39 @@
 const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
 let db;
 
-//App Setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
-//Import DB keys and config
-// const db = require('./config/keys').devURI;
-if(process.env.USER == 'yggdrasil') {
-  db = require('./config/keys').devURI;
-} else { 
-  db = process.env.MONGODB_URI;}
+// Importing DB Config
+// const db = require('./config/keys').prodURI;
+  if(process.env.PORT){
+   db = process.env.MONGODB_URI; 
+  } else {
+   db = require('./config/keys').devURI;
+  }
 
+// Connecting to MongoDB
 mongoose
-  .connect(db, {useNewUrlParser: true })
-  .then(() => console.log('MongoDB Connected.'))
-  .catch(err => console.log(`DB Connection error: \n${err}`));
+  .connect(db, { useNewUrlParser: true })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log('\nMongoDB ERROR - Connection acting up!\n'));
 
-//Import Routes
-// const indexRouter = require('./routes/indexRouter');
-// const nidsRouter = require('./routes/nidsRouter');
-// const projectsRouter = require('./routes/projectsRouter');
-// const errorRouter = require('./routes/error');
+// Importing Routes
+// const usersRouter = require('./routes/api/users');
+// const profileRouter = require('./routes/api/profile');
+// const postsRouter = require('./routes/api/posts');
+// const indexRouter = require('./routes/index');
+// const ercalcRouter = require('./routes/api/ercalc');
 
-//Route Setup
-// app.get('/', indexRouter);
-// app.get('/nids', nidsRouter);
-// app.use('/projects', projectsRouter);
-// app.get('/error', errorRouter);
+// app.use('/api/users', usersRouter);
+// app.use('/api/profile', profileRouter);
+// app.use('/api/posts', postsRouter);
+// app.use('/api/ercalc/', ercalcRouter);
+// app.use('/', indexRouter);
 
 module.exports = app;
