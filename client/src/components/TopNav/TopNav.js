@@ -16,9 +16,24 @@ class TopNav extends Component {
     });
   }
 
+  componentDidMount(){
+      let mainNavPos = document.getElementById('mainNav').offsetTop;
+      console.log('mainNavPos: ' + mainNavPos );
+      window.addEventListener('scroll', (event) => {
+         if(window.scrollY > mainNavPos){
+             document.getElementById('mainNav').className='navbar navbar-expand-lg bg-dark fixed-top navbar-shrink';
+         }else{
+             document.getElementById('mainNav').className='navbar navbar-expand-lg bg-dark fixed-top';
+         }
+      });
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll');
+  }
+
   render() {
     return (
-      <Navbar expand="lg" color="dark" fixed="top" id="mainNav">
+      <Navbar className="" expand="lg" color="dark" fixed="top" id="mainNav">
         <NavbarBrand href="#page-top" className="js-scroll-trigger" >GregSoares</NavbarBrand>
           <NavbarToggler onClick={this.toggle} > Menu <i className="fas fa-bars"></i> </NavbarToggler>
           <Collapse isOpen={this.state.isOpen} id="navbarResponsive" navbar>
