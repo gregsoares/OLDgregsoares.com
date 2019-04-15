@@ -1,5 +1,5 @@
 # Full Stack JavaScript - MERN
-    **MERN** - **M**ongoDB **E**xpressJs **R**eact **N**odeJs 
+   **MERN** - **M**ongoDB **E**xpressJs **R**eact **N**odeJs 
 
 ## Purpose:
   Showcase past projects, present endeavors and future challenges.
