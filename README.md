@@ -1,16 +1,28 @@
-#Full MERN Stack Starter Template (Heroku Deployment)
+# Full Stack JavaScript - MERN
+    **MERN** - **M**ongoDB **E**xpressJs **R**eact **N**odeJs 
 
-#Installed Dependencies:
-   MERN - MongoDB ExpressJs React NodeJs
-    - Client Side:
-         @fortawesome/fontawesome - Fonts Icons and Brands
-         Bootstrap
-         http-proxy-middleware
-         react-router-dom
-         reactstrap
-    - Server Side:
-         body-parser
-         concurrently
-         express
-         mongoose
-         path
+## Purpose:
+  Showcase past projects, present endeavors and future challenges.
+  
+[GregSoares.com](https://gregsoares.com)
+
+## NPM Commands:
+
+ * clientTest - Continuously runs and watches client-side tests
+ * server - Initiates the Back-End server only
+ * dev - Initiates both Front and Back end servers concurrently
+
+## Screenshots: (Coming Soon)
+
+### Installed Dependencies: 
+    
+- ### Client Side: 
+ * @fortawesome/fontawesome - Fonts Icons and Brands Bootstrap 
+ * http-proxy-middleware 
+ * react-router-dom reactstrap 
+- ### Server Side: 
+ * body-parser 
+ * concurrently 
+ * express 
+ * mongoose 
+ * path
