@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TopHeader from './TopHeader';
+import TopThree from './TopThree';
 
-it('renders without crashing', () => {
+it('renders TopThree with no errors', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<TopHeader />, div);
+  ReactDOM.render(<TopThree />, div);
   ReactDOM.unmountComponentAtNode(div);
+
+
 });

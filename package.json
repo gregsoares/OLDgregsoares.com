@@ -1,7 +1,7 @@
 {
   "name": "gregsoares.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website",
   "main": "./bin/www.js",
   "scripts": {
     "clientTest": "npm run test --prefix client",

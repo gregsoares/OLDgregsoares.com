@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import TopNav from './TopNav';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<TopNav />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Renders TopNav without errors', () => {
+  it('renders TopNav without crashing', () => {
+    const wrapper = shallow(<TopNav />);
+    expect(wrapper);
+  });
+  
 });
