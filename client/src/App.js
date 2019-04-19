@@ -18,10 +18,14 @@ class App extends Component {
       <div className="App">
         <TopNav />
 
+{/* FIXME: pass in cards props to display different cards */}
+      <ContactCard 
+        cards={ 'smo' }
+      />
         <TopHeader />
 
+        {/* topOne.icon, .title, .text */}
         <TopThree
-        //topOne.icon, .title, .text
         
         
         

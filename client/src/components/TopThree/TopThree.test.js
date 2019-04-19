@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import TopThree from './TopThree';
 
-it('renders TopThree with no errors', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<TopThree />, div);
-  ReactDOM.unmountComponentAtNode(div);
-
-
+describe('Renders TopThree without errors', () => {
+  it('renders TopThree with no props', () => {
+    const wrapper = shallow(<TopThree />);
+    expect(wrapper);
+  });
 });

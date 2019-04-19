@@ -17,18 +17,18 @@ class TopNav extends Component {
   }
 
   componentDidMount(){
-      let mainNavPos = document.getElementById('mainNav').offsetTop;
-      console.log('mainNavPos: ' + mainNavPos );
       window.addEventListener('scroll', (event) => {
-         if(window.scrollY > mainNavPos){
+         if(window.scrollY > 100){
              document.getElementById('mainNav').className='navbar navbar-expand-lg bg-dark fixed-top navbar-shrink';
          }else{
              document.getElementById('mainNav').className='navbar navbar-expand-lg bg-dark fixed-top';
          }
       });
   }
+
+  // FIXME: Fix removeEventListener
   componentWillUnmount(){
-    window.removeEventListener('scroll');
+    // window.removeEventListener('scroll');
   }
 
   render() {
