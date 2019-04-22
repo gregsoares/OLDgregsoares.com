@@ -5,12 +5,14 @@ import React, { Component } from 'react';
 //Importing Components
 import TopNav from './components/TopNav/TopNav';
 import TopHeader from './components/TopHeader/TopHeader';
-import TopThree from './components/TopThree/TopThree';
+import IconCardSection from './components/IconCard/IconCardSection';
 import CardSection from './components/CardSection/CardSection';
 import ContactCard from './components/ContactCard/ContactCard';
 import ContactForm from './components/ContactForm/ContactForm';
 import TreeSection from './components/TreeSection/TreeSection';
 
+// Testing
+import IconCard from './components/IconCard/IconCard';
 
 class App extends Component {
   render() {
@@ -25,11 +27,12 @@ class App extends Component {
         <TopHeader />
 
         {/* topOne.icon, .title, .text */}
-        <TopThree
         
-        
-        
-        />
+        <IconCardSection title="IconCardSection Title" subtitle="IconCardSection subtitle">
+        </IconCardSection>
+          <IconCard icon="fa-shopping-cart" title="IconCard Title" text="Some great text to text the text in txting." />
+          <IconCard icon="fa-laptop" title="IconCard Title" text="Some great text to text the text in txting." />
+          <IconCard icon="fa-lock" title="IconCard Title" text="Some great text to text the text in txting." />
 
       <CardSection />
 
