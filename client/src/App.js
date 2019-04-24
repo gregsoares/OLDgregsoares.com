@@ -12,27 +12,35 @@ import ContactForm from './components/ContactForm/ContactForm';
 import TreeSection from './components/TreeSection/TreeSection';
 
 // Testing
-import IconCard from './components/IconCard/IconCard';
+// import IconCard from './components/IconCard/IconCard';
 
 class App extends Component {
+
   render() {
+    const cards = [{ 'icon': 'fa-shopping-cart', 
+                  'title': "IconCard Title",
+                  'text': "Some great text to text the text in txting."},
+                   { 'icon': 'fa-laptop', 
+                'title': "LapTop Title",
+                'text': "SuperFastSuperLapTop."},
+                   { 'icon':"fa-lock",
+                     'title':"IconCard Title",
+                     'text': "Some great text to text the text in txting."}];
     return (
       <div className="App">
         <TopNav />
 
 {/* FIXME: pass in cards props to display different cards */}
-      <ContactCard 
-        cards={ 'smo' }
-      />
+      <ContactCard />
         <TopHeader />
 
         {/* topOne.icon, .title, .text */}
         
-        <IconCardSection title="IconCardSection Title" subtitle="IconCardSection subtitle">
-        </IconCardSection>
-          <IconCard icon="fa-shopping-cart" title="IconCard Title" text="Some great text to text the text in txting." />
-          <IconCard icon="fa-laptop" title="IconCard Title" text="Some great text to text the text in txting." />
-          <IconCard icon="fa-lock" title="IconCard Title" text="Some great text to text the text in txting." />
+        <IconCardSection 
+          title="IconCard Section Title" 
+          subtitle="IconCardSection subtitle" 
+          cards={cards}
+          />
 
       <CardSection />
 

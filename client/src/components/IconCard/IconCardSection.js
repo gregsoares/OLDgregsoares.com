@@ -1,12 +1,21 @@
 import React from 'react';
 import IconCard from './IconCard';
 
+/*  Component Legend:
+* IconCardSection: (props)
+*   title:
+*   subtitle:
+*   cards: (obj list rendered as IconCards)
+*     name
+*     title
+*     text
+*/
 function IconCardSection(props) {
     const title = props.title;
     const subtitle = props.subtitle;
+    const cards = props.cards;
 
-    
-  return (
+    return (
       <section id="topThree">
         <div className="container">
           <div className="row">
@@ -16,9 +25,11 @@ function IconCardSection(props) {
             </div>
           </div>
           <div className="row text-center">
-          {/* TODO: Display IconCards here */}
-          
-
+          {/* Render IconCards from props.cards */}
+          {cards.map((card, index) => {
+            return <IconCard icon={card.icon} title={card.title} text={card.text} key={index} /> 
+          } )}
+   
           </div>
         </div>
       </section>
