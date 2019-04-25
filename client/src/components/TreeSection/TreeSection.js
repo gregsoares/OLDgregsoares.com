@@ -1,6 +1,6 @@
 import React from 'react'
 
-/*Tree fill from Top to bottom
+/*Tree fills from Top to bottom
 *
 * <TreeSection title subtitle nodes: [{ imgPath, title, subtitle, text}] />
 *

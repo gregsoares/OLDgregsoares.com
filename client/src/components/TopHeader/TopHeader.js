@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
-
-// TODO Refactor to reactstrap standard
-/* TODO: change:
-  *  props.text to props.btnText
-  *  props.subtitle to props.text
-*/
-// TODO: Fix .intro-heading css
+import React from 'react';
 
 // Usage: <TopHeader title text btnText />
+
+// TODO Refactor to reactstrap standard
 
 const TopHeader = (props) => {
     return (
@@ -15,8 +10,8 @@ const TopHeader = (props) => {
         <div className="container">
           <div className="intro-text">
             <div className="intro-lead-in">{props.title}</div>
-            <div className="intro-heading">{props.subtitle}</div>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{props.text}</a>
+            <div className="intro-heading">{props.text}</div>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{props.btnText}</a>
           </div>
         </div>
       </header>

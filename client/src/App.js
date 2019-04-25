@@ -17,46 +17,67 @@ import TreeSection from './components/TreeSection/TreeSection';
 class App extends Component {
 
   render() {
-    const cards = [{ 'icon': 'fa-shopping-cart', 
-                  'title': "IconCard Title",
-                  'text': "Some great text to text the text in txting."},
-                   { 'icon': 'fa-laptop', 
-                'title': "LapTop Title",
-                'text': "SuperFastSuperLapTop."},
-                   { 'icon':"fa-lock",
-                     'title':"IconCard Title",
-                     'text': "Some great text to text the text in txting."}];
-    const nodes = [{
-      imgPath: "img/about/1.jpg",
-      title: "Original Node",
-      subtitle: "Something extraordinary came to pass",
-      text: "I had a new hobby"
-      },{
-      imgPath: "img/about/2.jpg",
-      title: "First Generation",
-      subtitle: "Something extraordinary came to pass",
-      text: "I had a new hobby"
+  const cards = [{ 'icon': 'fa-shopping-cart', 
+                'title': "IconCard Title",
+                'text': "Some great text to text the text in texting."},
+                { 'icon': 'fa-laptop', 
+                  'title': "LapTop Title",
+                  'text': "SuperFastSuperLapTop."},
+                { 'icon':"fa-lock",
+                  'title':"IconCard Title",
+                  'text': "Some great text to text the text in texting."}];
+  const nodes = [{
+    imgPath: "img/about/1.jpg",
+    title: "Original Node",
+    subtitle: "Something extraordinary came to pass",
+    text: "I had a new hobby"
+    },{
+    imgPath: "img/about/2.jpg",
+    title: "First Generation",
+    subtitle: "Something extraordinary came to pass",
+    text: "I had a new hobby"
+    },
+    {
+    imgPath: "img/about/3.jpg",
+    title: "Second Gen",
+    subtitle: "Something extraordinary came to pass",
+    text: "I had a new hobby"
+    },
+    {
+    imgPath: "img/about/4.jpg",
+    title: "third 39th",
+    subtitle: "Something extraordinary came to pass",
+    text: "I had a new hobby"
+    }]
+
+    const contactCards = [
+      {
+        imgPath: "img/about/1.jpg",
+        title: "First Contact",
+        subtitle: "Something extraordinary came to pass",
+        text: "I had a new hobby" 
       },
       {
-      imgPath: "img/about/3.jpg",
-      title: "Second Gen",
-      subtitle: "Something extraordinary came to pass",
-      text: "I had a new hobby"
+        imgPath: "img/about/2.jpg",
+        title: "Second Contact",
+        subtitle: "Something extraordinary came to pass",
+        text: "I had a new hobby" 
       },
       {
-      imgPath: "img/about/4.jpg",
-      title: "third 39th",
-      subtitle: "Something extraordinary came to pass",
-      text: "I had a new hobby"
-     }]
+        imgPath: "img/about/3.jpg",
+        title: "Last Contact",
+        subtitle: "Something extraordinary came to pass",
+        text: "I had a new hobby" 
+      },
+
+    ]
 
     return (
       <div className="App">
         <TopNav />
 
-{/* FIXME: pass in cards props to display different cards */}
-      <ContactCard />
-        <TopHeader title="Welcome to GregSoares.com" subtitle="Full Stack JavaScript" text="Download Resume" />
+      {/* <ContactCard cards={contactCards} /> */}
+        <TopHeader title="Welcome to GregSoares.com" text="Full Stack JavaScript" btnText="Download Resume" />
 
         {/* topOne.icon, .title, .text */}
         
