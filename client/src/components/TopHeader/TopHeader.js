@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 
-// TODO Convert to pure stateless function component
 // TODO Refactor to reactstrap standard
-class TopHeader extends Component {
-  render() {
+/* TODO: change:
+  *  props.text to props.btnText
+  *  props.subtitle to props.text
+*/
+// TODO: Fix .intro-heading css
+
+// Usage: <TopHeader title text btnText />
+
+const TopHeader = (props) => {
     return (
       <header className="masthead">
         <div className="container">
           <div className="intro-text">
-            <div className="intro-lead-in">Welcome To Our Studio!</div>
-            <div className="intro-heading text-uppercase">It's Nice To Meet You</div>
-            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+            <div className="intro-lead-in">{props.title}</div>
+            <div className="intro-heading">{props.subtitle}</div>
+            <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{props.text}</a>
           </div>
         </div>
       </header>
     );
-  }
-}
+  };
 
 export default TopHeader;

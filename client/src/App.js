@@ -26,13 +26,37 @@ class App extends Component {
                    { 'icon':"fa-lock",
                      'title':"IconCard Title",
                      'text': "Some great text to text the text in txting."}];
+    const nodes = [{
+      imgPath: "img/about/1.jpg",
+      title: "Original Node",
+      subtitle: "Something extraordinary came to pass",
+      text: "I had a new hobby"
+      },{
+      imgPath: "img/about/2.jpg",
+      title: "First Generation",
+      subtitle: "Something extraordinary came to pass",
+      text: "I had a new hobby"
+      },
+      {
+      imgPath: "img/about/3.jpg",
+      title: "Second Gen",
+      subtitle: "Something extraordinary came to pass",
+      text: "I had a new hobby"
+      },
+      {
+      imgPath: "img/about/4.jpg",
+      title: "third 39th",
+      subtitle: "Something extraordinary came to pass",
+      text: "I had a new hobby"
+     }]
+
     return (
       <div className="App">
         <TopNav />
 
 {/* FIXME: pass in cards props to display different cards */}
       <ContactCard />
-        <TopHeader />
+        <TopHeader title="Welcome to GregSoares.com" subtitle="Full Stack JavaScript" text="Download Resume" />
 
         {/* topOne.icon, .title, .text */}
         
@@ -44,7 +68,8 @@ class App extends Component {
 
       <CardSection />
 
-      <TreeSection />
+
+      <TreeSection title="TreeSection Title" subtitle="Handy Subtitle" nodes={nodes}/>
 
       <ContactForm />
 
