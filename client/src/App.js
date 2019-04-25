@@ -54,20 +54,17 @@ class App extends Component {
       {
         imgPath: "img/about/1.jpg",
         title: "First Contact",
-        subtitle: "Something extraordinary came to pass",
-        text: "I had a new hobby" 
+        text: "Something Cool" 
       },
       {
         imgPath: "img/about/2.jpg",
         title: "Second Contact",
-        subtitle: "Something extraordinary came to pass",
-        text: "I had a new hobby" 
+        text: "Something Great" 
       },
       {
         imgPath: "img/about/3.jpg",
         title: "Last Contact",
-        subtitle: "Something extraordinary came to pass",
-        text: "I had a new hobby" 
+        text: "Something Extraordinary " 
       },
 
     ]
@@ -76,22 +73,22 @@ class App extends Component {
       <div className="App">
         <TopNav />
 
-      <ContactCard title='Card Section Title' subtitle='Card Section Subtitle' cards={contactCards} />
         <TopHeader title="Welcome to GregSoares.com" text="Full Stack JavaScript" btnText="Download Resume" />
 
         {/* topOne.icon, .title, .text */}
         
+
+      <CardSection />
+
+      <TreeSection title="TreeSection Title" subtitle="Handy Subtitle" nodes={nodes}/>
+
+      <ContactCard title='Card Section Title' subtitle='Card Section Subtitle' cards={contactCards} />
+
         <IconCardSection 
           title="IconCard Section Title" 
           subtitle="IconCardSection subtitle" 
           cards={cards}
           />
-
-      <CardSection />
-
-
-      <TreeSection title="TreeSection Title" subtitle="Handy Subtitle" nodes={nodes}/>
-
       <ContactForm />
 
 

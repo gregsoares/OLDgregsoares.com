@@ -30,7 +30,8 @@ class TopNav extends Component {
   componentWillUnmount(){
     // window.removeEventListener('scroll');
   }
-
+// TODO: Refactor link items to props.linkText
+// TODO: Refactor href content to props.link
   render() {
     return (
       <Navbar className="" expand="lg" color="dark" fixed="top" id="mainNav">
