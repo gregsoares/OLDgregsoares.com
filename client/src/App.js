@@ -76,7 +76,7 @@ class App extends Component {
       <div className="App">
         <TopNav />
 
-      {/* <ContactCard cards={contactCards} /> */}
+      <ContactCard title='Card Section Title' subtitle='Card Section Subtitle' cards={contactCards} />
         <TopHeader title="Welcome to GregSoares.com" text="Full Stack JavaScript" btnText="Download Resume" />
 
         {/* topOne.icon, .title, .text */}
