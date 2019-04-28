@@ -27,7 +27,7 @@ function ContactCard(props) {
                     <h4>{card.title}</h4>
                     <p className="text-muted">{card.text}</p>
                     <ul className="list-inline social-buttons">
-                    {/* TODO: add props for cards.twitterLink/facebookLink/linkinLink */}
+                    {/* TODO: add props for cards.twitterLink/facebookLink/linkedinLink */}
                       <li className="list-inline-item">
                         <a href="#">
                           <i className="fab fa-twitter"></i>

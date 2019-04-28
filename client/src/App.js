@@ -12,19 +12,19 @@ import ContactForm from './components/ContactForm/ContactForm';
 import TreeSection from './components/TreeSection/TreeSection';
 
 // Testing
-// import IconCard from './components/IconCard/IconCard';
+// import Footer from './components/Footer/Footer';
 
 class App extends Component {
 
   render() {
   const cards = [{ 'icon': 'fa-shopping-cart', 
-                'title': "IconCard Title",
+                'title': "Footer Title",
                 'text': "Some great text to text the text in texting."},
                 { 'icon': 'fa-laptop', 
                   'title': "LapTop Title",
                   'text': "SuperFastSuperLapTop."},
                 { 'icon':"fa-lock",
-                  'title':"IconCard Title",
+                  'title':"Footer Title",
                   'text': "Some great text to text the text in texting."}];
   const nodes = [{
     imgPath: "img/about/1.jpg",
@@ -76,7 +76,7 @@ class App extends Component {
         <TopHeader title="Welcome to GregSoares.com" text="Full Stack JavaScript" btnText="Download Resume" />
 
         {/* topOne.icon, .title, .text */}
-        
+
 
       <CardSection />
 
@@ -84,52 +84,15 @@ class App extends Component {
 
       <ContactCard title='Card Section Title' subtitle='Card Section Subtitle' cards={contactCards} />
 
-        <IconCardSection 
-          title="IconCard Section Title" 
-          subtitle="IconCardSection subtitle" 
+        <IconCardSection
+          title="IconCard Section Title"
+          subtitle="IconCardSection subtitle"
           cards={cards}
           />
       <ContactForm />
 
 
-        <footer>
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4">
-                <span className="copyright">Copyright &copy; Your Website 2019</span>
-              </div>
-              <div className="col-md-4">
-                <ul className="list-inline social-buttons">
-                  <li className="list-inline-item">
-                    <a href="/">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="/">
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="/">
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-md-4">
-                <ul className="list-inline quicklinks">
-                  <li className="list-inline-item">
-                    <a href="/">Privacy Policy</a>
-                  </li>
-                  <li className="list-inline-item">
-                    <a href="/">Terms of Use</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+
 
 
         <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-hidden="true">

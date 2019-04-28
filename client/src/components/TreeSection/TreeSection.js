@@ -27,7 +27,7 @@ export default function TreeSection(props) {
               {nodes.map((node,index) => {
                  if((index%2) === 0) {
                    return (
-                       <li>
+                       <li key={index} >
                          <div className="timeline-image">
                            {/*TODO: Add confition: If imgPath !== ''/null/undefined, then put img element in.*/}
                            <img className="rounded-circle img-fluid" src={node.imgPath} alt="" />
@@ -39,13 +39,13 @@ export default function TreeSection(props) {
                            </div>
                            <div className="timeline-body">
                              <p className="text-muted">{node.text}</p>
-                           </div>
+                          </div>
                          </div>
                        </li>
                      )
                  } else {
                    return (
-                   <li className="timeline-inverted">
+                   <li className="timeline-inverted" key={index}>
                      <div className="timeline-image">
                        <img className="rounded-circle img-fluid" src={node.imgPath} alt="" />
                      </div>

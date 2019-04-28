@@ -18,11 +18,11 @@ describe('Renders ContactCard without errors', () => {
 });
 
 const cards = [{ 'icon': 'fa-shopping-cart', 
-                 'title': "IconCard Title",
+                 'title': "Footer Title",
                  'text': "Some great text to text the text in texting."},
                { 'icon': 'fa-laptop', 
                  'title': "LapTop Title",
                  'text': "SuperFastSuperLapTop."},
                { 'icon':"fa-lock",
-                  'title':"IconCard Title",
+                  'title':"Footer Title",
                   'text': "Some great text to text the text in texting."}];
