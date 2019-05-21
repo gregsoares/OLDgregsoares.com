@@ -29,17 +29,17 @@ function ContactCard(props) {
                     <ul className="list-inline social-buttons">
                     {/* TODO: add props for cards.twitterLink/facebookLink/linkedinLink */}
                       <li className="list-inline-item">
-                        <a href="#">
+                        <a href="/">
                           <i className="fab fa-twitter"></i>
                         </a>
                       </li>
                       <li className="list-inline-item">
-                        <a href="#">
+                        <a href="/">
                           <i className="fab fa-facebook-f"></i>
                         </a>
                       </li>
                       <li className="list-inline-item">
-                        <a href="#">
+                        <a href="/">
                           <i className="fab fa-linkedin-in"></i>
                         </a>
                       </li>
@@ -47,6 +47,7 @@ function ContactCard(props) {
                   </div>
                 </div> 
             )}
+            return null;
         })}
       </div> 
       <div className="row">
