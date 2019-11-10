@@ -1,37 +1,43 @@
 {
   "name": "gregsoares.com",
   "version": "1.0.0",
-  "description": "Portfolio website",
-  "main": "./bin/www.js",
+  "description": "**MERN** - **M**ongoDB **E**xpressJs **R**eact **N**odeJs",
+  "main": "app.js",
+  "bin": {
+    "gregsoares.com": "www.js"
+  },
   "scripts": {
     "clientTest": "npm run test --prefix client",
-    "server": "npx nodemon ./bin/www.js",
+    "server": "npx nodemon ./app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \" npm run server\" \" npm run client \" ",
+    "test": "npm run test --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "start": "node ./bin/www.js"
-  },
-  "eslintConfig": {
-
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gregsoares/gregsoares.com.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gregsoares/gregsoares.com/issues"
-  },
-  "homepage": "https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
-    "mongoose": "^5.5.1",
+    "mongoose": "^5.3.14",
     "path": "^0.12.7"
   },
+  "keywords": [
+    "web",
+    "development",
+    "FullStack"
+  ],
   "devDependencies": {
-    "nodemon": "^1.18.11"
-  }
+    "nodemon": "^1.18.7"
+  },
+  "author": "Greg Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregsoares/gregsoares.com/issues"
+  },
+  "homepage": "https://github.com/gregsoares/gregsoares.com#readme"
 }
