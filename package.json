@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/gregsoares/gregsoares.com/issues"
   },
-  "homepage": "https://github.com/MERN_StarterTemplate/MERN_StarterTemplate.com#readme",
+  "homepage": "https://github.com/https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
