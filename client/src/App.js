@@ -2,8 +2,9 @@ import React from 'react';
 
 // Components imports
 import { Topnav } from './components/Topnav/Topnav';
-// import { Jumbotron } from './components/Jumbotron/Jumbotron';
-// import { Verstand } from './components/Verstand/Verstand';
+import { Container } from './components/Container/Container';
+import { Jumbotron } from './components/Jumbotron/Jumbotron';
+import { Verstand } from './components/Verstand/Verstand';
 
 
 export const App = () =>{ 
@@ -23,7 +24,7 @@ export const App = () =>{
 return (
   <React.Fragment>
     <Headers />
-    <Topnav />
-    
+    <Topnav current='github' />
+    <Container />
   </React.Fragment>
   )};
