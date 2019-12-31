@@ -1,6 +1,5 @@
 
 Todo:
-  ✔ Main Content section @started(19-12-29 20:28) @done(19-12-29 20:55) @lasted(27m3s)
   ☐ Card row youtube style
     ☐ Create cards
     ☐ Create 'Deck' - row with slider
@@ -10,3 +9,18 @@ Enhancement:
   ☐ Add/render cards in and from deck
   ☐ Add Resume file for download
   ☐ Add Github Link
+
+Test:
+  ☐ Unit Test Components:
+    ☐ Jumbotron
+    ☐ Slider
+    ☐ Verstand
+    ☐ Container
+    ☐ Deck
+
+Completed:
+
+  ☐ Unit Test Components
+    ✔ Topnav @done(19-12-31 00:04)
+    ✔ Navlink @started(19-12-30 22:52) @done(19-12-31 00:04) @lasted(1h12m2s)
+  ✔ Main Content section @started(19-12-29 20:28) @done(19-12-29 20:55) @lasted(27m3s)
