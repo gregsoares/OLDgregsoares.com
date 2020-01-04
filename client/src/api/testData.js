@@ -1,18 +1,25 @@
-import React from 'react';
+import React from 'react'; 
 import axios from 'axios';
 
-export default class testData extends React.Component {
+export default class PersonList extends React.Component {
   state = {
-    users: [],
-    // todos: [],
-    // comments: []
+    persons: []
   }
-  let 
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(json => console.log(json))
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
+      .then(res => {
+        const persons = res.data;
+        this.setState({ persons });
+        console.log({persons});
+      })
+  }
 
+  render() {
+    return (
+      <ul>
+        { this.state.persons.map(person => <li>{person.name}</li>)}
+      </ul>
+    )
   }
 }

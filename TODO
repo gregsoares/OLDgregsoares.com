@@ -3,8 +3,8 @@ Todo:
   ☐ Card row youtube style
     ☐ Create cards
     ☐ Create 'Deck' - row with slider
-    ☐ Create preview modal for github projects and articles image expansion
-    ☐ Create a preview of github repos
+  ☐ Create preview modal for github projects and articles image expansion
+  ☐ Create a preview of github repos
 
 Enhancement:
   ☐ Add/render cards in and from deck
@@ -20,6 +20,7 @@ Test:
     ✔ Container @started(19-12-31 01:18) @done(19-12-31 22:58) @lasted(21h40m7s)
       ☐ test adding a Content prop
     ☐ Deck
+  ☐ testData - style into cards and test result
 
 Completed:
 

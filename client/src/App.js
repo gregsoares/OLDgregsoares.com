@@ -2,9 +2,9 @@ import React from 'react';
 
 // Components imports
 import { Topnav } from './components/Topnav/Topnav';
-import { Container } from './components/Container/Container';
+// import { Container } from './components/Container/Container';
 // import { Jumbotron } from './components/Jumbotron/Jumbotron';
-// import { Verstand } from './components/Verstand/Verstand';
+// import Verstand from './components/Verstand/Verstand';
 // import ThemeSwitcher, {  } from "./components/ThemeSwitcher/ThemeSwitcher";
 
 export const App = () =>{ 
@@ -22,23 +22,12 @@ export const App = () =>{
   }
 
   // TODO: Add on changeState read state of currentPage and reload App.
-    let currentPage = 'Github';
-
-  // const loadPage = req => {
-  //   // Manual for now
-  //   return req.Page
-  // }
-
-  const content = req => <Topnav current={req} />
-  // const swapTheme = () => <ThemeSwitcher />
+    // const swapTheme = () => <ThemeSwitcher />
   // const content = req => { }
 return (
   <React.Fragment>
     <Headers />
-    <Topnav current={currentPage} />
-    <Container Content={content('Home')} />
-    <Container Content={content('Networking Projects')} />
-    {/* <Container Content={swapTheme} /> */}
+    <Topnav current={<Topnav current='Github' />}/>
 
   </React.Fragment>
   )};
