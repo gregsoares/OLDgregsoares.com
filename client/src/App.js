@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getComments, setUsers, getTodos, getUsers } from './api/testData';
 
 // Components imports
 import { Topnav } from './components/Topnav/Topnav';
@@ -8,6 +9,9 @@ import { Topnav } from './components/Topnav/Topnav';
 // import ThemeSwitcher, {  } from "./components/ThemeSwitcher/ThemeSwitcher";
 
 export const App = () =>{ 
+  const [users, setUsers] = useState([]);
+  const [todos, setTodos] = useState([]);
+  const [comments, setComments] = useState([]);
 
   const Headers = () => {
     return (
@@ -21,6 +25,11 @@ export const App = () =>{
     )
   }
 
+    useEffect(() => {
+      getUsers().then(user => setUsers(user))
+      getTodos().then(todo => setTodos(todo))
+      getComments().then(comment => setComments(comment));
+      }, []) 
   // TODO: Add on changeState read state of currentPage and reload App.
     // const swapTheme = () => <ThemeSwitcher />
   // const content = req => { }
@@ -28,6 +37,11 @@ return (
   <React.Fragment>
     <Headers />
     <Topnav current={<Topnav current='Github' />}/>
+    {/* <p>{JSON.stringify(users) } </p>
+    <p>{JSON.stringify(users.length) } </p>
+    <br/><br/>
+    <p>{JSON.stringify(todos)}</p>
+    <p>{JSON.stringify(comments)}</p> */}
 
   </React.Fragment>
   )};
