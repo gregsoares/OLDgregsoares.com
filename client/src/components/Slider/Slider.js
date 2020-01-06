@@ -1,39 +1,115 @@
-import React from 'react';
-import './Slider.css'
+import React from 'react'
+// Check out my free youtube video on how to build a thumbnail gallery in react
+// https://www.youtube.com/watch?v=GZ4d3HEn9zg
 
-// FIXME: fix slide feature
-export const Slider = props => {
-  
+class Slider extends React.Component {
+  constructor(props) {
+    super(props)
 
-  const imgUrl = 'https://picsum.photos/200/300'
-  return (
-    <React.Fragment>
-      <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-      <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="d-block w-100 slider-img" src={imgUrl} alt="First slide" id="1"/>
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src={imgUrl} alt="Second slide" id="2"/>
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src={imgUrl} alt="Third slide" id="3"/>
-          </div>
+    this.state = {
+      images: [
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
+        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
+      ],
+      currentIndex: 0,
+      translateValue: 0
+    }
+  }
+
+  goToPrevSlide = () => {
+    if(this.state.currentIndex === 0)
+      return;
+    
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex - 1,
+      translateValue: prevState.translateValue + this.slideWidth()
+    }))
+  }
+
+  goToNextSlide = () => {
+    // Exiting the method early if we are at the end of the images array.
+    // We also want to reset currentIndex and translateValue, so we return
+    // to the first image in the array.
+    if(this.state.currentIndex === this.state.images.length - 1) {
+      return this.setState({
+        currentIndex: 0,
+        translateValue: 0
+      })
+    }
+    
+    // This will not run if we met the if condition above
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex + 1,
+      translateValue: prevState.translateValue + -(this.slideWidth())
+    }));
+  }
+
+  slideWidth = () => {
+     return document.querySelector('.slide').clientWidth
+  }
+
+  render() {
+    return (
+      <div className="slider">
+
+        <div className="slider-wrapper"
+          style={{
+            transform: `translateX(${this.state.translateValue}px)`,
+            transition: 'transform ease-out 0.45s'
+          }}>
+            {
+              this.state.images.map((image, i) => (
+                <Slide key={i} image={image} />
+              ))
+            }
         </div>
-        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="sr-only">Next</span>
-        </a>
+
+        <LeftArrow
+         goToPrevSlide={this.goToPrevSlide}
+        />
+
+        <RightArrow
+         goToNextSlide={this.goToNextSlide}
+        />
       </div>
-    </React.Fragment>
-  )
+    );
+  }
 }
+
+
+const Slide = ({ image }) => {
+  const styles = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 60%'
+  }
+  return <div className="slide" style={styles}></div>
+}
+
+
+const LeftArrow = (props) => {
+  return (
+    <div className="backArrow arrow" onClick={props.goToPrevSlide}>
+      <i className="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+    </div>
+  );
+}
+
+
+const RightArrow = (props) => {
+  return (
+    <div className="nextArrow arrow" onClick={props.goToNextSlide}>
+      <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+    </div>
+  );
+}
+
+
+export default Slider;

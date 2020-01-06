@@ -1,8 +1,8 @@
 
 Todo:
+  ☐ Main content Section: ImageText, TextImage components
   ☐ Card row youtube style
-    ☐ Create cards
-    ☐ Create 'Deck' - row with slider
+    ☐ Create 'Deck' - row with card slider
   ☐ Create preview modal for github projects and articles image expansion
   ☐ Create a preview of github repos
 
