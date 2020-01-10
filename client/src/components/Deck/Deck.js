@@ -248,7 +248,16 @@ export const Deck = props => {
       <div className="row text-center ml-1">
 
         {/* Test data to show <Card /> works */}
-        {testUsers.map(testUser => <Card name={testUser.name} username={testUser.username} email={testUser.email} street={testUser.address.street} id={testUser.id} /> )}
+        {testUsers.map(testUser => 
+          <Card 
+            name={testUser.name}
+            username={testUser.username}
+            email={testUser.email}
+            street={testUser.address.street}
+            id={testUser.id}
+            key={testUser.id}
+          /> 
+        )}
       </div>
     </div>
   )
