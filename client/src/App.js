@@ -8,6 +8,8 @@ import { Deck } from "./components/Deck/Deck";
 // import { Jumbotron } from './components/Jumbotron/Jumbotron';
 // import Verstand from './components/Verstand/Verstand';
 // import ThemeSwitcher, {  } from "./components/ThemeSwitcher/ThemeSwitcher";
+import { ItemCard } from './components/ItemCard/ItemCard';
+import { PriceTable } from "./components/PriceTable/PriceTable";
 
 export const App = () => { 
 
@@ -32,6 +34,8 @@ export const App = () => {
       <Topnav current='Home'/>
       {/* <Container Content={<Topnav current='Github'/>} /> */}
       <Container Content={<Deck />} />
+      <Container Content={<ItemCard />} />
+      <Container Content={<PriceTable />} />
 
     </React.Fragment>
   );

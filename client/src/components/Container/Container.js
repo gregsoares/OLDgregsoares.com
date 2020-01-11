@@ -4,7 +4,7 @@ import React from 'react';
 export const Container = props => {
 
   return (
-    <div className="row m-0 px-2 bg-secondary " data-test="Container">
+    <div className="row m-0 px-2 bg-secondary justify-content-center" data-test="Container">
       {props.Content}
     </div>
   )
