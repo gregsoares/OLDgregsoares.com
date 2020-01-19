@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // import { getComments, getTodos, getUsers } from "../../api/testData";
 import { Card } from './Card'
 
@@ -244,21 +244,23 @@ export const Deck = props => {
   // }, []);
 
   return (
-    <div className="container-fluid m-0 p-0">
-      <div className="row text-center ml-1">
+    <React.Fragment>
+      <div className="container-fluid m-0 p-0">
+        <div className="row text-center ml-1">
 
-        {/* Test data to show <Card /> works */}
-        {testUsers.map(testUser => 
-          <Card 
-            name={testUser.name}
-            username={testUser.username}
-            email={testUser.email}
-            street={testUser.address.street}
-            id={testUser.id}
-            key={testUser.id}
-          /> 
-        )}
+          {/* Test data to show <Card /> works */}
+          {testUsers.map(testUser =>
+            <Card
+              name={testUser.name}
+              username={testUser.username}
+              email={testUser.email}
+              street={testUser.address.street}
+              id={testUser.id}
+              key={testUser.id}
+            />
+          )}
+        </div>
       </div>
-    </div>
-  )
+    </React.Fragment>
+  );
 }
