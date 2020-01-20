@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Theme Components Import
-import { Plato } from './components/Plato/Plato';
+import { Index } from './components/Plato/Index';
 
 // Original Components imports
 // import { Topnav } from './components/Topnav/Topnav';
@@ -43,7 +43,7 @@ export const App = () => {
       {/* -----------------
 -------------------- */}
 
-    <Plato />
+    {<Index />}
     </React.Fragment>
   );
 
