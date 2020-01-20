@@ -13,15 +13,16 @@ export const Footer = props => {
               <div className="widget">
                 {/* <!-- logo --> */}
                 <div className="footerlogo">
-                  <h6><a href="index.html">Plato</a></h6>
+                  <h6><a href="/">GregSoares</a></h6>
                   {/* <!-- <img src="assets/img/logo.png" alt="" /> --> */}
                 </div>
                 {/* <!-- end logo --> */}
                 <address>
-                  <strong>Plato business company, Inc.</strong><br />
-                  4455 Great building Ave, Suite A10<br />
-                  San Francisco, CA 94107<br />
-                  <abbr title="Phone">P:</abbr> (123) 456-7890 </address>
+                  <strong>Full Stack Web Developer</strong><br />
+                  
+                  <strong><a href="http://linkedin.com/in/greg-soares/ " target="_blank" rel="noopener noreferrer">linkedin.com/in/greg-soares/ </a></strong>
+                  <br /><br />
+                  *All Rights Reserved</address>
               </div>
             </div>
             <div className="span3">
