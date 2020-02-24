@@ -68,24 +68,24 @@ export const About = props => {
                               <a href="index.html">Home</a>
                             </li>
                             <li className="dropdown">
-                              <a href="#">Features</a>
+                              <a href="/">Features</a>
                               <ul className="dropdown-menu">
                                 <li><a href="scaffolding.html">Scaffolding</a></li>
                                 <li><a href="base-css.html">Base CSS</a></li>
                                 <li><a href="components.html">Components</a></li>
                                 <li><a href="icons.html">Icons</a></li>
                                 <li><a href="list.html">Styled lists</a></li>
-                                <li className="dropdown"><a href="#">3rd level</a>
+                                <li className="dropdown"><a href="/">3rd level</a>
                                   <ul className="dropdown-menu sub-menu">
-                                    <li><a href="#">Example menu</a></li>
-                                    <li><a href="#">Example menu</a></li>
-                                    <li><a href="#">Example menu</a></li>
+                                    <li><a href="/">Example menu</a></li>
+                                    <li><a href="/">Example menu</a></li>
+                                    <li><a href="/">Example menu</a></li>
                                   </ul>
                                 </li>
                               </ul>
                             </li>
                             <li className="dropdown active">
-                              <a href="#">Pages</a>
+                              <a href="/">Pages</a>
                               <ul className="dropdown-menu">
                                 <li><a href="about.html">About us</a></li>
                                 <li><a href="pricingtable.html">Pricing table</a></li>
@@ -93,7 +93,7 @@ export const About = props => {
                               </ul>
                             </li>
                             <li className="dropdown">
-                              <a href="#">Portfolio</a>
+                              <a href="/">Portfolio</a>
                               <ul className="dropdown-menu">
                                 <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
                                 <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
@@ -102,7 +102,7 @@ export const About = props => {
                               </ul>
                             </li>
                             <li className="dropdown">
-                              <a href="#">Blog</a>
+                              <a href="/">Blog</a>
                               <ul className="dropdown-menu">
                                 <li><a href="blog_left_sidebar.html">Blog left sidebar</a></li>
                                 <li><a href="blog_right_sidebar.html">Blog right sidebar</a></li>
@@ -136,7 +136,7 @@ export const About = props => {
               </div>
               <div className="span8">
                 <ul className="breadcrumb notop">
-                  <li><a href="#">Home</a><span className="divider">/</span></li>
+                  <li><a href="/">Home</a><span className="divider">/</span></li>
                   <li className="active">About</li>
                 </ul>
               </div>
@@ -262,10 +262,10 @@ export const About = props => {
                 <div className="widget">
                   <h5>Browse pages</h5>
                   <ul className="list list-ok">
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Tamquam ponderum at eum, nibh dicta offendit mei</a></li>
-                    <li><a href="#">Vix no vidisse dolores intellegam</a></li>
-                    <li><a href="#">Est virtute feugiat accommodare eu</a></li>
+                    <li><a href="/">Lorem ipsum dolor sit amet</a></li>
+                    <li><a href="/">Tamquam ponderum at eum, nibh dicta offendit mei</a></li>
+                    <li><a href="/">Vix no vidisse dolores intellegam</a></li>
+                    <li><a href="/">Est virtute feugiat accommodare eu</a></li>
                   </ul>
                 </div>
               </div>
@@ -291,11 +291,11 @@ export const About = props => {
                     </div>
                   </form>
                   <ul className="social-network">
-                    <li><a href="#"><i className="icon-bg-light icon-facebook icon-circled icon-1x"></i></a></li>
-                    <li><a href="#" title="Twitter"><i className="icon-bg-light icon-twitter icon-circled icon-1x"></i></a></li>
-                    <li><a href="#" title="Linkedin"><i className="icon-bg-light icon-linkedin icon-circled icon-1x"></i></a></li>
-                    <li><a href="#" title="Pinterest"><i className="icon-bg-light icon-pinterest icon-circled icon-1x"></i></a></li>
-                    <li><a href="#" title="Google plus"><i className="icon-bg-light icon-google-plus icon-circled icon-1x"></i></a></li>
+                    <li><a href="/"><i className="icon-bg-light icon-facebook icon-circled icon-1x"></i></a></li>
+                    <li><a href="/" title="Twitter"><i className="icon-bg-light icon-twitter icon-circled icon-1x"></i></a></li>
+                    <li><a href="/" title="Linkedin"><i className="icon-bg-light icon-linkedin icon-circled icon-1x"></i></a></li>
+                    <li><a href="/" title="Pinterest"><i className="icon-bg-light icon-pinterest icon-circled icon-1x"></i></a></li>
+                    <li><a href="/" title="Google plus"><i className="icon-bg-light icon-google-plus icon-circled icon-1x"></i></a></li>
                   </ul>
                 </div>
               </div>

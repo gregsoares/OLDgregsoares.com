@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Theme Components Import
 import { Index } from './components/Plato/Index';
-import { About } from './Pages/About';
-import { PageChange as Page } from "./hooks/PageChange";
+// import { About } from './Pages/About';
+// import { PageChange as Page } from "./hooks/PageChange";
 
 // Original Components imports
 // import { Topnav } from './components/Topnav/Topnav';
