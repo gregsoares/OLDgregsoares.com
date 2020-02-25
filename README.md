@@ -20,7 +20,7 @@
  * create-react-app
  * @fortawesome/fontawesome - Fonts Icons and Brands Bootstrap 
  * http-proxy-middleware 
- * react-router-dom reactstrap 
+
 - ### Server Side: 
  * body-parser 
  * concurrently 
