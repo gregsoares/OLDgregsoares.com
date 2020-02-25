@@ -1,45 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 
 export const TopNav = () => {
+  const [currentPage, setCurrentPage] = useState("Index");
+
   return (
-    <div>
+    <header id="header">
+      <div className="container-fluid">
 
-      {/* <!--========================== */}
-      {/* Header */}
-      {/* ============================--> */}
-      <header id="header">
-        <div className="container-fluid">
+        <div id="logo" className="pull-left">
+          <h1><Link to="#intro" className="scrollto" onClick={() => setCurrentPage("Index")} >BizPage</Link></h1>
 
-          <div id="logo" className="pull-left">
-            <h1><a href="#intro" className="scrollto">BizPage</a></h1>
-
-            {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-
-            {/* <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""   /></a>--> */}
-          </div>
-
-          <nav id="nav-menu-container">
-            <ul className="nav-menu">
-              <li className="menu-active"><a href="#intro">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#team">Team</a></li>
-              <li className="menu-has-children"><a href="">Drop Down</a>
-                <ul>
-                  <li><a href="#">Drop Down 1</a></li>
-                  <li><a href="#">Drop Down 3</a></li>
-                  <li><a href="#">Drop Down 4</a></li>
-                  <li><a href="#">Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          {/* <!-- #nav-menu-container --> */}
+          {/* <!-- Uncomment below if you prefer to use an image logo --> */}
+          {/* <!-- <Link to="#intro"><img src="img/logo.png" alt="" title="" onClick={() => setCurrentPage()}    /></Link>--> */}
         </div>
-      </header>
-      {/* <!-- #header --> */}
-    </div>
+
+        <nav id="nav-menu-container">
+          <ul className="nav-menu">
+            <li className={currentPage === "Index" ? "menu-active" : ""}><Link to="#intro" onClick={() => setCurrentPage("Index")} >Home</Link></li>
+            <li className={currentPage === "About" ? "menu-active" : ""}><Link to="#about" onClick={() => setCurrentPage("About")} >About Us</Link></li>
+            <li className={currentPage === "Services" ? "menu-active" : ""}><Link to="#services" onClick={() => setCurrentPage("Services")} >Services</Link></li>
+            <li className={currentPage === "Portfolio" ? "menu-active" : ""}><Link to="#portfolio" onClick={() => setCurrentPage("Portfolio")} >Portfolio</Link></li>
+            <li className={currentPage === "Team" ? "menu-active" : ""}><Link to="#team" onClick={() => setCurrentPage("Team")} >Team</Link></li>
+            {/* <li className="menu-has-children"><Link to="" onClick={() => setCurrentPage()} >Drop Down</Link>
+              <ul>
+                <li><Link to="#" onClick={() => setCurrentPage()} >Drop Down 1</Link></li>
+                <li><Link to="#" onClick={() => setCurrentPage()} >Drop Down 3</Link></li>
+                <li><Link to="#" onClick={() => setCurrentPage()} >Drop Down 4</Link></li>
+                <li><Link to="#" onClick={() => setCurrentPage()} >Drop Down 5</Link></li>
+              </ul>
+            </li> */}
+            <li className={currentPage === "Contact" ? "menu-active" : ""}><Link to="#contact" onClick={() => setCurrentPage("Contact")} >Contact</Link></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   )
 }
