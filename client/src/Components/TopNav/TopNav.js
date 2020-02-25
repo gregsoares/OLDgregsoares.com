@@ -9,7 +9,7 @@ export const TopNav = () => {
       <div className="container-fluid">
 
         <div id="logo" className="pull-left">
-          <h1><Link to="#intro" className="scrollto" onClick={() => setCurrentPage("Index")} >BizPage</Link></h1>
+          <h1><Link to="#intro" className="scrollto" onClick={() => setCurrentPage("Index")} >GregSoares</Link></h1>
 
           {/* <!-- Uncomment below if you prefer to use an image logo --> */}
           {/* <!-- <Link to="#intro"><img src="img/logo.png" alt="" title="" onClick={() => setCurrentPage()}    /></Link>--> */}

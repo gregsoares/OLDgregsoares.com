@@ -1,6 +1,17 @@
 import React from 'react'
 
-export const FeaturedServices = () => {
+export const FeaturedServices = props => {
+  // FIXME: Show icon passed in from props
+  const Service = data => {
+      const { icon, title, text } = data;
+      return (
+        <div className="col-md-4 box text-center">
+          {/* <i className="ion-ios-bookmarks-outline"></i> */}
+          <h4 className="title"><a href="">{title}</a></h4>
+          <p className="description justify-content-center">{text}</p>
+        </div>
+      )
+  }
   return (
     <div>
       {/* <!--========================== */}
@@ -10,12 +21,8 @@ export const FeaturedServices = () => {
         <div className="container">
           <div className="row">
 
-            <div className="col-lg-4 box">
-              <i className="ion-ios-bookmarks-outline"></i>
-              <h4 className="title"><a href="">Lorem Ipsum Delino</a></h4>
-              <p className="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-
+    {props.content.map(data => Service(data))}
+            {/* 
             <div className="col-lg-4 box box-bg">
               <i className="ion-ios-stopwatch-outline"></i>
               <h4 className="title"><a href="">Dolor Sitema</a></h4>
@@ -26,7 +33,7 @@ export const FeaturedServices = () => {
               <i className="ion-ios-heart-outline"></i>
               <h4 className="title"><a href="">Sed ut perspiciatis</a></h4>
               <p className="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
+            </div> */}
 
           </div>
         </div>

@@ -2080,7 +2080,7 @@
 
 		/**
 		 * All event handlers.
-		 * @todo The cloned content removale is too late
+		 * @todo The cloned content removable is too late
 		 * @protected
 		 * @type {Object}
 		 */
