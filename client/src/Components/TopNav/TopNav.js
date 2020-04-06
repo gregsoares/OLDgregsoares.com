@@ -15,6 +15,7 @@ export const TopNav = () => {
           {/* <!-- <Link to="#intro"><img src="img/logo.png" alt="" title="" onClick={() => setCurrentPage()}    /></Link>--> */}
         </div>
 
+{/* FIXME: Link to #section not working, scrollto ? */}
         <nav id="nav-menu-container">
           <ul className="nav-menu">
             <li className={currentPage === "Index" ? "menu-active" : ""}><Link to="#intro" onClick={() => setCurrentPage("Index")} >Home</Link></li>

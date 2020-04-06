@@ -5,10 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { TopNavState } from "./Store/Context";
 
 // Temp GeneralHeaders import
-import { Headers } from "./Components/Headers/Headers";
 
 // Theme Components Import
-import { TopNav } from "./Components/TopNav/TopNav";
+
 // Pages
 import Index from './Pages/Index'
 
@@ -20,8 +19,6 @@ export const App = () => {
 
   return (
     <Router>
-      <Headers />
-      <TopNav />
       {/* {TopNavComp} */}
       <Switch>
         <Route exact path="/" component={Index} />
