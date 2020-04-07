@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import './Styles/app.css';
 // Context
-// import { TopNavState } from "./Store/Context";
 
 // Temp GeneralHeaders import
 
