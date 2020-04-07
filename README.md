@@ -18,9 +18,10 @@
     
 - ### Client Side: 
  * create-react-app
- * @fortawesome/fontawesome - Fonts Icons and Brands Bootstrap 
+ * @fortawesome/fontawesome - Fonts Icons and Brands 
+ * Tailwind CSS - CSS Styling
  * http-proxy-middleware 
- * react-router-dom reactstrap 
+ * react-router-dom 
 - ### Server Side: 
  * body-parser 
  * concurrently 
