@@ -7,8 +7,8 @@ export const Headers = () => {
       <link href="img/favicon.png" rel="icon" />
 
       {/* JS Scripts */}
-      {/* <!-- Contact Form JavaScript File --> */}
-      <script defer src="contactform/contactform.js"></script>
+      {/*  */}
+
     </>
   )
 }

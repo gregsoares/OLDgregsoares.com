@@ -1,5 +1,5 @@
 
-export const featuredServicesContent = [
+export const exampleContent = [
   {
     icon: 'One',
     title: 'One Title',
