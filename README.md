@@ -21,6 +21,7 @@
  * @fortawesome/fontawesome - Fonts Icons and Brands 
  * Tailwind CSS - CSS Styling
  * http-proxy-middleware 
+ * TailWind
  * react-router-dom 
 - ### Server Side: 
  * body-parser 
