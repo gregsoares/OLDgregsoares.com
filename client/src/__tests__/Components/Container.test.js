@@ -1,9 +1,11 @@
 import React from 'react';
-import { render, getByTestId } from '@testing-library/react';
-import { Container } from '../../Components/Container/Container';
+import { render, screen } from '@testing-library/react';
+import { Topnav } from '../../Components/Topnav/Topnav';
 
-test('Renders Content Container', () => {
-  const { getByTestId } = render(<Container />);
-  const dataTest = getByTestId('ContainerComponent')
-  expect(dataTest).toBeInTheDocument();
+import { findByTestAttr } from "../../testUtils";
+
+test('Renders Topnav', () => {
+  const { getByText } = render(<Topnav />);
+  const textCheck = getByText('GregSoares.com');
+  expect(textCheck).toBeInTheDocument();
 });

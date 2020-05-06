@@ -1,0 +1,19 @@
+
+ Initial Setup (MVP):
+  ☐ Pages (skeleton layout)
+    ☐ Index
+    ☐ Github/Projects
+    ☐ About Me
+
+ Primary Components:
+  ☐ Topnav
+  ☐ MainContent Container
+  ☐ Footer
+
+
+  Setup:
+    ✔ Install tailwind CSS @done(20-05-06 15:41)
+    ✔ React Router @done(20-05-06 15:18)
+
+
+
