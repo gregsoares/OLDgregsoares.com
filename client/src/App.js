@@ -1,32 +1,26 @@
-import React, { useState, useCallback } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-// Context
-// import { TopNavState } from "./Store/Context";
-
-// Temp GeneralHeaders import
-import { Headers } from "./Components/Headers/Headers";
-
-// Theme Components Import
-import { TopNav } from "./Components/TopNav/TopNav";
-// Pages
-import Index from './Pages/Index'
-
-
-export const App = () => {
-
-  // const [currentPage, setCurrentPage] = useState();
-  // const TopNavComp = useCallback(<TopNav />, [currentPage]);
-
+function App() {
   return (
-    <Router>
-      <Headers />
-      <TopNav />
-      {/* {TopNavComp} */}
-      <Switch>
-        <Route exact path="/" component={Index} />
-      </Switch>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
-
 }
+
+export default App;
