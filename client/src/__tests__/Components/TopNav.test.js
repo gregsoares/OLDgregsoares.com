@@ -2,8 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Topnav } from '../../Components/Topnav/Topnav';
 
-import { findByTestAttr } from "../../testUtils";
-
 test('Renders TopnavContainer (byTestId)', () => {
   const { getByTestId } = render(<Topnav />);
   const textCheck = getByTestId('TopnavContainer');

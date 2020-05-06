@@ -1,8 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { Topnav } from '../../Components/Topnav/Topnav';
-
-import { findByTestAttr } from "../../testUtils";
+import { render } from '@testing-library/react';
 
 import Index from '../../Pages/Index';
 test('Checking Index by testId', () => {
