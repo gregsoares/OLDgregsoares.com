@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "autoprefixer": "^9.7.6",
     "axios": "^0.19.2",
     "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
@@ -41,6 +40,7 @@
     "nyc": "^15.0.1",
     "parcel-bundler": "^1.12.4",
     "postcss": "^7.0.29",
+    "autoprefixer": "^9.7.6",
     "tailwindcss": "^1.4.5"
   }
 }
