@@ -9,7 +9,6 @@ import { Footer } from './Components/Footer/Footer';
 import Index from "./Pages/Index";
 import About from "./Pages/About";
 
-
 const App = () => {
   return (
     <Router>
@@ -20,8 +19,6 @@ const App = () => {
       </Switch>
       <Footer />
     </Router>
-
-
   );
 }
 
