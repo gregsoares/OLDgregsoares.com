@@ -4,9 +4,7 @@ import './Container.css';
 
 export const Container = () => {
   return (
-    <div data-testid="ContainerComponent">
-    <p className="about">Something black
-    </p>
+    <div className="text-white" data-testid="ContainerComponent">
       Container
     </div>
   )
