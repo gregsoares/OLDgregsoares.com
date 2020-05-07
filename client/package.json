@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "npm run run:css && react-scripts build",
-    "run:css": "npx tailwind build tailwind.css -o public/styles.css",
+    "run:css": "npx tailwind build styles.css -o public/styles.css",
     "test": "react-scripts test",
     "coverage": "nyc npm run test",
     "eject": "react-scripts eject"
