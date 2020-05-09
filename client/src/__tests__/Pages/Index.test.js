@@ -8,8 +8,8 @@ test('Checking Index by testId', () => {
   expect(textIdCheck).toBeInTheDocument();
 });
 
-test('Checking for text: Index', () => {
-  const { getByText } = render(<Index />);
-  const textCheck = getByText('Index');
-  expect(textCheck).toBeInTheDocument();
-});
+// test('Checking for text: Index', () => {
+//   const { getByText } = render(<Index />);
+//   const textCheck = getByText('Index');
+//   expect(textCheck).toBeInTheDocument();
+// });

@@ -7,5 +7,10 @@ test('GET: searchRepo', () => {
   const { getByTestId } = render(<Github />)
   const checkId = getByTestId('GithubContainer')
   expect(checkId).toBeInTheDocument();
-  
+});
+
+test('Rendering displayResult (byTestId:displayResult)', () => {
+  const { getByTestId } = render(<Github />)
+  const checkId = getByTestId('displayResult')
+  expect(checkId).toBeInTheDocument();
 });

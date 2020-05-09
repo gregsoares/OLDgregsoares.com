@@ -12,5 +12,4 @@ test('Renders Form (byText:VisitsPerDay)', () => {
   const { getByText } = render(<ContactForm />)
   const checkText = getByText('Visits Per Day')
   expect(checkText).toBeInTheDocument();
-  
-});
+  });

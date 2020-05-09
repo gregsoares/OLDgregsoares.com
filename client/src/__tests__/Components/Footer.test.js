@@ -6,7 +6,6 @@ test('Renders Footer (byTestId:FooterContainer)', () => {
   const { getByTestId } = render(<Footer />)
   const checkId = getByTestId('FooterContainer')
   expect(checkId).toBeInTheDocument();
-
 });
 
 test('Renders Footer (byText:GregSoares.com)', () => {
