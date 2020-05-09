@@ -10,7 +10,7 @@ test('Renders Tags (getBytestId:TagsContainer)', () => {
 });
 
 test('Renders Tags props:text (getByText:testText)', () => {
-  const { getByDisplayValue } = render(<Tags text="testText"/>)
-  const checkId = getByDisplayValue("testText")
+  const { getByText } = render(<Tags text="testText"/>)
+  const checkId = getByText("testText")
   expect(checkId).toBeInTheDocument();
 });

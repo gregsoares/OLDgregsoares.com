@@ -11,9 +11,11 @@ const Index = () => {
   return (
     <Container>
       <main className="w-full h-full p-0 m-0" id="IndexPage" data-testid="IndexPageContainer">
-          <CalendarCard />
-          <Tags text='OneTag' />
-          <CardSection />
+        <CalendarCard />
+
+        <Tags text='OneTag' />
+        <CardSection />
+
       </main>
     </Container>
   )
