@@ -1,4 +1,8 @@
 import axios from 'axios';
+
+// const baseUrl = `https://api.github.com/`
+// const myProfile = `https://api.github.com/users/gregsoares`
+
 // const github = {
 //   current_user_url: "https://api.github.com/user",
 //   current_user_authorizations_html_url: "https://github.com/settings/connections/applications{/client_id}",
@@ -33,8 +37,7 @@ import axios from 'axios';
 //   user_repositories_url: "https://api.github.com/users/{user}/repos{?type,page,per_page,sort}",
 //   user_search_url: "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 // }
-
-const mockGregsoaresRepo = {
+const myProfile = {
   "login": "gregsoares",
   "id": 11140845,
   "node_id": "MDQ6VXNlcjExMTQwODQ1",
@@ -60,12 +63,12 @@ const mockGregsoaresRepo = {
   "email": null,
   "hireable": true,
   "bio": "\"Define the problem properly and the solution will present itself\" - Albert Einstein",
-  "public_repos": 9,
+  "public_repos": 11,
   "public_gists": 0,
   "followers": 9,
   "following": 5,
   "created_at": "2015-02-22T00:04:59Z",
-  "updated_at": "2020-04-19T15:51:12Z"
+  "updated_at": "2020-05-12T14:38:33Z"
 }
 
 const mockData = {
@@ -176,21 +179,17 @@ const mockData = {
   ]
 }
 
-export const mockSearchRepo = { 'data': mockData }
-export const mockFetchGregsoaresRepo = { 'data': mockGregsoaresRepo }
+// export const mockSearchRepo = { 'data': mockData }
+// export const mockFetchGregsoaresRepo = { 'data': mockGregsoaresRepo }
 
-// export const fetchGregsoaresRepo = () => {
-//   const data = axios.get('https://api.github.com/users/gregsoares')
-//     .then(result => data = JSON.stringify(result))
-//     .catch(err => console.debug(err));
-//   if (data.type === String) {
-//     return data;
-//   }
-// }
+export const fetchMyProfile = async () => {
+  const { login, id, avatar_url, html_url, name, bio, public_repos } = await myProfile;
+  return [login, id, avatar_url, html_url, name, bio, public_repos]
+}
 
-export const searchRepo = repoName => {
-  const data = axios.get(`https://api.github.com/search/repositories?q=${repoName}`)
-    .then(res => JSON.stringify(res))
+export const searchRepo = async repoName => {
+  const data = await axios.get(`https://api.github.com/search/repositories?q=${repoName}`)
+    .then(response => response)
     .catch(err => console.debug(err));
   return data;
 }

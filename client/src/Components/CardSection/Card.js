@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tags } from "./Tags";
+// import { Tags } from "./Tags";
 
 // == Props ==
 //  [] of JSON Obj => cards.    title, body, tags[]
