@@ -1,13 +1,32 @@
 import React from 'react';
-import { render } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import renderer from 'react'
 
 import { Tags } from "../../Components/CardSection/Tags";
 
-test('Renders Tags (getBytestId:TagsContainer)', () => {
-  const { getByTestId } = render(<Tags />)
-  const checkId = getByTestId('TagsContainer')
-  expect(checkId).toBeInTheDocument();
+afterEach(() => {
+  cleanup
+});
+describe('Invalid Input tests all expect Undefined', () => {
+  test('Calls Tags props.text = undefined', () => {
+    const { findByTestId } = render(<Tags />)
+    const checkId = findByTestId('TagsContainer')
+    expect(checkId.length).toBe(undefined);
+  });
+  
+    test('Renders Tags props.text = null', () => {
+    const { findByTestId } = render(<Tags text={null} />)
+    const checkId = findByTestId('TagsContainer')
+    expect(checkId.length).toBe(undefined);
+  });
+  
+    test('Renders Tags props.text = ""', () => {
+    const { findByTestId } = render(<Tags text=''/>)
+    const checkId = findByTestId('TagsContainer')
+    expect(checkId.length).toBe(undefined);
+  });
+  
+
 });
 
 test('Renders Tags props:text (getByText:testText)', () => {

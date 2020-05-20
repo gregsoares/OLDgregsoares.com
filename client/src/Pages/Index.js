@@ -4,7 +4,7 @@ import { Container } from "../Components/Container/Container";
 // import { Github } from "../Components/Github/Github";
 // import { CalendarCard } from '../Components/CalendarCard/CalendarCard';
 // import { CardSection } from '../Components/CardSection/CardSection';
-// import { Tags } from '../Components/CardSection/Tags';
+import { Tags } from '../Components/CardSection/Tags';
 import { Github } from '../Components/Github/Github';
 
 const Index = () => {
@@ -15,8 +15,9 @@ const Index = () => {
         <Github />
         {/* <CalendarCard /> */}
 
-        {/* <Tags text='OneTag' /> */}
+        <Tags text='OneTag' />
 
+        <Tags text={null} />
       </main>
     </Container>
   )

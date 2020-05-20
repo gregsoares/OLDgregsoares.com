@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import { mockFetchGregsoaresRepo, fetchMyProfile } from "../../api/github";
+import { fetchMyProfile } from "../../api/github";
 // import metalBG from "./greymetal.svg";
 import blueCardBG from './blueCardBG.svg'
 
 export const Github = () => {
-  const [myRepo, setMyRepo] = useState(fetchMyProfile().then(data => data && console.log(data)));
+  const [myRepo, setMyRepo] = useState(fetchMyProfile().then(data => data));
 
   // const loadData = repoName => {
   //   if (!repoName) return 0;
