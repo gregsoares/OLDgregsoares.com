@@ -63,14 +63,14 @@ export const Github = () => {
 
 
   // const cardSkeleton = (
-  //   <div className="max-w-sm rounded overflow-hidden shadow-lg">
+  //   <div className="max-w-sm overflow-hidden rounded shadow-lg">
   //     <div className="px-6 py-4">
-  //       <div className="font-bold text-xl mb-2">{result.name}</div>
+  //       <div className="mb-2 text-xl font-bold">{result.name}</div>
 
   //     </div>
   //     <div className="px-6 py-4">
-  //       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{result.name}</span>
-  //       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{result.login}</span>
+  //       <span className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.name}</span>
+  //       <span className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.login}</span>
   //     </div>
   //   </div>
   // )
@@ -80,12 +80,12 @@ export const Github = () => {
   //       <div className="flex mx-2">
   //         <div className="w-1/3 px-2">
   //           <div className="chat-notification">
-  //             <div className="chat-notification-logo-wrapper font-bold text-xl mb-2">
+  //             <div className="mb-2 text-xl font-bold chat-notification-logo-wrapper">
   //               {result.name}
   //               <img className="h-12" src={result.avatar_url} alt="Avatar" />
   //             </div>
   //             <div className="chat-notification-content">
-  //               <p className="text-gray-700 text-base">
+  //               <p className="text-base text-gray-700">
   //                 {result.blog}
   //               </p>
   //             </div>
@@ -99,22 +99,22 @@ export const Github = () => {
   function displayResult() {
     // <p data-testid="displayResult">{(JSON.stringify(myRepo.items[0]))} </p>
     const displayComponent = (
-      <div className="max-w-sm w-full lg:max-w-1/2 lg:flex ml-4 mt-4" data-testid="displayResult">
+      <div className="w-full max-w-sm mt-4 ml-4 lg:max-w-1/2 lg:flex" data-testid="displayResult">
 
-        {/* <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" > */}
+        {/* <div className="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" > */}
 
         {/* Add left image/topics/titles/labels */}
 
         {/* </div> */}
-        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal" style={{ "backgroundImage": `url('${blueCardBG}')` }} >
+        <div className="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r" style={{ "backgroundImage": `url('${blueCardBG}')` }} >
           <div className="mb-8">
-            <p className="text-sm text-gray-600 flex items-center">
+            <p className="flex items-center text-sm text-gray-600">
               {/* <span className="text-teal-300">        Repository Name: {(JSON.stringify(myRepo.items[0].name).replace(/"/g, ""))} </span> */}
             </p>
-            {/* <div className="text-teal-100 font-bold text-lg mb-2">{JSON.stringify(myRepo.items[0].description).replace(/"/g, "")} </div> */}
+            {/* <div className="mb-2 text-lg font-bold text-teal-100">{JSON.stringify(myRepo.items[0].description).replace(/"/g, "")} </div> */}
             <div className="flex items-center">
               <div className="text-sm">
-                <p className="text-gray-300 leading-none"></p>
+                <p className="leading-none text-gray-300"></p>
                 <p className="text-gray-600">Aug 18</p>
               </div>
             </div>
@@ -131,27 +131,27 @@ export const Github = () => {
       <div className="w-full p-0 m-0" data-testid="CardSectionContainer">
         <div data-testid="CardContainer">
           <div className="w-1/4">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8" data-testid="CardSectionContainer">
-              {/* <img className="w-full" src={myRepo.items.owner.avatar_url} alt="Sunset in the mountains" /> */}
+            <div className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg" data-testid="CardSectionContainer">
+              <img className="w-full" src={myRepo.avatar_url} alt="Sunset in the mountains" />
               <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">
+                <div className="mb-2 text-xl font-bold">
                   {myRepo.login}
                 </div>
-                <p className="text-gray-600 text-base">
+                <p className="text-base text-gray-600">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nihil veniam minima corporis ipsum? Eaque reprehenderit, neque aliquid modi numquam expedita quo laborum? Vero ex aperiam tempora.
                </p>
               </div>
               <div className="px-6 py-4">
-                <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Programming</span></span>
-                <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Javascript</span></span>
-                <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Web Development</span></span>
+                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Programming</span></span>
+                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Javascript</span></span>
+                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Web Development</span></span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {myRepo != null ? (<p className="border ">Repository Name: {((JSON.stringify(myRepo.name)))}</p>) : ""} 
-      {myRepo != null ? `Repository Description: ${(JSON.stringify(myRepo.then(repo => repo)))}` : ""}
+      {/* {myRepo != null ? (<p className="border ">Repository Name: {((JSON.stringify(myRepo.name)))}</p>) : ""}  */}
+      {/* {myRepo != null ? `Repository Description: ${(JSON.stringify(myRepo.then(repo => repo)))}` : ""} */}
 
       {/* {myRepo != null ? (displayResult()) : "displayResult() Loading"}
       {gregsoaresRepo != null ? (displayGregsoaresRepo()) : "displayGregsoares() Loading"}  */}
