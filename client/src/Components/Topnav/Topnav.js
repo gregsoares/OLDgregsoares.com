@@ -1,34 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+// Icons
+import  faChevronCircleDown  from "./chevron-circle-down-solid.svg";
 
 export const Topnav = () => {
-  return (
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6" data-testid="TopnavContainer">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-      {/* SVG Icon here */}
-        <span className="font-semibold text-xl tracking-tight">GregSoares.com</span>
-      </div>
-      {/* <div className="block lg:hidden">
-        <button className="flex items-center px-3 py-2 border rounded text-teal-100 border-teal-400 hover:text-white hover:border-white">
-          <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Index</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-        </button>
-      </div> */}
+  // TODO: Add Context to Topnav
 
-      <div className="text-2lg w-full block flex-grow lg:flex lg:items-center lg:w-auto ml-auto">
-        <div className="text-sm lg:flex-grow">
-          <a href="/projects" className="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4">
-            Projects
-      </a>
-          <a href="/dev" className="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white mr-4">
-           In Development
-      </a>
-          <a href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-teal-100 hover:text-white">
-           About Me
-      </a>
-        </div>
-        {/* <div>
-          <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
-        </div> */}
+  return (
+    <nav data-testid="Topnav" className="flex p-6 bg-blue-500">
+      <span data-testid="brandname" className="">
+        <p className="py-0 font-serif text-2xl font-black ">GregSoares.com</p>
+      </span>
+      <div data-testid="NavLinks" className="mx-auto display-none">
+        <a href="/" className="mx-3 text-lg font-medium border-black hover:border-white border-gray hover:text-white">Home</a>
+        <a href="/projects" className="mx-3 text-lg font-medium border-black hover:border-white border-gray hover:text-white">Projects</a>
+        <a href="/github" className="mx-3 text-lg font-medium border-black hover:border-white border-gray hover:text-white">Github</a>
+        <a href="/about" className="mx-3 text-lg font-medium border-black hover:border-white border-gray hover:text-white">About Me</a>
       </div>
+        <div data-testid="CollapseBtn" className="mx-auto ">
+          Menu <span className="" data-testid="MenuChevron"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-down" class="svg-inline--fa fa-chevron-circle-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zM273 369.9l135.5-135.5c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L256 285.1 154.4 183.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L239 369.9c9.4 9.4 24.6 9.4 34 0z"></path></svg>
+          </span>
+          {/* TODO: Add the above menu items */}
+        </div>
     </nav>
   )
 }

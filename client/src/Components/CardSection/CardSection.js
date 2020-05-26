@@ -7,20 +7,20 @@ export const CardSection = () => {
   // <div className="w-full p-0 m-0" data-testid="CardSectionContainer">
   //   <div data-testid="CardContainer">
   //       <div className="w-1/4">
-  //         <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8" data-testid="CardSectionContainer">
+  //         <div className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg" data-testid="CardSectionContainer">
   //           <img className="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />
   //           <div className="px-6 py-4">
-  //             <div className="font-bold text-xl mb-2">
+  //             <div className="mb-2 text-xl font-bold">
   //             Card Title
   //             </div>
-  //             <p className="text-gray-600 text-base">
+  //             <p className="text-base text-gray-600">
   //             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nihil veniam minima corporis ipsum? Eaque reprehenderit, neque aliquid modi numquam expedita quo laborum? Vero ex aperiam tempora.
   //             </p>
   //           </div>
   //           <div className="px-6 py-4">
-  //             <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Programming</span></span>
-  //             <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Javascript</span></span>
-  //             <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Web Development</span></span>
+  //             <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Programming</span></span>
+  //             <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Javascript</span></span>
+  //             <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Web Development</span></span>
   //           </div>
   //         </div>
   //       </div>
@@ -45,7 +45,7 @@ export const CardSection = () => {
   }]
 
   return (
-    <div className="w-full p-0 m-0" data-testid="CardSectionContainer">
+    <div className="flex w-full p-0 py-8 mx-0 bg-gray-200" data-testid="CardSectionContainer">
       <Card cards={showCards[0]} />
       <Card cards={showCards[1]} />
       <Card cards={showCards[2]} />
