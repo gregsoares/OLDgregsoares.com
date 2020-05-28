@@ -8,6 +8,7 @@ import { Footer } from './Components/Footer/Footer';
 // Pages Imports
 import Index from "./Pages/Index";
 import About from "./Pages/About";
+import Projects from './Pages/Projects';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Index} />
         <Route exact path='/about' component={About} />
+        <Route exact path='/projects' component={Projects} />
       </Switch>
       <Footer />
     </Router>
