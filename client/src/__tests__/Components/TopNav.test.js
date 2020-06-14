@@ -13,3 +13,9 @@ test('Renders Topnav (ByText:GregSoares.com)', () => {
   const textCheck = getByText('GregSoares.com');
   expect(textCheck).toBeInTheDocument();
 });
+
+test('Expects Text="Full Stack"', () => {
+  render(<Topnav />)
+
+  expect(screen.getByText('Full Stack')).toBeTruthy()
+})

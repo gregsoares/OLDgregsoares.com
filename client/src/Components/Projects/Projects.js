@@ -1,6 +1,6 @@
 import React from 'react'
 // TODO: Move to ReviewCard Component 
-// Make a proper Projects display page
+// TODO: Make a proper Projects display page
 export const SampleReviewCard = () => {
 	return (
 

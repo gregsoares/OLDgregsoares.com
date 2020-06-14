@@ -1,12 +1,10 @@
 import React from 'react';
-import { render } from "@testing-library/react";
-import { Card } from "../../Components/CardSection/Card";
+import { render } from '@testing-library/react';
+import { CardSection } from '../../Components/CardSection/CardSection';
 
-describe('Full Card test suite', () => {
-  test('Render basic component (byTestId:CardContainer)', () => {
-      const { getByTestId } = render(<Card />);
-      const checkRender = getByTestId('CardContainer');
-      expect(checkRender).toBeInTheDocument();
-  });
-});
+test('expects to render Card without errors', () => {
+  const { getByTestId } = render(<CardSection />)
+  const checkId = getByTestId('CardSectionContainer');
+  expect(checkId).toBeInTheDocument();
 
+})

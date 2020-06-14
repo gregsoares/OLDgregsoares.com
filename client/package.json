@@ -27,6 +27,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
   "browserslist": {
     "production": [
       ">0.2%",

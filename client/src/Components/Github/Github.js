@@ -14,10 +14,10 @@ export const Github = () => {
   //   return data;
   // }
 
-  const loadMyProfile = () => {
-    const data = fetchMyProfile().then(data =>data && setMyRepo(data));
-    return data;
-  }
+  // const loadMyProfile = () => {
+  //   const data = fetchMyProfile().then(data =>data && setMyRepo(data));
+  //   return data;
+  // }
 
   useEffect(() => {
     // loadMyProfile().then(() => myRepo.then(repoLogin => console.log(repoLogin)))
@@ -96,34 +96,34 @@ export const Github = () => {
   //   )
   // }
 
-  function displayResult() {
-    // <p data-testid="displayResult">{(JSON.stringify(myRepo.items[0]))} </p>
-    const displayComponent = (
-      <div className="w-full max-w-sm mt-4 ml-4 lg:max-w-1/2 lg:flex" data-testid="displayResult">
+  // function displayResult() {
+  //   // <p data-testid="displayResult">{(JSON.stringify(myRepo.items[0]))} </p>
+  //   const displayComponent = (
+  //     <div className="w-full max-w-sm mt-4 ml-4 lg:max-w-1/2 lg:flex" data-testid="displayResult">
 
-        {/* <div className="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" > */}
+  //       {/* <div className="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" > */}
 
-        {/* Add left image/topics/titles/labels */}
+  //       {/* Add left image/topics/titles/labels */}
 
-        {/* </div> */}
-        <div className="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r" style={{ "backgroundImage": `url('${blueCardBG}')` }} >
-          <div className="mb-8">
-            <p className="flex items-center text-sm text-gray-600">
-              {/* <span className="text-teal-300">        Repository Name: {(JSON.stringify(myRepo.items[0].name).replace(/"/g, ""))} </span> */}
-            </p>
-            {/* <div className="mb-2 text-lg font-bold text-teal-100">{JSON.stringify(myRepo.items[0].description).replace(/"/g, "")} </div> */}
-            <div className="flex items-center">
-              <div className="text-sm">
-                <p className="leading-none text-gray-300"></p>
-                <p className="text-gray-600">Aug 18</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-    return displayComponent;
-  }
+  //       {/* </div> */}
+  //       <div className="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r" style={{ "backgroundImage": `url('${blueCardBG}')` }} >
+  //         <div className="mb-8">
+  //           <p className="flex items-center text-sm text-gray-600">
+  //             {/* <span className="text-teal-300">        Repository Name: {(JSON.stringify(myRepo.items[0].name).replace(/"/g, ""))} </span> */}
+  //           </p>
+  //           {/* <div className="mb-2 text-lg font-bold text-teal-100">{JSON.stringify(myRepo.items[0].description).replace(/"/g, "")} </div> */}
+  //           <div className="flex items-center">
+  //             <div className="text-sm">
+  //               <p className="leading-none text-gray-300"></p>
+  //               <p className="text-gray-600">Aug 18</p>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   )
+  //   return displayComponent;
+  // }
 
 
   return (
