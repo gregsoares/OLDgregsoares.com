@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 // Icons
 // import  faChevronCircleDown  from "./chevron-circle-down-solid.svg";
@@ -7,16 +7,35 @@ export const Topnav = () => {
   // TODO: Add background + opacity for better reading when scrolling
   // TODO: Add Context to Topnav
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [mobileMenuToggle, setMobileMenuToggle] = useState(() => {
+    if (window.innerWidth < 768) return true;
+    return false;
+  });
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  }
+
+  const toggleMobileMenu = () => {
+    // setMobileMenuToggle(revState => !prevState);
+    // console.debug(`Mobile Menu Toggled ${mobileMenuToggle}`);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+  }, [])
+
   return (
-    <nav className="sticky top-0 flex flex-wrap items-center justify-between p-4" data-testid="TopnavContainer">
+    <nav className="sticky top-0 flex flex-wrap justify-between p-4 bg-gray-200 bg-opacity-75" data-testid="TopnavContainer">
       <span data-testid="brandname" className="">
         <p className="py-0 font-serif text-2xl font-black ">GregSoares.com</p>
       </span>
       <div className="w-auto lg:order-2 lg:w-1/5 lg:text-center">
-        <a className="text-xl font-semibold text-indigo-500" href="/" >Full Stack</a>
+        <a className="text-xl font-semibold text-indigo-500" href="/" >{windowWidth}</a>
       </div>
       <div className="block lg:hidden">
-        <button className="flex items-center px-3 py-2 text-indigo-500 border border-indigo-500 rounded navbar-burger">
+        <button onClick={toggleMobileMenu()} className="flex items-center px-3 py-2 text-indigo-500 border border-indigo-500 rounded navbar-burger">
           <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">

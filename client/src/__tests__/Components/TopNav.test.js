@@ -3,19 +3,11 @@ import { render, screen } from '@testing-library/react';
 import { Topnav } from '../../Components/Topnav/Topnav';
 
 test('Renders TopnavContainer (byTestId)', () => {
-  const { getByTestId } = render(<Topnav />);
-  const textCheck = getByTestId('TopnavContainer');
-  expect(textCheck).toBeInTheDocument();
+  render(<Topnav />);
+  expect(screen.getByTestId('TopnavContainer')).toBeInTheDocument();
 });
 
 test('Renders Topnav (ByText:GregSoares.com)', () => {
-  const { getByText } = render(<Topnav />);
-  const textCheck = getByText('GregSoares.com');
-  expect(textCheck).toBeInTheDocument();
+  render(<Topnav />);
+  expect(screen.getByText('GregSoares.com')).toBeInTheDocument();
 });
-
-test('Expects Text="Full Stack"', () => {
-  render(<Topnav />)
-
-  expect(screen.getByText('Full Stack')).toBeTruthy()
-})
