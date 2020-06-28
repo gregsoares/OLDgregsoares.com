@@ -10,8 +10,8 @@ export const HeroCTA = () => {
             It's not a job if you enjoy it.
           </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
-            <span className="py-2 text-xl tracking-wide text-white sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-xl">Some of my favorite projects cover the following topics:</span>
-            <ul className="justify-around mx-auto my-6 text-lg leading-10 tracking-wider md:flex" data-testid="CTA_list_container">
+            <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-lg">Some of my favorite projects cover the following topics:</span>
+            <ul className="justify-around mx-auto my-6 text-sm leading-10 tracking-wider lg:text-md md:flex" data-testid="CTA_list_container">
               <div className="sm:flex">
                 <li className="w-full py-2 pl-4 pr-1 mx-auto my-2 text-center ">
                   <p className="font-bold ">

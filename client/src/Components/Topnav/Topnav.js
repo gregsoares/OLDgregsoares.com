@@ -1,30 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
-// Icons
-// import  faChevronCircleDown  from "./chevron-circle-down-solid.svg";
+import React from 'react';
 
 export const Topnav = () => {
-  // TODO: Add background + opacity for better reading when scrolling
-  // TODO: Add Context to Topnav
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [mobileMenuToggle, setMobileMenuToggle] = useState(() => {
-    if (window.innerWidth < 768) return true;
-    return false;
-  });
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  }
-
-  const toggleMobileMenu = () => {
-    // setMobileMenuToggle(revState => !prevState);
-    // console.debug(`Mobile Menu Toggled ${mobileMenuToggle}`);
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  }, [])
 
   return (
     <nav className="sticky top-0 flex justify-between p-4 bg-gray-200 bg-opacity-75" data-testid="TopnavContainer">
