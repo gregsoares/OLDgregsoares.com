@@ -1,5 +1,15 @@
 @tailwind base;
 @tailwind components;
+
+  .topMenuBtn {
+    @apply px-2;
+    @apply py-1;
+    @apply mx-1;
+    @apply my-1;
+    @apply rounded-sm;
+
+  }
+
 @tailwind utilities;
 
 @responsive {
