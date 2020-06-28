@@ -8,5 +8,11 @@ describe('Full HeroCTA test suite', () => {
       const checkId = getByTestId('HeroCTAContainer');
       expect(checkId).toBeInTheDocument();
   });
+
+  test('Expects "Networking" from li (geByTestId="CTA_list_container)', () => {
+    const { getByTestId, getByText } = render(<HeroCTA />);
+    let checkText = getByTestId('CTA_list_container');
+    expect(checkText.firstChild.textContent).toContain('Networking')
+  });
 });
 
