@@ -11,25 +11,25 @@ export const HeroCTA = () => {
           </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
             <span className="py-2 text-lg tracking-wide text-white border-2 border-l-0 border-r-0 border-gray-400 md:text-xl">Some of my favorite projects cover the following topics:</span>
-            <ul className="justify-around mx-auto my-6 leading-10 tracking-wider sm:flex" data-testid="CTA_list_container">
-              <li className="w-full px-3 py-2 mx-1 my-2 border border-gray-300 sm:max-w-sm ">
+            <ul className="justify-around mx-auto my-6 leading-10 tracking-wider md:flex" data-testid="CTA_list_container">
+              <li className="w-full py-2 pl-4 pr-1 mx-auto my-2 text-left md:border md:border-t-0 md:border-b-0 md:border-l-0 md:border-r-1 sm:min-w-sm ">
                 <p className="font-bold ">
                   Networking
                 </p>Intrusion Detection System (Zeek / Snort), Proxy, Nmap, MSFConsole, BurpSuite
                 </li>
-              <li className="w-full px-3 py-2 mx-1 my-2 border border-gray-300 sm:max-w-sm ">
+              <li className="w-full py-2 pl-4 pr-1 mx-auto my-2 text-left md:border md:border-t-0 md:border-b-0 md:border-l-0 md:border-r-1 sm:min-w-sm ">
                 <p className="font-bold ">
                   Web Development
               </p>
                  NodeJs, React, Boostrap, TailwindCSS, Github, DevOps, Linux Web Server Deployment
                 </li>
-              <li className="w-full px-3 py-2 mx-1 my-2 border border-gray-300 sm:max-w-sm ">
+              <li className="w-full py-2 pl-4 pr-1 mx-auto my-2 text-left md:border md:border-t-0 md:border-b-0 md:border-l-0 md:border-r-1 sm:min-w-sm ">
                 <p className="font-bold ">
                   Security
               </p>
                 Vulnerability Asessment in Web Application, Networks, Operating Systems
                 </li>
-              <li className="w-full px-3 py-2 mx-1 my-2 border border-gray-300 sm:max-w-sm ">
+              <li className="w-full py-2 pl-4 pr-1 mx-auto my-2 text-left sm:min-w-sm ">
                 <p className="font-bold ">
                   Threat Analysis
               </p>
