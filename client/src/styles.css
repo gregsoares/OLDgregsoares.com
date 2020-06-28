@@ -2,3 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@responsive {
+
+  .h-10 {
+    height: 10vh;
+  }
+
+  .h-20 {
+    height: 20vh;
+  }
+
+  .h-30 {
+    height: 30vh;
+  }
+
+  .h-40 {
+    height: 40vh;
+  }
+
+  .h-50 {
+    height: 50vh;
+  }
+
+  .h-60 {
+    height: 60vh;
+  }
+
+  .h-70 {
+    height: 70vh;
+  }
+
+  .h-80 {
+    height: 80vh;
+  }
+
+  .h-90 {
+    height: 90vh;
+  }
+}
