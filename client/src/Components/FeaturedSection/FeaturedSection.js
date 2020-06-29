@@ -1,4 +1,6 @@
 import React from 'react'
+import { Tag } from "../Tag/Tag";
+import { FeatSection } from "./FeatSection";
 
 import monitoringImg from './assets/monitoring.jpg';
 import reportingImg from './assets/reporting.jpg';
@@ -9,42 +11,62 @@ export const FeaturedSection = () => {
   return (
     <div className="" data-testid="FeaturedSectionContainer">
       <section className="">
-        <h2 className="mb-8 text-4xl font-bold text-center text-gray-800">
+        <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-gray-800">
           Projects
         </h2>
-        <div className="flex flex-wrap justify-around py-8 pb-10 overflow-hidden bg-gray-300 rounded-lg">
-          <div className="flex-col mx-auto text-center ">
-            <h4 className="pb-0 mb-0 text-3xl font-bold text-gray-800 ">"Reactify"</h4>
-            <p className="pt-0 mt-0 mb-5 text-gray-700">Full MERN Stack</p>
-            <div className="flex-col justify-center mb-5 text-gray-700 ">
-              <p className="my-3" >Static Bootstrap Template <span className="text-2xl"> ➡ </span> Full Stack Web Application</p>
-              <ul className="">
-                <li className="mb-1 leading-relaxed tracking-wide "><p className="ml-4 sm:ml-6 md:ml-10">
-                  Each section ready for export as stand-alone React Component
-                </p> </li>
-                <li className="mb-1 leading-relaxed tracking-wide "><p className="ml-4 sm:ml-6 md:ml-10">
-                  REST API ready
-                </p> </li>
-                <li className="mb-1 leading-relaxed tracking-wide "><p className="ml-4 sm:ml-6 md:ml-10">
-                  Bootstrap + FontAwesome
-                </p> </li>
-                <li className="mb-1 leading-relaxed tracking-wide "><p className="ml-4 sm:ml-6 md:ml-10">
-                  HTML, CSS3, JavaScript, ReactJs
-                </p> </li>
-              </ul>
+        <FeatSection
+          featTitle="Agency Temp"
+          featSubtitle="What we do best"
+          featText={["One of a kind", "Qualilty, Timely, Respectfuly, Kindly", "True"]}
+          featTags={["Skill", "Tech Skill", "Pro Debugger"]}
+          featImg={AgencyImg}
+        />
+        {/* Agency Section */}
+        <div className="justify-around px-4 py-4 mx-0 sm:flex" id="agencySection" data-testid="AgencyContainer" >
+          <div className="text-center">
+            <span className="my-3 text-lg text-center text-gray-800 border border-l-0 border-r-0 border-gray-800">
+              Agency Template
+          </span>
+            <p className="px-4 my-2 text-sm text-center lg:text-md">
+              Bootstrap Template <span className="text-lg md:text-xl lg:text-2xl"> ➡ </span> Full MERN Stack Template
+            </p>
+            <div className="">
+              <span className="text-sm text-left">
+                ➡ Full MERN Stack Template
+                <br />
+              </span>
+              <span className="text-sm text-left">
+                ➡ Full MERN Stack Template
+                <br />
+              </span>
+              <span className="text-sm text-left">
+                ➡ Full MERN Stack Template
+                <br />
+              </span>
+              <span className="text-sm text-left">
+                ➡ Full MERN Stack Template
+                <br />
+              </span>
+
+            </div>
+            <div className="flex flex-wrap-reverse justify-around mt-2 mb-6 bg-opacity-75 sm:mt-4 md:mt-6">
+              <div className="flex p-1 mx-1 my-1 bg-gray-400 bg-opacity-50 rounded-full">
+                <Tag text="Bootstrap" />
+              </div>
+              <div className="flex p-1 my-1 mr-1 bg-gray-400 bg-opacity-50 rounded-full">
+                <Tag text="Full Stack" />
+              </div>
+              <div className="flex p-1 my-1 mr-1 bg-gray-400 bg-opacity-50 rounded-full">
+                <Tag text="ReactJs" />
+              </div>
+              <div className="flex p-1 my-1 mr-1 bg-gray-400 bg-opacity-50 rounded-full">
+                <Tag text="Modularization" />
+              </div>
             </div>
           </div>
-          <div className="w-full md:w-2/5 sm:px-4">
+
+          <div className="w-2/3 mx-auto my-4 sm:max-w-sm">
             <img className="rounded-md" src={AgencyImg} alt="Monitoring" />
-          </div>
-        </div>
-        <div className="flex flex-wrap items-center mb-20">
-          <div className="w-full md:w-1/2">
-            <h4 className="mb-3 text-3xl font-bold text-gray-800">Exercise Metric</h4>
-            <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch is able to capture you vitals while you exercise. You can create different category of exercises and can track your vitals on the go.</p>
-          </div>
-          <div className="w-full md:w-1/2">
-            <img src={monitoringImg} alt="Monitoring" />
           </div>
         </div>
 
