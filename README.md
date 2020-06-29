@@ -3,6 +3,7 @@
 
 ## Purpose:
   Showcase past projects, present endeavors and future challenges.
+  REST ready - back-end API routing
   
 [GregSoares.com](https://gregsoares.com)
 
@@ -18,8 +19,8 @@
     
 - ### Client Side: 
  * create-react-app
- * @fortawesome/fontawesome - Fonts Icons and Brands Bootstrap 
- * http-proxy-middleware 
+ * @fortawesome/fontawesome - Fonts Icons and Brands Bootstrap
+ * react-router
 
 - ### Server Side: 
  * body-parser 
@@ -27,3 +28,7 @@
  * express 
  * mongoose 
  * path
+ 
+- ### Development:
+  * @react-testing-library
+  * nodemon
