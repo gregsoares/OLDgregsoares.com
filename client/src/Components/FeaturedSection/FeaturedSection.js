@@ -2,7 +2,6 @@ import React from 'react'
 import { Tag } from "../Tag/Tag";
 import { FeatSection } from "./FeatSection";
 
-import monitoringImg from './assets/monitoring.jpg';
 import reportingImg from './assets/reporting.jpg';
 import syncingImg from './assets/syncing.jpg';
 import AgencyImg from './assets/AgencySS.png';
@@ -15,14 +14,22 @@ export const FeaturedSection = () => {
           Projects
         </h2>
         <FeatSection
-          featTitle="Agency Temp"
-          featSubtitle="What we do best"
-          featText={["One of a kind", "Qualilty, Timely, Respectfuly, Kindly", "True"]}
-          featTags={["Skill", "Tech Skill", "Pro Debugger"]}
+          featTitle="GregSoares.com ➡ Full MERN Stack"
+          featSubtitle="MongoDB, NodeJs+ExpressJs, ReactJs"
+          featText={["Our Smart Health Monitoring Wristwatch can generate a comprehensive report on your vitals depending on your settings either daily, weekly, monthly, quarterly or yearly."]}
+          featTags={["Bootstrap", "Tech Skill", "Pro Debugger"]}
+          featImg={AgencyImg}
+          bgColor="bg-indigo-400"
+        />
+        <FeatSection
+          featTitle="Bootstrap Template ➡ Full MERN Stack Template"
+          featSubtitle=""
+          featText={["Our Smart Health Monitoring Wristwatch can generate a comprehensive report on your vitals depending on your settings either daily, weekly, monthly, quarterly or yearly."]}
+          featTags={["Bootstrap", "Tech Skill", "Pro Debugger"]}
           featImg={AgencyImg}
         />
         {/* Agency Section */}
-        <div className="justify-around px-4 py-4 mx-0 sm:flex" id="agencySection" data-testid="AgencyContainer" >
+        {/* <div className="justify-around px-4 py-4 mx-0 sm:flex" id="agencySection" data-testid="AgencyContainer" >
           <div className="text-center">
             <span className="my-3 text-lg text-center text-gray-800 border border-l-0 border-r-0 border-gray-800">
               Agency Template
@@ -32,7 +39,7 @@ export const FeaturedSection = () => {
             </p>
             <div className="">
               <span className="text-sm text-left">
-                ➡ Full MERN Stack Template
+                
                 <br />
               </span>
               <span className="text-sm text-left">
@@ -51,10 +58,10 @@ export const FeaturedSection = () => {
             </div>
             <div className="flex flex-wrap-reverse justify-around mt-2 mb-6 bg-opacity-75 sm:mt-4 md:mt-6">
               <div className="flex p-1 mx-1 my-1 bg-gray-400 bg-opacity-50 rounded-full">
-                <Tag text="Bootstrap" />
+                <Tag text="" />
               </div>
               <div className="flex p-1 my-1 mr-1 bg-gray-400 bg-opacity-50 rounded-full">
-                <Tag text="Full Stack" />
+                <Tag text="" />
               </div>
               <div className="flex p-1 my-1 mr-1 bg-gray-400 bg-opacity-50 rounded-full">
                 <Tag text="ReactJs" />
@@ -68,7 +75,7 @@ export const FeaturedSection = () => {
           <div className="w-2/3 mx-auto my-4 sm:max-w-sm">
             <img className="rounded-md" src={AgencyImg} alt="Monitoring" />
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-wrap items-center mb-20">
           <div className="w-full md:w-1/2">

@@ -36,7 +36,7 @@ export const HeroCTA = () => {
                   <p className="font-bold ">
                     Threat Analysis
               </p>
-                Vulnerability Signature Scripting(Bash, Python, Lua), Splunk + BrimSecurity, ELK (Elastic, LogStash and Kibana)
+                Vulnerability Signature Scripting(Bash, Python, Lua), Splunk, BrimSecurity, ELK Stack (Elastic, LogStash and Kibana)
                 </li>
               </div>
             </ul>
