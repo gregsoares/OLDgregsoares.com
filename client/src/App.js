@@ -13,7 +13,7 @@ import Projects from './Pages/Projects';
 const App = () => {
   return (
     <Router>
-      <Topnav />
+      <Topnav activePage />
       <Switch>
         <Route exact path='/' component={Index} />
         <Route exact path='/about' component={About} />

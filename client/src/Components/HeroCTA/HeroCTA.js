@@ -1,5 +1,4 @@
 import React from 'react'
-
 export const HeroCTA = () => {
   return (
     <div className="overflow-hidden border rounded-b-lg" data-testid="HeroCTAContainer">
@@ -7,7 +6,7 @@ export const HeroCTA = () => {
       >
         <div className="w-full px-6 text-center">
           <h2 className="mb-10 text-4xl font-bold text-white">
-            It's not a job if you enjoy it.
+           Networking, Cyber Security, Web Development, ...
           </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
             <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-lg">Some of my favorite projects cover the following topics:</span>

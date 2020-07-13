@@ -1,17 +1,22 @@
 import React from 'react';
 
-export const Topnav = () => {
+export const Topnav = props => {
+
+  const activePage = props.activePage;
+  const isActive = page => (
+   (page === activePage) ? "topMenuBtn hover:shadow-md text-black hover:bg-gray-100" : "topMenuBtn hover:shadow-md text-gray-700 hover:bg-gray-100"
+  )
 
   return (
-    <nav className="sticky top-0 flex justify-between p-4 bg-gray-200 bg-opacity-75" data-testid="TopnavContainer">
-      <div className="mr-12" data-testid="brandname" >
-        <p className="py-0 font-serif text-2xl font-black ">GregSoares.com</p>
+    <nav className="sticky top-0 flex justify-between px-4 py-0 bg-gray-200 bg-opacity-75" data-testid="TopnavContainer">
+      <div className="mr-12 py-0" data-testid="brandName" >
+        <p className="py-0 font-serif text-2xl  ">GregSoares.com</p>
       </div>
-      <div className="flex justify-end w-full mr-4 navbar-menu">
-        <a className="topMenuBtn hover:shadow-sm hover:font-medium" href="/projects" >Projects</a>
-        <a className="topMenuBtn hover:shadow-sm hover:font-medium" href="/" >Resume</a>
-        <a className="topMenuBtn hover:shadow-sm hover:font-medium" href="/" >Github</a>
-        <a className="topMenuBtn hover:shadow-sm hover:font-medium" href="/" >LinkedIn</a>
+      <div className="flex justify-end w-full mr-4 py-0 navbar-menu font-semibold">
+        <a className={isActive("projects")} href="/projects" >Projects</a>
+        <a className={isActive("resume")} href="/" >Resume</a>
+        <a className={isActive("github")} href="/" >Github</a>
+        <a className={isActive("linkedin")} href="/" >LinkedIn</a>
       </div>
     </nav>
   )

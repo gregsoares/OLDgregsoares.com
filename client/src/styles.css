@@ -2,12 +2,12 @@
 @tailwind components;
 
   .topMenuBtn {
+    @apply shadow-sm;
     @apply px-2;
-    @apply py-1;
-    @apply mx-1;
-    @apply my-1;
+    @apply py-3;
     @apply rounded-sm;
-
+    @apply my-0;
+    @apply transition-shadow;
   }
 
 @tailwind utilities;

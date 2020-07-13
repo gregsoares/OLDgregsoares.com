@@ -7,7 +7,7 @@ test('Renders TopnavContainer (byTestId)', () => {
   expect(screen.getByTestId('TopnavContainer')).toBeInTheDocument();
 });
 
-test('Renders Topnav (ByText:GregSoares.com)', () => {
+test('Renders Topnav (ByTestId: brandName)', () => {
   render(<Topnav />);
-  expect(screen.getByText('GregSoares.com')).toBeInTheDocument();
+  expect(screen.getByTestId('brandName')).toBeInTheDocument();
 });

@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    zIndex: {
+      '-10': '-10',
+    },
     screens: {
       sm: '576px',
       md: '768px',
