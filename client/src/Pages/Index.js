@@ -17,7 +17,7 @@ const Index = () => {
       {/* <Modal contentLabel="HelloWorld something TRUE" className="shadow-inner w-2 h-2 py-2 px-4 my-1 mx-2 border bg-gray-300" isOpen={true} /> */}
       <HeroCTA />
       <FeaturedSection />
-      <CardSection />
+      {/* <CardSection /> */}
     </main>
   );
 };

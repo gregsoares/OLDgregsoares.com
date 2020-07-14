@@ -8,7 +8,7 @@ import React from 'react'
 export const PostSection = props => {
   const { postImg } = props;
   return (
-    <div>
+    <div data-testid="PostSectionContainer">
       {/*  */}
       <div className="flex flex-wrap items-center mb-20">
         <div className="w-full md:w-1/2">

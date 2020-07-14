@@ -5,8 +5,8 @@ export const Intro = () => {
     e.target.playbackRate = 2.93;
   };
   return (
-    <div className="relative bg-opacity-25 m-0 p-0 h-screen -z-10">
-      <video
+    <div className="relative bg-opacity-25 m-0 p-0 h-screen -z-10" data-testid="IntroContainer">
+      {/* <video
         className="absolute w-full -z-10 h-full object-cover -translate-x-1/2 -translate-y-1/2"
         src={gibsonVideo}
         autoPlay
@@ -14,14 +14,14 @@ export const Intro = () => {
         muted
         id="hackThePlanet"
         style={{ zIndex: "-1" }}
-      >
+      > */}
       <h1 className="text-3xl z-10 bg-white">Hello world</h1>
       <h1 className="text-3xl z-10 bg-white">Hello world</h1>
       <h1 className="text-3xl z-10 bg-white">Hello world</h1>
       <h1 className="text-3xl z-10 bg-white">Hello world</h1>
       <h1 className="text-3xl z-10 bg-white">Hello world</h1>
       
-      </video>
+      {/* </video> */}
     </div>
   );
 };
