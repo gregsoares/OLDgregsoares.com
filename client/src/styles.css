@@ -13,7 +13,7 @@
 @tailwind utilities;
 
 @responsive {
-
+  
   .h-10 {
     height: 10vh;
   }

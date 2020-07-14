@@ -4,13 +4,13 @@ export const Topnav = props => {
 
   const activePage = props.activePage;
   const isActive = page => (
-   (page === activePage) ? "topMenuBtn hover:shadow-md text-black hover:bg-gray-100" : "topMenuBtn hover:shadow-md text-gray-800 hover:bg-gray-100"
+   (page === activePage) ? "topMenuBtn text-black hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border " : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg"
   )
 
   return (
-    <nav className="sticky top-0 flex justify-between px-4 py-0 bg-blue-500 bg-opacity-50 shadow-inner" data-testid="TopnavContainer">
+    <nav className="sticky top-0 flex justify-between px-4 py-0 shadow-md" style={{backgroundColor: "#45718C"}} data-testid="TopnavContainer">
       <div className="mr-12 py-0" data-testid="brandName" >
-        <p className="py-0 font-serif text-2xl  ">GregSoares.com</p>
+        <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
       </div>
       <div className="flex justify-end w-full mr-4 py-0 navbar-menu font-semibold">
         <a className={isActive("home") + ''} href="/" >Home</a>
