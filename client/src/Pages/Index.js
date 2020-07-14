@@ -3,7 +3,8 @@ import React from "react";
 import { CardSection } from "../Components/CardSection/CardSection";
 import { FeaturedSection } from "../Components/FeaturedSection/FeaturedSection";
 import { HeroCTA } from "../Components/HeroCTA/HeroCTA";
-import { Intro } from "../Components/Intro/Intro";
+import { Modal } from "../Components/Modal/Modal";
+// import { Intro } from "../Components/Intro/Intro";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       data-testid="IndexPageContainer"
     >
       {/* <Intro /> */}
+      {/* <Modal contentLabel="HelloWorld something TRUE" className="shadow-inner w-2 h-2 py-2 px-4 my-1 mx-2 border bg-gray-300" isOpen={true} /> */}
       <HeroCTA />
       <FeaturedSection />
       <CardSection />
