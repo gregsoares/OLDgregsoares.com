@@ -27,8 +27,16 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "jest": {
-    "coverageReporters": ["text-summary"]
+  "jest": { 
+    "coverageReporters": ["lcov"],
+    "coverageThreshold": {
+      "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+      }
+    }
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
