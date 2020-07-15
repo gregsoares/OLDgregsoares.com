@@ -29,6 +29,7 @@ export const Topnav = (props) => {
           className={isActive("resume") + ""}
           href="https://www.linkedin.com/in/greg-soares/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAABkED18BwLp2ur2OWi7pIobAZZSlpJBTgp0,1593197804619)/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BGRPVrhLgTa272qWWSqugbw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-featured_item_detail_view"
           target="_blank"
+          rel="noopener noreferrer"
          data-testid="resumeNavLink">
           Resume
         </a>
@@ -37,6 +38,7 @@ export const Topnav = (props) => {
           className={isActive("github") + ""}
           href="https://github.com/gregsoares"
           target="_blank"
+          rel="noopener noreferrer"
         data-testid="githubNavLink">
           Github
         </a>
@@ -45,6 +47,7 @@ export const Topnav = (props) => {
           className={isActive("linkedin") + ""}
           href="http://www.linkedin.com/in/greg-soares"
           target="_blank"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>
