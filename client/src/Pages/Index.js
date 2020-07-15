@@ -1,11 +1,12 @@
 import React from "react";
 
-import { CardSection } from "../Components/CardSection/CardSection";
+// import { CardSection } from "../Components/CardSection/CardSection";
 import { FeaturedSection } from "../Components/FeaturedSection/FeaturedSection";
 import { HeroCTA } from "../Components/HeroCTA/HeroCTA";
-import { Modal } from "../Components/Modal/Modal";
+// import { Modal } from "../Components/Modal/Modal";
 // import { Intro } from "../Components/Intro/Intro";
 
+// TODO: import ../Components/assets/js/scollPosition and run to return to same place onReload
 const Index = () => {
   return (
     <main

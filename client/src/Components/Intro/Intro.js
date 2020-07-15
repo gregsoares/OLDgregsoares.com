@@ -1,9 +1,6 @@
 import React from "react";
-import gibsonVideo from "./hackThePlanet.webm";
+// import gibsonVideo from "./hackThePlanet.webm";
 export const Intro = () => {
-  const slowItDown = (e) => {
-    e.target.playbackRate = 2.93;
-  };
   return (
     <div className="relative bg-opacity-25 m-0 p-0 h-screen -z-10" data-testid="IntroContainer">
       {/* <video
