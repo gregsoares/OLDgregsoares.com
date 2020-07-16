@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactModal from "react-modal";
 
 export const Modal = (props) => {
-  const { isOpen, contentLabel } = props;
+  const [modalProps, setModalProps] = useState(
+    { isOpen: props.isOpen, contentLabel: props.contentLabel },
+    { className: props.className }
+  );
 
   return (
-    <ReactModal isOpen={isOpen} >
-      <p>{contentLabel}</p>
+    <ReactModal isOpen={modalProps.isOpen} className={modalProps.className}>
+      <p>{modalProps.contentLabel}</p>
     </ReactModal>
   );
 };

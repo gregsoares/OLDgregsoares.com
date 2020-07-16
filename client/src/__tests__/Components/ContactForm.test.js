@@ -8,8 +8,8 @@ test('Renders ContactForm (byTestId)', () => {
   expect(checkId).toBeInTheDocument();
 });
 
-test('Renders Form (byText:VisitsPerDay)', () => {
+test('Renders main label (byText:know)', () => {
   const { getByText } = render(<ContactForm />)
-  const checkText = getByText('Visits Per Day')
+  const checkText = getByText(/know/)
   expect(checkText).toBeInTheDocument();
   });
