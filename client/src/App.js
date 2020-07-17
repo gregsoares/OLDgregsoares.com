@@ -9,7 +9,6 @@ import { Footer } from './Components/Footer/Footer';
 import Index from "./Pages/Index";
 import About from "./Pages/About";
 import Projects from './Pages/Projects';
-import { Coverage } from "./coverage/lcov-report/Pages/Coverage";
 
 const App = () => {
   return (
@@ -19,7 +18,6 @@ const App = () => {
         <Route exact path='/' component={Index} />
         <Route exact path='/about' component={About} />
         <Route exact path='/projects' component={Projects} />
-        <Route exact path='/supaSecretAdmin/coverage' component={Coverage} />
       </Switch>
       <Footer />
     </Router>
