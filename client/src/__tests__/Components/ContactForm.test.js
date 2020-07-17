@@ -4,6 +4,8 @@ import { ContactForm } from "../../Components/ContactForm/ContactForm";
 
 beforeEach(()=> cleanup)
 
+// TODO: Add Send message test (fireEvent)
+
 describe("ContactForm test suite", () => {
   test("Renders ContactForm (byTestId)", () => {
     render(<ContactForm />);

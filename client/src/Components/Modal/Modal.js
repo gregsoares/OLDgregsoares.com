@@ -8,7 +8,7 @@ export const Modal = (props) => {
   );
 
   return (
-    <ReactModal isOpen={modalProps.isOpen} className={modalProps.className}>
+    <ReactModal onRequestClose={() => setModalProps({...modalProps, isOpen: false})} isOpen={modalProps.isOpen} className={modalProps.className}>
       <p>{modalProps.contentLabel}</p>
     </ReactModal>
   );
