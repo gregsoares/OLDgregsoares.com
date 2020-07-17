@@ -3,42 +3,45 @@ import React from "react";
 export const ContactForm = () => {
   return (
     <div
-      className="w-full mx-auto max-w-md mb-6"
+      className="w-full mx-auto max-w-md mb-6 bg-gray-200"
       data-testid="ContactFormContainer"
     >
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-6">
+      <form className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6">
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-700 text-md text-center font-bold mb-2"
             htmlFor="visits"
           >
             You know what to do.
           </label>
           <input
-            className="border hover:bg-white bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-inner"
+            className="border hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"
             type="text"
-            id="nameInput"
+            id="name_input"
             placeholder="Name"
             required={true}
+            data-testid="nameInput"
           />
           <input
-            className="border hover:bg-white bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-inner"
+            className="border hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"
             type="email"
-            id="emailInput"
+            id="email_input"
             placeholder="Email"
             required={true}
+            data-testid="emailInput"
           />
 
           <div className="my-3" id="messageArea">
-            <label className="text-sm lg:text-lg font-medium mb-2" htmlFor="messageLabel" id="messageLabel">
+            <label className="text-md lg:text-lg font-medium mb-2 block" htmlFor="messageLabel" id="messageLabel">
               Message:
             </label>
             <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="messageBox"
+              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message_box"
               type="text"
               placeholder="Don't be shy, I'm a geek."
               rows={12}
+              data-testid="messageBox"
             />
           </div>
         </div>
@@ -48,6 +51,7 @@ export const ContactForm = () => {
         <button
           className="bg-blue-600 hover:bg-blue-500 text-gray-200 hover:text-white hover:shadow-md shadow-sm transition-all font-semibold hover:font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
+          data-testid="sendMessageBtn"
         >
           Send Message
         </button>
