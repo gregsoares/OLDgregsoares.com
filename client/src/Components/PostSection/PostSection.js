@@ -5,11 +5,35 @@ import React from 'react'
 // postText
 // postImg
 
+/* Old FeaturedSection
+
+        <div className="flex flex-wrap items-center mb-20">
+          <div className="w-full md:w-1/2">
+            <img src={reportingImg} alt="Reporting" />
+          </div>
+          <div className="w-full pl-10 md:w-1/2">
+            <h4 className="mb-3 text-3xl font-bold text-gray-800">Reporting</h4>
+            <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch can generate a comprehensive report on your vitals depending on your settings either daily, weekly, monthly, quarterly or yearly.</p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center mb-20">
+          <div className="w-full md:w-1/2">
+            <h4 className="mb-3 text-3xl font-bold text-gray-800">Syncing</h4>
+            <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch allows you to sync data across all your mobile devices whether iOS, Android or Windows OS and also to your laptop whether MacOS, GNU/LInux or Windows OS.</p>
+          </div>
+          <div className="w-full md:w-1/2">
+            <img src={syncingImg} alt="Syncing" />
+          </div>
+        </div>
+
+*/
+
 export const PostSection = props => {
   const { postImg } = props;
   return (
     <div data-testid="PostSectionContainer">
-      {/*  */}
+    
       <div className="flex flex-wrap items-center mb-20">
         <div className="w-full md:w-1/2">
           <h4 className="mb-3 text-3xl font-bold text-gray-800">Exercise Metric</h4>

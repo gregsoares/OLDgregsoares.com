@@ -14,23 +14,45 @@ export const ContactForm = () => {
           >
             You know what to do.
           </label>
-
-          <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="messageBox"
+          <input
+            className="border hover:bg-white bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-inner"
             type="text"
-            placeholder="Don't be shy, I'm a geek."
-            cols={20}
-            aria-autocomplete={true}
+            id="nameInput"
+            placeholder="Name"
+            required={true}
           />
+          <input
+            className="border hover:bg-white bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-inner"
+            type="email"
+            id="emailInput"
+            placeholder="Email"
+            required={true}
+          />
+
+          <div className="my-3" id="messageArea">
+            <label className="text-sm lg:text-lg font-medium mb-2" htmlFor="messageLabel" id="messageLabel">
+              Message:
+            </label>
+            <textarea
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="messageBox"
+              type="text"
+              placeholder="Don't be shy, I'm a geek."
+              rows={12}
+              aria-autocomplete={true}
+            />
+          </div>
         </div>
+
+<div className="w-full text-center" id="sendMessageButtonContainer">
 
         <button
           className="bg-blue-600 hover:bg-blue-500 text-gray-200 hover:text-white hover:shadow-md shadow-sm transition-all font-semibold hover:font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
         >
-          Calculate
+          Send Message
         </button>
+</div>
       </form>
     </div>
   );
