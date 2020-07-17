@@ -1,8 +1,8 @@
 import React from 'react'
 import { FeatSection } from "./FeatSection";
 
-import reportingImg from './assets/reporting.jpg';
-import syncingImg from './assets/syncing.jpg';
+// import reportingImg from './assets/reporting.jpg';
+// import syncingImg from './assets/syncing.jpg';
 import AgencyImg from './assets/AgencySS.png';
 
 export const FeaturedSection = () => {

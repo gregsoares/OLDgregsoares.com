@@ -39,7 +39,6 @@ export const ContactForm = () => {
               type="text"
               placeholder="Don't be shy, I'm a geek."
               rows={12}
-              aria-autocomplete={true}
             />
           </div>
         </div>
