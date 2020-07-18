@@ -4,9 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 let db;
-require("./models/Message");
 
-const Message = mongoose.model("messages");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

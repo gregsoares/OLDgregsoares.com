@@ -9,6 +9,17 @@ router.get("/", (req, res) => res.json({ msg: "/api/users - Good Reply" }));
 // @access Public
 router.get("/", (req, res) => res.json({ msg: "Form API Works" }));
 
+// @route GET form/aForm/read?email(json)
+// @desc Tests users route
+// @access Public
+router.get("/aForm/read", (req, res) => {
+  Message.findOne({ email: req.body.email }).then((message) =>
+    message
+      ? res.status(200).json(message)
+      : res.status(403).json({ msg: "no good" })
+  );
+});
+
 // @route GET form/aForm/readAll
 // @desc Tests users route
 // @access Public
@@ -31,25 +42,11 @@ router.post("/sendMessage", (req, res) => {
     email: req.body.email,
     message: req.body.message,
   });
-  message
-    .save()
-    .catch((resp) => {
-      console.debug(resp);
-      console.debug(resp.body);
-    });
-    res.json('Success')
+  message.save().catch((resp) => {
+    console.debug(resp);
+    console.debug(resp.body);
+  });
+  res.json("Success");
 });
-
-//   let showData = `
-//     ${req.body.data.name}: ${req.body.data.email}
-//     Message: <br> ${req.body.data.message}
-//     `;
-//   console.debug(showData);
-
-//   const sendMessage = new Message({
-//     name: data.name,
-//     email: data.email,
-//     message: data.message,
-//   }).save();
 
 module.exports = router;
