@@ -3,16 +3,19 @@ import React, { useState } from "react";
 export const ContactForm = () => {
   const [input, setInput] = useState({ name: "", email: "", message: "" });
   const [messageSent, setMessageSent] = useState(false);
-  const sendMessage = (e) => {
+
+  const sendMessage = async (e) => {
     e.preventDefault();
     const { name, email, message } = input;
-    const data = {
+    const newData = await fetch("/form/sendMessage", {
+      method: "POST",
+      headers: 'application/json',
+      body: JSON.stringify({
       name: name,
       email: email,
       message: message,
-    };
-
-    fetch("/form/sendMessage", { method: "POST", body: JSON.stringify(data) })
+    }),
+    })
       .then((resp) => {
         if (resp === "Success") {
           setMessageSent(true);
@@ -23,7 +26,7 @@ export const ContactForm = () => {
         console.debug(resp);
         console.debug(resp.body);
         console.log(messageSent);
-      });
+      })
   };
 
   return (

@@ -2,12 +2,6 @@ const express = require("express");
 const router = express.Router();
 
 const Message = require("../models/Message");
-router.get("/", (req, res) => res.json({ msg: "/api/users - Good Reply" }));
-
-// @route GET /form
-// @desc Tests users route
-// @access Public
-router.get("/", (req, res) => res.json({ msg: "Form API Works" }));
 
 // @route GET form/aForm/read?email(json)
 // @desc Tests users route
@@ -45,8 +39,15 @@ router.post("/sendMessage", (req, res) => {
   message.save().catch((resp) => {
     console.debug(resp);
     console.debug(resp.body);
+    res.json(resp);
   });
   res.json("Success");
 });
+router.get("/", (req, res) => res.json({ msg: "/api/users - Good Reply" }));
+
+// @route GET /form
+// @desc Tests users route
+// @access Public
+router.get("/", (req, res) => res.json({ msg: "Form API Works" }));
 
 module.exports = router;
