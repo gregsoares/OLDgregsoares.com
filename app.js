@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const path = require("path");
 const { trace } = require("console");
+const { send } = require("process");
 const app = express();
 let db;
 
@@ -19,35 +20,41 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Routes
-app.post("/form/sendMessage", (req, res) => {
-  let data = req.body;
-  let smtpTransport = nodemailer.createTransport({
-    //TODO: add service, not Gmail
-    service: "",
-    port: 465,
-    // add creds here
-    auth: {
-      user: "",
-      pass: "",
-    },
-  });
-  let mailOpts = {
-    from: data.email,
-    to: "gregselvagem@gmail.com",
-    subject: `Message from ${data.name}`,
-    html: `
+app.post("/form/sendMessage/", (req, res) => {
+  if (req.body.data === null) res.send(req.body);
+  if (req.body.data === undefined) res.send(req.body);
+  if (req.body.data.length() === 0) res.send(req.body);
+
+  () => {
+    let data = req.body;
+    let smtpTransport = nodemailer.createTransport({
+      //TODO: add service, not Gmail
+      host: "smtp.ethereal.email",
+      port: 587,
+      // add creds here Audie Johnson
+      auth: {
+        user: "audie72@ethereal.email",
+        pass: "4apaqbMvbNC4eMsfG7",
+      },
+    });
+    let mailOpts = {
+      from: data.email,
+      to: "gregselvagem@gmail.com",
+      subject: `Message from ${data.name}`,
+      html: `
     
     <h2> <b> FROM: </b> ${data.name}: ${data.email} </h2><br> <br>
     <h2> Message: <br> ${data.message} </h2>
     `,
-  };
-  smtpTransport.sendMail(mailOpts, (error, resp) => {
-    if (error) res.send(error);
-    res.send("Message Sent");
-  });
-  smtpTransport.close();
-});
+    };
+    smtpTransport
+      .sendMail(mailOpts)
+      .then((resp) => res.send("Success"))
+      .catch((error) => res.send(error));
 
+    smtpTransport.close();
+  };
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
