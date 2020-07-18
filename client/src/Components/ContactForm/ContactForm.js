@@ -1,28 +1,60 @@
 import React, { useState } from "react";
-
-// Todo: After setState is implemented, Implement: sendMessage
+import axios from "axios";
 
 export const ContactForm = () => {
   const [input, setInput] = useState({ name: "", email: "", message: "" });
-  function sendMessage() {
+  const [messageSent, setMessageSent] = useState(false);
+  const sendMessage = (e) => {
+    e.preventDefault();
     const { name, email, message } = input;
-    console.debug(JSON.stringify(name));
-    console.debug(JSON.stringify(email));
-    console.debug(JSON.stringify(message));
-  }
+    const data = {
+      "name": name,
+      "email": email,
+      "message": message
+    }
+
+    axios
+      .post("/form/sendMessage", data)
+      .then((resp) => {
+        if (resp === "Success") {
+          setMessageSent(true);
+          setInput({ name: "", email: "", message: "" });
+        } else setMessageSent("error");
+      })
+      .catch((resp) => {
+        console.debug(resp);
+        console.debug(resp.body);
+        console.log(messageSent);
+      });
+  };
 
   return (
     <div
       className="w-full mx-auto max-w-md mb-6 bg-gray-200"
       data-testid="ContactFormContainer"
     >
-      <form className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6">
+      <form onSubmit={sendMessage} className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6">
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-md text-center font-bold mb-2"
-            htmlFor="visits"
+            className={
+              messageSent !== true
+                ? "block text-gray-700 text-md text-center font-bold mb-2"
+                : "hidden"
+            }
+            htmlFor="formTitle"
           >
             You know what to do.
+          </label>
+          <label
+            className={
+              messageSent === true
+                ? "block text-gray-700 text-md text-center font-bold mb-2"
+                : "hidden"
+            }
+            htmlFor="formTitle"
+          >
+            Your message has been sent successfully. Thank you for taking the
+            time to reach out.
           </label>
           <input
             className="border text-center hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"
@@ -69,7 +101,7 @@ export const ContactForm = () => {
         <div className="w-full text-center" id="sendMessageButtonContainer">
           <button
             className="bg-blue-600 hover:bg-blue-500 text-gray-200 hover:text-white hover:shadow-md shadow-sm transition-all font-semibold hover:font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            onClick={() => sendMessage()}
+            onClick={(e) => sendMessage(e)}
             type="button"
             data-testid="sendMessageBtn"
           >

@@ -28,8 +28,10 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "jest": { 
-    "coverageReporters": ["lcov"]
+  "jest": {
+    "coverageReporters": [
+      "lcov"
+    ]
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
