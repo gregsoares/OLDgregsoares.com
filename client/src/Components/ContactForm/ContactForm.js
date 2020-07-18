@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 export const ContactForm = () => {
   const [input, setInput] = useState({ name: "", email: "", message: "" });
@@ -8,13 +7,12 @@ export const ContactForm = () => {
     e.preventDefault();
     const { name, email, message } = input;
     const data = {
-      "name": name,
-      "email": email,
-      "message": message
-    }
+      name: name,
+      email: email,
+      message: message,
+    };
 
-    axios
-      .post("/form/sendMessage", data)
+    fetch("/form/sendMessage", { method: "POST", body: JSON.stringify(data) })
       .then((resp) => {
         if (resp === "Success") {
           setMessageSent(true);
@@ -33,7 +31,10 @@ export const ContactForm = () => {
       className="w-full mx-auto max-w-md mb-6 bg-gray-200"
       data-testid="ContactFormContainer"
     >
-      <form onSubmit={sendMessage} className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6">
+      <form
+        onSubmit={sendMessage}
+        className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6"
+      >
         <div className="mb-4">
           <label
             className={
