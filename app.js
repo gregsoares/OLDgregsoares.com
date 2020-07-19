@@ -27,8 +27,10 @@ mongoose
 
 // Routes
 const formRouter = require("./routes/contactForm");
+const userRouter = require("./routes/userRouter");
 app.use("/form", formRouter);
 app.use("/form/sendMessage", formRouter);
 app.use("/form/aForm/*", formRouter);
+app.use("/user", userRouter);
 
 module.exports = app;

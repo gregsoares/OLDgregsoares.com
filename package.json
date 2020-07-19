@@ -29,6 +29,8 @@
     "express": "^4.16.4",
     "mongoose": "^5.9.20",
     "nodemailer": "^6.4.10",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {

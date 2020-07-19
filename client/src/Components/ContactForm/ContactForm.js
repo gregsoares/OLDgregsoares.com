@@ -28,7 +28,7 @@ export const ContactForm = () => {
       })
       .then((data) => {
         setMessageSent(true);
-        setInput({ name: data.name, email: data.email, message: data.message });
+        setInput({ name:"", email: "", message: "" });
       })
       .catch((res) => {
         console.debug(res);
