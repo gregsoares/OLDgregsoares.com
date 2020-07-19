@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
 const Message = require("../models/Message");
 
 // TODO: add a check on sendMessage do see if duplicate email within some TIME PERIOD (to allow for multiple messages from one person)

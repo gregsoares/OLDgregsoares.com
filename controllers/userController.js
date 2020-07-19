@@ -1,6 +1,6 @@
 const passport = require("passport");
 const GoogleStategy = require("passport-google-oauth20").Strategy;
-const keys = require("../config/keys");
+// const keys = require("../config/keys");
 
 module.export = passport.use(
   new GoogleStategy(

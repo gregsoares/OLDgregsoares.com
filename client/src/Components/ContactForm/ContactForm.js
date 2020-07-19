@@ -18,8 +18,6 @@ export const ContactForm = () => {
       message: message,
     };
 
-    // TODO: Make it front end only
-
     axios
       .post("http://192.168.0.10:3001/form/sendMessage", sendData)
       .then((response) => {
@@ -29,13 +27,12 @@ export const ContactForm = () => {
       .then((data) => {
         console.debug(data);
         setMessageSent(true);
-        setInput({ name:"", email: "", message: "" });
+        setInput({ name: "", email: "", message: "" });
       })
       .catch((res) => {
         console.debug(res);
         console.log(messageSent);
       });
-      
   };
 
   return (
