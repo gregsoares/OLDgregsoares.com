@@ -21,8 +21,7 @@ export const ContactForm = () => {
     axios
       .post("http://192.168.0.10:3001/form/sendMessage", sendData)
       .then((response) => {
-        console.debug(`first res from post: ${response.statusText}`);
-        JSON.stringify(response);
+        console.debug(`frontEnd res from post: ${response.statusText}`);
       })
       .then((data) => {
         console.debug(data);
