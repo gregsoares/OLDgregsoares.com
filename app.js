@@ -2,12 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
+const cors = require('cors');
 const app = express();
 let db;
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 // Importing DB Config
 if (process.env.PORT) {
@@ -21,11 +23,14 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) =>
-    console.log(process.env.PORT ? `\nMongoDB ERROR - Connection acting up!\n ${err}` : `\nMongoDB ERROR - Connection acting up!\n ${err}`)
+    console.log(`\nMongoDB ERROR - Connection acting up!\n ${err}`)
   );
 
 // Routes
 const formRouter = require('./routes/contactForm');
 app.use("/form", formRouter);
+app.use("/form/sendMessage", formRouter);
+app.use("/form/aForm/*", formRouter);
+
 
 module.exports = app;

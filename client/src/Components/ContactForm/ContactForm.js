@@ -1,32 +1,39 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export const ContactForm = () => {
-  const [input, setInput] = useState({ name: "", email: "", message: "" });
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [messageSent, setMessageSent] = useState(false);
 
   const sendMessage = async (e) => {
     e.preventDefault();
     const { name, email, message } = input;
-    const newData = await fetch("/form/sendMessage", {
-      method: "POST",
-      headers: 'application/json',
-      body: JSON.stringify({
+    const sendData = {
       name: name,
       email: email,
       message: message,
-    }),
-    })
-      .then((resp) => {
-        if (resp === "Success") {
-          setMessageSent(true);
-          setInput({ name: "", email: "", message: "" });
-        } else setMessageSent("error");
+    };
+
+    // TODO: Make it front end only
+
+    axios
+      .post("http://192.168.0.10:3001/form/sendMessage", sendData)
+      .then((response) => {
+        console.debug(`first res from post: ${response}`);
+        return JSON.stringify(response);
       })
-      .catch((resp) => {
-        console.debug(resp);
-        console.debug(resp.body);
+      .then((data) => {
+        setMessageSent(true);
+        setInput({ name: data.name, email: data.email, message: data.message });
+      })
+      .catch((res) => {
+        console.debug(res);
         console.log(messageSent);
-      })
+      });
   };
 
   return (
@@ -85,7 +92,7 @@ export const ContactForm = () => {
             <label
               className="text-md lg:text-lg font-medium mb-2 block"
               htmlFor="messageLabel"
-              id="messageLabel"
+              id="message_input"
             >
               Message:
             </label>

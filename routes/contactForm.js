@@ -22,28 +22,32 @@ router.get("/aForm/readAll", (req, res) => res.json({ msg: "allUsers Works" }));
 // @route POST /form/sendMessage
 // @desc Adds new message to collection
 router.post("/sendMessage", (req, res) => {
-  if (req.body === null) res.send(req.body);
-  if (req.body === undefined) res.send(req.body);
+  if (req.body === null) new Error(res.send(req.body));
+  if (req.body === undefined) new Error(res.send(req.body));
 
-  const data = {
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message,
-  };
+  console.debug(`
+  name: ${req.body.name}
+  email: ${req.body.email}
+  message: ${req.body.message}
+  `);
 
   let message = new Message({
     name: req.body.name,
     email: req.body.email,
     message: req.body.message,
   });
-  message.save().catch((resp) => {
-    console.debug(resp);
-    console.debug(resp.body);
-    res.json(resp);
-  });
-  res.json("Success");
+  message
+    .save()
+    .then((res) => {
+      JSON.stringify(res)
+    })
+    .catch((error) => {
+      console.debug(error);
+      res.json(error);
+    });
+    res.json(res.body)
 });
-router.get("/", (req, res) => res.json({ msg: "/api/users - Good Reply" }));
+router.get("/test", (req, res) => res.json({ msg: "/form/test - Good Reply" }));
 
 // @route GET /form
 // @desc Tests users route
