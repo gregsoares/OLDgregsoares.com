@@ -18,6 +18,7 @@ export const ContactForm = () => {
       message: message,
     };
 
+    // internal ip address giving problems in prod env.
     axios
       .post("http://192.168.0.10:3001/form/sendMessage", sendData)
       .then((response) => {
