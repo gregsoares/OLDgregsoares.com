@@ -9,8 +9,15 @@ module.export = passport.use(
       clientSecret: google.ClientSecret,
       callbackURL: "/user/auth/googleuser",
     },
-    (accessToken) => {
-        console.log(accessToken)
+    (accessToken, refreshToken, profile, done) => {
+      console.debug(`\n
+    accessToken: ${accessToken}
+    refreshToken${refreshToken} \n
+    Profile Info: 
+      Full name: ${(profile.name.givenName)} ${(profile.name.familyName)}
+      Email: ${(profile.emails[0].value)} 
+      Photo URL: ${(profile.photos[0].value)}
+    \n `);
     }
   )
 );

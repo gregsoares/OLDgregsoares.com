@@ -21,7 +21,7 @@ export const ContactForm = () => {
     // internal ip address giving problems in prod env.
     // TODO: use controllers/endVars to load proper address for post & callback
     axios
-      .post("http://192.168.0.10:3001/form/sendMessage", sendData)
+      .post("https://192.168.0.10:3001/form/sendMessage", sendData)
       .then((response) => {
         console.debug(`frontEnd res from post: ${response.statusText}`);
       })
