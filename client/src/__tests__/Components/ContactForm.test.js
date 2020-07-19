@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
 import { ContactForm } from "../../Components/ContactForm/ContactForm";
 
-beforeEach(()=> cleanup)
+beforeEach(() => cleanup);
 
 // TODO: Add Send message test (fireEvent)
 
@@ -14,11 +14,10 @@ describe("ContactForm test suite", () => {
   });
 
   test("Renders main label (byText:know)", () => {
-     render(<ContactForm />);
+    render(<ContactForm />);
     const checkText = screen.getByText(/know/);
     expect(checkText).toBeInTheDocument();
   });
-
 
   test('Expect to render byTestId="nameInput"', () => {
     render(<ContactForm />);
@@ -43,5 +42,4 @@ describe("ContactForm test suite", () => {
     const checkId = screen.getByTestId("messageBox");
     expect(checkId).toBeInTheDocument();
   });
-
 });

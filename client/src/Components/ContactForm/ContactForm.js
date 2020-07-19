@@ -64,8 +64,8 @@ export const ContactForm = () => {
             }
             htmlFor="formTitle"
           >
-            Your message has been sent successfully. Thank you for taking the
-            time to reach out.
+            Your message has been sent successfully.
+            <br /> Thank you for taking the time to reach out.
           </label>
           <input
             className="border text-center hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"

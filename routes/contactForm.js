@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Message = require("../models/Message");
 
+// TODO: add a check on sendMessage do see if duplicate email within some TIME PERIOD (to allow for multiple messages from one person)
 // @route GET form/aForm/read?email(json)
 // @desc Tests users route
 // @access Public
@@ -39,13 +40,13 @@ router.post("/sendMessage", (req, res) => {
   message
     .save()
     .then((res) => {
-      JSON.stringify(res)
+      JSON.stringify(res);
     })
     .catch((error) => {
       console.debug(error);
       res.json(error);
     });
-    res.json(res.body)
+  res.json(res.body);
 });
 router.get("/test", (req, res) => res.json({ msg: "/form/test - Good Reply" }));
 

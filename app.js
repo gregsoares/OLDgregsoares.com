@@ -2,10 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 let db;
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -27,10 +26,9 @@ mongoose
   );
 
 // Routes
-const formRouter = require('./routes/contactForm');
+const formRouter = require("./routes/contactForm");
 app.use("/form", formRouter);
 app.use("/form/sendMessage", formRouter);
 app.use("/form/aForm/*", formRouter);
-
 
 module.exports = app;
