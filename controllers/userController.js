@@ -1,20 +1,12 @@
 const passport = require("passport");
 const GoogleStategy = require("passport-google-oauth20").Strategy;
-// const keys = require("../config/keys");
-let googleClientId, googleClientSecret;
-if (process.env.PORT) {
-  googleClientId = process.env.googleClientID;
-  googleClientSecret = process.env.googleClientSecret;
-} else {
-  googleClientId = require("../config/keys").googleClientID;
-  googleClientSecret = require("../config/keys").googleClientSecret;
-}
+const google = require("./envVars.js");
 
 module.export = passport.use(
   new GoogleStategy(
     {
-      clientID: googleClientId,
-      clientSecret: googleClientSecret,
+      clientID: google.ClientId,
+      clientSecret: google.ClientSecret,
       callbackURL: "/user/auth/googleuser",
     },
     (accessToken) => {
