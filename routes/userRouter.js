@@ -14,6 +14,8 @@ router.get(
 // Route returned by oauth with user's code
 router.get(
   "/auth/googleuser",
-  passport.authenticate("google"));
+  passport.authenticate("google"),(res) => {
+       console.debug(res);
+  });
 
 module.exports = router;

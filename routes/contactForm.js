@@ -23,8 +23,8 @@ router.get("/aForm/readAll", (req, res) => res.json({ msg: "allUsers Works" }));
 // @route POST /form/sendMessage
 // @desc Adds new message to collection
 router.post("/sendMessage", (req, res) => {
-  if (req.body === null) new Error(res.send(req.body));
-  if (req.body === undefined) new Error(res.send(req.body));
+  if (req.body.email === null) new Error(res.send(req.body));
+  if (req.body.email === undefined) new Error(res.send(req.body));
 
   console.debug(`
   name: ${req.body.name}
@@ -40,14 +40,16 @@ router.post("/sendMessage", (req, res) => {
   message
     .save()
     .then((res) => {
+      console.debug(res);
       JSON.stringify(res);
     })
     .catch((error) => {
       console.debug(error);
       res.json(error);
     });
-  res.json(res.body);
+    res.json(res.body)
 });
+
 router.get("/test", (req, res) => res.json({ msg: "/form/test - Good Reply" }));
 
 // @route GET /form

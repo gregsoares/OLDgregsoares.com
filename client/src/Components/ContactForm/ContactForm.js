@@ -23,10 +23,11 @@ export const ContactForm = () => {
     axios
       .post("http://192.168.0.10:3001/form/sendMessage", sendData)
       .then((response) => {
-        console.debug(`first res from post: ${response}`);
-        return JSON.stringify(response);
+        console.debug(`first res from post: ${response.statusText}`);
+        JSON.stringify(response);
       })
       .then((data) => {
+        console.debug(data);
         setMessageSent(true);
         setInput({ name:"", email: "", message: "" });
       })
@@ -34,6 +35,7 @@ export const ContactForm = () => {
         console.debug(res);
         console.log(messageSent);
       });
+      
   };
 
   return (
@@ -97,7 +99,7 @@ export const ContactForm = () => {
               Message:
             </label>
             <textarea
-              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight hover:bg-white focus:outline-none focus:shadow-outline"
               onChange={(e) => setInput({ ...input, message: e.target.value })}
               value={input.message}
               id="message_box"

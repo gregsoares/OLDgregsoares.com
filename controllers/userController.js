@@ -1,9 +1,6 @@
-const express = require("express");
 const passport = require("passport");
 const GoogleStategy = require("passport-google-oauth20").Strategy;
 const keys = require("../config/keys");
-
-const URI = `https://accounts.google.com/o/oauth2/v2/auth`;
 
 module.export = passport.use(
   new GoogleStategy(
