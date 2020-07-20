@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// TODO: implement sorters to return basicProfileData and other features
+
 // const baseUrl = `https://api.github.com/`
 // const myProfile = `https://api.github.com/users/gregsoares`
 
