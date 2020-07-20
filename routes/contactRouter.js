@@ -8,7 +8,7 @@ module.exports = (app) => {
     Message.findOne({ email: req.body.email }).then((message) =>
       message
         ? res.status(200).json(message)
-        : res.status(403).json({ msg: "no good" })
+        : res.status(404).json({ msg: "Not Found" })
     );
   });
 
@@ -16,7 +16,13 @@ module.exports = (app) => {
   // @desc Tests users route
   // @access Public
   app.get("/form/aForm/readAll", (req, res) =>
-    res.json({ msg: "allUsers Works" })
+    Message.findOne({ email: "*" })
+      .then((message) =>
+        message
+          ? res.status(200).json(message)
+          : res.status(404).json({ msg: "Not Found" })
+      )
+      .catch((err) => console.debug(err))
   );
 
   // @route POST /form/sendMessage
