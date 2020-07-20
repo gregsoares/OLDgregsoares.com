@@ -1,21 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const path = require("path");
 const cors = require("cors");
 const app = express();
-let db;
+const { db } = require("./controllers/passport.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-
-// Importing DB Config
-if (process.env.PORT) {
-  db = process.env.MONGODB_URI;
-} else {
-  db = require("./config/keys").devURI;
-}
 
 // Connecting to MongoDB
 mongoose

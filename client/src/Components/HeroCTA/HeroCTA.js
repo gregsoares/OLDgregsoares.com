@@ -2,7 +2,7 @@ import React from 'react'
 export const HeroCTA = () => {
   return (
     <div className="overflow-hidden border rounded-b-lg" data-testid="HeroCTAContainer">
-      <div className="pt-8 pb-12 text-gray-200 " style={{ "background": "linear-gradient(90deg, #667eea 0%, #764ba2 100%)" }}
+      <div className="pt-8 pb-12 font-medium xl:font-lg text-gray-200 " style={{ "background": "linear-gradient(90deg, #667eea 0%, #764ba2 100%)" }}
       >
         <div className="w-full px-6 text-center">
           <h2 className="mb-10 text-4xl font-bold text-white">

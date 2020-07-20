@@ -5,7 +5,7 @@
   Showcase past projects, present endeavors and future challenges.
   REST ready - back-end API routing
   
-[GregSoares.com](https://gregsoares.com)
+[GregSoares.com](http://www.gregsoares.com/)
 
 ## NPM Commands:
 
