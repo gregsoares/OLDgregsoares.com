@@ -5,7 +5,7 @@ import { fetchMyProfile } from "../../assets/api/github";
 // import blueCardBG from './blueCardBG.svg'
 
 export const Github = () => {
-  const [myRepo, setMyRepo] = useState(fetchMyProfile().then(data => data));
+  const [myRepo, setMyRepo] = useState(fetchMyProfile().then((data) => data));
 
   // const loadData = repoName => {
   //   if (!repoName) return 0;
@@ -22,12 +22,11 @@ export const Github = () => {
   useEffect(() => {
     // loadMyProfile().then(() => myRepo.then(repoLogin => console.log(repoLogin)))
     // setRepoData(loadMyProfile().then(data => data && setMyRepo(data)).finally(console.log(repoData)))
-
     // .then(data => setRepoData(data))
     // setRepoData(mockSearchRepo.data)
     // setGregsoaresRepo(mockFetchGregsoaresRepo.data)
     // console.debug(JSON.stringify(repoData.total_count))
-  }, [])
+  }, []);
 
   // const greyMetalSVG = (
   //   <svg width="1080" height="416" viewBox="0 0 1080 416" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +59,6 @@ export const Github = () => {
 
   // function displayGregsoaresRepo() {
   //   let result = mockFetchGregsoaresRepo.data;
-
 
   // const cardSkeleton = (
   //   <div className="max-w-sm overflow-hidden rounded shadow-lg">
@@ -125,26 +123,48 @@ export const Github = () => {
   //   return displayComponent;
   // }
 
-
   return (
     <div data-testid="GithubContainer">
       <div className="w-full p-0 m-0" data-testid="CardSectionContainer">
         <div data-testid="CardContainer">
           <div className="w-1/4">
-            <div className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg" data-testid="CardSectionContainer">
-              <img className="w-full" src={myRepo.avatar_url} alt="Sunset in the mountains" />
+            <div
+              className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg"
+              data-testid="CardSectionContainer"
+            >
+              <img
+                className="w-full"
+                src={myRepo.avatar_url}
+                alt="Sunset in the mountains"
+              />
               <div className="px-6 py-4">
-                <div className="mb-2 text-xl font-bold">
-                  {myRepo.login}
-                </div>
+                <div className="mb-2 text-xl font-bold">{myRepo.login}</div>
                 <p className="text-base text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos nihil veniam minima corporis ipsum? Eaque reprehenderit, neque aliquid modi numquam expedita quo laborum? Vero ex aperiam tempora.
-               </p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
+                  nihil veniam minima corporis ipsum? Eaque reprehenderit, neque
+                  aliquid modi numquam expedita quo laborum? Vero ex aperiam
+                  tempora.
+                </p>
               </div>
               <div className="px-6 py-4">
-                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Programming</span></span>
-                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Javascript</span></span>
-                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full" data-testid="TagsContainer"># <span data-testid="TagsTextDisplay">Web Development</span></span>
+                <span
+                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
+                  data-testid="TagsContainer"
+                >
+                  # <span data-testid="TagsTextDisplay">Programming</span>
+                </span>
+                <span
+                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
+                  data-testid="TagsContainer"
+                >
+                  # <span data-testid="TagsTextDisplay">Javascript</span>
+                </span>
+                <span
+                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
+                  data-testid="TagsContainer"
+                >
+                  # <span data-testid="TagsTextDisplay">Web Development</span>
+                </span>
               </div>
             </div>
           </div>
@@ -156,5 +176,5 @@ export const Github = () => {
       {/* {myRepo != null ? (displayResult()) : "displayResult() Loading"}
       {gregsoaresRepo != null ? (displayGregsoaresRepo()) : "displayGregsoares() Loading"}  */}
     </div>
-  )
-}
+  );
+};

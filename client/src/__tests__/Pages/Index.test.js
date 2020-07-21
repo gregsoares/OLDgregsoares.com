@@ -1,10 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import Index from '../../Pages/Index';
-test('Checking Index by testId', () => {
+import Index from "../../Pages/Index";
+test("Checking Index by testId", () => {
   const { getByTestId } = render(<Index />);
-  const textIdCheck = getByTestId('IndexPageContainer');
+  const textIdCheck = getByTestId("IndexPageContainer");
   expect(textIdCheck).toBeInTheDocument();
 });
 

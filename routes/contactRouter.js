@@ -11,6 +11,8 @@ module.exports = (app) => {
     );
   };
 
+  // @desc: 
+  // @return: JSON with all items in messages collection
   const getAllMessages = (req, res) => {
     Message.find((err, messages) => {
       if (err) return console.debug(err);

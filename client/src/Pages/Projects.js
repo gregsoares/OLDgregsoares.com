@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
 // Project Components import
-import { SampleReviewCard } from "../Components/Projects/Projects";
 import { TerminalComp } from "../Components/TerminalComp/TerminalComp";
+import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
 
- const Projects = () => {
+const Projects = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-600">
-      <SampleReviewCard />
+      <ReviewCard />
       <TerminalComp />
     </div>
-  )
-}
+  );
+};
 export default Projects;

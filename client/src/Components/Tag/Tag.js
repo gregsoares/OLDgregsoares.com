@@ -14,7 +14,7 @@ export const Tag = (props) => {
     </span>
   );
   return (
-    <div className="hover:shadow-md hover:">
+    <div className="hover:shadow-md">
       {props.text != null ? tagPill : ""}
     </div>
   );

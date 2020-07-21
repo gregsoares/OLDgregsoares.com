@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 // TODO: implement sorters to return basicProfileData and other features
 
@@ -40,38 +40,41 @@ import axios from 'axios';
 //   user_search_url: "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 // }
 const myProfile = {
-  "login": "gregsoares",
-  "id": 11140845,
-  "node_id": "MDQ6VXNlcjExMTQwODQ1",
-  "avatar_url": "https://avatars0.githubusercontent.com/u/11140845?v=4",
-  "gravatar_id": "",
-  "url": "https://api.github.com/users/gregsoares",
-  "html_url": "https://github.com/gregsoares",
-  "followers_url": "https://api.github.com/users/gregsoares/followers",
-  "following_url": "https://api.github.com/users/gregsoares/following{/other_user}",
-  "gists_url": "https://api.github.com/users/gregsoares/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/gregsoares/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/gregsoares/subscriptions",
-  "organizations_url": "https://api.github.com/users/gregsoares/orgs",
-  "repos_url": "https://api.github.com/users/gregsoares/repos",
-  "events_url": "https://api.github.com/users/gregsoares/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/gregsoares/received_events",
-  "type": "User",
-  "site_admin": false,
-  "name": "Yggdrasil",
-  "company": null,
-  "blog": "https://gregsoares.com",
-  "location": "PA",
-  "email": null,
-  "hireable": true,
-  "bio": "\"Define the problem properly and the solution will present itself\" - Albert Einstein",
-  "public_repos": 11,
-  "public_gists": 0,
-  "followers": 9,
-  "following": 5,
-  "created_at": "2015-02-22T00:04:59Z",
-  "updated_at": "2020-05-12T14:38:33Z"
-}
+  login: "gregsoares",
+  id: 11140845,
+  node_id: "MDQ6VXNlcjExMTQwODQ1",
+  avatar_url: "https://avatars0.githubusercontent.com/u/11140845?v=4",
+  gravatar_id: "",
+  url: "https://api.github.com/users/gregsoares",
+  html_url: "https://github.com/gregsoares",
+  followers_url: "https://api.github.com/users/gregsoares/followers",
+  following_url:
+    "https://api.github.com/users/gregsoares/following{/other_user}",
+  gists_url: "https://api.github.com/users/gregsoares/gists{/gist_id}",
+  starred_url: "https://api.github.com/users/gregsoares/starred{/owner}{/repo}",
+  subscriptions_url: "https://api.github.com/users/gregsoares/subscriptions",
+  organizations_url: "https://api.github.com/users/gregsoares/orgs",
+  repos_url: "https://api.github.com/users/gregsoares/repos",
+  events_url: "https://api.github.com/users/gregsoares/events{/privacy}",
+  received_events_url:
+    "https://api.github.com/users/gregsoares/received_events",
+  type: "User",
+  site_admin: false,
+  name: "Yggdrasil",
+  company: null,
+  blog: "https://gregsoares.com",
+  location: "PA",
+  email: null,
+  hireable: true,
+  bio:
+    '"Define the problem properly and the solution will present itself" - Albert Einstein',
+  public_repos: 11,
+  public_gists: 0,
+  followers: 9,
+  following: 5,
+  created_at: "2015-02-22T00:04:59Z",
+  updated_at: "2020-05-12T14:38:33Z",
+};
 
 // const mockData = {
 //   "total_count": 1,
@@ -185,13 +188,22 @@ const myProfile = {
 // export const mockFetchGregsoaresRepo = { 'data': mockGregsoaresRepo }
 
 export const fetchMyProfile = async () => {
-  const { login, id, avatar_url, html_url, name, bio, public_repos } = await myProfile;
-  return [login, id, avatar_url, html_url, name, bio, public_repos]
-}
+  const {
+    login,
+    id,
+    avatar_url,
+    html_url,
+    name,
+    bio,
+    public_repos,
+  } = await myProfile;
+  return [login, id, avatar_url, html_url, name, bio, public_repos];
+};
 
-export const searchRepo = async repoName => {
-  const data = await axios.get(`https://api.github.com/search/repositories?q=${repoName}`)
-    .then(response => response)
-    .catch(err => console.debug(err));
+export const searchRepo = async (repoName) => {
+  const data = await axios
+    .get(`https://api.github.com/search/repositories?q=${repoName}`)
+    .then((response) => response)
+    .catch((err) => console.debug(err));
   return data;
-}
+};
