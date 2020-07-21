@@ -1,4 +1,7 @@
-const Message = require("../models/Message");
+require('../models/MessageModel');
+const mongoose = require('mongoose');
+const Message = mongoose.model('messages');
+
 module.exports = (app) => {
   const getByEmail = (req, res) => {
     Message.find({ email: req.body.email }).then((message) =>

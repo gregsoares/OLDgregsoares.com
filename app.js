@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
+// Routes
+require("./routes/contactRouter")(app);
+require("./routes/userRouter")(app);
+
 // Connecting to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -16,9 +20,5 @@ mongoose
   .catch((err) =>
     console.log(`\nMongoDB ERROR - Connection acting up!\n ${err}`)
   );
-
-// Routes
-require("./routes/contactRouter")(app);
-require("./routes/userRouter")(app);
 
 module.exports = app;
