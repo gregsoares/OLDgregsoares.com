@@ -1,6 +1,6 @@
-require('../models/MessageModel');
-const mongoose = require('mongoose');
-const Message = mongoose.model('messages');
+require("../models/MessageModel");
+const mongoose = require("mongoose");
+const Message = mongoose.model("messages");
 
 module.exports = (app) => {
   const getByEmail = (req, res) => {
@@ -11,14 +11,14 @@ module.exports = (app) => {
     );
   };
 
-  const getAllMessages = (req, res) =>
-    Message.find({})
-      .then((message) =>
-        message
-          ? res.status(200).json(message)
-          : res.status(404).json({ msg: "Not Found" })
-      )
+  const getAllMessages = (req, res) => {
+    Message.find((err, messages) => {
+      if (err) return console.debug(err);
+      console.debug(messages);
+    })
+      .then((message) => res.json(message))
       .catch((err) => console.debug(err));
+  };
 
   const postMessage = (req, res) => {
     if (req.body.email === null) new Error(res.send(req.body));

@@ -1,7 +1,8 @@
 const passport = require("passport");
 const GoogleStategy = require("passport-google-oauth20").Strategy;
-const mongoose = require('mongoose');
-// const User = mongoose.model('users')
+require("../models/UserModel");
+const mongoose = require("mongoose");
+const User = mongoose.model("users");
 
 let googleClientId, googleClientSecret, db;
 if (process.env.PORT) {
@@ -9,10 +10,27 @@ if (process.env.PORT) {
   googleClientSecret = process.env.googleClientSecret;
   db = process.env.MONGODB_URI;
 } else {
+  // If in DEV environment
   googleClientId = require("../config/keys").googleClientID;
   googleClientSecret = require("../config/keys").googleClientSecret;
   db = require("../config/keys").devURI;
 }
+
+// @desc: checks if googleId already exists in users collection, if NOT => register
+// TODO: Return to valid page
+const newUser = (googleId, fName, lName, emailAddress, profileURL) =>
+  User.findOne({ googleId: googleId }).then((res) => {
+    if (res) return console.log(`${fName} - ${emailAddress}  already exists`);
+    else {
+      new User({
+        googleId: googleId,
+        firstName: fName,
+        lastName: lName,
+        email: emailAddress,
+        profileImage: profileURL,
+      }).save();
+    }
+  }); // END newUser
 
 const google = passport.use(
   new GoogleStategy(
@@ -22,25 +40,22 @@ const google = passport.use(
       callbackURL: "/user/auth/googleuser",
     },
     (accessToken, refreshToken, profile, done) => {
-      console.debug(`\n
+      newUser(
+        profile.id,
+        profile.name.givenName,
+        profile.name.familyName,
+        profile.emails[0].value,
+        profile.photos[0].value
+      ).then(() =>
+        // TODO: add cookie
+        console.debug(`\n
     accessToken: ${accessToken}
     refreshToken: ${refreshToken} \n
-    Profile Info: 
-     \tID: ${profile.id} 
-
-     \tFull name: ${profile.name.givenName} ${profile.name.familyName}
-     \tEmail: ${profile.emails[0].value} 
-     \tPhoto URL: ${profile.photos[0].value}
-    \n `);
-      // new User({
-      //   googleId: profile.id,
-      //   firstName: profile.name.givenName,
-      //   lastName: profile.name.familyName,
-      //   email: profile.emails[0].value
-      // }).save();
+    `)
+      );
       done();
     }
   )
 );
 
-module.exports = { googleClientId, googleClientId, db, google };
+module.exports = { googleClientId, googleClientSecret, db, google };
