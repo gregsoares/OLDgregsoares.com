@@ -3,7 +3,7 @@ import React from 'react'
 export const TerminalComp = props => {
   const { hostname, text } = props;
   return (
-    <div data-testid="TerminalComp">
+    <div className=" px-4 py-3" data-testid="TerminalComp">
       <div className="w-full">
         <div className="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased 
               bg-gray-800  pb-6 rounded-lg leading-normal overflow-hidden">

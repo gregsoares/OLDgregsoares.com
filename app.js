@@ -2,8 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-const bodyParser = require("body-parser");
-const cors = require("cors");
 const app = express();
 const { db } = require("./controllers/passport.js");
 const keys = require("./config/keys.js");
@@ -16,10 +14,6 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors());
 
 // Routes
 require("./routes/contactRouter")(app);

@@ -1,5 +1,7 @@
 import React from "react";
 
+// TODO: useContext(messages) to reload this panel
+
 /* @Props
  *
  * title  -  String
@@ -12,8 +14,8 @@ import React from "react";
  * jobTitle  -  String
  *
  */
-
-export const ReviewCard = (props) => {
+// TODO: swap from props to context for when a new message gets send/Refresh (timer or manual)
+export const MessagesPanel = (props) => {
   const {
     title,
     status,
@@ -84,3 +86,4 @@ export const ReviewCard = (props) => {
     </div>
   );
 };
+

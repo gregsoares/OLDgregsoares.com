@@ -5,17 +5,11 @@ const passport = require("passport");
 // TODO: idCheck(params) = takes in w/e it needs to check ID(login/check if already registered)
 
 module.exports = (app) => {
-
   // @route GET user/auth/googleuser
   // @desc Returned token from Gmail authentication server
   // @access Public
   // Route returned by oauth with user's code
-  app.get(
-    "/user/auth/googleuser",
-    passport.authenticate("google", (res) => {
-      console.debug(res);
-    })
-  );
+  app.get("/user/auth/googleuser", passport.authenticate("google"));
 
   // @route GET user/auth/google
   // @desc Redirects to Gmail authentication server
@@ -24,9 +18,15 @@ module.exports = (app) => {
   app.get(
     "/user/auth/google",
     passport.authenticate("google", {
-      scope: ["profile", "email"],
-      successRedirect: "/",
-      failureRedirect: "/projects",
+      scope: ["profile", "email"]
     })
+  );
+
+  // @route GET user/profile
+  // @return token from Gmail authentication server
+  // @access Public
+  // Route returned by oauth with user's code
+  app.get("/user/profile", (req, res) =>
+    res.send(`Not sure what to do about this: ${req.profile}`)
   );
 };

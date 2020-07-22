@@ -22,15 +22,14 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-  User.findById(id)
-    .then(user => done(null, user));
+  User.findById(id).then((user) => done(null, user));
 });
 
 // @Description: checks if googleId already exists in users collection, if NOT => register
 // TODO: Return to valid page
 const newUser = (accessToken, refreshToken, profile, done) => {
   return User.findOne({ googleId: profile.id }).then((res) => {
-    if (res) done({ msg: "User already registered" }, res);
+    if (res) done(res, res);
     else {
       //if not found, then register
       new User({
@@ -41,8 +40,8 @@ const newUser = (accessToken, refreshToken, profile, done) => {
         profileImage: profile.photos[0].value,
       })
         .save()
-        .then((user) => done({ msg: "New User created" }, user))
-        .catch((err) => console.debug(err));
+        .then((user) => done(null, user))
+        .catch((err) => console.debug(`error: ${err}`));
     }
   });
 }; // END newUser
@@ -55,12 +54,10 @@ const google = passport.use(
     {
       clientID: googleClientId,
       clientSecret: googleClientSecret,
-      callbackURL: "/user/auth/googleuser",
+      callbackURL: "http://192.168.0.10:3000/user/auth/googleuser",
     },
     (accessToken, refreshToken, profile, done) =>
       newUser(accessToken, refreshToken, profile, done)
-        .then((res) => console.debug(`send to success/fail:  res: ${res}`))
-        .catch((err) => console.debug(err))
   )
 ); // END GoogleStrategy
 
