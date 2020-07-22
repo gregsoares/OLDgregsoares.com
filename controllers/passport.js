@@ -17,23 +17,35 @@ if (process.env.PORT) {
 }
 
 // TODO: isLoggedIn(googleId/Token) return Boolean
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id)
+    .then(user => done(null, user));
+});
 
 // @Description: checks if googleId already exists in users collection, if NOT => register
 // TODO: Return to valid page
-const newUser = (googleId, fName, lName, emailAddress, profileURL) =>
-  User.findOne({ googleId: googleId }).then((res) => {
-    if (res) return console.log(`${fName} - ${emailAddress}  already exists`);
+const newUser = (accessToken, refreshToken, profile, done) => {
+  return User.findOne({ googleId: profile.id }).then((res) => {
+    if (res) done({ msg: "User already registered" }, res);
     else {
       //if not found, then register
       new User({
-        googleId: googleId,
-        firstName: fName,
-        lastName: lName,
-        email: emailAddress,
-        profileImage: profileURL,
-      }).save();
+        googleId: profile.id,
+        firstName: profile.name.givenName,
+        lastName: profile.name.familyName,
+        email: profile.emails[0].value,
+        profileImage: profile.photos[0].value,
+      })
+        .save()
+        .then((user) => done({ msg: "New User created" }, user))
+        .catch((err) => console.debug(err));
     }
-  }); // END newUser
+  });
+}; // END newUser
 
 // @Description: Creates and saves a new user to DB
 // Data: GoogleId, FirstName, LastName, Email, ProfileImageURL
@@ -45,22 +57,10 @@ const google = passport.use(
       clientSecret: googleClientSecret,
       callbackURL: "/user/auth/googleuser",
     },
-    (accessToken, refreshToken, profile, done) => {
-      newUser(
-        profile.id,
-        profile.name.givenName,
-        profile.name.familyName,
-        profile.emails[0].value,
-        profile.photos[0].value
-      ).then(() =>
-        // TODO: add cookie
-        console.debug(`\n
-    accessToken: ${accessToken}
-    refreshToken: ${refreshToken} \n
-    `)
-      );
-      done();
-    }
+    (accessToken, refreshToken, profile, done) =>
+      newUser(accessToken, refreshToken, profile, done)
+        .then((res) => console.debug(`send to success/fail:  res: ${res}`))
+        .catch((err) => console.debug(err))
   )
 ); // END GoogleStrategy
 
