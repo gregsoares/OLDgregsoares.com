@@ -3,10 +3,8 @@ const passport = require("passport");
 // TODO: registerUser(params) = adds a user to collection
 
 // TODO: idCheck(params) = takes in w/e it needs to check ID(login/check if already registered)
+
 module.exports = (app) => {
-  const checkAuth = (req, res) => {
-    console.debug(`Req: ${req} \nRes: ${res}`);
-  };
 
   // @route GET user/auth/googleuser
   // @desc Returned token from Gmail authentication server

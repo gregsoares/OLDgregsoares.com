@@ -1,5 +1,5 @@
 const passport = require("passport");
-const GoogleStategy = require("passport-google-oauth20").Strategy;
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 require("../models/UserModel");
 const mongoose = require("mongoose");
 const User = mongoose.model("users");
@@ -16,12 +16,14 @@ if (process.env.PORT) {
   db = require("../config/keys").devURI;
 }
 
+// TODO: isLoggedIn(googleId/Token) return Boolean
+
 // @desc: checks if googleId already exists in users collection, if NOT => register
 // TODO: Return to valid page
 const newUser = (googleId, fName, lName, emailAddress, profileURL) =>
   User.findOne({ googleId: googleId }).then((res) => {
     if (res) return console.log(`${fName} - ${emailAddress}  already exists`);
-    else {
+    else { //if not found, then register
       new User({
         googleId: googleId,
         firstName: fName,
@@ -33,7 +35,7 @@ const newUser = (googleId, fName, lName, emailAddress, profileURL) =>
   }); // END newUser
 
 const google = passport.use(
-  new GoogleStategy(
+  new GoogleStrategy(
     {
       clientID: googleClientId,
       clientSecret: googleClientSecret,
@@ -56,6 +58,6 @@ const google = passport.use(
       done();
     }
   )
-);
+); // end GoogleStrategy
 
 module.exports = { googleClientId, googleClientSecret, db, google };
