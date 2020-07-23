@@ -4,8 +4,16 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const app = express();
 const { db } = require("./controllers/passport.js");
-const keys = require("./config/keys.js");
 
+let keys = {}
+
+if (process.env.NODE_ENV === "production") {
+  keys = {
+    cookieKey: process.env.cookieKey
+  };
+} else {
+  keys = require('./config/keys');
+}
 app.use(
   cookieSession({
     masAge: 30 * 24 * 60 * 60 * 1000, //30days

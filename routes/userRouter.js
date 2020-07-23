@@ -8,7 +8,7 @@ module.exports = (app) => {
   // @access: Public
   app.get("/user/logout", (req, res) => {
     req.logout();
-    res.send(`{req.user} logged out.`)
+    res.send(`${req.user} logged out.`)
   }
   );
 
@@ -34,6 +34,6 @@ module.exports = (app) => {
   // @access Public
   // Route returned by oauth with user's code
   app.get("/user/profile", (req, res) =>
-    res.send(`Not sure what to do about this: ${req.profile}`)
+    res.send(req.user)
   );
 };
