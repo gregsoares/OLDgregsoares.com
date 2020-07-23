@@ -54,7 +54,7 @@ const google = passport.use(
     {
       clientID: googleClientId,
       clientSecret: googleClientSecret,
-      callbackURL: "http://192.168.0.10:3000/user/auth/googleuser",
+      callbackURL: "/user/auth/googleuser",
     },
     (accessToken, refreshToken, profile, done) =>
       newUser(accessToken, refreshToken, profile, done)

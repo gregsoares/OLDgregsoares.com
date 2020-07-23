@@ -5,6 +5,7 @@ const passport = require("passport");
 const app = express();
 const { db } = require("./controllers/passport.js");
 const keys = require("./config/keys.js");
+// const bodyParser = require("body-parser");
 
 app.use(
   cookieSession({
@@ -12,6 +13,9 @@ app.use(
     keys: [keys.cookieKey],
   })
 );
+
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
