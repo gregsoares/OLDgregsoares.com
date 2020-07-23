@@ -2,7 +2,7 @@
   "name": "gregsoares.com",
   "version": "2.0.0",
   "description": "",
-  "main": "./bin/www.js",
+  "main": "./app.js",
   "scripts": {
     "clientTest": "npm run test --prefix client",
     "server": "npx nodemon ./bin/www.js",

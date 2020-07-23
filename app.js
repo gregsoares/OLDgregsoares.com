@@ -4,22 +4,31 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const app = express();
 const { db } = require("./controllers/passport.js");
+const path = require("path");
+let keys = {};
 
-let keys = {}
-
+// If it's in production mode
 if (process.env.NODE_ENV === "production") {
   keys = {
-    cookieKey: process.env.cookieKey
+    cookieKey: process.env.cookieKey,
   };
+
+  app.use(express.static(path.join(__dirname, "client", "build")));
+
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
 } else {
-  keys = require('./config/keys');
+  app.use(express.static(path.join(__dirname, "client", "src")));
+  keys = require("./config/keys");
 }
 app.use(
   cookieSession({
     masAge: 30 * 24 * 60 * 60 * 1000, //30days
     keys: [keys.cookieKey],
   })
-);
+); // ========= End Environment conditional
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -34,5 +43,10 @@ mongoose
   .catch((err) =>
     console.log(`\nMongoDB ERROR - Connection acting up!\n ${err}`)
   );
+
+// Creating Server
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => console.log(`Server Listening on port ${port}`));
 
 module.exports = app;
