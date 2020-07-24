@@ -17,7 +17,8 @@ export const ContactForm = () => {
       email: email,
       message: message,
     };
-    const headers = {"Access-Control-Allow-Headers": "X-Requested-With, content-type"};
+    const headers = {"Access-Control-Allow-Headers": "X-Requested-With, content-type",
+  "Access-Control-Allow-Origin": "https://github-statging.herokuapp.com"};
 
     // internal ip address giving problems in prod env.
     // TODO: use controllers/endVars to load proper address for post & callback
