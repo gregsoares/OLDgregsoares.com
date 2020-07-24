@@ -7,6 +7,8 @@ const { db } = require("./controllers/passport.js");
 const path = require("path");
 let keys = {};
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 // If it's in production mode
 if (process.env.NODE_ENV === "production") {
   keys = {
@@ -47,6 +49,6 @@ mongoose
 // Creating Server
 const port = process.env.PORT || 3001;
 
-app.listen(port, () => console.log(`Server Listening on port ${port}`));
+app.listen(port, () => console.debug(`Server listening on port ${port}`));
 
 module.exports = app;

@@ -16,7 +16,6 @@ export const FeatSection = (props) => {
    * featImg= Image Location(src)
    */
   //  FIXME: Not responsive when smaller than SM breakpoint
-  // FIXME: change background color to make it easier to read content
 
   const featClassLoader = () => {
     let bgColor = props.bgColor;
