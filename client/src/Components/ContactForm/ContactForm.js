@@ -17,11 +17,12 @@ export const ContactForm = () => {
       email: email,
       message: message,
     };
+    const headers = {"Access-Control-Allow-Headers": "X-Requested-With, content-type"};
 
     // internal ip address giving problems in prod env.
     // TODO: use controllers/endVars to load proper address for post & callback
     axios
-      .post("http://localhost:3000/form/sendMessage", sendData)
+      .post("http://localhost:3000/form/sendMessage", sendData, headers)
       .then((response) => {
         console.debug(`frontEnd res from post: ${response.statusText}`);
       })
