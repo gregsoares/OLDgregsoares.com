@@ -29,6 +29,7 @@ export const ContactForm = () => {
         setInput({ name: "", email: "", message: "" });
       })
       .catch((res) => {
+        // TODO: Handle error & redirect to "/"
         console.debug(res);
         console.log(messageSent);
       });

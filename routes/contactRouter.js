@@ -1,16 +1,16 @@
 const { getByEmail, getAllMessages, postMessage } = require("../controllers/messageCtrl");
 
-module.exports = (app) => {
-  // TODO: add a check on sendMessage do see if duplicate email within some TIME PERIOD (to allow for multiple messages from one person)
+module.exports = app => {
 
   // @route: GET form/aForm/read?email(json)
-  // @return: [{allThat matches}]
-  // @description: Tests users route
+  // @return: messages::{allThat matches}
+  // @description: Get all messages from the specified email route
   // @access: Public
   app.get("/form/aForm/read", getByEmail);
 
   // @route: GET form/aForm/readAll
-  // @description: Tests users route
+  // @return: messages::{All messages}
+  // @description: 
   // @access: Public
   app.get("/form/aForm/readAll", getAllMessages);
 
@@ -21,8 +21,8 @@ module.exports = (app) => {
   app.post("/form/sendMessage", postMessage);
 
   // @route: GET /form
-  // @return: {"Form API Works"}
-  // @description: Tests users route
+  // @return: {testMessage: "Form API Works"}
+  // @description: Simple route test
   // @access: Public
-  app.get("/form", (req, res) => res.json({ msg: "Form API Works" }));
+  app.get("/form", (req, res) => res.json({ testMessage: "Form API Works" }));
 };

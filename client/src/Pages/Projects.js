@@ -6,10 +6,12 @@ import { CardSection } from "../Components/CardSection/CardSection";
 // import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 
+// TODO: Plato and Agency Repositories need SS and code review+Comments for display.
+
 const Projects = () => {
   return (
     <div className="items-center justify-center bg-gray-100">
-      <CardSection />
+      {/* <CardSection /> */}
       <div className="w-full bg-teal-600 py-5">
         <MessagesPanel
           title="Reading All Messages"
@@ -33,7 +35,7 @@ const Projects = () => {
         name="Mr. Strong"
         jobTitle="Short manager"
       /> */}
-      <TerminalComp hostname="Heimdal" text="su -" />
+      {/* <TerminalComp hostname="Heimdal" text="su -" /> */}
     </div>
   );
 };

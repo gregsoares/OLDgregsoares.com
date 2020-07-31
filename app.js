@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client", "src")));
   keys = require("./config/keys");
 }
+
 app.use(
   cookieSession({
     masAge: 30 * 24 * 60 * 60 * 1000, //30days

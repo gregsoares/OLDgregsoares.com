@@ -14,9 +14,9 @@ export const FeaturedSection = () => {
         </h2>
         <FeatSection
           featTitle="GregSoares.com ➡ Full MERN Stack"
-          featSubtitle="MongoDB, NodeJs+ExpressJs, ReactJs"
-          featText={["Our Smart Health Monitoring Wristwatch can generate a comprehensive report on your vitals depending on your settings either daily, weekly, monthly, quarterly or yearly."]}
-          featTags={["Bootstrap", "Tech Skill", "Pro Debugger"]}
+          featSubtitle="MongoDB, ExpressJs, ReactJs, NodeJs"
+          featText={["REST API on the Back-End sends messages to the database server.The Front-End uses third party APIs to implement the login options available."]}
+          featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={AgencyImg}
           bgColor="bg-indigo-400"
         />

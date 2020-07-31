@@ -7,6 +7,19 @@ import { Modal } from "../Components/Modal/Modal";
 import { ContactForm } from "../Components/ContactForm/ContactForm";
 // import { Intro } from "../Components/Intro/Intro";
 
+/* FIREBASE headers
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+*/
+
 // TODO: import ../Components/assets/js/scollPosition and run to return to same place onReload
 const Index = () => {
   return (

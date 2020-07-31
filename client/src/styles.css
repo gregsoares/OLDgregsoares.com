@@ -12,6 +12,10 @@
 
 @tailwind utilities;
 
+  .scrollBar { 
+    
+  }
+
 @responsive {
   
   .h-10 {
