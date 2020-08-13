@@ -24,13 +24,17 @@ export const ContactForm = () => {
         console.debug(`frontEnd res from post: ${response.statusText}`);
       })
       .then((data) => {
-        console.debug(data);
+        console.debug(
+          `ContactForm: =>> data returned from form/sendMessage <<=\n${data}`
+        );
         setMessageSent(true);
         setInput({ name: "", email: "", message: "" });
       })
       .catch((res) => {
         // TODO: Handle error & redirect to "/"
-        console.debug(res);
+        console.debug(
+          `ContactForm: =>> data returned from form/sendMessage <<=\n${res}`
+        );
         console.log(messageSent);
       });
   };
