@@ -5,6 +5,7 @@ import { FeaturedSection } from "../Components/FeaturedSection/FeaturedSection";
 import { HeroCTA } from "../Components/HeroCTA/HeroCTA";
 import { Modal } from "../Components/Modal/Modal";
 import { ContactForm } from "../Components/ContactForm/ContactForm";
+import { Topnav } from "../Components/Topnav/Topnav";
 
 /* FIREBASE headers
 
@@ -22,11 +23,8 @@ import { ContactForm } from "../Components/ContactForm/ContactForm";
 // TODO: import ../Components/assets/js/scollPosition and run to return to same place onReload
 const Index = () => {
   return (
-    <main
-      className="w-full h-full p-0 m-0"
-      id="IndexPage"
-      data-testid="IndexPageContainer"
-    >
+    <main className="p-0 m-0" id="IndexPage" data-testid="IndexPageContainer">
+      <Topnav activePage />
       <Modal
         contentLabel="HelloWorld something TRUE"
         className="shadow-inner py-2 px-4 my-1 mx-2 border bg-gray-300"

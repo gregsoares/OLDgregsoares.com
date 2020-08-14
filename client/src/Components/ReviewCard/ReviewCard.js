@@ -30,12 +30,40 @@ export const ReviewCard = (props) => {
       id="cardContainer"
     >
       <div
-        className="bg-gray-300 text-lg shadow-outline mb-2 py-4 px-4 text-gray-800 select-none"
+        className="flex items-center bg-gray-300 text-lg shadow-outline my-2 py-4 px-4 text-gray-800 select-none"
         id="cardTitle"
       >
-        {title}
+        <p className="p-0 mb-4 mx-auto">{title}</p>
+        <div className="ml-auto  bg-gray-300 pt-2" id="cardFooterContainer">
+          <div className="flex px-2 mb-2">
+            <span className="flex h-12 w-12 rounded-full bg-blue-700 text-white justify-center items-center font-bold capitalize ml-3 ">
+              {initials}
+            </span>
+
+            <div className="inline ml-4" id="namePositionContainer">
+              <p className=" font-bold  select-none">{name}</p>
+              <p
+                className=" text-gray-700 capitalize my-2 text-xs select-none"
+                id="footerTextContainer"
+              >
+                {jobTitle}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className=" flex border-b pb-4 py-2 w-full " id="reviewDateSection">
+      <div className="px-3 py-3" id="commentContainer">
+        <div
+          className="sm:flex-wrap bg-gray-300 rounded-lg my-2 mx-2 py-4 px-4 shadow-inner select-none text-black font-medium"
+          id="commentSection"
+        >
+          {comment}
+        </div>
+      </div>
+      <div
+        className="flex items-center border-b border-t py-2 w-full "
+        id="reviewDateSection"
+      >
         <div
           className="mx-4 my-1 bg-orange-600 uppercase rounded-full px-3 py-1 text-xs text-gray-300 font-bold shadow select-none"
           id="statusContainer"
@@ -45,40 +73,6 @@ export const ReviewCard = (props) => {
 
         <div className="ml-auto mr-4 my-1 select-none" id="dateContainer">
           {date}
-        </div>
-      </div>
-
-      <div className="px-3 py-3" id="commentContainer">
-        <div
-          className="sm:flex-wrap bg-gray-300 rounded-lg my-2 mx-2 py-4 px-4 shadow-inner select-none text-black font-medium"
-          id="commentSection"
-        >
-          {comment}
-        </div>
-      </div>
-
-      <div className=" bg-gray-300 pt-1 pb-2 shadow-outline" id="cardFooterContainer">
-        <div
-          className="uppercase font-bold text-gray-700 text-opacity-75 text-xs my-2 ml-4  select-none"
-          id="cardFooterTitle"
-        >
-          {position}
-        </div>
-
-        <div className="flex px-2 mb-2">
-          <span className="flex h-12 w-12 rounded-full bg-blue-700 text-white text-center justify-center items-center font-bold capitalize ml-3 ">
-            {initials}
-          </span>
-
-          <div className="inline ml-4" id="namePositionContainer">
-            <p className=" font-bold  select-none">{name}</p>
-            <p
-              className=" text-gray-700 capitalize my-2 text-xs select-none"
-              id="footerTextContainer"
-            >
-              {jobTitle}
-            </p>
-          </div>
         </div>
       </div>
     </div>

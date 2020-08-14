@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components Imports
-import { Topnav } from "./Components/Topnav/Topnav";
+// import { Topnav } from "./Components/Topnav/Topnav";
 import { Footer } from "./Components/Footer/Footer";
 
 // Pages Imports
@@ -14,7 +14,6 @@ import Components from "./Pages/Components";
 const App = () => {
   return (
     <Router>
-      <Topnav activePage />
       <Switch>
         <Route exact path="/" component={Index} />
         <Route exact path="/about" component={About} />

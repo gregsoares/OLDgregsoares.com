@@ -17,16 +17,44 @@ import { IntroCards } from "../Components/IntroCards/IntroCards";
 import { Modal } from "../Components/Modal/Modal";
 import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
 import { TerminalComp } from "../Components/TerminalComp/TerminalComp";
+import { Blog } from "../Components/Blog/Blog";
 
 const Components = () => {
+  const testBlogs = [
+    {
+      imgURL: "test",
+      text: "test",
+      date: "test",
+    },
+    {
+      imgURL: "test",
+      text: "test",
+      date: "test",
+    },
+    {
+      imgURL: "test",
+      text: "test",
+      date: "test",
+    },
+    {
+      imgURL: "test",
+      text: "test",
+      date: "test",
+    },
+  ];
   return (
     <div data-testid="ComponentsContainer">
+      <Blog
+        blogTitle="Blog"
+        blogSubtitle="Future Project preview section"
+        blogs={testBlogs}
+      />
       <CalendarCard />
       <Carousel />
       <Container />
       <FluidContainer />
       <Github />
-      <MessagesPanel />
+      <MessagesPanel title="Message Panel" status="Testing" date={new Date()} />
       <PostSection />
       <Tag />
       <Topnav />
@@ -43,7 +71,16 @@ const Components = () => {
       </Container>
 
       <Modal />
-      <ReviewCard />
+      <ReviewCard
+        title="Review Card"
+        status="Status"
+        date="Today"
+        comment="Reusable, Responsive, Rocking"
+        initials="GS"
+        position="Dev"
+        name="Greg Soares"
+        jobTitle="Web Dev"
+      />
       <TerminalComp />
     </div>
   );
