@@ -1,33 +1,49 @@
 import React from "react";
 import { Card } from "./Card";
 
-export const CardSection = () => {
-  const showCards = [
-    {
-      title: "Javascript",
-      body: "Multi-paradigm programming language",
-      tags: ["Programming", "Web Development"],
-    },
-    {
-      title: "Back-End",
-      body: "Implementation",
-      tags: ["API", "Database", "Security"],
-    },
-    {
-      title: "Front-End",
-      body: "Presentation Layer",
-      tags: ["WYSIWYG", "UX", "UI"],
-    },
-  ];
+export const CardSection = (props) => {
+  const showCards = props.cards
+    ? () => {
+        const cardData = props.cards.map((card) => card);
+        return cardData;
+      }
+    : [
+        {
+          title: "Javascript",
+          body: "Multi-paradigm programming language",
+          text:
+            "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+          tags: ["Programming", "Web Development"],
+        },
+        {
+          title: "Back-End",
+          body: "Implementation",
+          text:
+            "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+          tags: ["API", "Database", "Security"],
+        },
+        {
+          title: "Front-End",
+          body: "Presentation Layer",
+          text:
+            "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+          tags: ["WYSIWYG", "UX", "UI"],
+        },
+      ];
+
+  const loadCards = () => {
+    const output = props.cards.map((card) => (
+      <Card cardData={card} key={Math.random()} />
+    ));
+    return output;
+  };
 
   return (
     <div
-      className="flex flex-wrap w-full p-0 py-8 mx-0 bg-gray-200"
+      className="flex flex-wrap w-full p-0 py-6 mx-0 bg-gray-200"
       data-testid="CardSectionContainer"
     >
-      <Card cards={showCards[0]} />
-      <Card cards={showCards[1]} />
-      <Card cards={showCards[2]} />
+      {loadCards()}
     </div>
   );
 };

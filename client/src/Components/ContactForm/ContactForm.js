@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// FIXME: Name + Email input are side-by-side, add mx & my and stack them
+// TODO: Handle error & redirect to "/",
+// TODO: ADD save state in localStorage
 export const ContactForm = () => {
   const [input, setInput] = useState({
     name: "",
@@ -31,7 +34,6 @@ export const ContactForm = () => {
         setInput({ name: "", email: "", message: "" });
       })
       .catch((res) => {
-        // TODO: Handle error & redirect to "/"
         console.debug(
           `ContactForm: =>> data returned from form/sendMessage <<=\n${res}`
         );

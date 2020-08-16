@@ -22,24 +22,50 @@ import { Blog } from "../Components/Blog/Blog";
 const Components = () => {
   const testBlogs = [
     {
-      imgURL: "test",
+      imgURL: "https://via.placeholder.com/10",
       text: "test",
       date: "test",
     },
     {
-      imgURL: "test",
+      imgURL: "https://via.placeholder.com/10",
       text: "test",
       date: "test",
     },
     {
-      imgURL: "test",
+      imgURL: "https://via.placeholder.com/10",
       text: "test",
       date: "test",
     },
     {
-      imgURL: "test",
+      imgURL: "https://via.placeholder.com/10",
       text: "test",
       date: "test",
+    },
+  ];
+  const cardData = [
+    {
+      imgURL: "https://via.placeholder.com/10",
+      title: "Good Title",
+      text:
+        "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+    },
+    {
+      imgURL: "https://via.placeholder.com/10",
+      title: "Good Title",
+      text:
+        "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+    },
+    {
+      imgURL: "https://via.placeholder.com/10",
+      title: "Good Title",
+      text:
+        "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
+    },
+    {
+      imgURL: "https://via.placeholder.com/10",
+      title: "Good Title",
+      text:
+        "lorem ipsum yeah sum stuff coaglatolorem ipsum yeah sum stuff coaglator rlorem ipsum yeah sum stuff coaglator",
     },
   ];
   return (
@@ -58,17 +84,15 @@ const Components = () => {
       <PostSection />
       <Tag />
       <Topnav />
-      <CardSection />
+      <CardSection cards={cardData} />
       <ContactForm />
       <FeaturedSection />
       <Footer />
       <HeroCTA />
 
-      <Container>
-        <div className="md:w-96">
-          <IntroCards />
-        </div>
-      </Container>
+      <div className="md:w-96">
+        <IntroCards cards={cardData} />
+      </div>
 
       <Modal />
       <ReviewCard

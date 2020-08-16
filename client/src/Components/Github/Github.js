@@ -7,51 +7,31 @@ import { fetchMyProfile } from "../../assets/api/github";
 export const Github = () => {
   const [myRepo, setMyRepo] = useState(fetchMyProfile().then((data) => data));
 
-  // const loadData = repoName => {
+  // const loadData = (repoName) => {
   //   if (!repoName) return 0;
   //   const data = mockSearchRepo(repoName);
-  //   console.debug(data)
+  //   console.debug(data);
   //   return data;
-  // }
+  // };
 
-  // const loadMyProfile = () => {
-  //   const data = fetchMyProfile().then(data =>data && setMyRepo(data));
-  //   return data;
-  // }
+  const loadMyProfile = () => {
+    const data = fetchMyProfile().then((data) => data && setMyRepo(data));
+    return data;
+  };
 
   useEffect(() => {
-    // loadMyProfile().then(() => myRepo.then(repoLogin => console.log(repoLogin)))
-    // setRepoData(loadMyProfile().then(data => data && setMyRepo(data)).finally(console.log(repoData)))
-    // .then(data => setRepoData(data))
-    // setRepoData(mockSearchRepo.data)
-    // setGregsoaresRepo(mockFetchGregsoaresRepo.data)
+    loadMyProfile().then(() =>
+      myRepo.then((repoLogin) => console.log(repoLogin))
+    );
+    // setRepoData(
+    //   loadMyProfile()
+    //     .then((data) => data && setMyRepo(data))
+    //     .finally(console.log(repoData))
+    // ).then((data) => setRepoData(data));
+    // setRepoData(mockSearchRepo.data);
+    // setGregsoaresRepo(mockFetchGregsoaresRepo.data);
     // console.debug(JSON.stringify(repoData.total_count))
   }, []);
-
-  // const greyMetalSVG = (
-  //   <svg width="1080" height="416" viewBox="0 0 1080 416" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //     <rect x="-1" y="1" width="1080" height="412" fill="url(#paint0_linear)" />
-  //     <rect opacity="0.83" x="-1" y="1" width="1080" height="412" fill="#393D43" fill-opacity="0.47" />
-  //     <g filter="url(#filter0_d)">
-  //       <path d="M43.5 1.5L372 412M395.5 1.5L1079 142M899.5 412L248 1.5" stroke="#82999A" stroke-opacity="0.41" stroke-width="2" />
-  //     </g>
-  //     <defs>
-  //       <filter id="filter0_d" x="41.7192" y="0.520481" width="1038.48" height="415.326" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  //         <feFlood flood-opacity="0" result="BackgroundImageFix" />
-  //         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-  //         <feOffset dy="2" />
-  //         <feGaussianBlur stdDeviation="0.5" />
-  //         <feColorMatrix type="matrix" values="0 0 0 0 0.356863 0 0 0 0 0.415686 0 0 0 0 0.439216 0 0 0 1 0" />
-  //         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-  //         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-  //       </filter>
-  //       <linearGradient id="paint0_linear" x1="-1" y1="207" x2="1079" y2="207" gradientUnits="userSpaceOnUse">
-  //         <stop stop-color="#BBD2C5" />
-  //         <stop offset="1" stop-color="#536976" />
-  //       </linearGradient>
-  //     </defs>
-  //   </svg>
-  // )
 
   // function cleanQuotes(text) {
   //   return (text.replace(/\"/g, ""))
@@ -125,12 +105,12 @@ export const Github = () => {
 
   return (
     <div data-testid="GithubContainer">
-      <div className="w-full p-0 m-0" data-testid="CardSectionContainer">
-        <div data-testid="CardContainer">
+      <div className="w-full p-0 m-0" data-testid="">
+        <div data-testid="">
           <div className="w-1/4">
             <div
               className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg"
-              data-testid="CardSectionContainer"
+              data-testid=""
             >
               <img
                 className="w-full"
@@ -139,31 +119,29 @@ export const Github = () => {
               />
               <div className="px-6 py-4">
                 <div className="mb-2 text-xl font-bold">{myRepo.login}</div>
-                <p className="text-base text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
-                  nihil veniam minima corporis ipsum? Eaque reprehenderit, neque
-                  aliquid modi numquam expedita quo laborum? Vero ex aperiam
-                  tempora.
-                </p>
+                <a href={myRepo.repos_url} target="_blank">
+                  <p className="text-base text-gray-600"></p>
+                  Go to Repository list
+                </a>
               </div>
               <div className="px-6 py-4">
                 <span
                   className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
                   data-testid="TagsContainer"
                 >
-                  # <span data-testid="TagsTextDisplay">Programming</span>
+                  # <span data-testid="TagsTextDisplay">Github</span>
                 </span>
                 <span
                   className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
                   data-testid="TagsContainer"
                 >
-                  # <span data-testid="TagsTextDisplay">Javascript</span>
+                  # <span data-testid="TagsTextDisplay">Card</span>
                 </span>
                 <span
                   className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
                   data-testid="TagsContainer"
                 >
-                  # <span data-testid="TagsTextDisplay">Web Development</span>
+                  # <span data-testid="TagsTextDisplay">No Data</span>
                 </span>
               </div>
             </div>

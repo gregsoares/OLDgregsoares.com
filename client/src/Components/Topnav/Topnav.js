@@ -1,5 +1,7 @@
 import React from "react";
 
+// FIXME: Topnav is taking up 2 lines
+// TODO: Add a mobile nav
 export const Topnav = (props) => {
   const activePage = props.activePage;
   const isActive = (page) =>
