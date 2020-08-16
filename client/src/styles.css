@@ -1,23 +1,21 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
-  .topMenuBtn {
-    @apply shadow-sm;
-    @apply px-2;
-    @apply py-4;
-    @apply rounded-sm;
-    @apply my-0;
-    @apply transition-shadow;
-  }
+.topMenuBtn {
+  @apply shadow-sm;
+  @apply px-2;
+  @apply py-4;
+  @apply rounded-sm;
+  @apply my-0;
+  @apply transition-shadow;
+}
 
-@tailwind utilities;
+@import "tailwindcss/utilities";
 
-  .scrollBar { 
-    
-  }
+.scrollBar {
+}
 
 @responsive {
-  
   .h-10 {
     height: 10vh;
   }

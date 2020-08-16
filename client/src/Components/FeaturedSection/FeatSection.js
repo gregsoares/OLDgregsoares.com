@@ -39,7 +39,9 @@ export const FeatSection = (props) => {
           </div>
 
           <div className="featContent pl-6 pr-4 text-left">
-              <p className="font-medium tracking-wide md:text-md">{featSubtitle}</p>
+            <p className="font-medium tracking-wide md:text-md">
+              {featSubtitle}
+            </p>
             <div className="mt-3">
               {featText.map((text) => (
                 <span key={Math.random(123)} className="text-sm text-left">

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { CardSection } from "../Components/CardSection/CardSection";
 import { FeaturedSection } from "../Components/FeaturedSection/FeaturedSection";
@@ -6,7 +6,6 @@ import { HeroCTA } from "../Components/HeroCTA/HeroCTA";
 import { Modal } from "../Components/Modal/Modal";
 import { ContactForm } from "../Components/ContactForm/ContactForm";
 import { Topnav } from "../Components/Topnav/Topnav";
-import { TopNavContext } from "../assets/store/TopNavContext";
 
 /* FIREBASE headers
 
@@ -23,24 +22,21 @@ import { TopNavContext } from "../assets/store/TopNavContext";
 
 // TODO: import ../Components/assets/js/scollPosition and run to return to same place onReload
 const Index = () => {
-  const context = useContext(TopNavContext);
-  console.debug(`Result from context: 
-  width: ${context.width}
-  activePage: ${context.activeage}
-  `);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const checkWindowSize = () => {
-    context.setWidth(window.innerWidth);
+    setWindowWidth(window.innerWidth);
   };
 
   useEffect(
     (e) => {
       window.addEventListener("resize", checkWindowSize());
+      // checkWindowSize();
 
       return () => {
         window.removeEventListener("resize", false);
       };
     },
-    [context.width]
+    [windowWidth]
   );
   return (
     <main
@@ -49,11 +45,11 @@ const Index = () => {
       onLoad={console.log(window.innerWidth)}
       data-testid="IndexPageContainer"
     >
-      <Topnav activePage="home" width={context.width} />
+      <Topnav activePage="home" windowWidth={windowWidth} />
 
       <Modal
         contentLabel="HelloWorld something TRUE"
-        className="shadow-inner py-2 px-4 my-1 mx-2 border bg-gray-300"
+        className="shadow-inner box-border py-2 px-4 my-1 mx-2 border bg-gray-300"
         isOpen={false}
       />
       <HeroCTA />

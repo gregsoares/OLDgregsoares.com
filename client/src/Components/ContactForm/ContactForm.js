@@ -52,7 +52,7 @@ export const ContactForm = () => {
           <label
             className={
               messageSent !== true
-                ? "block text-gray-700 text-md text-center font-bold mb-2"
+                ? "block text-gray-700 text-sm text-center font-bold mb-2"
                 : "hidden"
             }
             htmlFor="formTitle"
@@ -71,7 +71,7 @@ export const ContactForm = () => {
             <br /> Thank you for taking the time to reach out.
           </label>
           <input
-            className="border text-center hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"
+            className="border text-center hover:bg-white rounded py-2 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 -mx-3 shadow-sm focus:shadow-outline"
             onChange={(e) => setInput({ ...input, name: e.target.value })}
             value={input.name}
             type="text"
@@ -81,7 +81,7 @@ export const ContactForm = () => {
             data-testid="nameInput"
           />
           <input
-            className="border text-center hover:bg-white rounded py-2 px-3 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 shadow-sm focus:shadow-outline"
+            className="border text-center hover:bg-white rounded py-2 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 -mx-3 shadow-sm focus:shadow-outline"
             onChange={(e) => setInput({ ...input, email: e.target.value })}
             value={input.email}
             type="email"
@@ -100,7 +100,7 @@ export const ContactForm = () => {
               Message:
             </label>
             <textarea
-              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight hover:bg-white focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 text-gray-700 leading-tight hover:bg-white focus:outline-none focus:shadow-outline"
               onChange={(e) => setInput({ ...input, message: e.target.value })}
               value={input.message}
               id="message_box"

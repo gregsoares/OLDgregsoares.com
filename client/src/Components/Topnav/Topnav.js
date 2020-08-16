@@ -1,29 +1,20 @@
-import React, { useContext } from "react";
-import { TopNavContext } from "../../assets/store/TopNavContext";
+import React from "react";
 
-export const Topnav = () => {
-  const context = useContext(TopNavContext);
-  context.setWidth(window.innerWidth);
-  console.debug(`Result from context: 
-  width: ${context.width}
-  activePage: ${context.activePage}
-  `);
+export const Topnav = (props) => {
+  const activePage = props.activePage;
   const isActive = (page) =>
-    page === context.activePage
+    page === activePage
       ? "topMenuBtn text-black hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border "
       : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg";
 
   return (
     <nav
-      className="sticky top-0 flex justify-between py-0 shadow-md"
+      className="sticky top-0 flex flex-wrap justify-between py-0 shadow-md"
       style={{ backgroundColor: "#45718C" }}
       data-testid="TopnavContainer"
     >
       <div className="mr-12 py-0" data-testid="brandName">
         <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
-      </div>
-      <div className="mr-12 py-0" data-testid="brandName">
-        <p className="py-0 font-serif text-2xl ">{() => context.width}</p>
       </div>
 
       <div className="flex flex-wrap justify-end w-full mr-4 py-0 navbar-menu font-semibold">
