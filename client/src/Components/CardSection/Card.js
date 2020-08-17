@@ -1,14 +1,18 @@
 import React from "react";
 import cardImg from "./card-top.jpg";
 import { Tag } from "../Tag/Tag";
-// == Props ==
 
+/* == Props ==
+ * string: imgUrl
+ * string: title
+ * string: text
+ * string []: tags
+ */
 export const Card = (props) => {
   const { imgUrl, title, tags, text } = props.cardData;
   const loadTags = () => {
     if (!tags) return;
-    const allTags = props.cardData.tags.map((tag) => <Tag text={tag} />);
-    console.log(`allTags: ${allTags}`);
+    const allTags = tags.map((tag) => <Tag text={tag} key={Math.random()} />);
     return allTags;
   };
 
