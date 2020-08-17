@@ -1,5 +1,10 @@
 import React from "react";
 
+/*
+ * string: blogTitle
+ * string: blogSubtitle
+ * string []: blogs
+ */
 export const Blog = (props) => {
   const loadBlogSection = () => {
     return (

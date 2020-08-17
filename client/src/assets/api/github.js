@@ -88,7 +88,7 @@ export const fetchMyProfile = async () => {
     public_repos,
   } = await myProfile;
 
-  return [login, id, avatar_url, html_url, name, bio, public_repos];
+  return { login, id, avatar_url, html_url, name, bio, public_repos };
 };
 
 export const searchRepo = async (repoName) => {

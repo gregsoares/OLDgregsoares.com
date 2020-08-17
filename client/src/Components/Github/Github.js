@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { fetchMyProfile } from "../../assets/api/github";
-// import metalBG from "./greymetal.svg";
-// import blueCardBG from './blueCardBG.svg'
 
-// FIXME: loadMyProfile not fetching data
+// FIXME: Link to github account
 export const Github = () => {
   const [myRepo, setMyRepo] = useState(null);
 
@@ -14,14 +12,14 @@ export const Github = () => {
   //   console.debug(data);
   //   return data;
   // };
-  function loadMyProfile() {
-    fetchMyProfile().then((data) => setMyRepo(data));
-  }
+  const loadMyProfile = async () => {
+    await fetchMyProfile().then((data) => setMyRepo(data));
+  };
 
   useEffect(() => {
     // loadMyProfile().then(() => console.log(myRepo));
     // ==DEBUG==
-    loadMyProfile();
+    loadMyProfile().catch((err) => console.debug(err));
     // ).then((data) => setRepoData(data));
     // setRepoData(mockSearchRepo.data);
     // setGregsoaresRepo(mockFetchGregsoaresRepo.data);
@@ -42,8 +40,8 @@ export const Github = () => {
 
   //     </div>
   //     <div className="px-6 py-4">
-  //       <span className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.name}</span>
-  //       <span className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.login}</span>
+  //       <span className="inline-block px-3 py-1 my-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.name}</span>
+  //       <span className="inline-block px-3 py-1 my-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{result.login}</span>
   //     </div>
   //   </div>
   // )
@@ -99,52 +97,30 @@ export const Github = () => {
   // }
 
   return myRepo ? (
-    <div data-testid="GithubContainer">
-      <div className="w-full p-0 m-0" data-testid="">
-        <div data-testid="">
-          <div className="w-1/4">
-            <div
-              className="max-w-sm mx-auto my-8 overflow-hidden rounded shadow-lg"
-              data-testid=""
-            >
-              <img
-                className="w-full"
-                src={myRepo.avatar_url}
-                alt="Sunset in the mountains"
-              />
-              <div className="px-6 py-4">
-                <div className="mb-2 text-xl font-bold">{myRepo.login}</div>
-                <a
-                  href={myRepo.repos_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <p className="text-base text-gray-600"></p>
-                  Go to Repository list
-                </a>
-              </div>
-              <div className="px-6 py-4">
-                <span
-                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
-                  data-testid="TagsContainer"
-                >
-                  # <span data-testid="TagsTextDisplay">Github</span>
-                </span>
-                <span
-                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
-                  data-testid="TagsContainer"
-                >
-                  # <span data-testid="TagsTextDisplay">Card</span>
-                </span>
-                <span
-                  className="inline-block px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full"
-                  data-testid="TagsContainer"
-                >
-                  # <span data-testid="TagsTextDisplay">No Data</span>
-                </span>
-              </div>
-            </div>
-          </div>
+    <div className="my-4" data-testid="GithubContainer">
+      <div
+        className=" bg-gray-200 max-w-sm mx-auto px-4 py-4 border-2 border-gray-400 rounded shadow-lg"
+        data-testid=""
+      >
+        <img
+          className="w-full px-2"
+          src={myRepo.avatar_url}
+          alt="Sunset in the mountains"
+        />
+        <div className="px-6 py-4">
+          <div className=" text-xl font-bold">{`${myRepo.name} `}</div>
+          <a href={myRepo.repos_url} target="_blank" rel="noopener noreferrer">
+            <p className="text-base text-gray-600"></p>
+            Go to Repository list
+          </a>
+        </div>
+        <div className="px-1 mb-4 ">
+          <span
+            className="inline-block px-5 py-2 text-sm font-semibold text-gray-600  shadow-md border border-gray-400 rounded-lg"
+            data-testid="TagsContainer"
+          >
+            <p>{myRepo.bio || ""}</p>
+          </span>
         </div>
       </div>
       {/* {myRepo != null ? (<p className="border ">Repository Name: {((JSON.stringify(myRepo.name)))}</p>) : ""}  */}

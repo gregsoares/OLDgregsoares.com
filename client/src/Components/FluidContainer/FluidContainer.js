@@ -1,15 +1,16 @@
 import React from "react";
 
+// TODO: Customize this component
 export const FluidContainer = () => {
   return (
     <div data-testid="FluidContainer">
       <div
         className=" w-full flex flex-row flex-wrap bg-gray-600 p-10 py-20 justify-center"
         style={{
-          backgroundRepeat:"no-repeat",
-          backgroundSize:"cover",
-          backgroundBlendMode:"multiply",
-          backgroundPosition:"center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundBlendMode: "multiply",
+          backgroundPosition: "center",
           backgroundImage:
             "url('https://images.unsplash.com/photo-1573079487717-f8ebae0b1539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')",
         }}
@@ -23,11 +24,7 @@ export const FluidContainer = () => {
           </div>
         </div>
 
-        <form
-          className=" mt-3 flex flex-row flex-wrap"
-          action=""
-          method="POST"
-        >
+        <form className=" mt-3 flex flex-row flex-wrap" action="" method="POST">
           <div className="text-gray-600  w-2/3">
             <input
               type="text"

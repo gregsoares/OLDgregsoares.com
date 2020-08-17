@@ -32,7 +32,7 @@ export const MessagesPanel = () => {
 
   const loadMessages = () => {
     getAllMessages().then((data) => {
-      console.debug(`loadMessages Reports:\n
+      console.debug(`MessagePanel:: loadMessages Reports:\n
       ${name.name}
       Res: ${data.data[0].name}
 
@@ -51,13 +51,6 @@ export const MessagesPanel = () => {
     getAllMessages().then((data) => {
       setName(data.data[0].name);
       setMessage(data.data[0].message);
-      console.debug(`useEffect Reports:
-      ${name.name}
-      Res: ${data.data[0].name}
-
-      ${message.message}
-      Res: ${data.data[0].message}
-      `);
     });
   }, [name.name, message.message]);
   return (
