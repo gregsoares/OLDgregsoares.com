@@ -48,7 +48,7 @@ export const ContactForm = () => {
     >
       <form
         onSubmit={sendMessage}
-        className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-6"
+        className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 my-6"
       >
         <div className="mb-4">
           <label

@@ -21,7 +21,7 @@ export const FeatSection = (props) => {
     if (bgColor === "" || bgColor === undefined || bgColor === null)
       bgColor = "bg-gray-300";
 
-    return `${bgColor} py-4 my-4 border border-t-0 border-l-0 border-r-0 rounded-lg shadow-sm`;
+    return `${bgColor} py-4 border border-t-0 border-l-0 border-r-0 shadow-sm`;
   };
   return (
     <div className={featClassLoader()} id={featTitle}>

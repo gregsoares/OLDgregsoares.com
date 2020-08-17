@@ -8,9 +8,9 @@ import AgencyImg from "./assets/AgencySS.png";
 // TODO: Make a variant option for  Left/Right style posts
 export const FeaturedSection = () => {
   return (
-    <div className="" data-testid="FeaturedSectionContainer">
+    <div className="bg-indigo-400" data-testid="FeaturedSectionContainer">
       <section className="">
-        <h2 className="mt-4 mb-8 text-4xl font-bold text-center text-gray-800">
+        <h2 className="my-0 mb-8 text-4xl font-bold text-center text-gray-800">
           Projects
         </h2>
         <FeatSection

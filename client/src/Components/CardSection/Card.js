@@ -8,6 +8,7 @@ export const Card = (props) => {
   const loadTags = () => {
     if (!tags) return;
     const allTags = props.cardData.tags.map((tag) => <Tag text={tag} />);
+    console.log(`allTags: ${allTags}`);
     return allTags;
   };
 

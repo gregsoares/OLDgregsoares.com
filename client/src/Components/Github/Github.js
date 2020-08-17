@@ -14,17 +14,14 @@ export const Github = () => {
   //   console.debug(data);
   //   return data;
   // };
-  const loadMyProfile = async () => {
-    const data = await fetchMyProfile().then((data) => data && setMyRepo(data));
-    return data;
-  };
+  function loadMyProfile() {
+    fetchMyProfile().then((data) => setMyRepo(data));
+  }
 
   useEffect(() => {
-    loadMyProfile().then(() => console.log(myRepo));
-    // setRepoData(
-    //   loadMyProfile()
-    //     .then((data) => data && setMyRepo(data))
-    //     .finally(console.log(repoData))
+    // loadMyProfile().then(() => console.log(myRepo));
+    // ==DEBUG==
+    loadMyProfile();
     // ).then((data) => setRepoData(data));
     // setRepoData(mockSearchRepo.data);
     // setGregsoaresRepo(mockFetchGregsoaresRepo.data);

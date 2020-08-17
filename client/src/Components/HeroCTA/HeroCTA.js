@@ -1,10 +1,7 @@
 import React from "react";
 export const HeroCTA = () => {
   return (
-    <div
-      className="overflow-hidden border rounded-b-lg box-border"
-      data-testid="HeroCTAContainer"
-    >
+    <div className="overflow-hidden box-border" data-testid="HeroCTAContainer">
       <div
         className="pt-8 pb-12 font-medium xl:font-lg text-gray-200 "
         style={{
