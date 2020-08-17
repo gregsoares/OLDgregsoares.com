@@ -3,12 +3,12 @@ import cardImg from "./card-top.jpg";
 import { Tag } from "../Tag/Tag";
 // == Props ==
 
-// TODO: Add my to Cards
 export const Card = (props) => {
   const { imgUrl, title, tags, text } = props.cardData;
   const loadTags = () => {
     if (!tags) return;
     const allTags = props.cardData.tags.map((tag) => <Tag text={tag} />);
+    return allTags;
   };
 
   return (

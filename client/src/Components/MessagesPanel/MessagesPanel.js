@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {
   getAllMessages,
-  getByEmail,
-  formTest,
+  // getByEmail,
+  // formTest,
 } from "../../assets/api/messages";
 // TODO: useContext(messages) to reload this panel
 
@@ -59,7 +59,7 @@ export const MessagesPanel = () => {
       Res: ${data.data[0].message}
       `);
     });
-  }, [name.name]);
+  }, [name.name, message.message]);
   return (
     <div
       className="bg-white overflow-hidden rounded-lg shadow-lg p-0 text-sm mx-6"

@@ -14,16 +14,7 @@ import React from "react";
  */
 
 export const ReviewCard = (props) => {
-  const {
-    title,
-    status,
-    date,
-    comment,
-    initials,
-    position,
-    name,
-    jobTitle,
-  } = props;
+  const { title, status, date, comment, initials, name, jobTitle } = props;
   return (
     <div
       className="bg-white overflow-hidden rounded-lg shadow-lg p-0 text-sm max-w-md mx-3 my-2"

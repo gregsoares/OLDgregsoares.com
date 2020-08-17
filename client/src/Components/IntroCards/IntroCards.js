@@ -1,8 +1,8 @@
 import React from "react";
-import expressIcon from "./Expressjs.png";
-import mongoIcon from "./mongo.png";
-import reactIcon from "./react.png";
-import nodeIcon from "./Nodejs.png";
+// import expressIcon from "./Expressjs.png";
+// import mongoIcon from "./mongo.png";
+// import reactIcon from "./react.png";
+// import nodeIcon from "./Nodejs.png";
 
 export const IntroCards = (props) => {
   const { cards } = props;

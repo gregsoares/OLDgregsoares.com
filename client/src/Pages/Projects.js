@@ -1,9 +1,6 @@
 import React from "react";
 
 // Project Components import
-import { TerminalComp } from "../Components/TerminalComp/TerminalComp";
-import { CardSection } from "../Components/CardSection/CardSection";
-// import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 
 // TODO: Plato and Agency Repositories need SS and code review+Comments for display.
@@ -24,18 +21,6 @@ const Projects = () => {
           jobTitle="Short manager"
         />
       </div>
-
-      {/* <ReviewCard
-        title="Something Blue"
-        status="Showing"
-        date="07/21/2020"
-        comment="something Most interesting Being said"
-        initials="SO"
-        position="something gr8"
-        name="Mr. Strong"
-        jobTitle="Short manager"
-      /> */}
-      {/* <TerminalComp hostname="Heimdal" text="su -" /> */}
     </div>
   );
 };

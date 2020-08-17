@@ -3,18 +3,18 @@ import React from "react";
 export const Blog = (props) => {
   const loadBlogSection = () => {
     return (
-      <div>
-        <div className="container">
-          <div className="section-title text-center">
+      <div className="text-gray-800 mx-2">
+        <div className="bg-gray-200  border">
+          <div className="text-center text-3xl">
             <h2>{props.blogTitle}</h2>
-            <p className="separator">{props.blogSubtitle}</p>
+            <p className="py-1 text-xl">{props.blogSubtitle}</p>
           </div>
         </div>
 
         <div className="container">
           <div className="row">
             {props.blogs.map((blog) => (
-              <div className="col-md-6 col-lg-4">
+              <div className="col-md-6 col-lg-4" key={Math.random()}>
                 <div className="block-blog text-left">
                   <a href="/">
                     <img
@@ -46,7 +46,7 @@ export const Blog = (props) => {
       {/* Blog Section */}
       {/* ============================--> */}
       <section id="blog" className="padd-section wow fadeInUp">
-        {() => loadBlogSection}
+        {loadBlogSection()}
       </section>
     </React.Fragment>
   );

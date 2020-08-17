@@ -2,9 +2,11 @@ import React from "react";
 import { Card } from "./Card";
 
 export const CardSection = (props) => {
-  const showCards = props.cards
+  const loadCards = props.cards
     ? () => {
-        const cardData = props.cards.map((card) => card);
+        const cardData = props.cards.map((card) => (
+          <Card cardData={card} key={Math.random()} />
+        ));
         return cardData;
       }
     : [
@@ -31,12 +33,12 @@ export const CardSection = (props) => {
         },
       ];
 
-  const loadCards = () => {
-    const output = props.cards.map((card) => (
-      <Card cardData={card} key={Math.random()} />
-    ));
-    return output;
-  };
+  // const loadCards = () => {
+  //   const output = props.cards.map((card) => (
+  //     <Card cardData={card} key={Math.random()} />
+  //   ));
+  //   return output;
+  // };
 
   return (
     <div

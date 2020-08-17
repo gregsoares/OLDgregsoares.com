@@ -4,8 +4,9 @@ import { fetchMyProfile } from "../../assets/api/github";
 // import metalBG from "./greymetal.svg";
 // import blueCardBG from './blueCardBG.svg'
 
+// FIXME: loadMyProfile not fetching data
 export const Github = () => {
-  const [myRepo, setMyRepo] = useState(fetchMyProfile().then((data) => data));
+  const [myRepo, setMyRepo] = useState(null);
 
   // const loadData = (repoName) => {
   //   if (!repoName) return 0;
@@ -13,16 +14,13 @@ export const Github = () => {
   //   console.debug(data);
   //   return data;
   // };
-
-  const loadMyProfile = () => {
-    const data = fetchMyProfile().then((data) => data && setMyRepo(data));
+  const loadMyProfile = async () => {
+    const data = await fetchMyProfile().then((data) => data && setMyRepo(data));
     return data;
   };
 
   useEffect(() => {
-    loadMyProfile().then(() =>
-      myRepo.then((repoLogin) => console.log(repoLogin))
-    );
+    loadMyProfile().then(() => console.log(myRepo));
     // setRepoData(
     //   loadMyProfile()
     //     .then((data) => data && setMyRepo(data))
@@ -103,7 +101,7 @@ export const Github = () => {
   //   return displayComponent;
   // }
 
-  return (
+  return myRepo ? (
     <div data-testid="GithubContainer">
       <div className="w-full p-0 m-0" data-testid="">
         <div data-testid="">
@@ -119,7 +117,11 @@ export const Github = () => {
               />
               <div className="px-6 py-4">
                 <div className="mb-2 text-xl font-bold">{myRepo.login}</div>
-                <a href={myRepo.repos_url} target="_blank">
+                <a
+                  href={myRepo.repos_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <p className="text-base text-gray-600"></p>
                   Go to Repository list
                 </a>
@@ -154,5 +156,7 @@ export const Github = () => {
       {/* {myRepo != null ? (displayResult()) : "displayResult() Loading"}
       {gregsoaresRepo != null ? (displayGregsoaresRepo()) : "displayGregsoares() Loading"}  */}
     </div>
+  ) : (
+    "Bad Github Component"
   );
 };

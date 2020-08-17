@@ -80,7 +80,7 @@ const Components = () => {
       <Container />
       <FluidContainer />
       <Github />
-      <MessagesPanel title="Message Panel" status="Testing" date={new Date()} />
+      <MessagesPanel title="Message Panel" status="Testing" date="date" />
       <PostSection />
       <Tag />
       <Topnav />

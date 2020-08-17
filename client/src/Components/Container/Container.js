@@ -6,7 +6,7 @@ export const Container = (props) => {
   const userClass = props.className;
   return (
     <div
-      className="w-full bg-gray-300 justify-around px-4 p-3"
+      className={`w-full bg-gray-300 justify-around px-4 p-3 ${userClass}`}
       data-testid="ContainerComponent"
     >
       {props.children}
