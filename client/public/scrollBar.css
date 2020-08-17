@@ -1,18 +1,11 @@
 #root {
-    scrollbar-arrow-color: aqua;
-    scrollbar-highlight-color: black;
-
+  scrollbar-arrow-color: aqua;
+  scrollbar-highlight-color: black;
 }
 
 body::-webkit-scrollbar {
-    width: .75rem;
+  width: 0.75rem;
 }
-
-body::-webkit-scrollbar-track {
-    background: rgb(34,171,200);
-    background: rgba(34,171,200,.51);
-}
-
 body::-webkit-scrollbar-thumb {
-    background: rgba(50, 100, 130, 1);
+  background: rgba(69, 113, 140, 1);
 }

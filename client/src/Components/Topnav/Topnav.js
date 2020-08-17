@@ -1,7 +1,8 @@
 import React from "react";
 
-// FIXME: Topnav is taking up 2 lines
 // TODO: Add a mobile nav
+// TODO: Add Github + LinkedIn icons to save space
+// FIXME: Download resume and project links (to either gethub or preview)
 export const Topnav = (props) => {
   const activePage = props.activePage;
   const isActive = (page) =>
@@ -15,11 +16,11 @@ export const Topnav = (props) => {
       style={{ backgroundColor: "#45718C" }}
       data-testid="TopnavContainer"
     >
-      <div className="mr-12 py-0" data-testid="brandName">
+      <div className="ml-4 my-2 mr-auto py-0" data-testid="brandName">
         <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
       </div>
 
-      <div className="flex flex-wrap justify-end w-full mr-4 py-0 navbar-menu font-semibold">
+      <div className="flex flex-wrap justify-end items-center mr-4 py-0 navbar-menu font-semibold">
         <a className={isActive("home") + ""} href="/" data-testid="homeNavLink">
           Home
         </a>

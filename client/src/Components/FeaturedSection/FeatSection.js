@@ -1,6 +1,15 @@
 import React from "react";
 import { Tag } from "../Tag/Tag";
 
+// TODO: add prop : variant to change from left to right templates/styles
+
+/* ==> Props <==
+ * featTitle= String
+ * featSubtitle=String
+ * featText={[]}
+ * featTags={[]}
+ * featImg= Image Location(src)
+ */
 export const FeatSection = (props) => {
   const { featImg, featTitle, featSubtitle, featText, featTags } = props;
 
@@ -8,20 +17,12 @@ export const FeatSection = (props) => {
   if (featImg === null) return 0;
   if (featImg === undefined) return 0;
 
-  /* ==> Props <==
-   * featTitle= String
-   * featSubtitle=String
-   * featText={[]}
-   * featTags={[]}
-   * featImg= Image Location(src)
-   */
-
   const featClassLoader = () => {
     let bgColor = props.bgColor;
     if (bgColor === "" || bgColor === undefined || bgColor === null)
       bgColor = "bg-gray-300";
 
-    return `${bgColor} py-4 border border-t-0 border-l-0 border-r-0 shadow-sm`;
+    return `${bgColor} pt-4 pb-6 border border-t-0 border-l-0 border-r-0 shadow-sm`;
   };
   return (
     <div className={featClassLoader()} id={featTitle}>
