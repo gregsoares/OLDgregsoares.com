@@ -21,58 +21,50 @@ import {
 
 // TODO: swap from props to context for when a new message gets send/Refresh (timer or manual)
 export const MessagesPanel = () => {
-  // const [title, setTitle] = useState({"title": ""})
-  // const [status, setStatus] = useState({"status": ""})
-  // const [date, setDate] = useState({"date": ""})
-  // const [comment, setComment] = useState({"comment": ""})
-  // const [initials, setInitials] = useState({"initials": ""})
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  // const [jobTitle, setJobTitle] = useState({"jobTitle": ""})
+  const [email, setEmail] = useState([]);
+  // const [message, setMessage] = useState([]);
+  // const [name, setName] = useState([]);
 
   const loadMessages = () => {
     getAllMessages().then((data) => {
-      console.debug(`MessagePanel:: loadMessages Reports:\n
-      ${name.name}
-      Res: ${data.data[0].name}
+      const allMessages = [];
+      allMessages.push(data.data[0]);
 
-      ${message.message}
-      Res: ${data.data[0].message}
+      // TODO: Fix this mess, tired bain = bad
+      data.data.forEach(({ email }, index) => {
+        allMessages.push(
+          allMessages.filter((message) => message.email === email)
+        );
+      });
 
-      `);
-      let newName = data.data[0].name;
-      let newMessage = data.data[0].message;
-      setName(newName);
-      setMessage(JSON.stringify(newMessage));
+      setEmail(allMessages);
     });
   };
 
   useEffect(() => {
-    getAllMessages().then((data) => {
-      setName(data.data[0].name);
-      setMessage(data.data[0].message);
-    });
-  }, [name.name, message.message]);
+    console.log(email);
+  }, [email]);
+
+  const loadDisplays = () => {};
+
   return (
     <div
       className="bg-white overflow-hidden rounded-lg shadow-lg p-0 text-sm mx-6"
       data-testid="cardContainer"
-      // onLoad={() => loadMessages()}
     >
       <div
         className="flex w-full bg-gray-300 text-lg shadow-outline py-3 px-4 text-gray-800 select-none"
         data-testid="title"
       >
         <p className="ml-auto" id="title">
-          {name.name !== "" ? name.name : "No data"}
-          {/* {() => useState(name)} */}
+          {/* {name !== "" ? name : "No data"} */}
         </p>
         <div className="flex ml-auto w-auto" id="statusDate">
           <div
             className="flex mx-4 bg-orange-600 uppercase rounded-full px-3 py-1 text-xs text-gray-300 font-bold shadow select-none"
             data-testid="status"
           >
-            TAG SAYING SOMETING
+            Status
           </div>
         </div>
       </div>
@@ -81,7 +73,8 @@ export const MessagesPanel = () => {
           className="sm:flex-wrap bg-gray-300 rounded-lg my-2 mx-2 py-4 px-4 shadow-inner select-none text-black font-medium"
           data-testid="comment"
         >
-          {message.message !== "" ? message.message : "No data"}
+          Message:
+          {/* {message !== "" ? message : "No data"} */}
         </div>
       </div>
 
@@ -93,28 +86,23 @@ export const MessagesPanel = () => {
           className="uppercase font-bold text-gray-700 text-opacity-75 text-xs my-2 ml-4 select-none"
           data-testid="position"
         >
-          Someting here POSITION
+          {/* Email: {email} */}
         </div>
 
-        <div className="flex px-2 mb-2">
-          <span
-            className="flex h-12 w-12 rounded-full bg-blue-700 text-white text-center justify-center items-center font-bold capitalize ml-3 shadow-md border border-white"
+        <div className="flex items-center">
+          <div
+            className="flex py-6 px-4 rounded-full bg-blue-700 text-white text-center justify-center items-center font-bold capitalize ml-4 mr-auto shadow-md border border-white"
+            data-testid="initials"
+          >
+            <p className="text-xs">Reply</p>
+          </div>
+
+          <div
+            className="flex py-6 px-3 rounded-full bg-green-600 text-white text-center self-end items-center font-bold capitalize ml-auto mr-4 shadow-md border border-white"
             data-testid="initials"
             onClick={() => loadMessages()}
           >
-            Refresh
-          </span>
-
-          <div className="inline ml-4" data-testid="namePositionContainer">
-            <p className=" font-bold  select-none" data-testid="name">
-              some NAME
-            </p>
-            <p
-              className=" text-gray-700 capitalize my-2 text-xs select-none"
-              data-testid="jobTitle"
-            >
-              JOB TITLE ?? WHAT?!SECTION -
-            </p>
+            <p className="text-xs">Refresh</p>
           </div>
         </div>
       </div>

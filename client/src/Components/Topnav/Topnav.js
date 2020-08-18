@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-// FIXME: Download resume and project links (to either gethub or preview)
+// FIXME: Download resume and project links (to either github or preview)
 // FIXME: Mobile Menu doesn't close when it's been clicked on (implement prev state )
 export const Topnav = (props) => {
   const [isOpen, setIsOpen] = useState(null);

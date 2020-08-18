@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div className="items-center justify-center bg-gray-100">
       {/* <CardSection /> */}
-      <div className="w-full bg-teal-600 py-5">
+      <div className="max-w-md bg-teal-600 py-5">
         <MessagesPanel
           title="Reading All Messages"
           status="Last Update"
