@@ -1,14 +1,15 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // TODO: Add a mobile nav
-// TODO: Add Github + LinkedIn icons to save space
 // FIXME: Download resume and project links (to either gethub or preview)
 export const Topnav = (props) => {
   const activePage = props.activePage;
   const isActive = (page) =>
     page === activePage
       ? "topMenuBtn text-black hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border "
-      : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg";
+      : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg ";
 
   return (
     <nav
@@ -16,11 +17,38 @@ export const Topnav = (props) => {
       style={{ backgroundColor: "#45718C" }}
       data-testid="TopnavContainer"
     >
-      <div className="ml-4 my-2 mr-auto py-0" data-testid="brandName">
+      <div className="ml-4 my-2 py-0" data-testid="brandName">
         <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
       </div>
 
-      <div className="flex flex-wrap justify-end items-center mr-4 py-0 navbar-menu font-semibold">
+      <div className="flex items-center mr-4 navbar-menu font-semibold">
+        <a
+          className={
+            isActive("linkedin") +
+            " ml-2 md:ml-8 lg:ml-16 transform duration-300 ease-out"
+          }
+          href="https://www.linkedin.com/in/greg-soares"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+        </a>
+
+        <a
+          className={isActive("github") + " ml-2 "}
+          href="https://github.com/gregsoares"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="githubNavLink"
+        >
+          <FontAwesomeIcon icon={faGithub} size="2x" />
+        </a>
+      </div>
+
+      <div
+        className=" flex items-center mr-4 py-0 navbar-menu font-semibold"
+        id="navLinks"
+      >
         <a className={isActive("home") + ""} href="/" data-testid="homeNavLink">
           Home
         </a>
@@ -40,25 +68,6 @@ export const Topnav = (props) => {
           data-testid="resumeNavLink"
         >
           Resume
-        </a>
-
-        <a
-          className={isActive("github") + ""}
-          href="https://github.com/gregsoares"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-testid="githubNavLink"
-        >
-          Github
-        </a>
-
-        <a
-          className={isActive("linkedin") + ""}
-          href="http://www.linkedin.com/in/greg-soares"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
         </a>
       </div>
     </nav>
