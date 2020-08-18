@@ -12,7 +12,8 @@
 
 @import "tailwindcss/utilities";
 
-.scrollBar {
+.TopNav {
+  background-color: "#45718C";
 }
 
 @responsive {
