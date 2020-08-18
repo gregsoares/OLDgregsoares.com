@@ -20,6 +20,7 @@ import { TerminalComp } from "../Components/TerminalComp/TerminalComp";
 import { Blog } from "../Components/Blog/Blog";
 import { cardData } from "./mockPagesData";
 import { testBlogs } from "./mockPagesData";
+import { LazyLoader } from "../Components/LazyLoader/LazyLoader";
 
 const Components = () => {
   return (
@@ -60,6 +61,7 @@ const Components = () => {
         jobTitle="Web Dev"
       />
       <TerminalComp />
+      <LazyLoader />
     </div>
   );
 };
