@@ -22,27 +22,37 @@ import {
 // TODO: swap from props to context for when a new message gets send/Refresh (timer or manual)
 export const MessagesPanel = () => {
   const [email, setEmail] = useState([]);
-  // const [message, setMessage] = useState([]);
-  // const [name, setName] = useState([]);
+  const [message, setMessage] = useState([]);
+  const [name, setName] = useState([]);
+  const [allMessages, setAllMessages] = useState([]);
 
   const loadMessages = () => {
-    getAllMessages().then((data) => {
-      const allMessages = [];
-      allMessages.push(data.data[0]);
+    getAllMessages()
+      .then((data) => {
+        let allMessages = [],
+          tempEmail = [],
+          tempMessage = [],
+          tempName = [];
 
-      // TODO: Fix this mess, tired bain = bad
-      data.data.forEach(({ email }, index) => {
-        allMessages.push(
-          allMessages.filter((message) => message.email === email)
-        );
-      });
+        // TODO: Fix this mess, tired bain = bad
+        data.data.forEach((res) => {
+          tempEmail.push(res.email);
+          tempName.push(res.name);
+          tempMessage.push(res.message);
+        });
 
-      setEmail(allMessages);
-    });
+        console.log(`AllMessages: \n${allMessages}`);
+        setName(tempName);
+        setEmail(tempEmail);
+        setMessage(tempMessage);
+      })
+      .finally(() =>
+        console.log(`All States: \n${name[0]} ${email} ${message}`)
+      );
   };
 
   useEffect(() => {
-    console.log(email);
+    console.log(`AllMessages from useEffect: ${allMessages}`);
   }, [email]);
 
   const loadDisplays = () => {};

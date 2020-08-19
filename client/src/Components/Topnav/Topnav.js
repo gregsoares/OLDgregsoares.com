@@ -27,7 +27,7 @@ export const Topnav = (props) => {
   );
   return (
     <nav
-      className="sticky top-0 flex flex-wrap items-center justify-between py-0 shadow-md"
+      className="sticky top-0 flex flex-wrap items-center py-2 shadow-md"
       style={{ backgroundColor: "#45718C" }}
       data-testid="TopnavContainer"
     >
@@ -35,7 +35,7 @@ export const Topnav = (props) => {
         <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
       </div>
 
-      <div className="flex items-center mr-4 navbar-menu font-semibold">
+      <div className="flex items-center mx-auto navbar-menu font-semibold">
         <a
           className={
             isActive("linkedin") +
@@ -67,12 +67,12 @@ export const Topnav = (props) => {
         }}
       >
         <div className=" sm:hidden " id="menuItem">
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} size="2x" />
         </div>
         <div
           className={`${
             isOpen ? "translate-x-0" : "translate-x-full"
-          } fixed overflow-hidden mx-auto border-teal-500 rounded-lg text-center top-0 right-0 mt-14 py-3 px-4 origin-top transform duration-500 ease-out`}
+          } fixed overflow-hidden mx-auto border-teal-500 rounded-lg text-center top-0 right-0 mt-14 py-5 px-4 origin-top transform duration-500 ease-out`}
           style={{ backgroundColor: "#45718C" }}
           id="mobileNavLinks"
         >
