@@ -1,5 +1,6 @@
 import React from "react";
 export const HeroCTA = () => {
+  const resume = "./GregSoares-Resume.pdf";
   return (
     <div className="overflow-hidden box-border" data-testid="HeroCTAContainer">
       <div
@@ -9,8 +10,21 @@ export const HeroCTA = () => {
         }}
       >
         <div className="w-full px-6 text-center">
-          <h2 className="mb-10 text-4xl font-bold text-white">
-            Networking Cyber Security Web Development
+          <h2 className="flex mb-10 justify-evenly text-md md:text-xl lg:text-2xl font-bold text-white">
+            <p className="mx-2">
+              <span className=" block md:inline mr-4 object-top">&#9737;</span>{" "}
+              Networking
+            </p>
+            <p className="mx-2">
+              <span className=" block md:inline mr-4 object-bottom">
+                &#9737;
+              </span>{" "}
+              Cyber Security
+            </p>
+            <p className="mx-2">
+              <span className=" block md:inline mr-4 object-top">&#9737;</span>{" "}
+              Web Development
+            </p>
           </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
             <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-lg">
@@ -47,9 +61,14 @@ export const HeroCTA = () => {
           </div>
 
           <div className="mt-4">
-            <button className="px-6 py-4 font-bold tracking-wider text-gray-700 uppercase bg-gray-200 rounded-lg shadow-lg hover:text-black hover:bg-white hover:border hover:border-black">
+            <a
+              className="px-6 py-4 font-bold tracking-wider text-gray-700 uppercase bg-gray-200 rounded-lg shadow-lg hover:text-black hover:bg-white hover:border hover:border-black"
+              href="/GregSoares-Resume.pdf"
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
       </div>

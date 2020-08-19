@@ -93,9 +93,9 @@ export const Topnav = (props) => {
 
           <a
             className={isActive("resume") + "p-2"}
-            href="https://www.linkedin.com/in/greg-soares/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAABkED18BwLp2ur2OWi7pIobAZZSlpJBTgp0,1593197804619)/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BGRPVrhLgTa272qWWSqugbw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-featured_item_detail_view"
+            href="/GregSoares-Resume.pdf"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer noopenner"
             data-testid="resumeNavLink"
           >
             Resume
@@ -120,7 +120,7 @@ export const Topnav = (props) => {
 
         <a
           className={isActive("resume") + ""}
-          href="https://www.linkedin.com/in/greg-soares/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAABkED18BwLp2ur2OWi7pIobAZZSlpJBTgp0,1593197804619)/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BGRPVrhLgTa272qWWSqugbw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-featured_item_detail_view"
+          href="/GregSoares-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           data-testid="resumeNavLink"
