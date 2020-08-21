@@ -35,7 +35,7 @@ export const ContactForm = () => {
       })
       .catch((res) => {
         console.debug(
-          `ContactForm: =>> data returned from form/sendMessage <<=\n${res}`
+          `ContactForm: =>> Caught Error: form/sendMessage: \n${res}`
         );
         console.log(messageSent);
       });

@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-// FIXME: pass state/handleClick function using props
 export const Topnav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const activePage = props.activePage;
@@ -12,25 +11,12 @@ export const Topnav = (props) => {
       ? "topMenuBtn text-black hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border "
       : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg ";
 
-  const clickHandler = (e) => {
-    e.preventDefault();
-    setIsOpen((prevState) => !prevState);
-  };
-
-  useEffect(() => {
-    const handleClick = () => {
-      isOpen && setIsOpen(false);
-    };
-    document.addEventListener("mousedown", handleClick, false);
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, [isOpen]);
   return (
     <nav
       className="sticky top-0 flex flex-wrap items-center py-2 shadow-md"
       style={{ backgroundColor: "#45718C" }}
       data-testid="TopnavContainer"
+      onMouseLeave={() => isOpen && setIsOpen(false)}
     >
       <div className="ml-4 my-2 py-0" data-testid="brandName">
         <p className="py-0 font-serif text-2xl ">GregSoares.com</p>
@@ -38,10 +24,7 @@ export const Topnav = (props) => {
 
       <div className="flex items-center mx-auto navbar-menu font-semibold">
         <a
-          className={
-            isActive("linkedin") +
-            " ml-2 md:ml-8 lg:ml-16 transform duration-300 ease-out"
-          }
+          className="topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg"
           href="https://www.linkedin.com/in/greg-soares"
           target="_blank"
           rel="noopener noreferrer"
@@ -50,7 +33,7 @@ export const Topnav = (props) => {
         </a>
 
         <a
-          className={isActive("github") + " ml-2 "}
+          className="topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg"
           href="https://github.com/gregsoares"
           target="_blank"
           rel="noopener noreferrer"
@@ -61,15 +44,15 @@ export const Topnav = (props) => {
       </div>
 
       <div
-        className=" object-center relative mx-4"
-        id="mobileMenu"
-        onClick={(e) => {
-          clickHandler(e);
+        className=" sm:hidden p-1"
+        onClick={() => {
+          setIsOpen(!isOpen);
         }}
+        id="menuItem"
       >
-        <div className=" sm:hidden " id="menuItem">
-          <FontAwesomeIcon icon={faBars} size="2x" />
-        </div>
+        <FontAwesomeIcon icon={faBars} size="2x" />
+      </div>
+      <div className=" object-center relative mx-4" id="mobileMenu">
         <div
           className={`${
             isOpen ? "translate-x-0" : "translate-x-full"

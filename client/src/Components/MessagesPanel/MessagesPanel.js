@@ -21,13 +21,6 @@ import {
 
 // TODO: swap from props to context for when a new message gets send/Refresh (timer or manual)
 export const MessagesPanel = () => {
-  const [email, setEmail] = useState([]);
-  const [message, setMessage] = useState([]);
-  const [name, setName] = useState([]);
-  const [allMessages, setAllMessages] = useState([]);
-
-  const loadMessages = () => {};
-
   return (
     <div
       className="bg-white overflow-hidden rounded-lg shadow-lg p-0 text-sm mx-6"
@@ -80,7 +73,7 @@ export const MessagesPanel = () => {
           <div
             className="flex py-6 px-3 rounded-full bg-green-600 text-white text-center self-end items-center font-bold capitalize ml-auto mr-4 shadow-md border border-white"
             data-testid="initials"
-            onClick={() => loadMessages()}
+            // onClick={() => loadMessages()}
           >
             <p className="text-xs">Refresh</p>
           </div>
