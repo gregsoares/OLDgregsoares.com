@@ -26,36 +26,7 @@ export const MessagesPanel = () => {
   const [name, setName] = useState([]);
   const [allMessages, setAllMessages] = useState([]);
 
-  const loadMessages = () => {
-    getAllMessages()
-      .then((data) => {
-        let allMessages = [],
-          tempEmail = [],
-          tempMessage = [],
-          tempName = [];
-
-        // TODO: Fix this mess, tired bain = bad
-        data.data.forEach((res) => {
-          tempEmail.push(res.email);
-          tempName.push(res.name);
-          tempMessage.push(res.message);
-        });
-
-        console.log(`AllMessages: \n${allMessages}`);
-        setName(tempName);
-        setEmail(tempEmail);
-        setMessage(tempMessage);
-      })
-      .finally(() =>
-        console.log(`All States: \n${name[0]} ${email} ${message}`)
-      );
-  };
-
-  useEffect(() => {
-    console.log(`AllMessages from useEffect: ${allMessages}`);
-  }, [email]);
-
-  const loadDisplays = () => {};
+  const loadMessages = () => {};
 
   return (
     <div
@@ -83,8 +54,7 @@ export const MessagesPanel = () => {
           className="sm:flex-wrap bg-gray-300 rounded-lg my-2 mx-2 py-4 px-4 shadow-inner select-none text-black font-medium"
           data-testid="comment"
         >
-          Message:
-          {/* {message !== "" ? message : "No data"} */}
+          Message: {/* {message !== "" ? message : "No data"} */}
         </div>
       </div>
 

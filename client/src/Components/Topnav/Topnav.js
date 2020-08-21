@@ -3,28 +3,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-// FIXME: Download resume and project links (to either github or preview)
-// FIXME: Mobile Menu doesn't close when it's been clicked on (implement prev state )
+// FIXME: pass state/handleClick function using props
 export const Topnav = (props) => {
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   const activePage = props.activePage;
   const isActive = (page) =>
     page === activePage
       ? "topMenuBtn text-black hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border "
       : "topMenuBtn text-gray-200 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:border-white rounded-md hover:border  hover:shadow-lg ";
 
-  useEffect(
-    (e) => {
-      const handleClick = () => {
-        isOpen && setIsOpen(!isOpen);
-      };
-      document.addEventListener("mousedown", handleClick, false);
-      return () => {
-        document.removeEventListener("mousedown", handleClick);
-      };
-    },
-    [isOpen]
-  );
+  const clickHandler = (e) => {
+    e.preventDefault();
+    setIsOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    const handleClick = () => {
+      isOpen && setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handleClick, false);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, [isOpen]);
   return (
     <nav
       className="sticky top-0 flex flex-wrap items-center py-2 shadow-md"
@@ -62,8 +63,8 @@ export const Topnav = (props) => {
       <div
         className=" object-center relative mx-4"
         id="mobileMenu"
-        onClick={() => {
-          setIsOpen(!isOpen);
+        onClick={(e) => {
+          clickHandler(e);
         }}
       >
         <div className=" sm:hidden " id="menuItem">

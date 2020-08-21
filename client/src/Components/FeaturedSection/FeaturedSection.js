@@ -5,8 +5,6 @@ import { FeatSection } from "./FeatSection";
 // import syncingImg from './assets/syncing.jpg';
 import AgencyImg from "./assets/AgencySS.png";
 
-// TODO: Make a variant option for  Left/Right style posts (iff > sm: )
-// TODO: add proper content
 export const FeaturedSection = () => {
   return (
     <div className="pt-6 bg-indigo-400" data-testid="FeaturedSectionContainer">
@@ -20,6 +18,7 @@ export const FeaturedSection = () => {
           featText={[
             "REST API on the Back-End sends messages to the database server.The Front-End uses third party APIs to implement Google OAuth.",
           ]}
+          variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={AgencyImg}
           bgColor="bg-indigo-400"
@@ -30,6 +29,7 @@ export const FeaturedSection = () => {
           featText={[
             "Given a front-end template and made it into a full-stack JavaScript web application. REST API ready, reusable components, easily scalable and customizable with proper documentation.",
           ]}
+          variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}
         />
