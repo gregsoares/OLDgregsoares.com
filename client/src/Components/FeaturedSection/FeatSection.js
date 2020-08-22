@@ -27,7 +27,7 @@ export const FeatSection = (props) => {
     if (bgColor === "" || bgColor === undefined || bgColor === null)
       bgColor = "bg-gray-300";
 
-    return `${bgColor} pt-4 pb-6 border border-t-0 border-l-0 border-r-0 shadow-sm`;
+    return `${bgColor} pt-4 pb-6`;
   };
   const variantLeft = (
     <div className={featClassLoader()} id={featTitle}>
@@ -38,18 +38,18 @@ export const FeatSection = (props) => {
       >
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
           <div className="my-6">
-            <span className="font-semibold text-lg text-center text-gray-800 border border-l-0 border-r-0 border-gray-800">
+            <span className="font-semibold text-lg lg:text-xl text-center text-gray-200 border border-l-0 border-r-0 border-gray-600">
               {featTitle}
             </span>
           </div>
 
-          <div className="featContent pl-6 pr-4 text-left">
-            <p className="font-medium tracking-wide md:text-md">
+          <div className="text-gray-200 pl-6 pr-4 text-left">
+            <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
             <div className="mt-3">
               {featText.map((text) => (
-                <span key={Math.random(123)} className="text-sm text-left">
+                <span key={Math.random(123)} className="text-md text-left">
                   {text}
                   <br />
                 </span>
@@ -87,18 +87,18 @@ export const FeatSection = (props) => {
         </div>
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
           <div className="my-6">
-            <span className="font-semibold text-lg text-center text-gray-800 border border-l-0 border-r-0 border-gray-800">
+            <span className="font-semibold text-lg lg:text-xl text-center text-gray-200 border border-l-0 border-r-0 border-gray-800">
               {featTitle}
             </span>
           </div>
 
-          <div className="featContent pl-6 pr-4 text-left">
-            <p className="font-medium tracking-wide md:text-md">
+          <div className="text-gray-200 pl-6 pr-4 text-left">
+            <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
             <div className="mt-3">
               {featText.map((text) => (
-                <span key={Math.random(123)} className="text-sm text-left">
+                <span key={Math.random(123)} className="text-md text-left">
                   {text}
                   <br />
                 </span>

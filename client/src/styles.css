@@ -11,19 +11,27 @@
   @apply my-0;
   @apply transition-shadow;
 }
-
-.TopNav {
-  background-color: "#45718C";
+.bg-feature-one {
+  background-image: linear-gradient(
+    to right,
+    #33339f,
+    #3642ad,
+    #3851bb,
+    #3c5fc9,
+    #406ed6
+  );
 }
 
-.featSectionOne {
-  background-color: linear-gradient(90deg, #bba8f1e3 0%, #665cf3 100%);
+.bg-feature-two {
+  background-image: linear-gradient(
+    to right,
+    #12223b,
+    #142844,
+    #152e4d,
+    #163456,
+    #173a60
+  );
 }
-
-.featSectionTwo {
-  background-color: linear-gradient(90deg, #09adb3 0%, #0dd4b3 100%);
-}
-
 @responsive {
   .h-10 {
     height: 10vh;

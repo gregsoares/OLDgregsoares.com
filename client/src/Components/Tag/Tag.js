@@ -7,7 +7,7 @@ import React from "react";
 export const Tag = (props) => {
   const tagPill = (
     <span
-      className="px-3 py-1 text-sm font-semibold text-gray-600 bg-gray-100 rounded-full shadow-md nline-block"
+      className="px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-100 rounded-full shadow-md nline-block"
       data-testid="TagContainer"
     >
       #<span data-testid="TagsTextDisplay">{props.text}</span>

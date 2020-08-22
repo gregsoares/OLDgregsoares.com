@@ -21,7 +21,7 @@ export const FeaturedSection = () => {
           variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={AgencyImg}
-          bgColor="featSectionOne"
+          bgColor="bg-feature-one"
         />
         <FeatSection
           featTitle="Bootstrap Template ➡ Full MERN Stack Template"
@@ -32,7 +32,7 @@ export const FeaturedSection = () => {
           variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}
-          bgColor="featSectionTwo"
+          bgColor="bg-feature-two"
         />
       </section>
     </div>
