@@ -124,5 +124,5 @@ export const FeatSection = (props) => {
       </div>
     </div>
   );
-  return variant === "left" ? variantLeft : variantRight;
+  return variant === "left" ? variantLeft : variantRight; //defaults to variantRight
 };

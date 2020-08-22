@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  getAllMessages,
-  // getByEmail,
-  // formTest,
-} from "../../assets/api/messages";
+import React from "react";
+
 // TODO: useContext(messages) to reload this panel
 
 /* @Props

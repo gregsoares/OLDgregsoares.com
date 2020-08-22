@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["../public/*.html", "../public/*.js", "./build/*.css"],
+  purge: ["../public/*.html", "../public/*.js", "./public/*.css"],
   theme: {
     zIndex: {
       "-10": "-10",

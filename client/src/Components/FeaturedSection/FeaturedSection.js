@@ -7,7 +7,7 @@ import AgencyImg from "./assets/AgencySS.png";
 
 export const FeaturedSection = () => {
   return (
-    <div className="pt-6 bg-indigo-400" data-testid="FeaturedSectionContainer">
+    <div className="pt-6 " data-testid="FeaturedSectionContainer">
       <section className="">
         <h2 className="text-4xl font-bold text-center text-gray-800">
           Projects
@@ -16,12 +16,12 @@ export const FeaturedSection = () => {
           featTitle="GregSoares.com ➡ Full MERN Stack"
           featSubtitle="MongoDB, ExpressJs, ReactJs, NodeJs"
           featText={[
-            "REST API on the Back-End sends messages to the database server.The Front-End uses third party APIs to implement Google OAuth.",
+            "REST API on the back-end sends messages to the database server.The front-end uses third party APIs to implement Google OAuth.",
           ]}
           variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={AgencyImg}
-          bgColor="bg-indigo-400"
+          bgColor="featSectionOne"
         />
         <FeatSection
           featTitle="Bootstrap Template ➡ Full MERN Stack Template"
@@ -32,6 +32,7 @@ export const FeaturedSection = () => {
           variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}
+          bgColor="featSectionTwo"
         />
       </section>
     </div>

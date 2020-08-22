@@ -27,9 +27,6 @@ export const ContactForm = () => {
         console.debug(`frontEnd res from post: ${response.statusText}`);
       })
       .then((data) => {
-        console.debug(
-          `ContactForm: =>> data returned from form/sendMessage <<=\n${data}`
-        );
         setMessageSent(true);
         setInput({ name: "", email: "", message: "" });
       })

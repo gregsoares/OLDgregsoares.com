@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+@import "tailwindcss/utilities";
+
 .topMenuBtn {
   @apply shadow-sm;
   @apply px-2;
@@ -10,10 +12,16 @@
   @apply transition-shadow;
 }
 
-@import "tailwindcss/utilities";
-
 .TopNav {
   background-color: "#45718C";
+}
+
+.featSectionOne {
+  background-color: linear-gradient(90deg, #bba8f1e3 0%, #665cf3 100%);
+}
+
+.featSectionTwo {
+  background-color: linear-gradient(90deg, #09adb3 0%, #0dd4b3 100%);
 }
 
 @responsive {

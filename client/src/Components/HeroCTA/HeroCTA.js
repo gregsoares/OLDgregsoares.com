@@ -1,6 +1,5 @@
 import React from "react";
 export const HeroCTA = () => {
-  const resume = "./GregSoares-Resume.pdf";
   return (
     <div className="overflow-hidden box-border" data-testid="HeroCTAContainer">
       <div
@@ -27,7 +26,7 @@ export const HeroCTA = () => {
             </p>
           </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
-            <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-lg">
+            <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-xl">
               Some of my favorite projects cover the following topics:
             </span>
             <ul
