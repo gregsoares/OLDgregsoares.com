@@ -4,6 +4,7 @@ import { FeatSection } from "./FeatSection";
 // import reportingImg from './assets/reporting.jpg';
 // import syncingImg from './assets/syncing.jpg';
 import AgencyImg from "./assets/AgencySS.png";
+import GregSoaresSS from "./assets/gsSS.png";
 
 export const FeaturedSection = () => {
   return (
@@ -23,7 +24,7 @@ export const FeaturedSection = () => {
           ]}
           variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
-          featImg={AgencyImg}
+          featImg={GregSoaresSS}
           bgColor="bg-feature-one"
         />
         <FeatSection

@@ -1,7 +1,10 @@
-const { getByEmail, getAllMessages, postMessage } = require("../controllers/messageCtrl");
+const {
+  getByEmail,
+  getAllMessages,
+  postMessage,
+} = require("../controllers/messageCtrl");
 
-module.exports = app => {
-
+module.exports = (app) => {
   // @route: GET form/aForm/read?email(json)
   // @return: messages::{allThat matches}
   // @description: Get all messages from the specified email route
@@ -10,7 +13,7 @@ module.exports = app => {
 
   // @route: GET form/aForm/readAll
   // @return: messages::{All messages}
-  // @description: 
+  // @description:
   // @access: Public
   app.get("/form/aForm/readAll", getAllMessages);
 
