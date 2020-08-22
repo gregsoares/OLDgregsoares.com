@@ -22227,6 +22227,8 @@ video {
           animation: bounce 1s infinite;
 }
 
+/* TODO: update topMenuBtn */
+
 .topMenuBtn {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding-left: 0.5rem;
@@ -22256,6 +22258,10 @@ video {
 
 .brand-blue-gradient {
   background-image: linear-gradient(to right, #163456, #173a60);
+}
+
+.bg-mobilenav {
+  background-image: linear-gradient(to right, #142844, #152e4d);
 }
 
 .bg-topnav {

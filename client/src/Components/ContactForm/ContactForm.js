@@ -40,14 +40,14 @@ export const ContactForm = () => {
 
   return (
     <div
-      className="w-full brand-lighterBlue"
+      className="w-full py-3 brand-lighterBlue"
       data-testid="ContactFormContainer"
     >
       <form
         onSubmit={sendMessage}
         className="max-w-md px-8 pt-6 pb-8 mx-auto my-6 bg-gray-200 rounded shadow-md"
       >
-        <div className="mb-4">
+        <div className="items-center mb-4">
           <label
             className={
               messageSent !== true
@@ -70,7 +70,7 @@ export const ContactForm = () => {
             <br /> Thank you for taking the time to reach out.
           </label>
           <input
-            className="py-2 my-2 -mx-3 leading-tight text-center text-gray-800 bg-gray-200 border rounded shadow-sm hover:bg-white focus:outline-none focus:text-black focus:shadow-outline"
+            className="w-full px-2 py-2 mx-3 my-2 font-medium leading-tight text-blue-800 bg-gray-200 border border-blue-500 rounded shadow-sm md:w-2/3 hover:border-blue-700 xs:-mx-3 hover:bg-white focus:outline-none focus:shadow-outline"
             onChange={(e) => setInput({ ...input, name: e.target.value })}
             value={input.name}
             type="text"
@@ -80,7 +80,7 @@ export const ContactForm = () => {
             data-testid="nameInput"
           />
           <input
-            className="py-2 my-2 -mx-3 leading-tight text-center text-gray-800 bg-gray-200 border rounded shadow-sm hover:bg-white focus:outline-none focus:text-black focus:shadow-outline"
+            className="w-full px-2 py-2 mx-3 my-2 font-medium leading-tight text-blue-800 bg-gray-200 border border-blue-500 rounded shadow-sm md:w-2/3 hover:border-blue-700 xs:-mx-3 hover:bg-white focus:outline-none focus:shadow-outline"
             onChange={(e) => setInput({ ...input, email: e.target.value })}
             value={input.email}
             type="email"
@@ -99,7 +99,7 @@ export const ContactForm = () => {
               Message:
             </label>
             <textarea
-              className="w-full py-2 leading-tight text-gray-700 bg-gray-200 border rounded shadow appearance-none focus:bg-white hover:bg-white focus:outline-none focus:shadow-outline"
+              className="w-full p-2 font-medium leading-tight text-blue-800 bg-gray-200 border border-blue-400 rounded shadow appearance-none focus:bg-white hover:bg-white focus:border-blue-700 focus:text-blue-800 focus:outline-none focus:shadow-outline"
               onChange={(e) => setInput({ ...input, message: e.target.value })}
               value={input.message}
               id="message_box"
@@ -113,7 +113,7 @@ export const ContactForm = () => {
 
         <div className="w-full text-center" id="sendMessageButtonContainer">
           <button
-            className="px-4 py-2 font-semibold text-gray-200 transition-all bg-blue-700 border border-gray-400 rounded shadow-md hover:text-blue-800 hover:bg-gray-300 hover:border-blue-700 hover:shadow-md hover:font-bold focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 font-semibold text-gray-200 transition-all bg-blue-700 border border-blue-600 rounded shadow-md hover:text-blue-800 hover:bg-gray-300 hover:border-blue-700 hover:shadow-md hover:font-bold focus:outline-none focus:shadow-outline"
             onClick={(e) => sendMessage(e)}
             type="button"
             data-testid="sendMessageBtn"

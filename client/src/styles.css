@@ -3,6 +3,7 @@
 
 @import "tailwindcss/utilities";
 
+/* TODO: update topMenuBtn */
 .topMenuBtn {
   @apply shadow-sm;
   @apply px-2;
@@ -25,6 +26,10 @@
 }
 .brand-blue-gradient {
   background-image: linear-gradient(to right, #163456, #173a60);
+}
+
+.bg-mobilenav {
+  background-image: linear-gradient(to right, #142844, #152e4d);
 }
 
 .bg-topnav {
