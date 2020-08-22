@@ -40,12 +40,12 @@ export const ContactForm = () => {
 
   return (
     <div
-      className="w-full mx-auto max-w-md mb-6 bg-gray-200"
+      className="w-full brand-lighterBlue"
       data-testid="ContactFormContainer"
     >
       <form
         onSubmit={sendMessage}
-        className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 my-6"
+        className="max-w-md px-8 pt-6 pb-8 mx-auto my-6 bg-gray-200 rounded shadow-md"
       >
         <div className="mb-4">
           <label
@@ -70,7 +70,7 @@ export const ContactForm = () => {
             <br /> Thank you for taking the time to reach out.
           </label>
           <input
-            className="border text-center hover:bg-white rounded py-2 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 -mx-3 shadow-sm focus:shadow-outline"
+            className="py-2 my-2 -mx-3 leading-tight text-center text-gray-800 bg-gray-200 border rounded shadow-sm hover:bg-white focus:outline-none focus:text-black focus:shadow-outline"
             onChange={(e) => setInput({ ...input, name: e.target.value })}
             value={input.name}
             type="text"
@@ -80,7 +80,7 @@ export const ContactForm = () => {
             data-testid="nameInput"
           />
           <input
-            className="border text-center hover:bg-white rounded py-2 leading-tight focus:outline-none bg-gray-200 text-gray-800 focus:text-black my-2 -mx-3 shadow-sm focus:shadow-outline"
+            className="py-2 my-2 -mx-3 leading-tight text-center text-gray-800 bg-gray-200 border rounded shadow-sm hover:bg-white focus:outline-none focus:text-black focus:shadow-outline"
             onChange={(e) => setInput({ ...input, email: e.target.value })}
             value={input.email}
             type="email"
@@ -92,14 +92,14 @@ export const ContactForm = () => {
 
           <div className="my-3" id="messageArea">
             <label
-              className="text-md lg:text-lg font-medium mb-2 block"
+              className="block mb-2 font-medium text-md lg:text-lg"
               htmlFor="messageLabel"
               id="message_input"
             >
               Message:
             </label>
             <textarea
-              className="shadow appearance-none bg-gray-200 focus:bg-white border rounded w-full py-2 text-gray-700 leading-tight hover:bg-white focus:outline-none focus:shadow-outline"
+              className="w-full py-2 leading-tight text-gray-700 bg-gray-200 border rounded shadow appearance-none focus:bg-white hover:bg-white focus:outline-none focus:shadow-outline"
               onChange={(e) => setInput({ ...input, message: e.target.value })}
               value={input.message}
               id="message_box"
@@ -113,7 +113,7 @@ export const ContactForm = () => {
 
         <div className="w-full text-center" id="sendMessageButtonContainer">
           <button
-            className="bg-blue-600 hover:bg-blue-500 text-gray-200 hover:text-white hover:shadow-md shadow-sm transition-all font-semibold hover:font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 font-semibold text-gray-200 transition-all bg-blue-700 border border-gray-400 rounded shadow-md hover:text-blue-800 hover:bg-gray-300 hover:border-blue-700 hover:shadow-md hover:font-bold focus:outline-none focus:shadow-outline"
             onClick={(e) => sendMessage(e)}
             type="button"
             data-testid="sendMessageBtn"

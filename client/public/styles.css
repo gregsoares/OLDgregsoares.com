@@ -22239,62 +22239,27 @@ video {
   transition-property: box-shadow;
 }
 
-.bg-feature-one {
-  background-image: linear-gradient(
-    to right,
-    #33339f,
-    #3642ad,
-    #3851bb,
-    #3c5fc9,
-    #406ed6
-  );
+.brand-darkBlue {
+  background-image: linear-gradient(to right, #141720, #142831);
+  /* background-image: linear-gradient(#2d4059); */
 }
 
-.bg-feature-two {
-  background-image: linear-gradient(
-    to right,
-    #12223b,
-    #142844,
-    #152e4d,
-    #163456,
-    #173a60
-  );
+.brand-lighterBlue {
+  background-image: linear-gradient(to right, #1c2b3d, #1b303a);
+  /* background-image: linear-gradient(#2d4059); */
 }
 
-.h-10 {
-  height: 10vh;
+.brand-lightBlue {
+  background-image: linear-gradient(to right, #113852, #123752);
+  /* background-image: linear-gradient(#2d4059); */
 }
 
-.h-20 {
-  height: 20vh;
+.brand-blue-gradient {
+  background-image: linear-gradient(to right, #163456, #173a60);
 }
 
-.h-30 {
-  height: 30vh;
-}
-
-.h-40 {
-  height: 40vh;
-}
-
-.h-50 {
-  height: 50vh;
-}
-
-.h-60 {
-  height: 60vh;
-}
-
-.h-70 {
-  height: 70vh;
-}
-
-.h-80 {
-  height: 80vh;
-}
-
-.h-90 {
-  height: 90vh;
+.bg-topnav {
+  background-image: linear-gradient(to right, #12223b, #142844, #152e4d);
 }
 
 @media (min-width: 640px) {
@@ -43867,42 +43832,6 @@ video {
   .sm\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
-  }
-
-  .sm\:h-10 {
-    height: 10vh;
-  }
-
-  .sm\:h-20 {
-    height: 20vh;
-  }
-
-  .sm\:h-30 {
-    height: 30vh;
-  }
-
-  .sm\:h-40 {
-    height: 40vh;
-  }
-
-  .sm\:h-50 {
-    height: 50vh;
-  }
-
-  .sm\:h-60 {
-    height: 60vh;
-  }
-
-  .sm\:h-70 {
-    height: 70vh;
-  }
-
-  .sm\:h-80 {
-    height: 80vh;
-  }
-
-  .sm\:h-90 {
-    height: 90vh;
   }
 }
 
@@ -65477,42 +65406,6 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-
-  .md\:h-10 {
-    height: 10vh;
-  }
-
-  .md\:h-20 {
-    height: 20vh;
-  }
-
-  .md\:h-30 {
-    height: 30vh;
-  }
-
-  .md\:h-40 {
-    height: 40vh;
-  }
-
-  .md\:h-50 {
-    height: 50vh;
-  }
-
-  .md\:h-60 {
-    height: 60vh;
-  }
-
-  .md\:h-70 {
-    height: 70vh;
-  }
-
-  .md\:h-80 {
-    height: 80vh;
-  }
-
-  .md\:h-90 {
-    height: 90vh;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -87086,42 +86979,6 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
-
-  .lg\:h-10 {
-    height: 10vh;
-  }
-
-  .lg\:h-20 {
-    height: 20vh;
-  }
-
-  .lg\:h-30 {
-    height: 30vh;
-  }
-
-  .lg\:h-40 {
-    height: 40vh;
-  }
-
-  .lg\:h-50 {
-    height: 50vh;
-  }
-
-  .lg\:h-60 {
-    height: 60vh;
-  }
-
-  .lg\:h-70 {
-    height: 70vh;
-  }
-
-  .lg\:h-80 {
-    height: 80vh;
-  }
-
-  .lg\:h-90 {
-    height: 90vh;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -108694,41 +108551,5 @@ video {
   .xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
-  }
-
-  .xl\:h-10 {
-    height: 10vh;
-  }
-
-  .xl\:h-20 {
-    height: 20vh;
-  }
-
-  .xl\:h-30 {
-    height: 30vh;
-  }
-
-  .xl\:h-40 {
-    height: 40vh;
-  }
-
-  .xl\:h-50 {
-    height: 50vh;
-  }
-
-  .xl\:h-60 {
-    height: 60vh;
-  }
-
-  .xl\:h-70 {
-    height: 70vh;
-  }
-
-  .xl\:h-80 {
-    height: 80vh;
-  }
-
-  .xl\:h-90 {
-    height: 90vh;
   }
 }

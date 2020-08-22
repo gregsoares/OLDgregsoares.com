@@ -7,9 +7,12 @@ import AgencyImg from "./assets/AgencySS.png";
 
 export const FeaturedSection = () => {
   return (
-    <div className="pt-6 " data-testid="FeaturedSectionContainer">
+    <div
+      className="pt-6 border-t-0 border-l-0 border-r-0 border-white brand-darkBlue"
+      data-testid="FeaturedSectionContainer"
+    >
       <section className="">
-        <h2 className="text-4xl font-bold text-center text-gray-800">
+        <h2 className="text-4xl font-bold text-center text-gray-200">
           Projects
         </h2>
         <FeatSection

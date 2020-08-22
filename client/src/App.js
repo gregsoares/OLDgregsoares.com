@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components Imports
@@ -12,16 +12,22 @@ import Projects from "./Pages/Projects";
 import Components from "./Pages/Components";
 
 const App = () => {
+  useEffect(() => {
+    // Put this on .css when ready
+    document.getElementById("root").classList.add("brand-lightBlue");
+  });
   return (
     <Router>
-      <Topnav activePage="home" />
-      <Switch>
-        <Route exact path="/" component={Index} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/components" component={Components} />
-      </Switch>
-      <Footer />
+      <main className="p-0 m-0 brand-lighterBlue">
+        <Topnav activePage="home" />
+        <Switch>
+          <Route exact path="/" component={Index} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/components" component={Components} />
+        </Switch>
+        <Footer />
+      </main>
     </Router>
   );
 };
