@@ -7,8 +7,7 @@
     "clientTest": "npm run test --prefix client",
     "server": "npx nodemon ./bin/www.js",
     "test": "npm run test --prefix client",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \" nodemon run server\" \" npm run client \" ",
+    "dev": "concurrently \" nodemon run server\" \"npm run start --prefix client \" ",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client",
     "start": "node ./bin/www.js"
   },

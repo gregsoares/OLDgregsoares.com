@@ -8,26 +8,22 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "@fullhuman/postcss-purgecss": "^2.3.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "autoprefixer": "^9.8.4",
     "axios": "^0.19.2",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^7.0.30",
-    "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "tailwindcss": "^1.4.6"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build \"npx postcss src/styles.css -o public/styles.css -w -map -u \"autoprefixer\" \"tailwindcss\" \"@fullhuman/postcss-purgecss\"  \"",
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "build:css": "npx postcss src/styles.css -o public/styles.css",
     "test": "react-scripts test --coverage",
     "jest": "npm test -- --coverage --watch-all=false",
     "eject": "react-scripts eject"
@@ -56,5 +52,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.7.3"
   }
 }
