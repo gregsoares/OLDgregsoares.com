@@ -23,7 +23,7 @@
   "scripts": {
     "start": "npm run build:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "build:css": "postcss ./src/styles.css -o ./public/styles.css",
+    "build:css": "npx postcss ./src/styles.css -o ./public/styles.css",
     "test": "react-scripts test --coverage",
     "jest": "npm test -- --coverage --watch-all=false",
     "eject": "react-scripts eject"
