@@ -1,7 +1,14 @@
 module.exports = {
   purge: {
     enabled: true,
-    content: ["./src/**/**/**/*.js", "./public/*.css", "./public/*.html"],
+    content: [
+      "./src/**/**/*.css",
+      "./src/**/**/*.js",
+      "./src/**/*.html",
+      "./src/**/*.tsx",
+      "./src/**/*.ts",
+    ],
+    // content: ["./src/**/**/**/*.js", "./public/*.css", "./public/*.html"],
   },
   target: "relaxed",
   prefix: "",
