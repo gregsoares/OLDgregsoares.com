@@ -23,9 +23,6 @@ export const ContactForm = () => {
 
     axios
       .post("/form/sendMessage", sendData)
-      .then((response) => {
-        console.debug(`frontEnd res from post: ${response.statusText}`);
-      })
       .then((data) => {
         setMessageSent(true);
         setInput({ name: "", email: "", message: "" });

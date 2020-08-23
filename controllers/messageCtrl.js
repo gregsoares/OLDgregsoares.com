@@ -28,7 +28,7 @@ const postMessage = (req, res) => {
   if (req.body.email === null) new Error(res.send(req.body));
   if (req.body.email === undefined) new Error(res.send(req.body));
 
-  console.debug(`
+  console.debug(`postMessage:\n
   name: ${req.body.name}
   email: ${req.body.email}
   message: ${req.body.message}

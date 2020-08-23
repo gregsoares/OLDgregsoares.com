@@ -53,10 +53,7 @@ export const Topnav = (props) => {
         }}
         id="menuItem"
       >
-        {" "}
-        <div className="flex justify-center ">
-          <FontAwesomeIcon icon={faBars} size="2x" />
-        </div>
+        <FontAwesomeIcon icon={faBars} size="2x" />
       </div>
       <div className="relative object-center mx-4 " id="mobileMenu">
         <div

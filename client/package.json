@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build \"npx postcss src/styles.css -o public/styles.css\"",
+    "build": "react-scripts build \"npx postcss src/styles.css -o public/styles.css -w -map -u \"autoprefixer\" \"tailwindcss\" \"@fullhuman/postcss-purgecss\"  \"",
     "test": "react-scripts test --coverage",
     "jest": "npm test -- --coverage --watch-all=false",
     "eject": "react-scripts eject"
