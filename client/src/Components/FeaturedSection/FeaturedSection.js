@@ -22,6 +22,8 @@ export const FeaturedSection = () => {
           featText={[
             "REST API on the back-end sends messages to the database server.The front-end uses third party APIs to implement Google OAuth.",
           ]}
+          imgAlt="clean code showing REST API routes"
+          imgCaption="(REST API router file)"
           variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={GregSoaresSS}
@@ -33,6 +35,8 @@ export const FeaturedSection = () => {
           featText={[
             "Given a front-end template and made it into a full-stack JavaScript web application. REST API ready, reusable components, easily scalable and customizable with proper documentation.",
           ]}
+          imgAlt="Template ScreenShot"
+          imgCaption="(Template ScreenShot)"
           variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}

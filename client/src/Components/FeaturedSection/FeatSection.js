@@ -11,6 +11,8 @@ import { Tag } from "../Tag/Tag";
 export const FeatSection = (props) => {
   const {
     featImg,
+    imgAlt,
+    imgCaption,
     featTitle,
     featSubtitle,
     featText,
@@ -69,7 +71,10 @@ export const FeatSection = (props) => {
         </div>
 
         <div className="max-w-sm my-4 ml-auto mr-4 md:max-w-lg sm:mr-6 md:mr-8">
-          <img className="rounded-md" src={featImg} alt="Monitoring" />
+          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          <p className="p-0 text-sm text-center text-gray-600">
+            {imgCaption && imgCaption}
+          </p>
         </div>
       </div>
     </div>
@@ -81,7 +86,10 @@ export const FeatSection = (props) => {
     >
       <div className="items-center px-4 py-4 mx-0 sm:flex">
         <div className="hidden max-w-sm my-4 ml-auto mr-4 sm:block md:max-w-lg sm:mr-6 md:mr-8">
-          <img className="rounded-md" src={featImg} alt="Monitoring" />
+          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          <p className="p-0 text-sm text-center text-gray-600">
+            {imgCaption && imgCaption}
+          </p>
         </div>
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
           <div className="my-6">
@@ -117,7 +125,10 @@ export const FeatSection = (props) => {
         </div>
 
         <div className="block max-w-sm my-4 ml-auto mr-4 sm:hidden md:max-w-lg sm:mr-6 md:mr-8">
-          <img className="rounded-md" src={featImg} alt="Monitoring" />
+          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          <p className="p-0 text-sm text-center text-gray-600">
+            {imgCaption && imgCaption}
+          </p>
         </div>
       </div>
     </div>
