@@ -21,10 +21,11 @@ const App = () => {
       <main className="p-0 m-0 brand-lighterBlue">
         <Topnav activePage="home" />
         <Switch>
-          <Route exact path="/" component={Index} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/components" component={Components} />
+          <Route exact path="/:projects" component={Projects} />
+          <Route exact path="/:components" component={Components} />
+          <Route exact path="/" component={Index} />
+          <Route component={Index} />
         </Switch>
         <Footer />
       </main>
