@@ -42,7 +42,7 @@ export const ContactForm = () => {
     >
       <form
         onSubmit={sendMessage}
-        className="max-w-md px-8 pt-6 pb-8 mx-auto my-6 bg-gray-200 rounded shadow-md"
+        className="max-w-md px-6 pt-6 pb-6 mx-auto my-6 bg-gray-200 rounded shadow-md"
       >
         <div className="items-center mb-4">
           <label

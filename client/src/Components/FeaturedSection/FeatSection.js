@@ -36,7 +36,7 @@ export const FeatSection = (props) => {
       className={`bg-darkBlue border border-gray-300 border-t-0 border-r-0 border-l-0 my-2`}
       id={featTitle}
     >
-      <div className="items-center px-4 py-4 mx-0 sm:flex" id="">
+      <div className="items-center px-4 py-4 mx-0 my-6 sm:flex" id="">
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
           <div className="my-6">
             <span className="text-lg font-semibold text-center text-gray-200 border border-l-0 border-r-0 border-gray-400 lg:text-xl">
@@ -81,10 +81,10 @@ export const FeatSection = (props) => {
   );
   const variantRight = (
     <div
-      className={`brand-darkBluegg border border-gray-300 border-t-0 border-r-0 border-l-0 my-2`}
+      className={`brand-darkBlue border border-gray-300 border-t-0 border-r-0 border-l-0 my-2`}
       id={featTitle.split(0, 5)}
     >
-      <div className="items-center px-4 py-4 mx-0 sm:flex">
+      <div className="items-center px-4 py-4 mx-0 my-6 sm:flex">
         <div className="hidden max-w-sm my-4 ml-auto mr-4 sm:block md:max-w-lg sm:mr-6 md:mr-8">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
           <p className="p-0 text-sm text-center text-gray-600">
