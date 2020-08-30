@@ -41,6 +41,7 @@ export const FeaturedSection = () => {
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}
           bgColor="bg-feature-two"
+          liveSite="https://gregsoares-283810.web.app/"
         />
       </section>
     </div>

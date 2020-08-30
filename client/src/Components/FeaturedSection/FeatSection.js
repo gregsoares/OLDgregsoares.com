@@ -18,6 +18,7 @@ export const FeatSection = (props) => {
     featText,
     featTags,
     variant,
+    liveSite,
   } = props;
 
   if (featImg === "") return 0;
@@ -31,6 +32,22 @@ export const FeatSection = (props) => {
 
   //   return `${bgColor} pt-4 pb-6`;
   // };
+  const linkTitle = liveSite ? (
+    <a
+      className="transition-transform duration-300 bg-opacity-75 shadow-md hover:shadow-xl hover:scale-100"
+      href={liveSite}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="text-lg font-semibold text-center text-blue-800 border border-l-0 border-r-0 border-gray-400 lg:text-xl">
+        {featTitle}
+      </span>
+    </a>
+  ) : (
+    <span className="text-lg font-semibold text-center text-gray-200 border border-l-0 border-r-0 border-gray-400 lg:text-xl">
+      {featTitle}
+    </span>
+  );
   const variantLeft = (
     <div
       className={`bg-darkBlue border border-gray-300 border-t-0 border-r-0 border-l-0 my-2`}
@@ -38,12 +55,7 @@ export const FeatSection = (props) => {
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex" id="">
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
-          <div className="my-6">
-            <span className="text-lg font-semibold text-center text-gray-200 border border-l-0 border-r-0 border-gray-400 lg:text-xl">
-              {featTitle}
-            </span>
-          </div>
-
+          <div className="my-6">{linkTitle}</div>
           <div className="pl-6 pr-4 text-left text-gray-200">
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
@@ -92,11 +104,7 @@ export const FeatSection = (props) => {
           </p>
         </div>
         <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
-          <div className="my-6">
-            <span className="text-lg font-semibold text-center text-gray-200 border border-l-0 border-r-0 border-gray-800 lg:text-xl">
-              {featTitle}
-            </span>
-          </div>
+          <div className="my-6">{linkTitle}</div>
 
           <div className="pl-6 pr-4 text-left text-gray-200">
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
