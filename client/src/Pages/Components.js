@@ -6,13 +6,7 @@ import { FluidContainer } from "../Components/FluidContainer/FluidContainer";
 import { Github } from "../Components/Github/Github";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 import { PostSection } from "../Components/PostSection/PostSection";
-import { Tag } from "../Components/Tag/Tag";
-import { Topnav } from "../Components/Topnav/Topnav";
 import { CardSection } from "../Components/CardSection/CardSection";
-import { ContactForm } from "../Components/ContactForm/ContactForm";
-import { FeaturedSection } from "../Components/FeaturedSection/FeaturedSection";
-import { Footer } from "../Components/Footer/Footer";
-import { HeroCTA } from "../Components/HeroCTA/HeroCTA";
 import { IntroCards } from "../Components/IntroCards/IntroCards";
 import { Modal } from "../Components/Modal/Modal";
 import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
@@ -25,11 +19,11 @@ import { LazyLoader } from "../Components/LazyLoader/LazyLoader";
 const Components = () => {
   return (
     <div data-testid="ComponentsContainer">
-      <Blog
+      {/* <Blog
         blogTitle="Blog"
         blogSubtitle="Future Project preview section"
         blogs={testBlogs}
-      />
+      /> */}
       <CalendarCard />
       <Carousel />
       <Container />
@@ -37,13 +31,7 @@ const Components = () => {
       <Github />
       <MessagesPanel title="Message Panel" status="Testing" date="date" />
       <PostSection />
-      <Tag />
-      <Topnav />
       <CardSection cards={cardData} />
-      <ContactForm />
-      <FeaturedSection />
-      <Footer />
-      <HeroCTA />
 
       <div className="md:w-96">
         <IntroCards cards={cardData} />

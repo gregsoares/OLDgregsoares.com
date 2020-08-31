@@ -22,8 +22,8 @@ const App = () => {
         <Topnav activePage="home" />
         <Switch>
           <Route exact path="/about" component={About} />
-          <Route exact path="/:projects" component={Projects} />
-          <Route exact path="/:components" component={Components} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/components" component={Components} />
           <Route exact path="/" component={Index} />
           <Route component={Index} />
         </Switch>
