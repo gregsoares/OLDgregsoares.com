@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CalendarCard } from "../Components/CalendarCard/CalendarCard";
 import { Carousel } from "../Components/Carousel/Carousel";
 import { Container } from "../Components/Container/Container";
@@ -17,6 +17,7 @@ import { testBlogs } from "./mockPagesData";
 import { LazyLoader } from "../Components/LazyLoader/LazyLoader";
 
 const Components = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div data-testid="ComponentsContainer">
       {/* <Blog
@@ -25,6 +26,7 @@ const Components = () => {
         blogs={testBlogs}
       /> */}
       <CalendarCard />
+      <Modal />
       <Carousel />
       <Container />
       <FluidContainer />
@@ -37,7 +39,6 @@ const Components = () => {
         <IntroCards cards={cardData} />
       </div>
 
-      <Modal />
       <ReviewCard
         title="Review Card"
         status="Status"
