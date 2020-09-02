@@ -3,15 +3,18 @@ export const obs = () => {
   const obsOptions = {
     root: null, //viewport
     threshold: 0,
-    rootMargin: "400px 0px 400px 0px",
+    rootMargin: "0px 0px 200px 0px",
   };
   const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
       const imgURL = entry.target.getAttribute("data-src");
       entry.target.setAttribute("src", imgURL);
       console.log(
-        `Loading next Img, random ID# ${Math.round(Math.random() * 1000)}`
+        `Loading next Img, random ID# ${Math.round(Math.random() * 1000)}
+        \nisIntersecting: ${entry.isIntersecting}`
       );
+      observer.unobserve(entry.target);
     });
   }, obsOptions);
   imgs.forEach((img) => {
