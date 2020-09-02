@@ -10,10 +10,6 @@ export const obs = () => {
       if (!entry.isIntersecting) return;
       const imgURL = entry.target.getAttribute("data-src");
       entry.target.setAttribute("src", imgURL);
-      console.log(
-        `Loading next Img, random ID# ${Math.round(Math.random() * 1000)}
-        \nisIntersecting: ${entry.isIntersecting}`
-      );
       observer.unobserve(entry.target);
     });
   }, obsOptions);

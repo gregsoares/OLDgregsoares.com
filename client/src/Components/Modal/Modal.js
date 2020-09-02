@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactModal from "react-modal";
 // TODO: 1: Make it show up and close on click
 // TODO: Make it work through props if necessary args are not provided then fallback to default.
@@ -7,12 +7,12 @@ export const Modal = () => {
   ReactModal.setAppElement(document.getElementById("root"));
 
   const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState({
+  const modalContent = {
     title: "Title One  ",
     subtitle: "Subtitle Test",
     text:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, sequi voluptatem dicta minima dolorem cum. Nisi veniam at aperiam non, possimus eius aliquam laudantium maxime ab! Earum delectus animi minus.",
-  });
+  };
   // const openModal = () => {
   //   setShowModal(true);
   // };
@@ -42,6 +42,7 @@ export const Modal = () => {
             Open Modal
           </button>
         </div>
+        {/* TODO: Show content passed through props */}
         <ReactModal
           contentLabel={modalContent.title}
           isOpen={showModal}

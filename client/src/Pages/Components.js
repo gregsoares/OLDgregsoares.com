@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CalendarCard } from "../Components/CalendarCard/CalendarCard";
 import { Carousel } from "../Components/Carousel/Carousel";
 import { Container } from "../Components/Container/Container";
@@ -11,13 +11,12 @@ import { IntroCards } from "../Components/IntroCards/IntroCards";
 import { Modal } from "../Components/Modal/Modal";
 import { ReviewCard } from "../Components/ReviewCard/ReviewCard";
 import { TerminalComp } from "../Components/TerminalComp/TerminalComp";
-import { Blog } from "../Components/Blog/Blog";
+// import { Blog } from "../Components/Blog/Blog";
 import { cardData } from "./mockPagesData";
-import { testBlogs } from "./mockPagesData";
+// import { testBlogs } from "./mockPagesData";
 import { LazyLoader } from "../Components/LazyLoader/LazyLoader";
 
 const Components = () => {
-  const [showModal, setShowModal] = useState(false);
   return (
     <div data-testid="ComponentsContainer">
       {/* <Blog
