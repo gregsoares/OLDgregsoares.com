@@ -50,12 +50,12 @@ export const FeaturedSection = () => {
             "Given a front-end template and made it into a full-stack JavaScript web application. REST API ready, reusable components, easily scalable and customizable with proper documentation.",
           ]}
           imgAlt="Template ScreenShot"
-          imgCaption="(Template ScreenShot)"
+          imgCaption="Template deployed to Heroku - free dyno, slow loadtime "
           variant="left"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
           featImg={AgencyImg}
           bgColor="bg-feature-two"
-          liveSite="https://gregsoares-283810.web.app/"
+          liveSite="https://agencytemplate.herokuapp.com/"
         />
       </section>
     </div>

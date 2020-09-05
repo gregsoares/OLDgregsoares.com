@@ -1,5 +1,7 @@
 import React from "react";
 import { Tag } from "../Tag/Tag";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 /* ==> Props <==
  * featTitle= String
@@ -36,12 +38,13 @@ export const FeatSection = (props) => {
   const linkTitle = liveSite ? (
     // FIXME: hover: notworking
     <a
-      className="p-2 bg-opacity-75 border-teal-700 shadow-2xl "
+      className="p-2 bg-opacity-75 border-teal-700 "
       href={liveSite}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span className="text-2xl font-semibold leading-relaxed tracking-wider text-center text-blue-800 shadow-full">
+      <FontAwesomeIcon icon={faExternalLinkAlt} />
+      <span className="ml-3 text-2xl font-semibold leading-relaxed tracking-wider text-center text-blue-800 shadow-full">
         {featTitle}
       </span>
     </a>
@@ -126,7 +129,7 @@ export const FeatSection = (props) => {
             {featTags.map((tag) => (
               <div
                 key={Math.random(123)}
-                className="flex p-1 mx-1 my-1 rounded-full"
+                className="flex p-1 mx-1 my-1 bg-gray-400 bg-opacity-50 rounded-full"
               >
                 <Tag text={tag} />
               </div>
