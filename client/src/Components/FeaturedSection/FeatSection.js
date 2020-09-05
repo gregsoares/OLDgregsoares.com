@@ -59,7 +59,7 @@ export const FeatSection = (props) => {
       id={featTitle}
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex" id="">
-        <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
+        <div className="max-w-md mx-auto text-center lg:max-w-xl xl:max-w-2xl">
           <div className="my-6">{linkTitle}</div>
           <div className="pl-6 pr-4 text-left text-gray-200">
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
@@ -87,9 +87,9 @@ export const FeatSection = (props) => {
           </div>
         </div>
 
-        <div className="max-w-sm mx-auto my-4 md:max-w-lg sm:mx-4 ">
+        <div className="max-w-md mx-auto my-4 md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
-          <p className="p-0 text-sm text-center text-gray-600">
+          <p className="py-1 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
           </p>
         </div>
@@ -102,13 +102,13 @@ export const FeatSection = (props) => {
       id={featTitle.split(0, 5)}
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex">
-        <div className="hidden max-w-sm mx-auto my-4 sm:ml-auto sm:block md:max-w-lg sm:mx-4 ">
+        <div className="hidden max-w-md mx-auto my-4 sm:ml-auto sm:block md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
-          <p className="p-0 text-sm text-center text-gray-600">
+          <p className="py-1 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
           </p>
         </div>
-        <div className="max-w-sm mx-auto text-center lg:max-w-md xl:max-w-lg">
+        <div className="max-w-md mx-auto text-center lg:max-w-xl xl:max-w-2xl">
           <div className="my-6">{linkTitle}</div>
 
           <div className="pl-6 pr-4 text-left text-gray-200">
@@ -137,7 +137,7 @@ export const FeatSection = (props) => {
           </div>
         </div>
 
-        <div className="block max-w-sm mx-auto my-4 sm:hidden md:max-w-lg sm:mx-4 ">
+        <div className="block max-w-md mx-auto my-4 sm:hidden md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
           <p className="p-0 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}

@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <main className="p-0 m-0 brand-lighterBlue">
-        <Topnav activePage="home" />
+        <Topnav />
         <Switch>
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />

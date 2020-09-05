@@ -7,6 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:css": "npx postcss ./src/styles.css -o ./public/styles.css",
+    "tailwind": "npx tailwindcss build ./src/styles.css -o public/styles.css",
     "test": "react-scripts test --coverage",
     "jest": "npm test -- --coverage --watch-all=false",
     "eject": "react-scripts eject"

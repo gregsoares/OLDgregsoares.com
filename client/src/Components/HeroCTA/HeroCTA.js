@@ -7,22 +7,6 @@ export const HeroCTA = () => {
     >
       <div className="pt-8 pb-12 font-medium text-gray-200 xl:font-lg ">
         <div className="w-full px-6 text-center">
-          <h2 className="flex mb-10 font-bold text-white justify-evenly text-md md:text-xl lg:text-2xl">
-            <p className="mx-2">
-              <span className="block object-top mr-4 md:inline">&#9737;</span>{" "}
-              Networking
-            </p>
-            <p className="mx-2">
-              <span className="block object-bottom mr-4 md:inline">
-                &#9737;
-              </span>{" "}
-              Cyber Security
-            </p>
-            <p className="mx-2">
-              <span className="block object-top mr-4 md:inline">&#9737;</span>{" "}
-              Web Development
-            </p>
-          </h2>
           <div className="leading-6 sm:text-md md:text-lg" id="stackList">
             <span className="py-2 text-xl tracking-wide text-white sm:text-md sm:border-2 sm:border-l-0 sm:border-r-0 sm:border-gray-400 md:text-xl">
               Some of my favorite projects cover the following topics:

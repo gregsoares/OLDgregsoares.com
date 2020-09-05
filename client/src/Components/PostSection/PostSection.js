@@ -1,49 +1,44 @@
-import React from 'react'
+import React from "react";
 
 // ==> props <==
 // postTitle
 // postText
 // postImg
 
-/* Old FeaturedSection
-
-        <div className="flex flex-wrap items-center mb-20">
-          <div className="w-full md:w-1/2">
-            <img src={reportingImg} alt="Reporting" />
-          </div>
-          <div className="w-full pl-10 md:w-1/2">
-            <h4 className="mb-3 text-3xl font-bold text-gray-800">Reporting</h4>
-            <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch can generate a comprehensive report on your vitals depending on your settings either daily, weekly, monthly, quarterly or yearly.</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap items-center mb-20">
-          <div className="w-full md:w-1/2">
-            <h4 className="mb-3 text-3xl font-bold text-gray-800">Syncing</h4>
-            <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch allows you to sync data across all your mobile devices whether iOS, Android or Windows OS and also to your laptop whether MacOS, GNU/LInux or Windows OS.</p>
-          </div>
-          <div className="w-full md:w-1/2">
-            <img src={syncingImg} alt="Syncing" />
-          </div>
-        </div>
-
-*/
-
-export const PostSection = props => {
-  const { postImg } = props;
+export const PostSection = (props) => {
+  const { postImg, postTitle, postText } = props.content;
   return (
-    <div data-testid="PostSectionContainer">
-    
-      <div className="flex flex-wrap items-center mb-20">
-        <div className="w-full md:w-1/2">
-          <h4 className="mb-3 text-3xl font-bold text-gray-800">Exercise Metric</h4>
-          <p className="mb-8 text-gray-600">Our Smart Health Monitoring Wristwatch is able to capture you vitals while you exercise. You can create different category of exercises and can track your vitals on the go.</p>
+    <div
+      className="px-4 py-8 font-sans text-gray-500 "
+      data-testid="PostSectionContainer"
+    >
+      <div className="max-w-2xl mx-auto overflow-hidden rounded-md shadow-md brand-lighterBlue">
+        <div className="flex flex-col items-center justify-center leading-normal tracking-wide text-center ">
+          <img
+            src={postImg}
+            alt="PlaceHolder"
+            className="object-cover w-full"
+          />
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={postImg} alt="Monitoring" />
+
+        <div className="py-8 mx-8 ">
+          <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
+            {postTitle}
+          </h3>
+          <p className="mx-1 leading-relaxed tracking-wide sm:mx-2 md:mx-4">
+            {postText}
+          </p>
+        </div>
+
+        {/* Footer section */}
+        <div className="mt-2 text-center text-grey-darker">
+          <h3 className="mb-4 text-base sm:text-lg">
+            <button className="w-full py-4 my-8 text-sm tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:text-white hover:shadow-lg">
+              Live Preview
+            </button>
+          </h3>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};

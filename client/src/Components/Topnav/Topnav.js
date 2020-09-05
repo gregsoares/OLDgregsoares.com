@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "react-router-dom";
 
 export const Topnav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const activePage = props.activePage;
+  const activePage = useLocation().pathname;
+
+  // FIXME: isActive not working
   const isActive = (page) =>
     page === activePage
-      ? "topMenuBtn tracking-wider mx-1 font-semibold text-white hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300  rounded-md  "
-      : "topMenuBtn tracking-wider mx-1 font-medium text-gray-300 hover:bg-opacity-25 hover:text-white hover:bg-gray-300  rounded-md   hover:shadow-lg ";
+      ? "topMenuBtn tracking-wider mx-1 font-semibold text-white hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-100 rounded-md  "
+      : "topMenuBtn tracking-wider mx-1 font-medium text-gray-100 hover:bg-opacity-25 hover:text-white hover:bg-gray-300 rounded-md hover:shadow-lg ";
 
   return (
     <nav
@@ -63,14 +66,14 @@ export const Topnav = (props) => {
           id="mobileNavLinks"
         >
           <a
-            className={isActive("home") + "py-3 text-md rounded-md"}
+            className={isActive("/") + "py-3 text-md rounded-md"}
             href="/"
             data-testid="homeNavLink"
           >
             Home
           </a>
           <a
-            className={isActive("projects") + "py-3 text-md rounded-md"}
+            className={isActive("/projects") + "py-3 text-md rounded-md"}
             href="/projects"
             data-testid="projectsNavLink"
           >
@@ -78,7 +81,7 @@ export const Topnav = (props) => {
           </a>
 
           <a
-            className={isActive("resume") + "py-3 text-md rounded-md"}
+            className={isActive("/resume") + "py-3 text-md rounded-md"}
             href="/GregSoares-Resume.pdf"
             target="_blank"
             rel="noreferrer noopenner"
@@ -92,11 +95,11 @@ export const Topnav = (props) => {
         className="items-center hidden py-0 mr-4 font-semibold sm:flex navbar-menu"
         id="navLinks"
       >
-        <a className={isActive("home") + ""} href="/" data-testid="homeNavLink">
+        <a className={isActive("/") + ""} href="/" data-testid="homeNavLink">
           Home
         </a>
         <a
-          className={isActive("projects") + ""}
+          className={isActive("/projects") + ""}
           href="/projects"
           data-testid="projectsNavLink"
         >
@@ -104,7 +107,7 @@ export const Topnav = (props) => {
         </a>
 
         <a
-          className={isActive("resume") + ""}
+          className={isActive("/resume") + ""}
           href="/GregSoares-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
