@@ -1,6 +1,7 @@
 import React from "react";
 
 // Project Components import
+import { PostSection } from "../Components/PostSection/PostSection";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 
 // TODO: Plato and Agency Repositories need SS and code review+Comments for display.
@@ -8,8 +9,8 @@ import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 const Projects = () => {
   return (
     <div className="items-center justify-center bg-gray-100">
-      {/* <CardSection /> */}
-      <div className="max-w-md bg-teal-600 py-5">
+      <PostSection />
+      <div className="max-w-md py-5 bg-teal-600">
         <MessagesPanel
           title="Reading All Messages"
           status="Last Update"

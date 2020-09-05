@@ -15,10 +15,10 @@ export const FeaturedSection = () => {
     >
       <section className="">
         <FeatSection
-          featTitle="Front-End Mentor challenge  ➡ Stack Template"
-          featSubtitle="The job of a full-stack web developer"
+          featTitle="FrontEndMentor.io Challenge: Develop the given design"
+          featSubtitle=""
           featText={[
-            "The template and challenge are from FrontEndMentor.io. The purpose is to develop a given design, this challenge was completed with only HTML and TailwindCSS.",
+            "The template and challenge are from FrontEndMentor.io. The purpose is to develop a given design, this challenge was completed with only HTML and TailwindCSS. Deployed to Firebase.",
           ]}
           imgAlt="Template ScreenShot"
           imgCaption="Check Github for more info (Template ScreenShot)"
@@ -30,12 +30,12 @@ export const FeaturedSection = () => {
         />
 
         <FeatSection
-          featTitle="GregSoares.com ➡ Full MERN Stack"
-          featSubtitle="MongoDB, ExpressJs, ReactJs, NodeJs"
+          featTitle="GregSoares.com"
+          featSubtitle="MERN - Full Stack JavaScript"
           featText={[
-            "This website's code is all on Github, it features:REST API on the back-end sends messages to the database server.The front-end uses third party APIs to implement Google OAuth.",
+            "The Contact form uses REST API on the back-end to save messages to the database.The front-end uses third party APIs to implement Google OAuth. Sections and components are built with scalability and maintainability in mind. (low coupling, high cohesion)",
           ]}
-          imgAlt="clean code showing REST API routes"
+          imgAlt="REST API routes"
           imgCaption="(REST API router file)"
           variant="right"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
@@ -44,10 +44,10 @@ export const FeaturedSection = () => {
         />
 
         <FeatSection
-          featTitle="Bootstrap Template ➡ Full MERN Stack Template"
-          featSubtitle="The job of a full-stack web developer"
+          featTitle="Reactify a Bootstrap Template"
+          featSubtitle=""
           featText={[
-            "Given a front-end template and made it into a full-stack JavaScript web application. REST API ready, reusable components, easily scalable and customizable with proper documentation.",
+            "As one of my first full stack projects I took this front-end template and made it into a full-stack MERN app. Developed routes for REST API, reusable components, easily scalable and customizable with proper documentation.",
           ]}
           imgAlt="Template ScreenShot"
           imgCaption="Template deployed to Heroku - free dyno, slow loadtime "

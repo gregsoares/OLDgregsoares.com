@@ -6,6 +6,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export const Topnav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const activePage = props.activePage;
+
+  // FIXME: isActive not working
   const isActive = (page) =>
     page === activePage
       ? "topMenuBtn tracking-wider mx-1 font-semibold text-white hover:shadow-lg hover:bg-opacity-25 hover:text-white hover:bg-gray-300  rounded-md  "
