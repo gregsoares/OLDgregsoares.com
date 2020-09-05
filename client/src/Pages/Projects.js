@@ -4,24 +4,29 @@ import React from "react";
 import { PostSection } from "../Components/PostSection/PostSection";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
 
-// TODO: Plato and Agency Repositories need SS and code review+Comments for display.
-
+const insureChallenge = [
+  {
+    postTitle: "Lorem Ipsum Morel ",
+    postText:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque doloribus, obcaecati aut temporibus incidunt officia, voluptatum minus debitis consequatur architecto suscipit non nesciunt placeat quisquam beatae? Rem, dolore! Qui, aliquam. ",
+    postImg: "https://placeimg.com/640/480/any",
+  },
+  {
+    postTitle: "Title",
+    postText:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque doloribus, obcaecati aut temporibus incidunt officia, voluptatum minus debitis consequatur architecto suscipit non nesciunt placeat quisquam beatae? Rem, dolore! Qui, aliquam. ",
+    postImg: "https://placeimg.com/640/480/any",
+  },
+];
 const Projects = () => {
   return (
-    <div className="items-center justify-center bg-gray-100">
-      <PostSection />
-      <div className="max-w-md py-5 bg-teal-600">
-        <MessagesPanel
-          title="Reading All Messages"
-          status="Last Update"
-          date="07/21/2020"
-          comment="something Most interesting Being said"
-          initials="SO"
-          position="something gr8"
-          name="Mr. Strong"
-          jobTitle="Short manager"
-        />
-      </div>
+    <div className="items-center justify-center brand-darkBlue">
+      <PostSection content={insureChallenge[0]} />
+      <PostSection content={insureChallenge[1]} />
+      <PostSection content={insureChallenge[0]} />
+      <PostSection content={insureChallenge[1]} />
+      <PostSection content={insureChallenge[0]} />
+      <PostSection content={insureChallenge[1]} />
     </div>
   );
 };
