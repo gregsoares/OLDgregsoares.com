@@ -11,7 +11,7 @@ module.exports = {
     rules: {
       test: /\.js?/,
       exclude: /node_module/,
-      loader: "babel-loader",
+      loader: "postcss-loader",
       query: {
         presets: ["babel-preset-react"],
       },
@@ -21,5 +21,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "client", "public", "index.html"),
     }),
+    require("tailwindcss"),
+    require("autoprefixer"),
   ],
 };
