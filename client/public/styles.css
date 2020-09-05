@@ -85,7 +85,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -478,6 +479,18 @@ textarea {
   resize: vertical;
 }
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #a0aec0;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #a0aec0;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #a0aec0;
@@ -581,6 +594,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -655,6 +674,12 @@ video {
   --bg-opacity: 1;
   background-color: #2d3748;
   background-color: rgba(45, 55, 72, var(--bg-opacity));
+}
+
+.bg-red-400 {
+  --bg-opacity: 1;
+  background-color: #fc8181;
+  background-color: rgba(252, 129, 129, var(--bg-opacity));
 }
 
 .bg-red-500 {
@@ -733,6 +758,12 @@ video {
   --bg-opacity: 1;
   background-color: #e2e8f0;
   background-color: rgba(226, 232, 240, var(--bg-opacity));
+}
+
+.hover\:bg-red-600:hover {
+  --bg-opacity: 1;
+  background-color: #e53e3e;
+  background-color: rgba(229, 62, 62, var(--bg-opacity));
 }
 
 .hover\:bg-blue-700:hover {
@@ -837,6 +868,12 @@ video {
   --border-opacity: 1;
   border-color: #edf2f7;
   border-color: rgba(237, 242, 247, var(--border-opacity));
+}
+
+.hover\:border-gray-400:hover {
+  --border-opacity: 1;
+  border-color: #cbd5e0;
+  border-color: rgba(203, 213, 224, var(--border-opacity));
 }
 
 .hover\:border-gray-600:hover {
@@ -1088,6 +1125,10 @@ video {
   font-size: 1.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
 }
@@ -1189,6 +1230,16 @@ video {
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .my-auto {
@@ -1410,11 +1461,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1468,10 +1514,6 @@ video {
   padding-top: 2rem;
 }
 
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -1493,6 +1535,7 @@ video {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -1719,6 +1762,8 @@ video {
 
 .select-none {
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1797,9 +1842,22 @@ video {
   transition-duration: 500ms;
 }
 
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
 
@@ -1810,21 +1868,43 @@ video {
   }
 }
 
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
   }
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
   50% {
     transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
 
@@ -1869,9 +1949,56 @@ video {
   background-image: linear-gradient(to right, #12223b, #142844, #152e4d);
 }
 
+@media (min-width: 375px) {
+  .xs\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .xs\:container {
+      max-width: 375px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .xs\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .xs\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .xs\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .xs\:container {
+      max-width: 1280px;
+    }
+  }
+
+  .xs\:-mx-3 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .sm\:container {
+      max-width: 375px;
+    }
   }
 
   @media (min-width: 640px) {
@@ -1948,18 +2075,29 @@ video {
     flex-wrap: wrap;
   }
 
+  .sm\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .sm\:mt-4 {
     margin-top: 1rem;
   }
 
-  .sm\:mr-6 {
-    margin-right: 1.5rem;
+  .sm\:ml-auto {
+    margin-left: auto;
   }
 }
 
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .md\:container {
+      max-width: 375px;
+    }
   }
 
   @media (min-width: 640px) {
@@ -2018,10 +2156,6 @@ video {
     margin-top: 1.5rem;
   }
 
-  .md\:mr-8 {
-    margin-right: 2rem;
-  }
-
   .md\:mr-10 {
     margin-right: 2.5rem;
   }
@@ -2046,6 +2180,12 @@ video {
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .lg\:container {
+      max-width: 375px;
+    }
   }
 
   @media (min-width: 640px) {
@@ -2122,10 +2262,6 @@ video {
     font-size: 1.125rem;
   }
 
-  .lg\:text-xl {
-    font-size: 1.25rem;
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
   }
@@ -2150,6 +2286,12 @@ video {
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;
+  }
+
+  @media (min-width: 375px) {
+    .xl\:container {
+      max-width: 375px;
+    }
   }
 
   @media (min-width: 640px) {

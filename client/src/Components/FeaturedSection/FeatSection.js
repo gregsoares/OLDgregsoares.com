@@ -1,5 +1,7 @@
 import React from "react";
 import { Tag } from "../Tag/Tag";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 /* ==> Props <==
  * featTitle= String
@@ -32,26 +34,28 @@ export const FeatSection = (props) => {
 
   //   return `${bgColor} pt-4 pb-6`;
   // };
+  // TODO: if live link then put Icon to identify it
   const linkTitle = liveSite ? (
     // FIXME: hover: notworking
     <a
-      className="bg-opacity-75 shadow-md hover:border hover:border-l-0 hover:border-r-0 hover:border-gray-400 "
+      className="p-2 bg-opacity-75 border-teal-700 "
       href={liveSite}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span className="text-lg font-semibold text-center text-blue-800 lg:text-xl">
+      <FontAwesomeIcon icon={faExternalLinkAlt} />
+      <span className="ml-3 text-2xl font-semibold leading-relaxed tracking-wider text-center text-blue-800 shadow-full">
         {featTitle}
       </span>
     </a>
   ) : (
-    <span className="text-lg font-semibold text-center text-gray-200 lg:text-xl">
+    <span className="text-2xl font-semibold leading-relaxed tracking-wider text-center text-gray-200">
       {featTitle}
     </span>
   );
   const variantLeft = (
     <div
-      className={`bg-darkBlue border border-gray-300 border-t-0 border-r-0 border-l-0 my-2`}
+      className={`my-4 text-center text-gray-200 border border-gray-300 border-t-0 border-r-0 border-l-0`}
       id={featTitle}
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex" id="">
@@ -61,9 +65,9 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3">
+            <div className="mt-3 text-base">
               {featText.map((text) => (
-                <span key={Math.random(123)} className="text-left text-md">
+                <span key={Math.random(123)} className="text-left ">
                   {text}
                   <br />
                 </span>
@@ -83,7 +87,7 @@ export const FeatSection = (props) => {
           </div>
         </div>
 
-        <div className="max-w-sm mx-auto my-4 md:max-w-lg sm:mx-8 ">
+        <div className="max-w-sm mx-auto my-4 md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
           <p className="p-0 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
@@ -98,7 +102,7 @@ export const FeatSection = (props) => {
       id={featTitle.split(0, 5)}
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex">
-        <div className="hidden max-w-sm mx-auto my-4 sm:ml-auto sm:block md:max-w-lg sm:mx-8 ">
+        <div className="hidden max-w-sm mx-auto my-4 sm:ml-auto sm:block md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
           <p className="p-0 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
@@ -111,9 +115,9 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3">
+            <div className="mt-3 text-base">
               {featText.map((text) => (
-                <span key={Math.random(123)} className="text-left text-md">
+                <span key={Math.random(123)} className="text-left ">
                   {text}
                   <br />
                 </span>
@@ -125,7 +129,7 @@ export const FeatSection = (props) => {
             {featTags.map((tag) => (
               <div
                 key={Math.random(123)}
-                className="flex p-1 mx-1 my-1 rounded-full"
+                className="flex p-1 mx-1 my-1 bg-gray-400 bg-opacity-50 rounded-full"
               >
                 <Tag text={tag} />
               </div>
@@ -133,7 +137,7 @@ export const FeatSection = (props) => {
           </div>
         </div>
 
-        <div className="block max-w-sm mx-auto my-4 sm:hidden md:max-w-lg sm:mx-8 ">
+        <div className="block max-w-sm mx-auto my-4 sm:hidden md:max-w-lg sm:mx-4 ">
           <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
           <p className="p-0 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}

@@ -53,7 +53,7 @@ export const ContactForm = () => {
             }
             htmlFor="formTitle"
           >
-            You know what to do.
+            Contact Me
           </label>
           <label
             className={
@@ -101,7 +101,7 @@ export const ContactForm = () => {
               value={input.message}
               id="message_box"
               type="text"
-              placeholder="Don't be shy, I'm a geek."
+              placeholder=""
               rows={12}
               data-testid="messageBox"
             />
