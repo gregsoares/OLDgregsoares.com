@@ -1,6 +1,7 @@
 import React from "react";
 import { MernTemplate } from "./MernTemplate";
 import { InsureChallenge } from "./InsureChallenge";
+import { AgencyTemplate } from "./AgencyTemplate";
 
 export const PostSection = () => {
   return (
@@ -9,6 +10,7 @@ export const PostSection = () => {
       data-testid="PostSectionContainer"
     >
       <InsureChallenge />
+      <AgencyTemplate />
       <MernTemplate />
     </div>
   );

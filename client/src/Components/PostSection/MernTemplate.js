@@ -7,7 +7,7 @@ export const MernTemplate = () => {
         <img
           src="https://camo.githubusercontent.com/0dc9dfa3011c33bcee27650ad28fd1090d7f21d2/68747470733a2f2f692e6962622e636f2f6e7333724e78502f7365727665722d6170702e706e67"
           alt="Main Application file"
-          className="object-cover w-full"
+          className="object-cover object-center w-full max-h-60-screen"
         />
       </div>
 
@@ -52,9 +52,9 @@ export const MernTemplate = () => {
 
       {/* Footer section */}
       <div className="mt-2 text-center text-grey-darker">
-        <h3 className="mb-4 text-base ">
+        <h3 className="text-base ">
           <a
-            className="block w-full py-4 my-8 tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:border-white hover:border-2 hover:text-white hover:shadow-lg"
+            className="block w-full py-4 mt-8 tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:border-white hover:border-2 hover:text-white hover:shadow-lg"
             href="https://github.com/gregsoares/MERN_StartTemplate"
             target="_blank"
             rel="noopener noreferrer"
