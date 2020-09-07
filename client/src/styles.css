@@ -35,3 +35,19 @@
 .bg-topnav {
   background-image: linear-gradient(to right, #12223b, #142844, #152e4d);
 }
+
+.max-h-20-screen {
+  max-height: 20vh;
+}
+
+.max-h-40-screen {
+  max-height: 40vh;
+}
+
+.max-h-60-screen {
+  max-height: 60vh;
+}
+
+.max-h-80-screen {
+  max-height: 80vh;
+}

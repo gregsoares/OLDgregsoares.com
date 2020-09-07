@@ -20,7 +20,7 @@ export const Topnav = (props) => {
       data-testid="TopnavContainer"
       onMouseLeave={() => isOpen && setIsOpen(false)}
     >
-      <div className="py-0 my-2 ml-4 text-white" data-testid="brandName">
+      <div className="py-0 my-2 ml-8 text-white" data-testid="brandName">
         <p className="py-0 text-xl font-medium tracking-wide lg:font-semibold md:text-2xl xl:text-3xl ">
           GregSoares.com
         </p>
@@ -92,7 +92,7 @@ export const Topnav = (props) => {
         </div>
       </div>
       <div
-        className="items-center hidden py-0 mr-4 font-semibold sm:flex navbar-menu"
+        className="items-center hidden py-0 mr-8 font-semibold sm:flex navbar-menu"
         id="navLinks"
       >
         <a className={isActive("/") + ""} href="/" data-testid="homeNavLink">
