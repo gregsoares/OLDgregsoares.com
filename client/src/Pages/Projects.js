@@ -1,12 +1,12 @@
 import React from "react";
 
 // Project Components import
-import { PostSection } from "../Components/PostSection/PostSection";
+import { ProjectSection } from "../Components/ProjectSection/ProjectSection";
 
 const Projects = () => {
   return (
     <div className="items-center justify-center brand-darkBlue">
-      <PostSection />
+      <ProjectSection />
     </div>
   );
 };

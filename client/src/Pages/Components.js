@@ -5,7 +5,7 @@ import { Container } from "../Components/Container/Container";
 import { FluidContainer } from "../Components/FluidContainer/FluidContainer";
 import { Github } from "../Components/Github/Github";
 import { MessagesPanel } from "../Components/MessagesPanel/MessagesPanel";
-import { PostSection } from "../Components/PostSection/PostSection";
+import { ProjectSection } from "../Components/ProjectSection/ProjectSection";
 import { CardSection } from "../Components/CardSection/CardSection";
 import { IntroCards } from "../Components/IntroCards/IntroCards";
 import { Modal } from "../Components/Modal/Modal";
@@ -31,7 +31,7 @@ const Components = () => {
       <FluidContainer />
       <Github />
       <MessagesPanel title="Message Panel" status="Testing" date="date" />
-      <PostSection />
+      <ProjectSection />
       <CardSection cards={cardData} />
 
       <div className="md:w-96">
