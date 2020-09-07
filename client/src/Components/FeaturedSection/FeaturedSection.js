@@ -30,6 +30,22 @@ export const FeaturedSection = () => {
         />
 
         <FeatSection
+          featTitle="Reactify a Bootstrap Template"
+          featSubtitle=""
+          // Rewrite to third person
+          featText={[
+            "As one of my first full stack projects I took this front-end template and made it into a full-stack MERN app. Developed routes for REST API, reusable components, easily scalable and customizable with proper documentation.",
+          ]}
+          imgAlt="Template ScreenShot"
+          imgCaption="Template deployed to Heroku - free dyno, slow loadtime "
+          variant="right"
+          featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
+          featImg={AgencyImg}
+          bgColor="bg-feature-two"
+          liveSite="https://agencytemplate.herokuapp.com/"
+        />
+
+        <FeatSection
           featTitle="GregSoares.com"
           featSubtitle="MERN - Full Stack JavaScript"
           featText={[
@@ -37,25 +53,10 @@ export const FeaturedSection = () => {
           ]}
           imgAlt="REST API routes"
           imgCaption="(REST API router file)"
-          variant="right"
+          variant="left"
           featTags={["TailwindCSS", "TDD", "PassportJs", "Heroku Deployment"]}
           featImg={GregSoaresSS}
           bgColor="bg-feature-one"
-        />
-
-        <FeatSection
-          featTitle="Reactify a Bootstrap Template"
-          featSubtitle=""
-          featText={[
-            "As one of my first full stack projects I took this front-end template and made it into a full-stack MERN app. Developed routes for REST API, reusable components, easily scalable and customizable with proper documentation.",
-          ]}
-          imgAlt="Template ScreenShot"
-          imgCaption="Template deployed to Heroku - free dyno, slow loadtime "
-          variant="left"
-          featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
-          featImg={AgencyImg}
-          bgColor="bg-feature-two"
-          liveSite="https://agencytemplate.herokuapp.com/"
         />
       </section>
     </div>

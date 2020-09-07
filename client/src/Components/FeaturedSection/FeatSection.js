@@ -34,17 +34,15 @@ export const FeatSection = (props) => {
 
   //   return `${bgColor} pt-4 pb-6`;
   // };
-  // TODO: if live link then put Icon to identify it
   const linkTitle = liveSite ? (
-    // FIXME: hover: notworking
     <a
-      className="p-2 bg-opacity-75 border-teal-700 "
+      className="p-2 bg-opacity-75 "
       href={liveSite}
       target="_blank"
       rel="noopener noreferrer"
     >
       <FontAwesomeIcon icon={faExternalLinkAlt} />
-      <span className="ml-3 text-2xl font-semibold leading-relaxed tracking-wider text-center text-blue-800 shadow-full">
+      <span className="pb-1 ml-3 text-2xl font-semibold leading-relaxed tracking-wider text-center text-blue-800 border-b border-gray-400 shadow-full">
         {featTitle}
       </span>
     </a>
@@ -65,9 +63,9 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3 text-base">
+            <div className="mt-3 text-base text-justify">
               {featText.map((text) => (
-                <span key={Math.random(123)} className="text-left ">
+                <span key={Math.random(123)} className="text-left">
                   {text}
                   <br />
                 </span>
@@ -115,7 +113,7 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3 text-base">
+            <div className="mt-3 text-base text-justify">
               {featText.map((text) => (
                 <span key={Math.random(123)} className="text-left ">
                   {text}

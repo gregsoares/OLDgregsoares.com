@@ -2,7 +2,7 @@ import React from "react";
 
 export const MernTemplate = () => {
   return (
-    <div className="mx-4 my-16 overflow-hidden rounded-md shadow-md sm:mx-auto lg:max-w-4xl md:max-w-2xl xs:max-w-lg sm:max-w-lg brand-lighterBlue">
+    <div className="mx-4 my-16 overflow-hidden border border-gray-700 rounded-md shadow-md sm:mx-auto lg:max-w-4xl md:max-w-2xl xs:max-w-lg sm:max-w-lg brand-lighterBlue">
       <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
         MERN Starter Template
       </h3>
@@ -15,13 +15,14 @@ export const MernTemplate = () => {
       </div>
 
       <div className="py-8 mx-8 ">
-        <p className="leading-relaxed tracking-wide sm:mx-2 md:mx-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, non?
-          Quaerat consequatur saepe adipisci eos blanditiis atque aliquid
-          aspernatur laboriosam nam sit dolore tempora nulla nostrum a, labore
-          non accusantium!
+        {/* TODO: Add real description of the project */}
+        <p className="leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
+          <span className="pl-2">L</span>orem ipsum dolor sit amet consectetur
+          adipisicing elit. Maiores, non? Quaerat consequatur saepe adipisci eos
+          blanditiis atque aliquid aspernatur laboriosam nam sit dolore tempora
+          nulla nostrum a, labore non accusantium!
         </p>
-        <ol className="my-3 list-disc list-inside">
+        <ol className="mx-6 my-3 list-disc list-inside">
           <li>MongoDB</li>
           <li>ExpressJs</li>
           <li>ReactJs</li>
@@ -30,12 +31,12 @@ export const MernTemplate = () => {
           <li>Heroku Deployment Ready</li>
         </ol>
 
-        <p className="my-3 leading-relaxed tracking-wide sm:mx-2 md:mx-4">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
-          asperiores lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. asperiores?
-          lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi,
-          asperiores?
+        <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
+          <span className="pl-2">L</span>orem ipsum dolor sit amet, consectetur
+          adipisicing elit. Animi, asperiores lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. asperiores? lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Animi, asperiores?
         </p>
         <div className="w-full p-0 my-3 ">
           <img
@@ -44,10 +45,10 @@ export const MernTemplate = () => {
             className="mx-auto"
           />
         </div>
-        <p className="mt-5 leading-relaxed tracking-wide sm:mx-2 md:mx-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-          quam? Iusto consequuntur consectetur vero eius alias vel, quaerat
-          exercitationem?
+        <p className="mt-5 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
+          <span className="pl-2">L</span>orem ipsum dolor sit amet consectetur
+          adipisicing elit. Recusandae, quam? Iusto consequuntur consectetur
+          vero eius alias vel, quaerat exercitationem?
         </p>
       </div>
 

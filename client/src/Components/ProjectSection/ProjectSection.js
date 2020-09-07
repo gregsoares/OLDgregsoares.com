@@ -3,7 +3,7 @@ import { MernTemplate } from "./MernTemplate";
 import { InsureChallenge } from "./InsureChallenge";
 import { AgencyTemplate } from "./AgencyTemplate";
 
-export const PostSection = () => {
+export const ProjectSection = () => {
   return (
     <div
       className="px-4 py-8 font-sans text-gray-500 "
