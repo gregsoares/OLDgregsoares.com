@@ -2,7 +2,10 @@ import React from "react";
 
 export const InsureChallenge = () => {
   return (
-    <div className="max-w-2xl mx-auto my-8 overflow-hidden rounded-md shadow-md brand-lighterBlue">
+    <div className="mx-4 sm:mx-auto my-16 overflow-hidden rounded-md shadow-md lg:max-w-4xl md:max-w-2xl xs:max-w-lg sm:max-w-lg brand-lighterBlue">
+      <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
+        Insure Landing Page Challenge
+      </h3>
       <div className="flex flex-col items-center justify-center leading-normal tracking-wide text-center ">
         <img
           src="https://github.com/gregsoares/insure-page-challenge/raw/master/design/desktop-preview.jpg"
@@ -12,9 +15,6 @@ export const InsureChallenge = () => {
       </div>
 
       <div className="py-8 mx-8 ">
-        <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
-          Insure Landing Page Challenge
-        </h3>
         <p className="leading-relaxed tracking-wide sm:mx-2 md:mx-4">
           FrontEndMentor.io provides these challenges that are just like another
           day as a front end web developer, given an image or description de dev
@@ -48,10 +48,9 @@ export const InsureChallenge = () => {
       {/* Footer section */}
       <div className="mt-2 text-center text-grey-darker">
         <h3 className="text-base ">
-          {/* FIXME: Re deploy InsureLanding page to firebase */}
           <a
             className="block w-full py-4 mt-8 tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:border-white hover:border-2 hover:text-white hover:shadow-lg"
-            href="https://gregsoares-283810.web.app/"
+            href="https://insurechallenge.web.app/"
             target="_blank"
             rel="noopener noreferrer"
           >

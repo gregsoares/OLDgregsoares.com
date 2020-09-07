@@ -10,7 +10,9 @@ export const PostSection = () => {
       data-testid="PostSectionContainer"
     >
       <InsureChallenge />
+      <div className="h-2 border-b"></div>
       <AgencyTemplate />
+      <div className="h-2 border-b"></div>
       <MernTemplate />
     </div>
   );

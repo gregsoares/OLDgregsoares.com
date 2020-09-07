@@ -2,7 +2,10 @@ import React from "react";
 
 export const AgencyTemplate = () => {
   return (
-    <div className="max-w-2xl mx-auto my-8 overflow-hidden rounded-md shadow-md brand-lighterBlue">
+    <div className="mx-4 my-16 overflow-hidden rounded-md shadow-md sm:mx-auto lg:max-w-4xl md:max-w-2xl xs:max-w-lg sm:max-w-lg brand-lighterBlue">
+      <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
+        Agency Template
+      </h3>
       <div className="flex flex-col items-center justify-center leading-normal tracking-wide text-center ">
         <img
           src="https://i.ibb.co/bPZP53N/Screenshot-from-2020-09-06-17-56-06.png"
@@ -12,9 +15,6 @@ export const AgencyTemplate = () => {
       </div>
 
       <div className="py-8 mx-8 ">
-        <h3 className="my-6 text-2xl text-center text-gray-400 sm:text-3xl ">
-          Agency Template
-        </h3>
         <p className="leading-relaxed tracking-wide sm:mx-2 md:mx-4">
           Downloaded this Bootstrap template from BootstrapMade.com and rebuilt
           it into a full MERN stack template. Components are easily reusable in
