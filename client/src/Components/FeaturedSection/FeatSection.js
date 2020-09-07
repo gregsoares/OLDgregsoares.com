@@ -107,7 +107,7 @@ export const FeatSection = (props) => {
           </p>
         </div>
         <div className="max-w-md mx-auto text-center lg:max-w-xl xl:max-w-2xl">
-          <div className="my-6">{linkTitle}</div>
+          <div className="my-6 text-gray-200 ">{linkTitle}</div>
 
           <div className="pl-6 pr-4 text-left text-gray-200">
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
