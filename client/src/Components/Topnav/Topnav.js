@@ -33,7 +33,7 @@ export const Topnav = (props) => {
           className="text-gray-400 rounded-md topMenuBtn hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:shadow-lg"
           href="https://www.linkedin.com/in/greg-soares"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
         >
           <FontAwesomeIcon icon={faLinkedin} size="3x" />
         </a>
@@ -42,7 +42,7 @@ export const Topnav = (props) => {
           className="text-gray-400 rounded-md topMenuBtn hover:bg-opacity-25 hover:text-white hover:bg-gray-300 hover:shadow-lg"
           href="https://github.com/gregsoares"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
           data-testid="githubNavLink"
         >
           <FontAwesomeIcon icon={faGithub} size="3x" />
