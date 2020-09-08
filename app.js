@@ -7,8 +7,6 @@ const { db } = require("./controllers/passport.js");
 const path = require("path");
 let keys = {};
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 // If it's in production mode
 if (process.env.NODE_ENV === "production") {
   keys = {
@@ -31,6 +29,8 @@ app.use(
     keys: [keys.cookieKey],
   })
 ); // ========= End Environment conditional
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
 app.use(passport.session());
