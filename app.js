@@ -2,19 +2,19 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
+const sslRedirect = require("heroku-ssl-redirect");
 const app = express();
 const { db } = require("./controllers/passport.js");
 const path = require("path");
 let keys = {};
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 // If it's in production mode
 if (process.env.NODE_ENV === "production") {
   keys = {
     cookieKey: process.env.cookieKey,
   };
 
+  app.use(sslRedirect());
   app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("/*", function (req, res) {
@@ -31,6 +31,8 @@ app.use(
     keys: [keys.cookieKey],
   })
 ); // ========= End Environment conditional
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
 app.use(passport.session());
