@@ -23,8 +23,8 @@ export const AgencyTemplate = () => {
         </p>
         <ol className="mx-6 my-3 list-disc list-inside">
           <p className="my-2 font-medium text-gray-300">Tools Used:</p>
-          <li>MERN</li>
-          <li>Bootstrap</li>
+          <li className="my-1"> MERN</li>
+          <li className="my-1">Bootstrap</li>
         </ol>
 
         <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">

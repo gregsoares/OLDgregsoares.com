@@ -10,6 +10,7 @@ import Index from "./Pages/Index";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Components from "./Pages/Components";
+import { Messager } from "./Pages/Messager";
 
 const App = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const App = () => {
         <Topnav />
         <Switch>
           <Route exact path="/about" component={About} />
+          <Route exact path="/messager" component={Messager} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/components" component={Components} />
           <Route exact path="/" component={Index} />

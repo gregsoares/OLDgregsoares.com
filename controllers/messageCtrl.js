@@ -16,7 +16,7 @@ const getByEmail = (req, res) => {
 const getAllMessages = (req, res) => {
   Message.find((err, messages) => {
     if (err) return console.debug(err);
-    console.debug(messages);
+    console.debug(`Inside controller:getAllMessages(): \n${messages}`);
   })
     .then((message) => res.json(message))
     .catch((err) => console.debug(err));

@@ -23,12 +23,12 @@ export const MernTemplate = () => {
           nulla nostrum a, labore non accusantium!
         </p>
         <ol className="mx-6 my-3 list-disc list-inside">
-          <li>MongoDB</li>
-          <li>ExpressJs</li>
-          <li>ReactJs</li>
-          <li>NodeJs</li>
-          <li>REST API</li>
-          <li>Heroku Deployment Ready</li>
+          <li className="my-1">MongoDB</li>
+          <li className="my-1">ExpressJs</li>
+          <li className="my-1">ReactJs</li>
+          <li className="my-1">NodeJs</li>
+          <li className="my-1">REST API</li>
+          <li className="my-1">Heroku Deployment Ready</li>
         </ol>
 
         <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">

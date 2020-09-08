@@ -10,9 +10,9 @@ export const ProjectSection = () => {
       data-testid="PostSectionContainer"
     >
       <InsureChallenge />
-      <div className="h-2 border-b"></div>
+      <div className="w-4/5 h-2 mx-auto border-b"></div>
       <AgencyTemplate />
-      <div className="h-2 border-b"></div>
+      <div className="w-4/5 h-2 mx-auto border-b"></div>
       <MernTemplate />
     </div>
   );

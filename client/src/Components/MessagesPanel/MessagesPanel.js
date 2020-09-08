@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 // TODO: useContext(messages) to reload this panel
 
@@ -15,23 +16,36 @@ import React from "react";
  *
  */
 
-// TODO: swap from props to context for when a new message gets send/Refresh (timer or manual)
 export const MessagesPanel = () => {
+  const [messages, setMessages] = useState(null);
+
+  const loadMessages = async () =>
+    await axios.get("/form/aForm/readAll").then((data) => {
+      setMessages(data);
+    });
+
+  useEffect(() => {
+    loadMessages();
+
+    // console.debug(`messages: \n${messages}`);
+    messages && messages.map((d) => console.log(d));
+  }, [messages]);
+
   return (
     <div
-      className="bg-white overflow-hidden rounded-lg shadow-lg p-0 text-sm mx-6"
+      className="p-0 mx-6 overflow-hidden text-sm bg-white rounded-lg shadow-lg"
       data-testid="cardContainer"
     >
       <div
-        className="flex w-full bg-gray-300 text-lg shadow-outline py-3 px-4 text-gray-800 select-none"
+        className="flex w-full px-4 py-3 text-lg text-gray-800 bg-gray-300 shadow-outline select-none"
         data-testid="title"
       >
         <p className="ml-auto" id="title">
           {/* {name !== "" ? name : "No data"} */}
         </p>
-        <div className="flex ml-auto w-auto" id="statusDate">
+        <div className="flex w-auto ml-auto" id="statusDate">
           <div
-            className="flex mx-4 bg-orange-600 uppercase rounded-full px-3 py-1 text-xs text-gray-300 font-bold shadow select-none"
+            className="flex px-3 py-1 mx-4 text-xs font-bold text-gray-300 uppercase bg-orange-600 rounded-full shadow select-none"
             data-testid="status"
           >
             Status
@@ -40,7 +54,7 @@ export const MessagesPanel = () => {
       </div>
       <div className="px-3 py-3" data-testid="commentContainer">
         <div
-          className="sm:flex-wrap bg-gray-300 rounded-lg my-2 mx-2 py-4 px-4 shadow-inner select-none text-black font-medium"
+          className="px-4 py-4 mx-2 my-2 font-medium text-black bg-gray-300 rounded-lg shadow-inner select-none sm:flex-wrap"
           data-testid="comment"
         >
           Message: {/* {message !== "" ? message : "No data"} */}
@@ -48,11 +62,11 @@ export const MessagesPanel = () => {
       </div>
 
       <div
-        className=" bg-gray-300 pt-1 pb-2 shadow-outline"
+        className="pt-1 pb-2 bg-gray-300 shadow-outline "
         data-testid="cardFooterContainer"
       >
         <div
-          className="uppercase font-bold text-gray-700 text-opacity-75 text-xs my-2 ml-4 select-none"
+          className="my-2 ml-4 text-xs font-bold text-gray-700 text-opacity-75 uppercase select-none"
           data-testid="position"
         >
           {/* Email: {email} */}
@@ -60,14 +74,14 @@ export const MessagesPanel = () => {
 
         <div className="flex items-center">
           <div
-            className="flex py-6 px-4 rounded-full bg-blue-700 text-white text-center justify-center items-center font-bold capitalize ml-4 mr-auto shadow-md border border-white"
+            className="flex items-center justify-center px-4 py-6 ml-4 mr-auto font-bold text-center text-white capitalize bg-blue-700 border border-white rounded-full shadow-md"
             data-testid="initials"
           >
             <p className="text-xs">Reply</p>
           </div>
 
           <div
-            className="flex py-6 px-3 rounded-full bg-green-600 text-white text-center self-end items-center font-bold capitalize ml-auto mr-4 shadow-md border border-white"
+            className="flex items-center self-end px-3 py-6 ml-auto mr-4 font-bold text-center text-white capitalize bg-green-600 border border-white rounded-full shadow-md"
             data-testid="initials"
             // onClick={() => loadMessages()}
           >
