@@ -14,6 +14,7 @@ export const FeatSection = (props) => {
   const {
     featImg,
     imgAlt,
+    imgLink,
     imgCaption,
     featTitle,
     featSubtitle,
@@ -86,7 +87,17 @@ export const FeatSection = (props) => {
         </div>
 
         <div className="max-w-md mx-auto my-4 md:max-w-lg sm:mx-4 ">
-          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          {imgLink ? (
+            <a href={imgLink}>
+              <img
+                className="rounded-md"
+                src={featImg}
+                alt={imgAlt && imgAlt}
+              />
+            </a>
+          ) : (
+            <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          )}
           <p className="py-1 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
           </p>
@@ -101,7 +112,23 @@ export const FeatSection = (props) => {
     >
       <div className="items-center px-4 py-4 mx-0 my-6 sm:flex">
         <div className="hidden max-w-md mx-auto my-4 sm:ml-auto sm:block md:max-w-lg sm:mx-4 ">
-          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          {imgLink ? (
+            <a href={imgLink}>
+              <img
+                className="rounded-md"
+                src={featImg}
+                alt={imgAlt && imgAlt}
+                onClick={() => imgLink}
+              />
+            </a>
+          ) : (
+            <img
+              className="rounded-md"
+              src={featImg}
+              alt={imgAlt && imgAlt}
+              onClick={() => imgLink}
+            />
+          )}
           <p className="py-1 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
           </p>
@@ -136,7 +163,24 @@ export const FeatSection = (props) => {
         </div>
 
         <div className="block max-w-md mx-auto my-4 sm:hidden md:max-w-lg sm:mx-4 ">
-          <img className="rounded-md" src={featImg} alt={imgAlt && imgAlt} />
+          {imgLink ? (
+            <a href={imgLink}>
+              <img
+                className="rounded-md"
+                src={featImg}
+                alt={imgAlt && imgAlt}
+                onClick={() => imgLink}
+              />{" "}
+            </a>
+          ) : (
+            <img
+              className="rounded-md"
+              src={featImg}
+              alt={imgAlt && imgAlt}
+              onClick={() => imgLink}
+            />
+          )}
+
           <p className="p-0 text-sm text-center text-gray-600">
             {imgCaption && imgCaption}
           </p>

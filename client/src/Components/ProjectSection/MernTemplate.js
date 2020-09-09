@@ -15,29 +15,19 @@ export const MernTemplate = () => {
       </div>
 
       <div className="py-8 mx-8 ">
-        {/* TODO: Add real description of the project */}
+        The template provides the first few steps in creating a server,
+        connecting it to a database, and running a bare create-react-app
+        instance.
         <p className="leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
-          <span className="pl-2">L</span>orem ipsum dolor sit amet consectetur
-          adipisicing elit. Maiores, non? Quaerat consequatur saepe adipisci eos
-          blanditiis atque aliquid aspernatur laboriosam nam sit dolore tempora
-          nulla nostrum a, labore non accusantium!
+          <span className="pl-2"></span>
         </p>
         <ol className="mx-6 my-3 list-disc list-inside">
           <li className="my-1">MongoDB</li>
           <li className="my-1">ExpressJs</li>
           <li className="my-1">ReactJs</li>
           <li className="my-1">NodeJs</li>
-          <li className="my-1">REST API</li>
           <li className="my-1">Heroku Deployment Ready</li>
         </ol>
-
-        <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
-          <span className="pl-2">L</span>orem ipsum dolor sit amet, consectetur
-          adipisicing elit. Animi, asperiores lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. asperiores? lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Animi, asperiores?
-        </p>
         <div className="w-full p-0 my-3 ">
           <img
             src="https://camo.githubusercontent.com/df364c67033104c8a6d98902d9277cffecb676c9/68747470733a2f2f692e6962622e636f2f4a6d43484236362f7365727665722e706e67"
@@ -45,11 +35,23 @@ export const MernTemplate = () => {
             className="mx-auto"
           />
         </div>
-        <p className="mt-5 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
+        <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
+          <span className="pl-2">B</span>ack-End setup is REST API ready,
+          MongoDB can be easily managed with mongoose, and the client side is
+          concurrently served with server with{" "}
+          <code>
+            <i>npm run dev</i>{" "}
+          </code>{" "}
+          command.
+          {`\n`}
+          The client-side is all inside the <i>client</i> folder, in case I need
+          just the front-end I'd copy that folder and all is in order.
+        </p>
+        {/* <p className="mt-5 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
           <span className="pl-2">L</span>orem ipsum dolor sit amet consectetur
           adipisicing elit. Recusandae, quam? Iusto consequuntur consectetur
           vero eius alias vel, quaerat exercitationem?
-        </p>
+        </p> */}
       </div>
 
       {/* Footer section */}

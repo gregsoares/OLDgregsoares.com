@@ -20,26 +20,28 @@ export const FeaturedSection = () => {
           featText={[
             "The template and challenge are from FrontEndMentor.io. The purpose is to develop a given design, this challenge was completed with only HTML and TailwindCSS. Deployed to Firebase.",
           ]}
-          imgAlt="Template ScreenShot"
+          imgAlt="Design ScreenShot"
           imgCaption="Check Github for more info (Template ScreenShot)"
           variant="left"
           featTags={["TailwindCSS", "Front-End", "Responsive"]}
           featImg="https://raw.githubusercontent.com/gregsoares/insure-page-challenge/master/design/desktop-preview.jpg"
+          imgLink="https://ibb.co/qDHFSnk"
           bgColor="bg-feature-two"
           liveSite="https://gregsoares-283810.web.app/"
         />
 
         <FeatSection
-          featTitle="Reactify a Bootstrap Template"
+          featTitle="Agency Bootstrap Template"
           featSubtitle=""
           // Rewrite to third person
           featText={[
-            "As one of my first full stack projects I took this front-end template and made it into a full-stack MERN app. Developed routes for REST API, reusable components, easily scalable and customizable with proper documentation.",
+            "Provided by BootstrapMade.com this static front-end template is now a full-stack MERN application. Developed routes for REST API, reusable components, easily scalable and customizable with proper documentation.",
           ]}
           imgAlt="Template ScreenShot"
           imgCaption="Template deployed to Heroku - free dyno, slow loadtime "
           variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
+          imgLink="https://ibb.co/rxyQGdf"
           featImg={AgencyImg}
           bgColor="bg-feature-two"
           liveSite="https://agencytemplate.herokuapp.com/"
@@ -49,7 +51,7 @@ export const FeaturedSection = () => {
           featTitle="GregSoares.com"
           featSubtitle="MERN - Full Stack JavaScript"
           featText={[
-            "The Contact form uses REST API on the back-end to save messages to the database.The front-end uses third party APIs to implement Google OAuth. Sections and components are built with scalability and maintainability in mind. (low coupling, high cohesion)",
+            "The Contact form uses custom REST API on the back-end to save messages to the database.The front-end uses third party APIs to implement Google OAuth. Sections and components are built with scalability and maintainability in mind. (low coupling, high cohesion)",
           ]}
           imgAlt="REST API routes"
           imgCaption="(REST API router file)"
