@@ -25,6 +25,7 @@ export const FeaturedSection = () => {
           variant="left"
           featTags={["TailwindCSS", "Front-End", "Responsive"]}
           featImg="https://raw.githubusercontent.com/gregsoares/insure-page-challenge/master/design/desktop-preview.jpg"
+          imgLink="https://ibb.co/qDHFSnk"
           bgColor="bg-feature-two"
           liveSite="https://gregsoares-283810.web.app/"
         />
@@ -40,6 +41,7 @@ export const FeaturedSection = () => {
           imgCaption="Template deployed to Heroku - free dyno, slow loadtime "
           variant="right"
           featTags={["Bootstrap", "Back-End", "Front-End", "Responsive"]}
+          imgLink="https://ibb.co/rxyQGdf"
           featImg={AgencyImg}
           bgColor="bg-feature-two"
           liveSite="https://agencytemplate.herokuapp.com/"
