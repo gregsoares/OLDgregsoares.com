@@ -16,22 +16,23 @@ export const AgencyTemplate = () => {
 
       <div className="py-8 mx-8 ">
         <p className="leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
-          <span className="pl-2">D</span>ownloaded this Bootstrap template from
-          BootstrapMade.com and rebuilt it into a full MERN stack template.
-          Components are easily reusable in any other project, easy copy and
-          paste to minize rework.
+          <span className="pl-2">I</span> downloaded this Bootstrap template
+          from BootstrapMade.com and adapted it to a full MERN stack template.
+          Components are designed to be easily reusable in any other project to
+          minize rework. The idea is to have a template that can be easily
+          redesigned or have it's components reused in other projects.
         </p>
         <ol className="mx-6 my-3 list-disc list-inside">
-          <p className="my-2 font-medium text-gray-300">Tools Used:</p>
-          <li className="my-1"> MERN</li>
+          <li className="my-1">MERN</li>
           <li className="my-1">Bootstrap</li>
+          <li className="my-1">REST API</li>
         </ol>
 
         <p className="my-3 leading-relaxed tracking-wide text-justify sm:mx-2 md:mx-4">
-          <span className="pl-2">L</span>orem ipsum dolor sit amet consectetur,
-          adipisicing elit. Repellat suscipit rerum, labore sunt corrupti
-          adipisci maiores ad numquam saepe blanditiis illum velit! Sapiente et
-          distinctio temporibus voluptate repudiandae asperiores laudantium.
+          <span className="pl-2">T</span>he back-end is just enough to prep the
+          ExpressJs and MongoBG for API and data strogage, as well as Heroku
+          deployment. The front-end is all inside the <i>client</i> folder, make
+          with create-react-app, styled with Bootstrap and deployed to Firebase.
         </p>
       </div>
 
