@@ -27,7 +27,7 @@ export const FeaturedSection = () => {
           featImg="https://raw.githubusercontent.com/gregsoares/insure-page-challenge/master/design/desktop-preview.jpg"
           imgLink="https://ibb.co/qDHFSnk"
           bgColor="bg-feature-two"
-          liveSite="https://gregsoares-283810.web.app/"
+          liveSite="https://insurechallenge.firebaseapp.com/"
         />
 
         <FeatSection
