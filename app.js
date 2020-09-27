@@ -13,7 +13,6 @@ if (process.env.NODE_ENV === "production") {
   keys = {
     cookieKey: process.env.cookieKey,
   };
-  app.use(sslRedirect());
   app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("/*", function (req, res) {
@@ -35,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(sslRedirect(["production"], 301));
 
 // Routes
 require("./routes/contactRouter")(app);
