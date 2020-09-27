@@ -24,12 +24,12 @@ export const MessagesPanel = () => {
       setMessages(data);
     });
 
-  useEffect(() => {
-    loadMessages();
+  // useEffect(() => {
+  //   loadMessages();
 
-    // console.debug(`messages: \n${messages}`);
-    messages && messages.map((d) => console.log(d));
-  }, [messages]);
+  //   // console.debug(`messages: \n${messages}`);
+  //   messages && messages.map((d) => console.log(d));
+  // }, [messages]);
 
   return (
     <div
