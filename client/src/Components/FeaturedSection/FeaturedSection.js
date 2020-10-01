@@ -29,6 +29,21 @@ export const FeaturedSection = () => {
           bgColor="bg-feature-two"
           liveSite="https://insurechallenge.firebaseapp.com/"
         />
+        <FeatSection
+          featTitle="FrontEndMentor.io Challenge: Develop the given design"
+          featSubtitle=""
+          featText={[
+            "The template and challenge are from FrontEndMentor.io. The purpose is to develop a given design, this challenge was completed with only HTML and TailwindCSS. Deployed to Firebase.",
+          ]}
+          imgAlt="Design ScreenShot"
+          imgCaption="Check Github for more info (Template ScreenShot)"
+          variant="left"
+          featTags={["TailwindCSS", "Front-End", "Responsive"]}
+          featImg="https://raw.githubusercontent.com/gregsoares/insure-page-challenge/master/design/desktop-preview.jpg"
+          imgLink="https://ibb.co/qDHFSnk"
+          bgColor="bg-feature-two"
+          liveSite="https://insurechallenge.firebaseapp.com/"
+        />
 
         <FeatSection
           featTitle="Agency Bootstrap Template"

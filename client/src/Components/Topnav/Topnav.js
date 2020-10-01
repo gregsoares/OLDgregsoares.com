@@ -22,7 +22,7 @@ export const Topnav = (props) => {
     >
       <div className="py-0 my-2 ml-8 text-white" data-testid="brandName">
         <p className="py-0 text-xl font-medium tracking-wide lg:font-semibold md:text-2xl xl:text-3xl ">
-          GregSoares.com
+          <a href="/">GregSoares.com</a>
         </p>
       </div>
       <div

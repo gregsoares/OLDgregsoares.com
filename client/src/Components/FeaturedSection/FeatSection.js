@@ -57,8 +57,11 @@ export const FeatSection = (props) => {
       className={`my-4 text-center text-gray-200 border border-gray-300 border-t-0 border-r-0 border-l-0`}
       id={featTitle}
     >
-      <div className="items-center px-4 py-4 mx-0 my-6 sm:flex" id="">
-        <div className="max-w-md mx-auto text-center lg:max-w-xl xl:max-w-2xl">
+      <div
+        className="items-center justify-around px-4 py-4 mx-0 my-6 sm:flex"
+        id=""
+      >
+        <div className="flex-col max-w-md text-center lg:max-w-xl xl:max-w-2xl">
           <div className="my-6">{linkTitle}</div>
           <div className="pl-6 pr-4 text-left text-gray-200">
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
@@ -86,7 +89,7 @@ export const FeatSection = (props) => {
           </div>
         </div>
 
-        <div className="max-w-md mx-auto my-4 md:max-w-lg sm:mx-4 ">
+        <div className="flex-col max-w-md my-4 md:max-w-lg sm:mx-4 ">
           {imgLink ? (
             <a href={imgLink}>
               <img
