@@ -110,7 +110,7 @@ export const Github = () => {
         <div className="px-6 py-4">
           <div className=" text-xl font-bold">{`${myRepo.name} `}</div>
           <a href={myRepo.repos_url} target="_blank" rel="noopener noreferrer">
-            <p className="text-base text-gray-600"></p>
+            <p className=" text-gray-600"></p>
             Go to Repository list
           </a>
         </div>

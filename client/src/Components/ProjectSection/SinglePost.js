@@ -52,7 +52,7 @@ export const SinglePost = () => {
 
       {/* Footer section */}
       <div className="mt-2 text-center text-grey-darker">
-        <h3 className="mb-4 text-base ">
+        <h3 className="mb-4  ">
           <button className="w-full py-4 my-8 tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:border-white hover:border-2 hover:text-white hover:shadow-lg">
             Live Preview
           </button>

@@ -12,7 +12,7 @@ export const HeroCTA = () => {
               Some of my favorite projects cover the following topics:
             </span>
             <ul
-              className="justify-around mx-auto my-6 text-sm leading-10 tracking-wider lg:text-md md:flex"
+              className="justify-around mx-auto my-6 leading-10 tracking-wider lg:text-md md:flex"
               data-testid="CTA_list_container"
             >
               <div className="sm:flex ">
