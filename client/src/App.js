@@ -19,7 +19,7 @@ const App = () => {
   });
   return (
     <Router>
-      <main className="p-0 m-0 brand-lighterBlue">
+      <main className="p-0 m-0 text-lg brand-lighterBlue">
         <Topnav />
         <Switch>
           <Route exact path="/about" component={About} />
