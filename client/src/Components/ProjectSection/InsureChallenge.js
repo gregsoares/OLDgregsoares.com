@@ -48,7 +48,7 @@ export const InsureChallenge = () => {
 
       {/* Footer section */}
       <div className="mt-2 text-center text-grey-darker">
-        <h3 className="text-base ">
+        <h3 className="">
           <a
             className="block w-full py-4 mt-8 tracking-wide text-gray-300 border rounded shadow-md brand-blue-gradient hover:border-white hover:border-2 hover:text-white hover:shadow-lg"
             href="https://insurechallenge.web.app/"

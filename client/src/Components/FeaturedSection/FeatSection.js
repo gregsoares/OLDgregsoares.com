@@ -67,7 +67,7 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3 text-base text-justify">
+            <div className="mt-3 text-justify">
               {featText.map((text) => (
                 <span key={Math.random(123)} className="text-left">
                   {text}
@@ -143,7 +143,7 @@ export const FeatSection = (props) => {
             <p className="font-medium tracking-wide md:text-md lg:text-lg">
               {featSubtitle}
             </p>
-            <div className="mt-3 text-base text-justify">
+            <div className="mt-3 text-justify">
               {featText.map((text) => (
                 <span key={Math.random(123)} className="text-left ">
                   {text}
