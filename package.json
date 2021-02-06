@@ -27,7 +27,6 @@
     "express": "^4.16.4",
     "express-sslify": "^1.2.0",
     "logrocket": "^1.0.12",
-    "mongoose": "^5.10.3",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "path": "^0.12.7"
