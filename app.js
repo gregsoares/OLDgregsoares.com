@@ -1,8 +1,8 @@
-const sslRedirect = require("heroku-ssl-redirect");
+// const sslRedirect = require("heroku-ssl-redirect");
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
-const passport = require("passport");
+// const passport = require("passport");
 const app = express();
 const { db } = require("./controllers/passport.js");
 const path = require("path");
@@ -33,20 +33,20 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Routes
 require("./routes/contactRouter")(app);
 require("./routes/userRouter")(app);
 
 // Connecting to MongoDB
-mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) =>
-    console.log(`\nMongoDB ERROR - Connection acting up!\n ${err}`)
-  );
+// mongoose
+//   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch((err) =>
+//     console.log(`\nMongoDB ERROR - Connection acting up!\n ${err}`)
+//   );
 
 // Creating Server
 const port = process.env.PORT || 3001;
