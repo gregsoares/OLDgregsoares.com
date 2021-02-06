@@ -1,4 +1,5 @@
 // const sslRedirect = require("heroku-ssl-redirect");
+const enforce = require("express-sslify");
 const express = require("express");
 // const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
   keys = {
     cookieKey: process.env.cookieKey,
   };
-  app.use(sslRedirect());
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
   app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("/*", function (req, res) {
