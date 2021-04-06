@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+
 
 // TODO: useContext(messages) to reload this panel
 
@@ -17,19 +17,12 @@ import axios from "axios";
  */
 
 export const MessagesPanel = () => {
-  const [messages, setMessages] = useState(null);
+  // const [messages, setMessages] = useState(null);
 
-  const loadMessages = async () =>
-    await axios.get("/form/aForm/readAll").then((data) => {
-      setMessages(data);
-    });
-
-  // useEffect(() => {
-  //   loadMessages();
-
-  //   // console.debug(`messages: \n${messages}`);
-  //   messages && messages.map((d) => console.log(d));
-  // }, [messages]);
+  // const loadMessages = async () =>
+  //   await axios.get("/form/aForm/readAll").then((data) => {
+  //     setMessages(data);
+  //   });
 
   return (
     <div

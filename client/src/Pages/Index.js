@@ -7,11 +7,11 @@ import { ContactForm } from "../Components/ContactForm/ContactForm";
 // TODO: implement Modal on mouse over Resume and Projects
 const Index = () => {
   return (
-    <content id="IndexPage" data-testid="IndexPageContainer">
+    <div id="IndexPage" data-testid="IndexPageContainer">
       <HeroCTA />
       <FeaturedSection />
       <ContactForm />
-    </content>
+    </div>
   );
 };
 
