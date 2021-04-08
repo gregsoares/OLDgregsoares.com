@@ -1,2 +1,0 @@
-import LogRocket from 'logrocket';
-LogRocket.init('57fxdx/gregsoarescom');

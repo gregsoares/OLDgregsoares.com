@@ -1,38 +1,30 @@
 {
   "name": "gregsoares.com",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "",
-  "main": "./app.js",
+  "main": "./server.js",
   "scripts": {
-    "clientTest": "npm run test --prefix client",
-    "server": "npx nodemon ./bin/www.js",
-    "test": "npm run test --prefix client",
+    "server": "npx nodemon ./server.js",
     "dev": "concurrently \" nodemon run server\" \"npm run start --prefix client \" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client",
-    "start": "node ./bin/www.js"
+    "clientTest": "npm run test --prefix client"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gregsoares/gregsoares.com.git"
   },
-  "author": "Greg Soares",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gregsoares/gregsoares.com/issues"
   },
-  "homepage": "https://github.com/https://github.com/gregsoares/gregsoares.com#readme",
+  "homepage": "https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
-    "caniuse-lite": "^1.0.30001207",
-    "concurrently": "^5.2.0",
-    "cookie-session": "^1.4.0",
-    "express": "^4.16.4",
-    "express-sslify": "^1.2.0",
-    "logrocket": "^1.0.12",
-    "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "concurrently": "^6.0.1"
   }
 }

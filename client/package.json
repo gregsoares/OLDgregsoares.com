@@ -2,52 +2,27 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "https=true react-scripts build",
-    "build:css": "npx postcss ./src/styles.css -o public/styles.css",
-    "tailwind": "npx tailwindcss build ./src/styles.css -o public/styles.css",
-    "test": "react-scripts test --coverage",
-    "jest": "npm test -- --coverage --watch-all=false",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.21.1",
-    "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-modal": "^3.11.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "tailwindcss": "^1.8.4"
-  },
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.2"
-  },
   "eslintConfig": {
-    "extends": "react-app"
-  },
-  "jest": {
-    "coverageReporters": [
-      "lcov"
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
-  },
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true
   },
   "browserslist": {
     "production": [
@@ -60,5 +35,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.1.0",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
   }
 }
