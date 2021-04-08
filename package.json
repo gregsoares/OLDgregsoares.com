@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/https://github.com/gregsoares/gregsoares.com#readme",
   "dependencies": {
-    "caniuse-lite": "^1.0.30001207",
     "concurrently": "^5.2.0",
     "cookie-session": "^1.4.0",
     "express": "^4.16.4",

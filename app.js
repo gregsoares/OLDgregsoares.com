@@ -1,20 +1,20 @@
 // const sslRedirect = require("heroku-ssl-redirect");
-const enforce = require("express-sslify");
+// const enforce = require("express-sslify");
 const express = require("express");
 // const mongoose = require("mongoose");
-const cookieSession = require("cookie-session");
+// const cookieSession = require("cookie-session");
 // const passport = require("passport");
 const app = express();
-const { db } = require("./controllers/passport.js");
+// const { db } = require("./controllers/passport.js");
 const path = require("path");
 let keys = {};
 
 // If it's in production mode
 if (process.env.NODE_ENV === "production") {
-  keys = {
-    cookieKey: process.env.cookieKey,
-  };
-  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  // keys = {
+  //   cookieKey: process.env.cookieKey,
+  // };
+  // app.use(enforce.HTTPS({ trustProtoHeader: true }));
   app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("/*", function (req, res) {
@@ -22,15 +22,15 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.use(express.static(path.join(__dirname, "client", "src")));
-  keys = require("./config/keys");
+  // keys = require("./config/keys");
 }
 
-app.use(
-  cookieSession({
-    masAge: 30 * 24 * 60 * 60 * 1000, //30days
-    keys: [keys.cookieKey],
-  })
-); // ========= End Environment conditional
+// app.use(
+//   cookieSession({
+//     masAge: 30 * 24 * 60 * 60 * 1000, //30days
+//     keys: [keys.cookieKey],
+//   })
+// ); // ========= End Environment conditional
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -38,8 +38,8 @@ app.use(express.urlencoded({ extended: false }));
 // app.use(passport.session());
 
 // Routes
-require("./routes/contactRouter")(app);
-require("./routes/userRouter")(app);
+// require("./routes/contactRouter")(app);
+// require("./routes/userRouter")(app);
 
 // Connecting to MongoDB
 // mongoose
