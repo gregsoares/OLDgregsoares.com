@@ -7,7 +7,7 @@ import { WixLandingPage } from "./WixLandingPage";
 export const ProjectSection = () => {
   return (
     <div
-      className="px-4 py-8 font-sans text-gray-500 "
+      className="px-4 py-8 font-sans text-gray-800 "
       data-testid="PostSectionContainer"
     >
       <WixLandingPage />
